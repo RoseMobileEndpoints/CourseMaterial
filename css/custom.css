@@ -1,3 +1,4 @@
-.active > .gcb-lesson-title-with-progress > a {
+.active > .gcb-lesson-title-with-progress > a, 
+.active > .gcb-activity-title-with-progress > a {
 	color: black !important; 
 }

@@ -18,6 +18,23 @@
 // Original activity and assessment code written by Maggie Johnson
 // Refactored version by Philip Guo
 
+// Taken from activity page inline script.
+// import JSON for older browsers like IE 7
+if (typeof JSON == 'undefined') {
+	document.write('<script src="assets/lib/json2-2012.10.08.min.js"></' + 'script>');
+}
+
+// inline translations
+var trans = {};
+trans.CHECK_ANSWER_TEXT = " Check Answer ";
+trans.CHECK_ANSWERS_TEXT = " Check Answers ";
+trans.SHOW_ANSWER_TEXT = " Skip and Show Answer ";
+trans.SELECT_ANSWER_PROMPT = " Please click one of the buttons for your answer. ";
+trans.ALL_CORRECT_TEXT = " All your answers are correct! ";
+trans.NUM_CORRECT_TEXT = " Number of questions you answered correctly ";
+
+
+
 // time on page
 var gcbBeginningOfTime = new Date();
 
