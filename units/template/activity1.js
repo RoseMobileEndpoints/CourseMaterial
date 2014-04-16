@@ -31,27 +31,61 @@
 
 var activity = [
 
-  '<b>1.</b> Briefly discribe why and how we will use transistors in this course',
-
-  { questionType: 'freetext',
-    correctAnswerRegex: /current/i,
-    correctAnswerOutput: 'Indeed.  The microcontroller will only provide so much current, so we need a transistor to serve as an electrically controlled switch for loads that need more current (or higher voltages).',
-    incorrectAnswerOutput: "That works, but ideally somewhere you'd say the word 'current'. :)",
-    showAnswerOutput: 'The microcontroller will only provide so much current, so we need a transistor to serve as an electrically controlled switch for loads that need more current (or higher voltages)'},
-
-    '<br><br><b>2.</b> A transistor that is controlled by current is called a <br>',
+    '<b>1.</b> Example multiple choice question <br>',
     
-  { questionType: 'multiple choice',
-    choices: [['BJT', true, 'Correct!  Bipolar Junction Transistors turn on and off via current.'],
-              ['MOSFET', false, 'Please try again. MOSFETs are voltage controlled.'],
-              ['H-Bridge', false, 'Please try again. ']]},
+	{
+		questionType : 'multiple choice',
+		choices : [
+				['Option A', false, 'Please try again.' ],
+				['Option B', false, 'Please try again.' ],
+				['Option C', true, 'Correct!' ],
+				['Option D', false, 'Please try again.' ] ]
+	},
 
-  '<br><br><b>3.</b> A transistor that is controlled by voltage is called a <br>',
+	
+    '<br><br>',
+	'<b>2.</b> Example multiple choice group<br>',
+	{
+		questionType : 'multiple choice group',
+		questionsList : [
+				{
+					questionHTML : '<b>a.</b> Question A',
+					choices : [ 'Option 1', 'Option 2', 'Option 3' ],
+					correctIndex : 1
+				},
+				{
+					questionHTML : '<b>b.</b> Question B',
+					choices : [ 'Option 1', 'Option 2', 'Option 3' ],
+					correctIndex : 2
+				},
+				{
+					questionHTML : '<b>c.</b> Question C',
+					choices : [ 'Option 1', 'Option 2', 'Option 3' ],
+					correctIndex : 0
+				}, {
+					questionHTML : '<b>d.</b> Question D',
+					choices : [ 'Option 1', 'Option 2', 'Option 3' ],
+					correctIndex : [ 1, 2 ]
+				} ],
+		allCorrectOutput : 'Well done!',
+		someIncorrectOutput : 'Please try again. Hints: ...',
+	},
+
+
+  '<br><br>',
+  '<b>3.</b> Sample free text question with code<br>',
   
-  { questionType: 'multiple choice',
-    choices: [['BJT', false, 'Please try again. BJTs are current controlled.'],
-              ['MOSFET', true, 'Correct!  Metal Oxide Semiconductor Field Effect Transistors turn on and off via voltage.'],
-              ['H-Bridge', false, 'Please try again. ']]},
+	'<code style="font-weight: bold; padding: 5px; background: rgb(234, 248, 248); display: inline-block;">if (x == 7) {<br>&nbsp; &nbsp;printf("x is 7\\n");<br>}</code>',
+	'<br>',
+
+	{
+		questionType : 'freetext',
+		correctAnswerRegex : /Delay10KTCYx\(\s*250\s*\);/i,
+		correctAnswerOutput : 'Correct!',
+		incorrectAnswerOutput : 'Please try again.',
+		showAnswerOutput : 'Here is the answer'
+	},
+
 
 ];
 
