@@ -1,0 +1,15 @@
+UNIT TITLE: Buttons and MVC
+LINK TO OUTPUT: output
+LINK TO VIDEOS: https://www.youtube.com/
+LINK TO SLIDES: https://docs.google.com/presentation/d/1YUc3sQH5oQYxUjlp9pia70SNpeLtQvBaVzPqkYO28c0/edit#slide=id.g349a12dcf_0243
+
+
+LESSON TITLE: New Android Project
+VIDEO: watch?v=dNx1jl09Kjw&list=PLZOSMuDCDS7lRQ8vSF5-9aesFmXIfcqg5
+CONTENT ABOVE
+Some content <b>here!</b>
+CONTENT BELOW
+See here for more details. <a href="www.google.com">here</a>. Lots more.
+END
+
+ACTIVITY TITLE: Questions

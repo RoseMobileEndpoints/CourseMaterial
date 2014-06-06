@@ -1,0 +1,5 @@
+User stories and plan
+
+1. Can read in a lesson template and spit it back to another file called lesson.html.
+2. Can read in a lesson template with variables and spit it out with values swapped in.
+	Requires lots more code.
