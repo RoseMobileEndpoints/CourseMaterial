@@ -5,7 +5,7 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1YUc3sQH5oQYxUjlp9pia70SN
 
 
 LESSON TITLE: New Android Project
-VIDEO: watch?v=dNx1jl09Kjw&list=PLZOSMuDCDS7lRQ8vSF5-9aesFmXIfcqg5
+LESSON VIDEO: watch?v=dNx1jl09Kjw&list=PLZOSMuDCDS7lRQ8vSF5-9aesFmXIfcqg5
 CONTENT ABOVE
 Some content <b>here!</b>
 CONTENT BELOW
@@ -13,3 +13,82 @@ See here for more details. <a href="www.google.com">here</a>. Lots more.
 END
 
 ACTIVITY TITLE: Questions
+END
+
+LESSON TITLE: Hello Button View
+LESSON VIDEO: watch?v=dNx1jl09Kjw&list=PLZOSMuDCDS7lRQ8vSF5-9aesFmXIfcqg5
+CONTENT ABOVE
+Some content <b>here!</b>
+CONTENT BELOW
+See here for more details. <a href="www.google.com">here</a>. Lots more.
+END
+
+ACTIVITY TITLE: Questions
+END
+
+LESSON TITLE: Hello Button Controller
+LESSON VIDEO: watch?v=dNx1jl09Kjw&list=PLZOSMuDCDS7lRQ8vSF5-9aesFmXIfcqg5
+CONTENT ABOVE
+Some content <b>here!</b>
+CONTENT BELOW
+See here for more details. <a href="www.google.com">here</a>. Lots more.
+END
+
+ACTIVITY TITLE: Questions
+END
+
+LESSON TITLE: MVC and Tic Tac Toe Model
+LESSON VIDEO: watch?v=dNx1jl09Kjw&list=PLZOSMuDCDS7lRQ8vSF5-9aesFmXIfcqg5
+CONTENT ABOVE
+Some content <b>here!</b>
+CONTENT BELOW
+See here for more details. <a href="www.google.com">here</a>. Lots more.
+END
+
+ACTIVITY TITLE: Questions
+END
+
+LESSON TITLE: MVC and Tic Tac Toe Model
+LESSON VIDEO: watch?v=dNx1jl09Kjw&list=PLZOSMuDCDS7lRQ8vSF5-9aesFmXIfcqg5
+CONTENT ABOVE
+Some content <b>here!</b>
+CONTENT BELOW
+See here for more details. <a href="www.google.com">here</a>. Lots more.
+END
+
+ACTIVITY TITLE: Questions
+END
+
+LESSON TITLE: TicTacToe View
+LESSON VIDEO: watch?v=dNx1jl09Kjw&list=PLZOSMuDCDS7lRQ8vSF5-9aesFmXIfcqg5
+CONTENT ABOVE
+Some content <b>here!</b>
+CONTENT BELOW
+See here for more details. <a href="www.google.com">here</a>. Lots more.
+END
+
+ACTIVITY TITLE: Questions
+END
+
+LESSON TITLE: TicTacToe Controller
+LESSON VIDEO: watch?v=dNx1jl09Kjw&list=PLZOSMuDCDS7lRQ8vSF5-9aesFmXIfcqg5
+CONTENT ABOVE
+Some content <b>here!</b>
+CONTENT BELOW
+See here for more details. <a href="www.google.com">here</a>. Lots more.
+END
+
+ACTIVITY TITLE: Questions
+END
+
+LESSON TITLE: Lab: Getting Started with Buttons and Lights Out
+LESSON VIDEO: watch?v=dNx1jl09Kjw&list=PLZOSMuDCDS7lRQ8vSF5-9aesFmXIfcqg5
+CONTENT ABOVE
+Some content <b>here!</b>
+CONTENT BELOW
+See here for more details. <a href="www.google.com">here</a>. Lots more.
+END
+
+
+
+

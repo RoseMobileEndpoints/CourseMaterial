@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * TODO Put here a description of what this class does.
+ * A unit of material. Contains tasks (lessons and activities).
  * 
- * @author boutell. Created Jun 6, 2014.
+ * @author Matt Boutell. Created Jun 6, 2014.
  */
 public class Unit {
 	private String lessonTemplateName = "lessonTemplate.html";
@@ -26,12 +26,14 @@ public class Unit {
 	/**
 	 * Creates a unit from the given config file using default template files.
 	 * 
+	 * @param unitName
+	 * 
 	 * @param lessonTemplateName
 	 * @throws FileNotFoundException
 	 */
 	public Unit(String unitName) throws FileNotFoundException {
 		tasks = new ArrayList<Task>();
-		
+
 		lessonTemplate = fileContentsFromName(lessonTemplateName);
 		activityTemplate = fileContentsFromName(activityTemplateName);
 
@@ -48,12 +50,12 @@ public class Unit {
 				"LESSON TITLE:", "LESSON VIDEO:", "CONTENT ABOVE",
 				"CONTENT BELOW", "END", "ACTIVITY TITLE:" };
 
-		int IN_UNIT = 0, IN_LESSON_CONTENT_ABOVE = 1, IN_LESSON_CONTENT_BELOW = 2;
+		int IN_UNIT = 0, IN_LESSON_CONTENT_ABOVE = 1, IN_LESSON_CONTENT_BELOW = 2, IN_ACTIVITY = 3;
 		int state = IN_UNIT;
 
 		int nLessonsRead = 0;
 		Task currentTask = null;
-		
+
 		while (sc.hasNextLine()) {
 			String line = sc.nextLine();
 			String remainder = "";
@@ -66,54 +68,59 @@ public class Unit {
 					break;
 				}
 			}
-			if (state == IN_UNIT) {
-				switch (tokenIdx) {
-				case 0:
-					title = remainder;
-					break;
-				case 1:
-					outputLink = remainder;
-					break;
-				case 2:
-					videoLink = remainder;
-					break;
-				case 3:
-					slideLink = remainder;
-					break;
-				case 4: // Lesson title
-					state = nLessonsRead++;
-					currentTask = new Lesson(this, nLessonsRead);
-					currentTask.setTitle(remainder);
-					break;
-				case 5:
-					((Lesson)currentTask).setVideo(remainder);
-					break;
-				case 6:
-					state = IN_LESSON_CONTENT_ABOVE;
-					break;
-				case 7:
-					state = IN_LESSON_CONTENT_BELOW;
-					break;
-				case 8: 
-					// end
-					tasks.add(currentTask);
-					state = IN_UNIT;
-				case 9:
-					//Activity
-					currentTask = new Activity(this, nLessonsRead);
-					currentTask.setTitle(remainder);
-					break;
-				default:
-					if (state == IN_LESSON_CONTENT_ABOVE) {
-						((Lesson)currentTask).appendContentAbove(remainder);
-					} else if (state == IN_LESSON_CONTENT_BELOW){
-						((Lesson)currentTask).appendContentBelow(remainder);
-					}
-					
+			switch (tokenIdx) {
+			case 0:
+				title = remainder;
+				break;
+			case 1:
+				outputLink = remainder;
+				break;
+			case 2:
+				videoLink = remainder;
+				break;
+			case 3:
+				slideLink = remainder;
+				break;
+			case 4: // Lesson title
+				nLessonsRead++;
+				currentTask = new Lesson(this, nLessonsRead);
+				currentTask.setTitle(remainder);
+				break;
+			case 5:
+				((Lesson) currentTask).setVideo(remainder);
+				break;
+			case 6:
+				state = IN_LESSON_CONTENT_ABOVE;
+				break;
+			case 7:
+				state = IN_LESSON_CONTENT_BELOW;
+				break;
+			case 8:
+				// end
+				tasks.add(currentTask);
+				currentTask = null;
+				state = IN_UNIT;
+				break;
+			case 9:
+				// Activity
+				currentTask = new Activity(this, nLessonsRead);
+				currentTask.setTitle(remainder);
+				state = IN_ACTIVITY;
+				break;
+			default:
+				if (state == IN_LESSON_CONTENT_ABOVE) {
+					((Lesson) currentTask).appendContentAbove(line);
+				} else if (state == IN_LESSON_CONTENT_BELOW) {
+					((Lesson) currentTask).appendContentBelow(line);
+				} else {
 					System.out.println("Ignoring line: " + line);
-					break;
 				}
+				break;
 			}
+		}
+		if (currentTask != null) {
+			System.out.println("Didn't find a closing end statement. Adding last task");
+			tasks.add(currentTask);
 		}
 		sc.close();
 
@@ -123,10 +130,8 @@ public class Unit {
 			throws FileNotFoundException {
 		StringBuilder sb = new StringBuilder();
 		Scanner scanner = new Scanner(new File(fileName));
-		int count = 0;
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine();
-			count++;
 			sb.append(line);
 			sb.append("\n");
 		}
@@ -152,7 +157,21 @@ public class Unit {
 	public void generateFiles() throws FileNotFoundException {
 		PrintWriter pw = new PrintWriter(new File("lesson1.html"));
 		pw.println(lessonTemplate);
+		System.out.println("UNIT READ\n" + this.toString());
 		pw.close();
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Title: " + this.title + "\n");
+		sb.append("Output link: " + this.outputLink + "\n");
+		sb.append("Video link: " + this.videoLink + "\n");
+		sb.append("Slide link: " + this.slideLink + "\n");
+		for (Task task : this.tasks) {
+			sb.append(task.toString());
+		}
+		return sb.toString();
 	}
 
 }

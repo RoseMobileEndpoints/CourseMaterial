@@ -1,10 +1,9 @@
-import java.util.Scanner;
 
 
 /**
  * A lesson.
  *
- * @author boutell.
+ * @author Matt Boutell.
  *         Created Jun 6, 2014.
  */
 public class Lesson extends Task {
@@ -50,7 +49,16 @@ public class Lesson extends Task {
 		contentBelow += line + "\n";
 	}
 	
-	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Lesson " + this.getNumber() + "\n");
+		sb.append("Title: " + this.getTitle() + "\n");
+		sb.append("Video link: " + this.videoLink + "\n");
+		sb.append("Contents above:\n" + this.contentAbove);
+		sb.append("Contents below:\n" + this.contentBelow);
+		return sb.toString();
+	}
 	
 	
 }

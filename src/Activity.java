@@ -15,4 +15,13 @@ public class Activity extends Task {
 	public Activity(Unit unit, int number) {
 		super(unit, number);
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Activity " + this.getNumber() + "\n");
+		sb.append("Title: " + this.getTitle() + "\n");
+		return sb.toString();
+	}
+	
 }
