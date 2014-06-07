@@ -33,12 +33,12 @@ public class Unit {
 	 * @throws FileNotFoundException
 	 */
 	public Unit(String unitName) throws FileNotFoundException {
-		String lessonTemplateName = Paths.get("templates/lessonTemplate.html")
-				.toString();
-		String activityTemplateName = Paths.get(
-				"templates/activityTemplate.html").toString();
-		lessonTemplate = fileContentsFromName(lessonTemplateName);
-		activityTemplate = fileContentsFromName(activityTemplateName);
+		String dir = "CourseMaterial/units/templates/";
+		String ltName = Paths.get(dir + "lessonTemplate.html").toString();
+		lessonTemplate = fileContentsFromName(ltName);
+
+		String atName = Paths.get(dir + "activityTemplate.html").toString();
+		activityTemplate = fileContentsFromName(atName);
 
 		tasks = new ArrayList<Task>();
 		parse(unitName);
@@ -150,7 +150,8 @@ public class Unit {
 		lessonTemplate = lessonTemplate.replace("$VIDEO_LINK", this.videoLink);
 
 		activityTemplate = activityTemplate.replace("$UNIT_TITLE", this.title);
-		activityTemplate = activityTemplate.replace("$SLIDE_LINK", this.slideLink);
+		activityTemplate = activityTemplate.replace("$SLIDE_LINK",
+				this.slideLink);
 	}
 
 	private void createOutputDirectory() throws IOException {

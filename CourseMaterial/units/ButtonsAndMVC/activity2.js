@@ -31,61 +31,42 @@
 
 var activity = [
 
-    '<b>1.</b> Example multiple choice question <br>',
+    '<b>1.</b> When creating a new project, I would like you to add what info to the name of each project?<br>',
     
 	{
 		questionType : 'multiple choice',
 		choices : [
-				['Option A', false, 'Please try again.' ],
-				['Option B', false, 'Please try again.' ],
-				['Option C', true, 'Correct!' ],
-				['Option D', false, 'Please try again.' ] ]
+				['Nothing', false, 'No, there was something.' ],
+				['Your name or initials', true, 'Yes, that will help me much while grading!' ],
+				['The name of the CEO of Google', false, 'Interesting, but seeing the name Larry Page on your app is not helpful to me.' ]
+				]	
 	},
 
+    '<br><br>',
+    '<b>2.</b> What naming convention is used for packages?<br>',
+    
+	{
+		questionType : 'multiple choice',
+		choices : [
+				['Always use just your initials', false, 'Nope. That was for the last question.' ],
+				['use findViewById', false, 'No, but we will learn about that in an upcoming video!' ],
+				['reverse URL', true, 'Exactly. Please use something like edu.rosehulman.yourusername.theappname' ]]
+	},
 	
     '<br><br>',
-	'<b>2.</b> Example multiple choice group<br>',
+
+    '<b>3.</b> Choose all that apply.<br>',
 	{
 		questionType : 'multiple choice group',
 		questionsList : [
 				{
-					questionHTML : '<b>a.</b> Question A',
-					choices : [ 'Option 1', 'Option 2', 'Option 3' ],
-					correctIndex : 1
-				},
-				{
-					questionHTML : '<b>b.</b> Question B',
-					choices : [ 'Option 1', 'Option 2', 'Option 3' ],
-					correctIndex : 2
-				},
-				{
-					questionHTML : '<b>c.</b> Question C',
-					choices : [ 'Option 1', 'Option 2', 'Option 3' ],
-					correctIndex : 0
-				}, {
-					questionHTML : '<b>d.</b> Question D',
-					choices : [ 'Option 1', 'Option 2', 'Option 3' ],
-					correctIndex : [ 1, 2 ]
-				} ],
+					questionHTML : '<b>a.</b> What can you find in the AndroidManifest.xml file? ',
+					choices : [ 'The package name', 'The Activity that will be launched', 'What versions of Android your app supports' ],
+					correctIndex : [0,1,2]
+				}
+				],
 		allCorrectOutput : 'Well done!',
-		someIncorrectOutput : 'Please try again. Hints: ...',
-	},
-
-
-  '<br><br>',
-  '<b>3.</b> Sample free text question with code<br>',
-  
-	'<code style="font-weight: bold; padding: 5px; background: rgb(234, 248, 248); display: inline-block;">if (x == 7) {<br>&nbsp; &nbsp;printf("x is 7\\n");<br>}</code>',
-	'<br>',
-
-	{
-		questionType : 'freetext',
-		correctAnswerRegex : /Delay10KTCYx\(\s*250\s*\);/i,
-		correctAnswerOutput : 'Correct!',
-		incorrectAnswerOutput : 'Please try again.',
-		showAnswerOutput : 'Here is the answer'
-	},
-
-
+		someIncorrectOutput : 'Please try again. Hint: look back at that file for each of these.',
+	}
 ];
 
