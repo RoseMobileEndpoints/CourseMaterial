@@ -72,27 +72,9 @@ public class Lesson extends Task {
 		template = template.replace("$LESSON_VIDEO_LINK", this.videoLink);
 		template = template.replace("$LESSON_CONTENT_ABOVE", this.contentAbove);
 		template = template.replace("$LESSON_CONTENT_BELOW", this.contentBelow);
-
-		// TODO: Find next and previous
-		Task previousTask = this.getUnit().getPreviousTask(this);
-		String previousLink = "";
-		if (previousTask != null) {
-			previousLink = String.format("<a href=\""
-					+ previousTask.getFileName() + "\"> Previous Page </a>");
-		}
-		template = template.replace("$PREVIOUS_LINK", previousLink);
-
-		Task nextTask = this.getUnit().getNextTask(this);
-		String nextLink = "";
-		if (nextTask != null) {
-			nextLink = String.format("<a href=\""
-					+ nextTask.getFileName() + "\"> Next Page </a>");
-		}
-		template = template.replace("$NEXT_LINK", nextLink);
-		
-		// System.out.println(getFileName() + ", prev:" + previousName +
-		// ", next:" + nextName);
-
+		template = replaceNextAndPrevious(template);
 		pw.print(template);
+		
 	}
+
 }

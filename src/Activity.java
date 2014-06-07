@@ -35,7 +35,7 @@ public class Activity extends Task {
 	public void generateFile(PrintWriter pw) {
 		String template = this.getUnit().getActivityTemplate();
 		template = template.replace("$ACTIVITY_TITLE", this.getTitle());
+		template = replaceNextAndPrevious(template);
 		pw.print(template);
 	}
-
 }
