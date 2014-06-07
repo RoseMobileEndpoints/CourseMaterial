@@ -1,4 +1,4 @@
-User stories and plan
+USER STORIES AND PLAN
 
 Reads in a lesson template and spit it back to another file called lesson.html.
 Parses a unit file and spit info back 
@@ -12,8 +12,8 @@ Creates lesson files each with its given video.
 Creates lesson files each with its content above and below.
 Creates lesson files each with the next/previous
 Creates activity files each with the next/previous
-
 Creates activity files all with the correct js file.
-
 Creates lesson files each with the full nav bar 
+
 Nav bars have the active set properly.
+Creates activity files each with the full nav bar 

@@ -1,4 +1,5 @@
 import java.io.PrintWriter;
+import java.util.List;
 
 /**
  * A lesson.
@@ -73,8 +74,59 @@ public class Lesson extends Task {
 		template = template.replace("$LESSON_CONTENT_ABOVE", this.contentAbove);
 		template = template.replace("$LESSON_CONTENT_BELOW", this.contentBelow);
 		template = replaceNextAndPrevious(template);
+		System.out.println("------------------------LESSON " + this.getNumber());
+//		System.out.println(template);
+		template = replaceNavBar(template);
+//		System.out.println("------------------------LESSON " + this.getNumber() + " AFTER NAV SUB");
+//		System.out.println(template);
 		pw.print(template);
+
+	}
+
+	private String replaceNavBar(String template) {
+		StringBuilder navBar = new StringBuilder();
+		navBar.append("        <div class=\"gcb-nav\" id=\"gcb-nav-y\" role=\"navigation\">\n");
+		navBar.append("          <ul>\n");
+
+		String navBarBody = "";
+		List<Task> tasks = this.getUnit().getTasks();
+		for (int i = 0; i < tasks.size(); i++) {
+			// CONSIDER: Replace this hack with implementations by Lesson and Activity.
+			// If activity, replace $ACT_HOLDER with Act, $ACT_HOLDER.
+			// If lesson, replace $ACT_HOLDER (if there) with "", then add LH, $ACT_HOLDER, LE.
+			if (tasks.get(i) instanceof Lesson) {
+				navBarBody = navBarBody.replace("$ACTIVITY_HOLDER", ""); 
+				navBarBody += "            <li class=\"active\">\n";
+				navBarBody += "              <div class=\"gcb-lesson-title-with-progress\">\n";
+				navBarBody += "                <a href=\"" + tasks.get(i).getFileName() + "\">" + tasks.get(i).getTitle() + "</a>\n";
+				navBarBody += "              </div>\n";
+				navBarBody += "              <ul>\n";
+				navBarBody += "$ACTIVITY_HOLDER";
+				navBarBody += "             </ul>\n";
+				navBarBody += "           </li>\n";
+			} else if (tasks.get(i) instanceof Activity) {
+				String activityBody = "";
+				activityBody += "                <li>\n";
+				activityBody += "                  <div class=\"gcb-activity-title-with-progress\">\n";
+				activityBody += "                    <a href=\"" + tasks.get(i).getFileName() + "\">Activity</a>\n";
+				activityBody += "                  </div>\n";
+				activityBody += "               </li>\n";
+				activityBody += "$ACTIVITY_HOLDER";
+				navBarBody = navBarBody.replace("$ACTIVITY_HOLDER", activityBody);
+			}
+		}
+		navBar.append(navBarBody.replace("$ACTIVITY_HOLDER", "")); 
+		navBar.append("           <!-- end of navbar elements -->\n");
+		navBar.append("        </ul>\n");
+		navBar.append("      </div>\n");
+		navBar.append("");
+
+//		System.out.println("------------------------LESSON " + this.getNumber() + " NAV BAR CONTENTS:");
+//		System.out.println(navBar.toString());
+//		System.out.println("$NAV_BAR found at " + template.indexOf("$NAV_BAR"));
 		
+		template = template.replace("$NAV_BAR", navBar.toString());
+		return template;
 	}
 
 }

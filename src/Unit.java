@@ -230,4 +230,9 @@ public class Unit {
 		}
 		return null;
 	}
+	
+	List<Task> getTasks() {
+		return tasks;
+	}
+	
 }
