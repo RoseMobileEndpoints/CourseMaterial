@@ -1,3 +1,5 @@
+import java.io.PrintWriter;
+
 
 
 /**
@@ -65,5 +67,13 @@ public class Lesson extends Task {
 		return "lesson" + getNumber() + ".html";
 	}
 	
+	@Override
+	public void generateFile(PrintWriter pw) {
+		// TODO Auto-generated method stub.
+		Unit unit = this.getUnit();
+		
+		
+		
+	}
 	
 }

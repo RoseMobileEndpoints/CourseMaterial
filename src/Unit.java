@@ -1,6 +1,9 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -160,28 +163,44 @@ public class Unit {
 		
 	}
 
+	private void createOutputDirectory() throws IOException {
+		
+		Path p1 = Paths.get(this.outputLink);
+		System.out.println(p1.toString());
+		File outputDirectory = new File(p1.toString());
+		
+		if (outputDirectory.exists())
+			return;
+//		if (!outputDirectory.isDirectory()) {
+//			throw new IOException("Specified output location: "
+//					+ outputDirectory + " exists but is not a directory.");
+//		}
+		if (!outputDirectory.mkdirs()) {
+			throw new IOException("Unable to create output directory "
+					+ outputDirectory);
+		}
+	}
+
+	
 	/**
 	 * Generates all the html files (lesson and activity) for this unit.
-	 * 
-	 * @throws FileNotFoundException
+	 * @throws IOException 
 	 * 
 	 */
-	public void generateFiles() throws FileNotFoundException {
+	public void generateFiles() throws IOException {
 
 		System.out.println(this.toString());
-		// Go to 
-		// this.outputLink;
-		// Make folder
+		createOutputDirectory();
 		
 		
 		for (int i = 0; i < tasks.size(); i++) {
 			Task task = tasks.get(i);
 			
 			String name = task.getFileName();
-			String fullName = this.outputLink + "/" + name;
-			System.out.println(fullName);
+			String fullName = Paths.get(this.outputLink + "/" + name).toString();
+			
 			PrintWriter pw = new PrintWriter(new File(fullName));
-			pw.println(lessonTemplate);
+			task.generateFile(pw);
 			pw.close();
 		}
 		

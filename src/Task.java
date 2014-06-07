@@ -1,3 +1,5 @@
+import java.io.PrintWriter;
+
 
 /**
  * A lesson or activity.
@@ -40,5 +42,7 @@ public abstract class Task {
 	public void setNumber(int number) {
 		this.number = number;
 	}
+
+	public abstract void generateFile(PrintWriter pw);
 	
 }

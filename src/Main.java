@@ -1,4 +1,5 @@
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  * Runs the unit course material generator.
@@ -18,6 +19,8 @@ public class Main {
 			Unit unit = new Unit(unitName);
 			unit.generateFiles();
 		} catch (FileNotFoundException exception) {
+			exception.printStackTrace();
+		} catch (IOException exception) {
 			exception.printStackTrace();
 		} 
 	}
