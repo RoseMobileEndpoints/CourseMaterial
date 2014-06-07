@@ -1,21 +1,18 @@
 import java.io.PrintWriter;
 
-
-
 /**
  * A lesson.
- *
- * @author Matt Boutell.
- *         Created Jun 6, 2014.
+ * 
+ * @author Matt Boutell. Created Jun 6, 2014.
  */
 public class Lesson extends Task {
 	private String videoLink;
 	private String contentAbove;
 	private String contentBelow;
-	
+
 	/**
 	 * Creates a lesson with the given unit and number.
-	 *
+	 * 
 	 * @param unit
 	 * @param number
 	 */
@@ -27,7 +24,8 @@ public class Lesson extends Task {
 
 	/**
 	 * Sets the given lesson
-	 * @param videoLink 
+	 * 
+	 * @param videoLink
 	 */
 	public void setVideo(String videoLink) {
 		this.videoLink = videoLink;
@@ -35,7 +33,7 @@ public class Lesson extends Task {
 
 	/**
 	 * Adds a line to the contentAbove
-	 *
+	 * 
 	 * @param line
 	 */
 	public void appendContentAbove(String line) {
@@ -44,13 +42,13 @@ public class Lesson extends Task {
 
 	/**
 	 * Adds a line to the contentBelow.
-	 *
+	 * 
 	 * @param line
 	 */
 	public void appendContentBelow(String line) {
 		contentBelow += line + "\n";
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
@@ -66,7 +64,7 @@ public class Lesson extends Task {
 	public String getFileName() {
 		return "lesson" + getNumber() + ".html";
 	}
-	
+
 	@Override
 	public void generateFile(PrintWriter pw) {
 		String template = this.getUnit().getLessonTemplate();
@@ -74,8 +72,27 @@ public class Lesson extends Task {
 		template = template.replace("$LESSON_VIDEO_LINK", this.videoLink);
 		template = template.replace("$LESSON_CONTENT_ABOVE", this.contentAbove);
 		template = template.replace("$LESSON_CONTENT_BELOW", this.contentBelow);
+
+		// TODO: Find next and previous
+		Task previousTask = this.getUnit().getPreviousTask(this);
+		String previousLink = "";
+		if (previousTask != null) {
+			previousLink = String.format("<a href=\""
+					+ previousTask.getFileName() + "\"> Previous Page </a>");
+		}
+		template = template.replace("$PREVIOUS_LINK", previousLink);
+
+		Task nextTask = this.getUnit().getNextTask(this);
+		String nextLink = "";
+		if (nextTask != null) {
+			nextLink = String.format("<a href=\""
+					+ nextTask.getFileName() + "\"> Next Page </a>");
+		}
+		template = template.replace("$NEXT_LINK", nextLink);
 		
+		// System.out.println(getFileName() + ", prev:" + previousName +
+		// ", next:" + nextName);
+
 		pw.print(template);
 	}
-	
 }

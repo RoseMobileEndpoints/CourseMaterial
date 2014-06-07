@@ -206,12 +206,28 @@ public class Unit {
 		return sb.toString();
 	}
 
-	public String getLessonTemplate() {
+	String getLessonTemplate() {
 		return lessonTemplate;
 	}
 
-	public String getActivityTemplate() {
+	String getActivityTemplate() {
 		return activityTemplate;
 	}
 
+	Task getNextTask(Task task) {
+		for (int i = 0; i < tasks.size(); i++) {
+			if (tasks.get(i) == task && i < tasks.size()-1) {
+				return tasks.get(i+1);
+			}
+		}
+		return null;
+	}
+	Task getPreviousTask(Task task) {
+		for (int i = 0; i < tasks.size(); i++) {
+			if (tasks.get(i) == task && i > 0) {
+				return tasks.get(i-1);
+			}
+		}
+		return null;
+	}
 }
