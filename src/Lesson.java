@@ -59,6 +59,11 @@ public class Lesson extends Task {
 		sb.append("Contents below:\n" + this.contentBelow);
 		return sb.toString();
 	}
+
+	@Override
+	public String getFileName() {
+		return "lesson" + getNumber() + ".html";
+	}
 	
 	
 }

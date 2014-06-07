@@ -1,5 +1,8 @@
 User stories and plan
 
-1. Can read in a lesson template and spit it back to another file called lesson.html.
-2. Can read in a lesson template with variables and spit it out with values swapped in.
-	Requires lots more code.
+- Read in a lesson template and spit it back to another file called lesson.html.
+- Parse a unit file and spit info back 
+- Read in a lesson template with variables and spit it out with random values swapped in.
+- Substitute unit basic info into template.
+
+

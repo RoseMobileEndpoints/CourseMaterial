@@ -24,4 +24,10 @@ public class Activity extends Task {
 		return sb.toString();
 	}
 	
+	@Override
+	public String getFileName() {
+		return "activity" + getNumber() + ".html";
+	}
+
+	
 }

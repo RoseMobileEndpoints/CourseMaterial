@@ -10,6 +10,8 @@ public abstract class Task {
 	private Unit unit; 
 	private int number;
 
+	public abstract String getFileName();
+	
 	public Task(Unit unit, int number) {
 		this.unit = unit;
 		this.number = number;

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
 /**
  * A unit of material. Contains tasks (lessons and activities).
  * 
@@ -32,13 +33,12 @@ public class Unit {
 	 * @throws FileNotFoundException
 	 */
 	public Unit(String unitName) throws FileNotFoundException {
-		tasks = new ArrayList<Task>();
 
 		lessonTemplate = fileContentsFromName(lessonTemplateName);
 		activityTemplate = fileContentsFromName(activityTemplateName);
 
+		tasks = new ArrayList<Task>();
 		parse(unitName);
-
 		replaceVariables();
 	}
 
@@ -119,7 +119,8 @@ public class Unit {
 			}
 		}
 		if (currentTask != null) {
-			System.out.println("Didn't find a closing end statement. Adding last task");
+			System.out
+					.println("Didn't find a closing end statement. Adding last task");
 			tasks.add(currentTask);
 		}
 		sc.close();
@@ -144,8 +145,19 @@ public class Unit {
 	 * 
 	 */
 	private void replaceVariables() {
-		lessonTemplate = lessonTemplate.replace("$UNIT_TITLE",
-				"Matts Unit Title");
+		lessonTemplate = lessonTemplate.replace("$UNIT_TITLE", this.title);
+		lessonTemplate = lessonTemplate.replace("$SLIDE_LINK", this.slideLink);
+		lessonTemplate = lessonTemplate.replace("$VIDEO_LINK", this.videoLink);
+		
+
+		
+		
+		// TODO: Use output folder
+		// Need to loop over lessons and activities.
+        // $LESSON_CONTENT_ABOVE
+        
+		
+		
 	}
 
 	/**
@@ -155,10 +167,24 @@ public class Unit {
 	 * 
 	 */
 	public void generateFiles() throws FileNotFoundException {
-		PrintWriter pw = new PrintWriter(new File("lesson1.html"));
-		pw.println(lessonTemplate);
-		System.out.println("UNIT READ\n" + this.toString());
-		pw.close();
+
+		System.out.println(this.toString());
+		// Go to 
+		// this.outputLink;
+		// Make folder
+		
+		
+		for (int i = 0; i < tasks.size(); i++) {
+			Task task = tasks.get(i);
+			
+			String name = task.getFileName();
+			String fullName = this.outputLink + "/" + name;
+			System.out.println(fullName);
+			PrintWriter pw = new PrintWriter(new File(fullName));
+			pw.println(lessonTemplate);
+			pw.close();
+		}
+		
 	}
 
 	@Override

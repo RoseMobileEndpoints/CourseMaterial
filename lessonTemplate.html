@@ -119,21 +119,23 @@
                 <div class="gcb-col-3">
                   <p style="float: right; margin-top: 0px;">
                     <!-- TODO: Slide link -->
-                    <a role="button" class="gcb-button" id="lessonNotesLink" href="link to slides" target="_blank"> Slides </a>
+                    <a role="button" class="gcb-button" id="lessonNotesLink" href="$SLIDE_LINK" target="_blank"> Slides </a>
                   </p>
                 </div>
               </div>
               <!-- /gcb-cols -->
               <div class="gcb-lesson-content">
-                <ul>
                   <!-- TODO: Customize lesson summary -->
+                  $LESSON_CONTENT_ABOVE
+                <!--<ul>
                   <li>Content above video</li>
-                </ul>
+                </ul>-->
               </div>
               <p class="gcb-video-container">
                 <!-- TODO: Fix link to video -->
                 <!-- FIXME: Add correct link/embed video player for Camtasia -->
-                <iframe class="tscplayer_inline" name="tsc_player" src="../../videos/MobileTestVideo/MobileTestVideo_player.html" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe class="tscplayer_inline" name="tsc_player" src="$VIDEO_LINK/$LESSON_VIDEO_LINK" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<!--                <iframe class="tscplayer_inline" name="tsc_player" src="../../videos/MobileTestVideo/MobileTestVideo_player.html" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
               </p>
               <div class="gcb-lesson-content">
                 <ul>

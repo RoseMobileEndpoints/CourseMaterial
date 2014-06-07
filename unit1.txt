@@ -5,7 +5,7 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1YUc3sQH5oQYxUjlp9pia70SN
 
 
 LESSON TITLE: New Android Project
-LESSON VIDEO: watch?v=dNx1jl09Kjw&list=PLZOSMuDCDS7lRQ8vSF5-9aesFmXIfcqg5
+LESSON VIDEO: NewAndroidProject/NewAndroidProject_player.html
 CONTENT ABOVE
 Some content <b>here!</b>
 CONTENT BELOW
