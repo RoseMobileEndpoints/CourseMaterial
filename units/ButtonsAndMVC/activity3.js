@@ -30,38 +30,57 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-    '<b>1.</b> What is the main reason we place our strings in the strings.xml values file?<br>',
-    {
+    '<b>1.</b> How do you refer to a string in code?<br>',
+	{
 		questionType : 'multiple choice',
 		choices : [
-				['We like doing more work', false, 'No, although that may be true for you.' ],
-				['Android complains if we use hardcoded strings', false, 'No. Not the main reason, although that is true.' ],
-				['It makes it easier to maintain the strings', true, 'Correct. Especially if we want to do localization (swap languages) later.' ]
+				['getResources.getColor(R.color.somename)', false, 'No.' ],
+				['getString(R.string.somename)', true, 'Correct.' ],
+				['findViewById(R.id.somename)', false, 'No.' ]
 				]	
 	},
 
     '<br><br>',
-    '<b>2.</b> What is true of the format of colors in colors.xml? (Choose all that apply.)',
+    '<b>2.</b> How do you refer to a color in code?<br>',
 	{
-		questionType : 'multiple choice group',
-		questionsList : [
-				{
-					questionHTML : '',
-					choices : [ 'RGB can each be 1 digit', 'RGB can each be 2 digits', 'Alpha (transparency) is optional', 'They must start with #', 'They can use decimal instead of hex' ],
-					correctIndex : [0,1,2,3]
-				}
-				],
-		allCorrectOutput : 'Well done!',
-		someIncorrectOutput : 'Please try again. Hint: look back at the slides.',
+		questionType : 'multiple choice',
+		choices : [
+				['getResources.getColor(R.color.somename)', true, 'Correct.' ],
+				['getString(R.string.somename)', false, 'No.' ],
+				['findViewById(R.id.somename)', false, 'No.' ]
+				]	
 	},
 
     '<br><br>',
-    '<b>3.</b> If you want a view to stretch across the screen, what value should you use for android:layout_width?<br>',
-    {
+    '<b>3.</b> How do you refer to a view in code?<br>',
+	{
 		questionType : 'multiple choice',
 		choices : [
-				['matchParent', true, 'Correct.' ],
-				['fillParent', false, 'No, that is what it used to be called. (It will work fine if you use it, so you still get full credit.)' ],
-				['wrap content', false, 'No, that will only be as large as the text within it.' ]]
-	}	
+				['getResources.getColor(R.color.somename)', false, 'No.' ],
+				['getString(R.string.somename)', false, 'No.' ],
+				['findViewById(R.id.somename)', true, 'Correct.' ]
+				]	
+	},
+
+    '<br><br>',
+    '<b>4.</b> You use findViewById to get a Button. However, that method returns a View, so what else do you need to do to assign it to a Button? <br>',
+	{
+		questionType : 'multiple choice',
+		choices : [
+				['Nothing, just assign to a Button', false, 'No. They are different types.' ],
+				['Pass the View returned by findViewById to the Button constructor', false, 'No.' ],
+				['Cast it', true, 'Correct. For example, Button b = (Button)findViewById(R.id.someid);' ]]
+	},
+    
+    '<br><br>',
+    '<b>5.</b> What method is used to add a listener to a Button?<br>',
+	{
+		questionType : 'multiple choice',
+		choices : [
+				['addListener()', false, 'No, but right idea. What kind of listener? There are several.' ],
+				['addActionListener()', false, 'No, that is from the Swing library in Java.' ],
+				['setOnClickListener().', true, 'Correct.' ]]
+	}
+	
 ];
+

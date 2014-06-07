@@ -30,38 +30,45 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-    '<b>1.</b> What is the main reason we place our strings in the strings.xml values file?<br>',
-    {
+    '<b>1.</b> Consider the model-view-controller (MVC) design pattern. By using xml layouts, you are separating which two?<br>',
+	{
 		questionType : 'multiple choice',
 		choices : [
-				['We like doing more work', false, 'No, although that may be true for you.' ],
-				['Android complains if we use hardcoded strings', false, 'No. Not the main reason, although that is true.' ],
-				['It makes it easier to maintain the strings', true, 'Correct. Especially if we want to do localization (swap languages) later.' ]
+				['M&V', false, 'No. The xml is the view, but it is our responsibility to separate out the model from the controller if needed.' ],
+				['M&C', false, 'No. That is our job.' ],
+				['V&C', true, 'Correct.' ]
 				]	
 	},
 
     '<br><br>',
-    '<b>2.</b> What is true of the format of colors in colors.xml? (Choose all that apply.)',
+    '<b>2.</b> Which two tend to get put together in simple apps?<br>',
 	{
-		questionType : 'multiple choice group',
-		questionsList : [
-				{
-					questionHTML : '',
-					choices : [ 'RGB can each be 1 digit', 'RGB can each be 2 digits', 'Alpha (transparency) is optional', 'They must start with #', 'They can use decimal instead of hex' ],
-					correctIndex : [0,1,2,3]
-				}
-				],
-		allCorrectOutput : 'Well done!',
-		someIncorrectOutput : 'Please try again. Hint: look back at the slides.',
+		questionType : 'multiple choice',
+		choices : [
+				['M&V', false, 'No. The view is separated by using xml layouts.' ],
+				['M&C', true, 'Correct. Consider HelloButton: the only thing that would go in the model is the click counter.'],
+				['V&C', false, 'No. These are separated by using xml layouts.' ]
+				]	
 	},
 
     '<br><br>',
-    '<b>3.</b> If you want a view to stretch across the screen, what value should you use for android:layout_width?<br>',
-    {
+    '<b>3.</b> Which model method should you call to get the game state string?<br>',
+	{
 		questionType : 'multiple choice',
 		choices : [
-				['matchParent', true, 'Correct.' ],
-				['fillParent', false, 'No, that is what it used to be called. (It will work fine if you use it, so you still get full credit.)' ],
-				['wrap content', false, 'No, that will only be as large as the text within it.' ]]
+				['stringForGameState()', true, 'Correct.' ],
+				['ticTacToeState()', false, 'No. Look back at the given code.' ],
+				['getGameStateString()', false, 'No, although that sounds reasonable. Look back at the given code.' ]]
+	},
+	
+    '<br><br>',
+    '<b>4.</b> Which model method should you call when a button is pressed?<br>',
+	{
+		questionType : 'multiple choice',
+		choices : [
+				['setOnClickListener()', false, 'No. Later we will use that to listen to button clicks.' ],
+				['buttonPressedForModel()', false, 'No. Good guess. But do not guess. Look at the code.' ],
+				['pressedButtonALocation()', true, 'Correct.']]
 	}	
 ];
+

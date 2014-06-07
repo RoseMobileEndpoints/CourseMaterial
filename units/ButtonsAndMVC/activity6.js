@@ -29,39 +29,41 @@
 //    asks for help. For more information on how to specify the object, please
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
+
+
+
+
 var activity = [
-    '<b>1.</b> What is the main reason we place our strings in the strings.xml values file?<br>',
-    {
+    '<b>1.</b> To make it easier later on to distinguish which button was pressed, how do we store the 9 buttons in code?<br>',
+	{
 		questionType : 'multiple choice',
 		choices : [
-				['We like doing more work', false, 'No, although that may be true for you.' ],
-				['Android complains if we use hardcoded strings', false, 'No. Not the main reason, although that is true.' ],
-				['It makes it easier to maintain the strings', true, 'Correct. Especially if we want to do localization (swap languages) later.' ]
+				['as an array', false, 'No. That is possible, but you would need to convert from a (row,column) pair to an index.' ],
+				['as a 2d array', true, 'Correct. Tables work well as 2d arrays.' ],
+				['as 9 separate variables', false, 'No. That would work but is cumbersome.' ]
 				]	
 	},
 
     '<br><br>',
-    '<b>2.</b> What is true of the format of colors in colors.xml? (Choose all that apply.)',
+    '<b>2.</b> Which class responded to all the button clicks?<br>',
 	{
-		questionType : 'multiple choice group',
-		questionsList : [
-				{
-					questionHTML : '',
-					choices : [ 'RGB can each be 1 digit', 'RGB can each be 2 digits', 'Alpha (transparency) is optional', 'They must start with #', 'They can use decimal instead of hex' ],
-					correctIndex : [0,1,2,3]
-				}
-				],
-		allCorrectOutput : 'Well done!',
-		someIncorrectOutput : 'Please try again. Hint: look back at the slides.',
+		questionType : 'multiple choice',
+		choices : [
+				['Each button', false, 'No. You would need to override the Button class to do that, since Buttons are not OnClickListeners.' ],
+				['An anonymous listener for each button', false, 'No. That could work, but it is not what we did.'],
+				['MainActivity', true, 'Correct.' ]
+				]	
 	},
 
     '<br><br>',
-    '<b>3.</b> If you want a view to stretch across the screen, what value should you use for android:layout_width?<br>',
-    {
+    '<b>3.</b> Because of that choice, onClick must use getId() to distinguish between how many buttons?<br>',
+	{
 		questionType : 'multiple choice',
 		choices : [
-				['matchParent', true, 'Correct.' ],
-				['fillParent', false, 'No, that is what it used to be called. (It will work fine if you use it, so you still get full credit.)' ],
-				['wrap content', false, 'No, that will only be as large as the text within it.' ]]
-	}	
+				['1', false, 'No. That was only the new game button.' ],
+				['9', false, 'No. You forgot the new game button!' ],
+				['10', true, 'Correct. 9 tic tac toe buttons plus the new game button.' ]]
+	}
+	
 ];
+

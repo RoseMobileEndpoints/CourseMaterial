@@ -30,38 +30,49 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-    '<b>1.</b> What is the main reason we place our strings in the strings.xml values file?<br>',
-    {
+    '<b>1.</b> What value do we use for the stretchColumns property to cause all columns in the table to stretch?<br>',
+	{
 		questionType : 'multiple choice',
 		choices : [
-				['We like doing more work', false, 'No, although that may be true for you.' ],
-				['Android complains if we use hardcoded strings', false, 'No. Not the main reason, although that is true.' ],
-				['It makes it easier to maintain the strings', true, 'Correct. Especially if we want to do localization (swap languages) later.' ]
+				['*', true, 'Yes, that is a wildcard.' ],
+				['?', false, 'No. That is a wildcard character in some instances, but not here.' ],
+				['all', false, 'No.' ]
 				]	
 	},
 
     '<br><br>',
-    '<b>2.</b> What is true of the format of colors in colors.xml? (Choose all that apply.)',
+    '<b>2.</b> What color is Rose-Hulman red?<br>',
+	{
+		questionType : 'multiple choice',
+		choices : [
+				['FFFFFF', false,  'No. That is white'],
+				['#0939B5', false, 'No. Since the third hex pair has the largest numerical value, that would be blue - see colorpicker.com to see what shade if you are curious.'], 
+				['#B50939.', true, 'Yes. Good memory. Want a job in Communications?']]	
+	},
+
+    '<br><br>',
+    "<b>3.</b> What method would we use to align the bottom edge of a button with the bottom of the RelativeLayout it is part of? If you aren't sure, type it in the xml editor and read the documentation that pops up.<br>",
+	{
+		questionType : 'multiple choice',
+		choices : [
+				['android:layout_alignBaseline', false, 'No. But that is a valid xml property.' ],
+				['android:layout_alignBottom', false, 'No. That aligns the bottom of two sibling views.' ],
+				['android:layout_alignParentBottom', true, 'Correct. Since the layout contains the button, it is the parent of the button.' ]]
+	},
+	    
+ 	'<br><br>',
+    '<b>4.</b> To specify the position of view A relative to view B, what must be true? (Choose all that apply.)',
 	{
 		questionType : 'multiple choice group',
 		questionsList : [
 				{
 					questionHTML : '',
-					choices : [ 'RGB can each be 1 digit', 'RGB can each be 2 digits', 'Alpha (transparency) is optional', 'They must start with #', 'They can use decimal instead of hex' ],
-					correctIndex : [0,1,2,3]
+					choices : [ 'view A must have an ID', 'view B must have an ID', 'view A must be declared before view B in the xml', 'view B must be declared before view A in the xml'],
+					correctIndex : [1, 3]
 				}
 				],
 		allCorrectOutput : 'Well done!',
-		someIncorrectOutput : 'Please try again. Hint: look back at the slides.',
-	},
+		someIncorrectOutput : 'Please try again.',
+	}
+	];
 
-    '<br><br>',
-    '<b>3.</b> If you want a view to stretch across the screen, what value should you use for android:layout_width?<br>',
-    {
-		questionType : 'multiple choice',
-		choices : [
-				['matchParent', true, 'Correct.' ],
-				['fillParent', false, 'No, that is what it used to be called. (It will work fine if you use it, so you still get full credit.)' ],
-				['wrap content', false, 'No, that will only be as large as the text within it.' ]]
-	}	
-];
