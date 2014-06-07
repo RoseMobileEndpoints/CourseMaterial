@@ -31,10 +31,15 @@ public class Activity extends Task {
 		return "activity" + getNumber() + ".html";
 	}
 
+	public String getJavaScriptFileName() {
+		return "activity" + getNumber() + ".js";
+	}
+
 	@Override
 	public void generateFile(PrintWriter pw) {
 		String template = this.getUnit().getActivityTemplate();
 		template = template.replace("$ACTIVITY_TITLE", this.getTitle());
+		template = template.replace("$QUIZ_JAVA_SCRIPT_FILE", this.getJavaScriptFileName());
 		template = replaceNextAndPrevious(template);
 		pw.print(template);
 	}

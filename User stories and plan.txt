@@ -11,8 +11,8 @@ Creates activity files with title and correct js file.
 Creates lesson files each with its given video.
 Creates lesson files each with its content above and below.
 Creates lesson files each with the next/previous
-
 Creates activity files each with the next/previous
+
 Creates activity files all with the correct js file.
 
 Creates lesson files each with the full nav bar 
