@@ -30,11 +30,6 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-
-
-
-
-
     '<b>1.</b> What is the main reason we place our strings in the strings.xml values file?<br>',
     
 	{
@@ -47,9 +42,6 @@ var activity = [
 	},
 
     '<br><br>',
-
-Q2: Colors follow what format? RGB can each be 1 digit. Can be 2 digits, Can include transparency. Must start with #. Can use decimal instead of hex.
-
     '<b>3.</b> What is true of the format of colors in colors.xml? (Choose all that apply.)<br>',
 	{
 		questionType : 'multiple choice group',
