@@ -31,42 +31,49 @@
 
 var activity = [
 
-    '<b>1.</b> When creating a new project, I would like you to add what info to the name of each project?<br>',
+
+
+
+
+    '<b>1.</b> What is the main reason we place our strings in the strings.xml values file?<br>',
     
 	{
 		questionType : 'multiple choice',
 		choices : [
-				['Nothing', false, 'No, there was something.' ],
-				['Your name or initials', true, 'Yes, that will help me much while grading!' ],
-				['The name of the CEO of Google', false, 'Interesting, but seeing the name Larry Page on your app is not helpful to me.' ]
+				['We like doing more work', false, 'No, although that may be true for you.' ],
+				['Android complains if we use hardcoded strings', false, 'No. Not the main reason, although that is true' ],
+				['It makes it easier to maintain the strings', true, 'Correct. Especially if we can to do localization (swap languages) later.' ]
 				]	
 	},
 
     '<br><br>',
-    '<b>2.</b> What naming convention is used for packages?<br>',
-    
-	{
-		questionType : 'multiple choice',
-		choices : [
-				['Always use just your initials', false, 'Nope. That was for the last question.' ],
-				['use findViewById', false, 'No, but we will learn about that in an upcoming video!' ],
-				['reverse URL', true, 'Exactly. Please use something like edu.rosehulman.yourusername.theappname' ]]
-	},
-	
-    '<br><br>',
 
-    '<b>3.</b> Choose all that apply.<br>',
+Q2: Colors follow what format? RGB can each be 1 digit. Can be 2 digits, Can include transparency. Must start with #. Can use decimal instead of hex.
+
+    '<b>3.</b> What is true of the format of colors in colors.xml? (Choose all that apply.)<br>',
 	{
 		questionType : 'multiple choice group',
 		questionsList : [
 				{
-					questionHTML : '<b>a.</b> What can you find in the AndroidManifest.xml file? ',
-					choices : [ 'The package name', 'The Activity that will be launched', 'What versions of Android your app supports' ],
-					correctIndex : [0,1,2]
+					questionHTML : '',
+					choices : [ 'RGB can each be 1 digit', 'RGB can each be 2 digits', 'Alpha (transparency) is optional', 'They must start with #', 'They can use decimal instead of hex' ],
+					correctIndex : [0,1,2,3]
 				}
 				],
 		allCorrectOutput : 'Well done!',
-		someIncorrectOutput : 'Please try again. Hint: look back at that file for each of these.',
+		someIncorrectOutput : 'Please try again. Hint: look back at the slides.',
+	},
+
+    '<br><br>',
+    '<b>3.</b> If you want a view to stretch across the screen, what value should you use for android:layout_width?<br>',
+    
+	{
+		questionType : 'multiple choice',
+		choices : [
+				['matchParent', true, 'Correct.' ],
+				['fillParent', false, 'No, that is not the current best practice although it will work fine.' ],
+				['wrap content', false, 'No, that will only be as large as the text within it.' ]]
 	}
+	
 ];
 

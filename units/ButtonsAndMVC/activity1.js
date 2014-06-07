@@ -55,12 +55,12 @@ var activity = [
 	
     '<br><br>',
 
-    '<b>3.</b> Choose all that apply.<br>',
+    '<b>3.</b> What can you find in the AndroidManifest.xml file? (Choose all that apply.)<br>',
 	{
 		questionType : 'multiple choice group',
 		questionsList : [
 				{
-					questionHTML : '<b>a.</b> What can you find in the AndroidManifest.xml file? ',
+					questionHTML : '',
 					choices : [ 'The package name', 'The Activity that will be launched', 'What versions of Android your app supports' ],
 					correctIndex : [0,1,2]
 				}
