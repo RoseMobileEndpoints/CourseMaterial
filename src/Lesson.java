@@ -96,7 +96,11 @@ public class Lesson extends Task {
 			// If lesson, replace $ACT_HOLDER (if there) with "", then add LH, $ACT_HOLDER, LE.
 			if (tasks.get(i) instanceof Lesson) {
 				navBarBody = navBarBody.replace("$ACTIVITY_HOLDER", ""); 
-				navBarBody += "            <li class=\"active\">\n";
+				navBarBody += "            <li"; 
+				if (this == tasks.get(i)) {
+					navBarBody += " class=\"active\""; 
+				}
+				navBarBody += ">\n";
 				navBarBody += "              <div class=\"gcb-lesson-title-with-progress\">\n";
 				navBarBody += "                <a href=\"" + tasks.get(i).getFileName() + "\">" + tasks.get(i).getTitle() + "</a>\n";
 				navBarBody += "              </div>\n";
@@ -106,7 +110,12 @@ public class Lesson extends Task {
 				navBarBody += "           </li>\n";
 			} else if (tasks.get(i) instanceof Activity) {
 				String activityBody = "";
-				activityBody += "                <li>\n";
+				activityBody += "                <li"; 
+				if (this == tasks.get(i)) {
+					activityBody += " class=\"active\""; 
+				}
+				activityBody += ">\n";
+				
 				activityBody += "                  <div class=\"gcb-activity-title-with-progress\">\n";
 				activityBody += "                    <a href=\"" + tasks.get(i).getFileName() + "\">Activity</a>\n";
 				activityBody += "                  </div>\n";
