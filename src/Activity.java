@@ -41,6 +41,7 @@ public class Activity extends Task {
 		template = template.replace("$ACTIVITY_TITLE", this.getTitle());
 		template = template.replace("$QUIZ_JAVA_SCRIPT_FILE", this.getJavaScriptFileName());
 		template = replaceNextAndPrevious(template);
+		template = replaceNavBar(template);
 		pw.print(template);
 	}
 }

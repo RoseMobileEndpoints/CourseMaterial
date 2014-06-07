@@ -15,5 +15,4 @@ Creates activity files each with the next/previous
 Creates activity files all with the correct js file.
 Creates lesson files each with the full nav bar 
 Nav bars have the active set properly.
-
 Creates activity files each with the full nav bar 
