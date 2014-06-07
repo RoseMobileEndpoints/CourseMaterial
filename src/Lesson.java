@@ -69,11 +69,12 @@ public class Lesson extends Task {
 	
 	@Override
 	public void generateFile(PrintWriter pw) {
-		// TODO Auto-generated method stub.
-		Unit unit = this.getUnit();
+		String template = this.getUnit().getLessonTemplate();
+		template = template.replace("$LESSON_TITLE", this.getTitle());
+		// $LESSON_CONTENT_ABOVE
+
 		
-		
-		
+		pw.print(template);
 	}
 	
 }

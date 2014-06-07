@@ -1,3 +1,5 @@
+import java.io.PrintWriter;
+
 
 /**
  * An activity.
@@ -29,5 +31,11 @@ public class Activity extends Task {
 		return "activity" + getNumber() + ".html";
 	}
 
-	
+	@Override
+	public void generateFile(PrintWriter pw) {
+		String template = this.getUnit().getActivityTemplate();
+		template = template.replace("$ACTIVITY_TITLE", this.getTitle());
+		pw.print(template);
+	}
+
 }

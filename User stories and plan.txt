@@ -1,8 +1,14 @@
 User stories and plan
 
-- Reads in a lesson template and spit it back to another file called lesson.html.
-- Parses a unit file and spit info back 
-- Reads in a lesson template with variables and spit it out with random values swapped in.
-- Substitutes unit basic info into template.
-- Creates files in specified output directory
-
+Reads in a lesson template and spit it back to another file called lesson.html.
+Parses a unit file and spit info back 
+Reads in a lesson template with variables and spit it out with random values swapped in.
+Substitutes unit basic info into template.
+Creates files in specified output directory
+Creates lesson files each with its given title embedded.
+Creates lesson files each with its given video.
+Creates lesson files each with its content above and below.
+Creates activity files with title and correct js file.
+Creates lesson files each with the next/previous
+Creates lesson files each with the full nav bar 
+Nav bars have the active set properly.

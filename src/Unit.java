@@ -8,15 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
 /**
  * A unit of material. Contains tasks (lessons and activities).
  * 
  * @author Matt Boutell. Created Jun 6, 2014.
  */
 public class Unit {
-	private String lessonTemplateName = "lessonTemplate.html";
-	private String activityTemplateName = "activityTemplate.html";
 	private String unitContents;
 	private String lessonTemplate;
 	private String activityTemplate;
@@ -36,13 +33,16 @@ public class Unit {
 	 * @throws FileNotFoundException
 	 */
 	public Unit(String unitName) throws FileNotFoundException {
-
+		String lessonTemplateName = Paths.get("templates/lessonTemplate.html")
+				.toString();
+		String activityTemplateName = Paths.get(
+				"templates/activityTemplate.html").toString();
 		lessonTemplate = fileContentsFromName(lessonTemplateName);
 		activityTemplate = fileContentsFromName(activityTemplateName);
 
 		tasks = new ArrayList<Task>();
 		parse(unitName);
-		replaceVariables();
+		replaceUnitVariables();
 	}
 
 	private void parse(String unitName) throws FileNotFoundException {
@@ -143,67 +143,53 @@ public class Unit {
 		return sb.toString();
 	}
 
-	/**
-	 * TODO Put here a description of what this method does.
-	 * 
-	 */
-	private void replaceVariables() {
+	// These pertain to the whole unit and affect each lesson in the same way.
+	private void replaceUnitVariables() {
 		lessonTemplate = lessonTemplate.replace("$UNIT_TITLE", this.title);
 		lessonTemplate = lessonTemplate.replace("$SLIDE_LINK", this.slideLink);
 		lessonTemplate = lessonTemplate.replace("$VIDEO_LINK", this.videoLink);
-		
 
-		
-		
-		// TODO: Use output folder
-		// Need to loop over lessons and activities.
-        // $LESSON_CONTENT_ABOVE
-        
-		
-		
+		activityTemplate = activityTemplate.replace("$UNIT_TITLE", this.title);
+		activityTemplate = activityTemplate.replace("$SLIDE_LINK", this.slideLink);
 	}
 
 	private void createOutputDirectory() throws IOException {
-		
+
 		Path p1 = Paths.get(this.outputLink);
 		System.out.println(p1.toString());
 		File outputDirectory = new File(p1.toString());
-		
+
 		if (outputDirectory.exists())
 			return;
-//		if (!outputDirectory.isDirectory()) {
-//			throw new IOException("Specified output location: "
-//					+ outputDirectory + " exists but is not a directory.");
-//		}
 		if (!outputDirectory.mkdirs()) {
 			throw new IOException("Unable to create output directory "
 					+ outputDirectory);
 		}
 	}
 
-	
 	/**
 	 * Generates all the html files (lesson and activity) for this unit.
-	 * @throws IOException 
+	 * 
+	 * @throws IOException
 	 * 
 	 */
 	public void generateFiles() throws IOException {
 
 		System.out.println(this.toString());
 		createOutputDirectory();
-		
-		
+
 		for (int i = 0; i < tasks.size(); i++) {
 			Task task = tasks.get(i);
-			
+
 			String name = task.getFileName();
-			String fullName = Paths.get(this.outputLink + "/" + name).toString();
-			
+			String fullName = Paths.get(this.outputLink + "/" + name)
+					.toString();
+
 			PrintWriter pw = new PrintWriter(new File(fullName));
 			task.generateFile(pw);
 			pw.close();
 		}
-		
+
 	}
 
 	@Override
@@ -217,6 +203,14 @@ public class Unit {
 			sb.append(task.toString());
 		}
 		return sb.toString();
+	}
+
+	public String getLessonTemplate() {
+		return lessonTemplate;
+	}
+
+	public String getActivityTemplate() {
+		return activityTemplate;
 	}
 
 }
