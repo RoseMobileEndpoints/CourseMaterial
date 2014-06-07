@@ -72,11 +72,8 @@ public class Lesson extends Task {
 		String template = this.getUnit().getLessonTemplate();
 		template = template.replace("$LESSON_TITLE", this.getTitle());
 		template = template.replace("$LESSON_VIDEO_LINK", this.videoLink);
-		
-		
-		
-		// $LESSON_CONTENT_ABOVE
-
+		template = template.replace("$LESSON_CONTENT_ABOVE", this.contentAbove);
+		template = template.replace("$LESSON_CONTENT_BELOW", this.contentBelow);
 		
 		pw.print(template);
 	}
