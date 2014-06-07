@@ -71,6 +71,10 @@ public class Lesson extends Task {
 	public void generateFile(PrintWriter pw) {
 		String template = this.getUnit().getLessonTemplate();
 		template = template.replace("$LESSON_TITLE", this.getTitle());
+		template = template.replace("$LESSON_VIDEO_LINK", this.videoLink);
+		
+		
+		
 		// $LESSON_CONTENT_ABOVE
 
 		
