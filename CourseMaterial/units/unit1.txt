@@ -1,7 +1,8 @@
 UNIT TITLE: Buttons and MVC
 LINK TO OUTPUT: CourseMaterial/units/ButtonsAndMVC
+// Use first for production, second for testing
+//LINK TO VIDEOS: ../../videos/    
 LINK TO VIDEOS: ../../../../CourseMaterial/videos/    
-// TODO: change to ../../videos.
 LINK TO SLIDES: https://docs.google.com/presentation/d/1YUc3sQH5oQYxUjlp9pia70SNpeLtQvBaVzPqkYO28c0/edit#slide=id.g349a12dcf_0243
 
 
@@ -9,7 +10,9 @@ LESSON TITLE: New Android Project
 LESSON VIDEO: NewAndroidProject/NewAndroidProject_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll learn about what files are created in a Hello World project.</li>
+<li>In this lesson, you'll learn about the files that are created in a vanilla Hello World project. 
+You will also be introduced to 3 apps that we will write in this unit: 
+Hello Button, Tic Tac Toe (both together in the videos), and LightsOut (the lab)</li>
 </ul>
 CONTENT BELOW
 END
@@ -83,7 +86,7 @@ CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1B1bTD2u_JuVOUXUOPO8p6rn9dwmt1DWzminoy3PtqbY/edit">here</a>.</li>
 <li>When done, be sure to submit your zipped Eclipse projects (MyFirstApp and LightsOut), plus video demos, to the Moodle dropbox.</li>
-<li>Then go complete the Moodle survey before calling it a day.</li>
+<li>Then go complete the Moodle "Unit 1: Buttons and MVC self-evaluation" survey before calling it a day.</li>
 </ul>
 CONTENT BELOW
 END

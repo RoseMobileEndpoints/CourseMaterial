@@ -32,8 +32,8 @@ public class Unit {
 	 * @param lessonTemplateName
 	 * @throws FileNotFoundException
 	 */
-	public Unit(String unitName) throws FileNotFoundException {
-		String dir = "CourseMaterial/units/templates/";
+	public Unit(String unitName, String dir) throws FileNotFoundException {
+		//dir = "CourseMaterial/units/templates/";
 		String ltName = Paths.get(dir + "lessonTemplate.html").toString();
 		lessonTemplate = fileContentsFromName(ltName);
 

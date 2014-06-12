@@ -1,0 +1,61 @@
+UNIT TITLE: Menus
+LINK TO OUTPUT: CourseMaterial/units/Menus
+// Use first for production, second for testing
+//LINK TO VIDEOS: ../../videos/    
+LINK TO VIDEOS: ../../../../CourseMaterial/videos/    
+LINK TO SLIDES: https://docs.google.com/presentation/d/1JDbkQDuvbg34lXzdRsqH2aMvUekXeY_OPyKbnuGwgeg
+
+LESSON TITLE: Activities
+LESSON VIDEO: ActivitiesAndIntents/ActivitiesAndIntents_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn about apps that have multiple screens (Activities). You'll also learn about mechanisms for communicating information between activities: Intent extras and Shared Preferences.</li>
+<li>You'll also see the app that you will write in this unit: Lights Out with Menu (LOM)</li>
+<li>Note that this unit is longer than the previous one (), so budget your time wisely.</li>
+<li>You are also ready for an exam</li>
+
+</ul>
+CONTENT BELOW
+END
+
+// Lessons here
+
+
+LESSON TITLE: Lab: Passing Data in Intents
+LESSON VIDEO: LabPassingDataInIntents/LabGettingStartedWithButtons_player.html
+CONTENT ABOVE
+<ul>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1nsif5GdeFADpqMkK2m-E2a3L-ajOM0teIPQfBZKRvDE">here</a>.</li>
+<li>When done, be sure to submit your zipped Eclipse project (BasketballJersey), plus video demo, to the Moodle dropbox.</li>
+<li>Then go complete the Moodle "Unit 2: Intents and Activities self-evaluation" survey before calling it a day.</li>
+</ul>
+CONTENT BELOW
+END
+
+LESSON TITLE: 
+LESSON VIDEO: /_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li></li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ .
+ $#$ $#$ yes
+$#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
+
+
+

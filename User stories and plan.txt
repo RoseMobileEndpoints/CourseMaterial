@@ -16,3 +16,6 @@ Creates activity files all with the correct js file.
 Creates lesson files each with the full nav bar 
 Nav bars have the active set properly.
 Creates activity files each with the full nav bar 
+
+Generates quiz files
+Runs from a config file that further configures folders and files to use.
