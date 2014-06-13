@@ -26,7 +26,6 @@ Generates quiz .js files:
 	Can generate real questions of type MC
 	Can generate dummy questions of type MS
 	Can generate real questions of type MS
-
 	Writes to the properly-named js file.
 
 Next sprint:
