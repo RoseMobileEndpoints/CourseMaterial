@@ -25,6 +25,6 @@ var activity = [
 
 ];
 */	
-	
+// See https://code.google.com/p/course-builder/wiki/CreateActivities#Free_text
 	
 }
