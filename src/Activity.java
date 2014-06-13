@@ -70,12 +70,11 @@ public class Activity extends Task {
 		PrintWriter pw = new PrintWriter(new File(fullName));
 		String template = this.getUnit().getQuizTemplate();
 		pw.println(template);
-		pw.println(questions.size() + " questions");
 		pw.println("var activity = [");
 		for (int i = 0; i < questions.size(); i++) {
 			pw.print(questions.get(i).toString());
 			if (i < questions.size() - 1) {
-				pw.println("\t'<br><br>',");
+				pw.println("\t\"<br><br>\",");
 			}
 		}
 		
@@ -87,5 +86,6 @@ public class Activity extends Task {
 	
 	public void addQuestion(Question currentQuestion) {
 		questions.add(currentQuestion);
+		currentQuestion.setNumber(questions.size());
 	}
 }

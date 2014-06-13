@@ -29,11 +29,26 @@
 //    asks for help. For more information on how to specify the object, please
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
-2 questions
 var activity = [
-QUESTION:What is the main app you'll code in this unit?
-MULTIPLE_CHOICE
-	'<br><br>',
-QUESTION:What are some of the things you'll learn about in this unit?
-MULTIPLE_SELECT
+	"<b>1.</b> What is the main app you'll code in this unit?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+			["HelloButton ", false, "Try again.  That was last time." ],
+			["LightsOutMenu ", true, "Correct.  " ],
+			["TicTacToe ", false, "Try again.  That was last time." ],
+			["MovieQuotes ", false, "Try again.  We'll use that one to learn Endpoints later this term." ],
+		]
+	},
+	"<br><br>",
+	"<b>2.</b> What are some of the things you'll learn about in this unit?<br>",
+	{
+		questionType : "multiple choice group",
+		choices : [
+			["Building apps with multiple screens ", true, "Correct. null" ],
+			["radio buttons ", true, "Correct. null" ],
+			["geocoding ", false, "Try again. null" ],
+			["landscape layout ", true, "Correct. null" ],
+		]
+	},
 ];

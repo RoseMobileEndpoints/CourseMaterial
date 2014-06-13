@@ -5,10 +5,10 @@ var activity = [
 	{
 		questionType : 'multiple choice',
 		choices : [
-				['Nothing', true, 'No, there was something.' ],
+				['Nothing', true],
 				['Your name or initials', true, 'Yes, that will help me much while grading!' ],
-				['The name of the CEO of Google', false, 'Interesting, but seeing the name Larry Page on your app is not helpful to me.' ]
-				]	
+				['The name of the CEO of Google', false, 'Interesting, but seeing the name Larry Page on your app is not helpful to me.' ],
+				],	
 	},
 
     '<br><br>',
@@ -35,7 +35,7 @@ var activity = [
 				}
 				],
 		allCorrectOutput : 'Well done!',
-		someIncorrectOutput : 'Please try again. Hint: look back at that file for each of these.',
-	}
+		someIncorrectOutput : 'Please ignore the previous feedback line. Then try again.',
+	},
 ];
 

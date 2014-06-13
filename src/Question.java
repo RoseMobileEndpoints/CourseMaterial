@@ -16,16 +16,32 @@ public class Question {
 		MULTIPLE_SELECT,
 		FREE_RESPONSE
 	}
-
+	
 	private class QuestionChoice {
 		String value;
 		String feedback;
 		boolean isCorrect;
+		
+		@Override
+		public String toString() {
+			StringBuilder sb = new StringBuilder();
+			sb.append("[\"");
+			sb.append(value);
+			sb.append("\", ");
+			sb.append(isCorrect);
+			sb.append(", \"");
+			sb.append(isCorrect ? "Correct. " : "Try again. ");
+			sb.append(feedback);
+			sb.append("\" ],");
+			return sb.toString();
+			
+		}
 	}
 
 	private String prompt;
 	private QuestionType type;
 	ArrayList<QuestionChoice> choices;
+	private int number;
 
 	public Question(String prompt) {
 		this.prompt = prompt;
@@ -33,6 +49,10 @@ public class Question {
 		this.choices = new ArrayList<QuestionChoice>();
 	}
 
+	public void setNumber(int number) {
+		this.number = number;
+	}
+	
 	public void setType(String typeString) throws UnsupportedDataTypeException {
 		typeString = typeString.trim().toUpperCase();
 		if (typeString.equals("MC")) {
@@ -70,11 +90,53 @@ public class Question {
 	
 	@Override
 	public String toString() {
-		String s = "QUESTION:";
-		s += prompt + "\n";
-		s += type.toString() + "\n";
-		return s;
+		StringBuilder sb = new StringBuilder();
+		sb.append("\t\"<b>" + number + ".</b> ");
+		sb.append(prompt);
+		sb.append("<br>\",\n");
+		sb.append("\t{\n");
+		sb.append("\t\tquestionType : \"");
+		switch (type) {
+		case MULTIPLE_CHOICE:
+			sb.append("multiple choice");
+			break;
+		case MULTIPLE_SELECT:
+			sb.append("multiple choice group");
+			break;
+		case FREE_RESPONSE:
+			sb.append("FREE RESPONSE CHANGE ME!");
+			break;
+			
+		}
+		sb.append("\",\n");
+		sb.append("\t\tchoices : [\n");
+		
+		for (QuestionChoice choice : choices) {
+			sb.append("\t\t\t" + choice.toString() + "\n");
+		}
+		
+		sb.append("\t\t]\n");
+		
+		
+		
+		sb.append("\t},\n");
+		return sb.toString();
 	}
+
+	
+/*
+    '<b>1.</b> Q text<br>',
+    
+	{
+		questionType : 'multiple choice',
+		choices : [
+				['Nothing', true],
+				['Your name or initials', true, 'Yes, that will help me much while grading!' ],
+				['The name of the CEO of Google', false, 'Interesting, but seeing the name Larry Page on your app is not helpful to me.' ]
+				]	
+	},
+ */
+	
 	
 	
 }
