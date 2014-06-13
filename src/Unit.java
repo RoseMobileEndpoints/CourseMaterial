@@ -69,7 +69,8 @@ public class Unit {
 		int nLessonsRead = 0;
 		Task currentTask = null;
 		Question currentQuestion = null;
-
+		String currentQuestionPrompt = null;
+		
 		int lineCount = 0;
 		while (sc.hasNextLine()) {
 			String line = sc.nextLine();
@@ -138,11 +139,12 @@ public class Unit {
 				if (currentQuestion != null) {
 					((Activity)currentTask).addQuestion(currentQuestion);
 				}
-				currentQuestion = new Question(remainder);
+				currentQuestionPrompt = remainder;
 				break;
 			case 11:
 				// Quiz type. 
-				currentQuestion.setType(remainder);
+				currentQuestion = Question.makeQuestion(remainder);
+				currentQuestion.setPrompt(currentQuestionPrompt);
 				break;
 				
 			default:

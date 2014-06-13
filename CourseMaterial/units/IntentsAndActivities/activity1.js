@@ -45,10 +45,6 @@ var activity = [
 	{
 		questionType : "multiple choice group",
 		choices : [
-			["Building apps with multiple screens ", true, "Correct. null" ],
-			["radio buttons ", true, "Correct. null" ],
-			["geocoding ", false, "Try again. null" ],
-			["landscape layout ", true, "Correct. null" ],
 		]
 	},
 ];

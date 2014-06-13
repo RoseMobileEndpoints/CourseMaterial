@@ -1,27 +1,18 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import javax.activation.UnsupportedDataTypeException;
 
-
 /**
  * An individual question in a quiz.
- *
- * @author Matt Boutell.
- *         Created Jun 13, 2014.
+ * 
+ * @author Matt Boutell. Created Jun 13, 2014.
  */
-public class Question {
-	enum QuestionType {
-		MULTIPLE_CHOICE,
-		MULTIPLE_SELECT,
-		FREE_RESPONSE
-	}
-	
-	private class QuestionChoice {
+public abstract class Question {
+	class QuestionChoice {
 		String value;
 		String feedback;
 		boolean isCorrect;
-		
+
 		@Override
 		public String toString() {
 			StringBuilder sb = new StringBuilder();
@@ -34,109 +25,58 @@ public class Question {
 			sb.append(feedback);
 			sb.append("\" ],");
 			return sb.toString();
-			
+
 		}
 	}
 
 	private String prompt;
-	private QuestionType type;
 	ArrayList<QuestionChoice> choices;
 	private int number;
 
-	public Question(String prompt) {
-		this.prompt = prompt;
-		this.type = QuestionType.MULTIPLE_CHOICE; // default
+	public Question() {
 		this.choices = new ArrayList<QuestionChoice>();
+	}
+
+	protected String getPrompt() {
+		return this.prompt;
+	}
+
+	public void setPrompt(String prompt) {
+		this.prompt = prompt;
+	}
+
+	protected ArrayList<QuestionChoice> getChoices() {
+		return this.choices;
+	}
+
+	protected void setChoices(ArrayList<QuestionChoice> choices) {
+		this.choices = choices;
+	}
+
+	protected int getNumber() {
+		return this.number;
 	}
 
 	public void setNumber(int number) {
 		this.number = number;
 	}
+
+	public abstract void addQuestionChoice(String line); 
 	
-	public void setType(String typeString) throws UnsupportedDataTypeException {
+	// Factory method
+	public static Question makeQuestion(String typeString)
+			throws UnsupportedDataTypeException {
 		typeString = typeString.trim().toUpperCase();
 		if (typeString.equals("MC")) {
-			type = QuestionType.MULTIPLE_CHOICE;
+			return new MultipleChoiceQuestion();
 		} else if (typeString.equals("MS")) {
-			type = QuestionType.MULTIPLE_SELECT;
+			return new MultipleSelectQuestion();
 		} else if (typeString.startsWith("FREE")) {
-			type = QuestionType.MULTIPLE_CHOICE;
+			return null;
 		} else {
-			throw new UnsupportedDataTypeException("Cannot understand question type " + typeString);
+			throw new UnsupportedDataTypeException(
+					"Cannot understand question type " + typeString);
 		}
 	}
 
-	public void addQuestionChoice(String line) {
-		line = line.trim();
-		if (line.length() == 0) {
-			return;
-		}
-		String NON_PRINTABLE = Character.toString((char)0xAB00); 
-		line = line.replace("$#$", NON_PRINTABLE); // A non-printable ethiopic character, not likely to be used by a user of this program.
-		String[] tokens = line.split(NON_PRINTABLE);
-		System.out.println(Arrays.toString(tokens));
-		QuestionChoice choice = new QuestionChoice(); 
-		if (this.type == QuestionType.MULTIPLE_CHOICE) {
-			choice.value = tokens[0];
-			choice.feedback = tokens[1];
-			choice.isCorrect = (tokens.length > 2);
-			choices.add(choice);
-		} else if (this.type == QuestionType.MULTIPLE_SELECT) {
-			choice.value = tokens[0];
-			choice.isCorrect = (tokens.length > 1);
-			choices.add(choice);
-		}
-	}
-	
-	@Override
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("\t\"<b>" + number + ".</b> ");
-		sb.append(prompt);
-		sb.append("<br>\",\n");
-		sb.append("\t{\n");
-		sb.append("\t\tquestionType : \"");
-		switch (type) {
-		case MULTIPLE_CHOICE:
-			sb.append("multiple choice");
-			break;
-		case MULTIPLE_SELECT:
-			sb.append("multiple choice group");
-			break;
-		case FREE_RESPONSE:
-			sb.append("FREE RESPONSE CHANGE ME!");
-			break;
-			
-		}
-		sb.append("\",\n");
-		sb.append("\t\tchoices : [\n");
-		
-		for (QuestionChoice choice : choices) {
-			sb.append("\t\t\t" + choice.toString() + "\n");
-		}
-		
-		sb.append("\t\t]\n");
-		
-		
-		
-		sb.append("\t},\n");
-		return sb.toString();
-	}
-
-	
-/*
-    '<b>1.</b> Q text<br>',
-    
-	{
-		questionType : 'multiple choice',
-		choices : [
-				['Nothing', true],
-				['Your name or initials', true, 'Yes, that will help me much while grading!' ],
-				['The name of the CEO of Google', false, 'Interesting, but seeing the name Larry Page on your app is not helpful to me.' ]
-				]	
-	},
- */
-	
-	
-	
 }
