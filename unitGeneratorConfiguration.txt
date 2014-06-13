@@ -1,2 +1,2 @@
-CourseMaterial/units/unit2.txt
+CourseMaterial/units/unit2small.txt
 CourseMaterial/units/templates/

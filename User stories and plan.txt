@@ -16,6 +16,15 @@ Creates activity files all with the correct js file.
 Creates lesson files each with the full nav bar 
 Nav bars have the active set properly.
 Creates activity files each with the full nav bar 
+Generates quiz .js files:
+	Can read in quiz sections
 
-Generates quiz files
+	Can generate dummy questions of type MC
+	Can generate real questions of type MC
+	Can generate dummy questions of type MS
+	Can generate real questions of type MS
+	Can generate dummy questions of type free
+	Can generate real questions of type free
+	Writes to the properly-named js file.
+	
 Runs from a config file that further configures folders and files to use.

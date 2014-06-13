@@ -1,0 +1,78 @@
+UNIT TITLE: Intents and Activities
+LINK TO OUTPUT: CourseMaterial/units/IntentsAndActivities
+// Use first for production, second for testing
+//LINK TO VIDEOS: ../../videos/    
+LINK TO VIDEOS: ../../../../CourseMaterial/videos/    
+LINK TO SLIDES: https://docs.google.com/presentation/d/1JDbkQDuvbg34lXzdRsqH2aMvUekXeY_OPyKbnuGwgeg
+
+LESSON TITLE: Intents and Activities Unit
+LESSON VIDEO: IntentAndActivitiesUnit/IntentAndActivitiesUnit_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn about apps that have multiple screens (Activities). You'll also learn about mechanisms for communicating information between activities: Intent extras and Shared Preferences.</li>
+<li>You'll also see the app that you will write in this unit: Lights Out with Menu (LOM)</li>
+<li>This unit is longer than the previous one (longer lectures and two labs), so please budget your time wisely.</li>
+<li>You will also have an exam on basic interactive apps at the end of this unit.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What is the main app you'll code in this unit?
+TYPE: MC
+HelloButton $#$ That was last time.
+LightsOutMenu $#$ $#$ yes
+TicTacToe $#$ That was last time.
+MovieQuotes $#$ We'll use that one to learn Endpoints later this term.
+
+Q: What are some of the things you'll learn about in this unit?
+TYPE: MS
+Building apps with multiple screens $#$ yes 
+radio buttons $#$ yes
+geocoding $#$  
+landscape layout $#$ yes
+END
+
+LESSON TITLE: Lab: Layouts
+LESSON VIDEO: LabLayouts/LabLayouts_player.html
+CONTENT ABOVE
+<ul>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1bcVJLLxZc1rHWWhAJbrivBELdS6ykNixM3GJHv0IL3I">here</a>.</li>
+<li>For this mini-lab, please submit to Moodle, the answers to the questions, plus your video demos. In this lab, you will create several mini projects; you don't need to submit the code for these now, but I may ask for them at the end of the course. </li>
+</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: Main Menu (Review)
+LESSON VIDEO: MainMenu/MainMenu_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll review how to make a simple app from scratch.</li>
+<li>We'll start it together, and it will pause at about 5:00 for you to try it. The rest of the video is completely optional: it's there in case you get stuck. You might want to watch from 9:30 - 10:30 if you want a short description of how android uses padding in the layout.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+ACTIVITY TITLE: Questions
+Q: How many menu options does the Lights Out Menu app have?
+TYPE: MC
+1 $#$ Only one option would be boring!
+2 $#$ More than that.
+3 $#$ More than that.
+4 $#$ $#$ yes
+5 $#$ Not that many.
+
+Q: What type of layout does the main menu use?
+TYPE: MC
+RelativeLayout $#$ That would work, but it can be done more simply using another one.
+LinearLayout $#$ $#$ yes
+FrameLayout $#$ That would be painful since you'd have to position each button and text view using gravity.
+AbsoluteLayout $#$ $#$ That type of layout, in which positions are specified in pixels, is deprecated (scheduled to be phased out in a future release).
+END
+
+
+
+
+

@@ -24,6 +24,10 @@ public class Unit {
 	private String slideLink;
 	private List<Task> tasks;
 
+	
+	private static final int IN_UNIT = 0, IN_LESSON_CONTENT_ABOVE = 1, IN_LESSON_CONTENT_BELOW = 2, IN_ACTIVITY = 3;
+
+	
 	/**
 	 * Creates a unit from the given config file using default template files.
 	 * 
@@ -51,16 +55,17 @@ public class Unit {
 		String[] startingTokens = new String[] { "UNIT TITLE:",
 				"LINK TO OUTPUT:", "LINK TO VIDEOS:", "LINK TO SLIDES:",
 				"LESSON TITLE:", "LESSON VIDEO:", "CONTENT ABOVE",
-				"CONTENT BELOW", "END", "ACTIVITY TITLE:" };
+				"CONTENT BELOW", "END", "ACTIVITY TITLE:", "Q:", "TYPE:"};
 
-		int IN_UNIT = 0, IN_LESSON_CONTENT_ABOVE = 1, IN_LESSON_CONTENT_BELOW = 2, IN_ACTIVITY = 3;
 		int state = IN_UNIT;
 
 		int nLessonsRead = 0;
 		Task currentTask = null;
 
+		int lineCount = 0;
 		while (sc.hasNextLine()) {
 			String line = sc.nextLine();
+			lineCount++;
 			String remainder = "";
 			int tokenIdx = -1;
 			for (int i = 0; i < startingTokens.length; i++) {
@@ -85,6 +90,11 @@ public class Unit {
 				slideLink = remainder;
 				break;
 			case 4: // Lesson title
+				if (currentTask != null) {
+					System.out
+							.println("Didn't find a closing end statement. Adding a task");
+					tasks.add(currentTask);
+				}
 				nLessonsRead++;
 				currentTask = new Lesson(this, nLessonsRead);
 				currentTask.setTitle(remainder);
@@ -110,11 +120,25 @@ public class Unit {
 				currentTask.setTitle(remainder);
 				state = IN_ACTIVITY;
 				break;
+			case 10:
+				// Quiz text prompt
+				// TODO: Need to save the last question and start a new question.
+				
+				break;
+			case 11:
+				// Quiz type. TODO: save it.
+				
+				
+				break;
+				
 			default:
 				if (state == IN_LESSON_CONTENT_ABOVE) {
 					((Lesson) currentTask).appendContentAbove(line);
 				} else if (state == IN_LESSON_CONTENT_BELOW) {
 					((Lesson) currentTask).appendContentBelow(line);
+				} else if (state == IN_ACTIVITY) {
+					System.out.println("Read a question:" + line);
+					// TODO: save it. Parse it later (I think) when I generate the whole question.
 				} else {
 					System.out.println("Ignoring line: " + line);
 				}
