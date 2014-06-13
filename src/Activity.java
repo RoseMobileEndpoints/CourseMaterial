@@ -1,4 +1,5 @@
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 
 /**
@@ -8,6 +9,8 @@ import java.io.PrintWriter;
  *         Created Jun 6, 2014.
  */
 public class Activity extends Task {
+	private ArrayList<Question> questions;
+	
 	/**
 	 * Creates a lesson with the given unit and number.
 	 *
@@ -16,6 +19,7 @@ public class Activity extends Task {
 	 */
 	public Activity(Unit unit, int number) {
 		super(unit, number);
+		questions = new ArrayList<Question>();
 	}
 	
 	@Override
@@ -43,5 +47,9 @@ public class Activity extends Task {
 		template = replaceNextAndPrevious(template);
 		template = replaceNavBar(template);
 		pw.print(template);
+	}
+
+	public void addQuestion(Question currentQuestion) {
+		questions.add(currentQuestion);
 	}
 }

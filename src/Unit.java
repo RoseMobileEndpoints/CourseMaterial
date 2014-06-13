@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.activation.UnsupportedDataTypeException;
+
 /**
  * A unit of material. Contains tasks (lessons and activities).
  * 
@@ -32,11 +34,13 @@ public class Unit {
 	 * Creates a unit from the given config file using default template files.
 	 * 
 	 * @param unitName
+	 * @param dir 
 	 * 
 	 * @param lessonTemplateName
 	 * @throws FileNotFoundException
+	 * @throws UnsupportedDataTypeException 
 	 */
-	public Unit(String unitName, String dir) throws FileNotFoundException {
+	public Unit(String unitName, String dir) throws FileNotFoundException, UnsupportedDataTypeException {
 		//dir = "CourseMaterial/units/templates/";
 		String ltName = Paths.get(dir + "lessonTemplate.html").toString();
 		lessonTemplate = fileContentsFromName(ltName);
@@ -49,7 +53,7 @@ public class Unit {
 		replaceUnitVariables();
 	}
 
-	private void parse(String unitName) throws FileNotFoundException {
+	private void parse(String unitName) throws FileNotFoundException, UnsupportedDataTypeException {
 		unitContents = fileContentsFromName(unitName);
 		Scanner sc = new Scanner(unitContents);
 		String[] startingTokens = new String[] { "UNIT TITLE:",
@@ -61,6 +65,7 @@ public class Unit {
 
 		int nLessonsRead = 0;
 		Task currentTask = null;
+		Question currentQuestion = null;
 
 		int lineCount = 0;
 		while (sc.hasNextLine()) {
@@ -122,13 +127,15 @@ public class Unit {
 				break;
 			case 10:
 				// Quiz text prompt
-				// TODO: Need to save the last question and start a new question.
-				
+				// Save the last question if needed and start a new question.
+				if (currentQuestion != null) {
+					((Activity)currentTask).addQuestion(currentQuestion);
+				}
+				currentQuestion = new Question(remainder);
 				break;
 			case 11:
-				// Quiz type. TODO: save it.
-				
-				
+				// Quiz type. 
+				currentQuestion.setType(remainder);
 				break;
 				
 			default:
@@ -137,10 +144,11 @@ public class Unit {
 				} else if (state == IN_LESSON_CONTENT_BELOW) {
 					((Lesson) currentTask).appendContentBelow(line);
 				} else if (state == IN_ACTIVITY) {
-					System.out.println("Read a question:" + line);
+					System.out.println("Read a choice on line " + lineCount + ":" + line);
 					// TODO: save it. Parse it later (I think) when I generate the whole question.
+					currentQuestion.addQuestionChoice(line);
 				} else {
-					System.out.println("Ignoring line: " + line);
+					System.out.println("Ignoring line " + lineCount + ":" + line);
 				}
 				break;
 			}

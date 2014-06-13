@@ -71,8 +71,3 @@ LinearLayout $#$ $#$ yes
 FrameLayout $#$ That would be painful since you'd have to position each button and text view using gravity.
 AbsoluteLayout $#$ $#$ That type of layout, in which positions are specified in pixels, is deprecated (scheduled to be phased out in a future release).
 END
-
-
-
-
-
