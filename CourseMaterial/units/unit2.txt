@@ -24,9 +24,9 @@ LESSON TITLE: Intents and Activities Unit
 LESSON VIDEO: IntentAndActivitiesUnit/IntentAndActivitiesUnit_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll learn about apps that have multiple screens (Activities). You'll also learn about mechanisms for communicating information between activities: Intent extras and Shared Preferences.</li>
+<li>In this lesson, you'll learn about apps that have multiple screens (Activities). You'll also learn about mechanisms for communicating information between activities: Intent extras and SharedPreferences.</li>
 <li>You'll also see the app that you will write in this unit: Lights Out with Menu (LOM)</li>
-<li>This unit is longer than the previous one (longer lectures and two labs), so please budget your time wisely.</li>
+<li>This unit is longer than the previous one (lectures totalling 132 minutes, plus two labs), so please budget your time wisely.</li>
 <li>You will also have an exam on basic interactive apps at the end of this unit.</li>
 </ul>
 CONTENT BELOW
@@ -52,8 +52,8 @@ LESSON TITLE: Lab: Layouts
 LESSON VIDEO: LabLayouts/LabLayouts_player.html
 CONTENT ABOVE
 <ul>
-<li>The lab specification is <a href="https://docs.google.com/document/d/1bcVJLLxZc1rHWWhAJbrivBELdS6ykNixM3GJHv0IL3I">here</a>.</li>
-<li>For this mini-lab, please submit to Moodle, the answers to the questions, plus your video demos. In this lab, you will create several mini projects; you don't need to submit the code for these now, but I may ask for them at the end of the course. </li>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1bcVJLLxZc1rHWWhAJbrivBELdS6ykNixM3GJHv0IL3I" target="_blank">here</a>.</li>
+<li>For this mini-lab, please submit to Moodle: the answers to the questions plus your video demos. (You will create several mini projects; you don't need to submit the code for these now, but I may ask for them at the end of the course.)</li>
 </ul>
 CONTENT BELOW
 END
@@ -64,7 +64,7 @@ LESSON VIDEO: MainMenu/MainMenu_player.html
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll review how to make a simple app from scratch.</li>
-<li>We'll start it together, and it will pause at about 5:00 for you to try it. The rest of the video is completely optional: it's there in case you get stuck. You might want to watch from 9:30 - 10:30 if you want a short description of how android uses padding in the layout.</li>
+<li>We'll start it together, and it will pause at about 5:00 for you to try it. The rest of the video is completely optional: it's there in case you get stuck. You might want to watch from 9:30 - 10:30 if you want a short description of how Android uses padding in the layout.</li>
 </ul>
 CONTENT BELOW
 END
@@ -83,7 +83,7 @@ TYPE: MC
 RelativeLayout $#$ That would work, but it can be done more simply using another one.
 LinearLayout $#$ $#$ yes
 FrameLayout $#$ That would be painful since you'd have to position each button and text view using gravity.
-AbsoluteLayout $#$ $#$ That type of layout, in which positions are specified in pixels, is deprecated (scheduled to be phased out in a future release).
+AbsoluteLayout $#$ That type of layout, in which positions are specified in pixels, is deprecated (scheduled to be phased out in a future release).
 END
 
 LESSON TITLE: New Activities
@@ -110,7 +110,7 @@ onDie()
 Q: Which is the only thing that the new Activity wizard will NOT do for you?
 TYPE: MC
 Create a new class that extends Activity $#$ It does this.
-Create an intent for the Activity $#$ Plus, you need to call startActivity. It does all the others. $#$ yes
+Create an intent to launch the Activity $#$ Plus, you need to call startActivity. It does all the others. $#$ yes
 Create a new layout file for the new Activity $#$ It does this, although you still need to modify it.
 Register the Activity in the AndroidManifest $#$ It does this.
  
@@ -122,13 +122,13 @@ Theme.Toast $#$ That is for Toast messages, which you saw in an earlier lab.
 
 Q: How can you test an activity in isolation of the rest of the app? 
 TYPE: MC
-Move the intent filter with Main and Launcher to that activity. $#$ yes
-From that activity's java file, choose ctrl-F11 to run the app. $#$ No, that will still launch whichever activity is set as the main/launcher activity.
+Move the intent filter with the MAIN action and LAUNCHER category to that activity. $#$ $#$ yes
+From that activity's java file, choose ctrl-F11 to run the app. $#$ That will still launch whichever activity is set as the main/launcher activity.
 Create the activity in the Android Manifest $#$ Creating it isn't enough. You must do something else in the Manifest.
 
-Q: Which is NOT a parameters passed to the Intent constructor?
+Q: Which is NOT a parameter passed to the Intent constructor?
 TYPE: MC
-The layout of the activity to be launched $#$ The activity to be launched knows its own layout through setContentView(). $#$ yes
+The layout of the activity to be launched $#$ The activity to be launched specifies its own layout by calling setContentView(). $#$ yes
 The class of the activity to be launched $#$ This is the second parameter, for example, AboutActivity.class.
 The context $#$ This is the first parameter, for example, this. 
 END
@@ -153,7 +153,7 @@ It is good practice to put IDs on everything in a layout $#$ That may be the cas
 Q: What type of listener is used to respond to radio buttons?
 TYPE: MC
 onRadioClickListener $#$ That's too specific.
-onClickListener $#$ Just like any other button $#$ yes
+onClickListener $#$ Just like any other button. $#$ yes
 There is no such listener $#$ There is one. Hint: it's the same one as used for any other button.
 END
 
@@ -169,10 +169,10 @@ CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: What are Intent extras?
+Q: What is the format of an Intent extra?
 TYPE: MC
-Array elements $#$ 
-Key-value pairs $#$ $#$ yes
+An array element $#$ 
+A key-value pair $#$ $#$ yes
 
 Q: What method do we use to start an activity that we expect will pass back data?
 TYPE: MC
@@ -188,10 +188,10 @@ startActivityForReturn $#$
 onActivityResult $#$ $#$ yes
 onActivityReturn $#$
 
-Q: Note that there are two codes: a request code and a result code. 
+Q: Note that the callback uses two codes: a request code and a result code. 
 TYPE: MC
-Got it $#$ The calling activity sets the request code to flag which activity it is calling (REQUEST_CODE) and the result code sets the result code to RESULT_OK (if it finishes normally or RESULT_CANCELLED if the back button was pressed. $#$ yes
-Huh? $#$ The calling activity sets the request code to flag which activity it is calling (REQUEST_CODE) and the result code sets the result code to RESULT_OK (if it finishes normally or RESULT_CANCELLED if the back button was pressed. 
+Got it $#$ The calling activity sets the request code to flag which activity it is calling (REQUEST_CODE_someactivity) and the result code sets the result code to RESULT_OK if it finishes normally or RESULT_CANCELLED if the back button was pressed. $#$ yes
+Huh? $#$ The calling activity sets the request code to flag which activity it is calling (REQUEST_CODE_someactivity) and the result code sets the result code to RESULT_OK if it finishes normally or RESULT_CANCELLED if the back button was pressed. 
 END
 
 
@@ -199,7 +199,7 @@ LESSON TITLE: Lights Out Activity Part 1: Setup
 LESSON VIDEO: LightsOutActivitySetup/LightsOutActivitySetup_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll review intents and MVC by setting up the LightsOutActivity.</li>
+<li>In this lesson, you'll review MVC and launching activities using intents by setting up the LightsOutActivity.</li>
 </ul>
 CONTENT BELOW
 END
@@ -208,7 +208,7 @@ ACTIVITY TITLE: Questions
 Q: Which property is valid to use with TableLayouts?
 TYPE: MS
 StretchColumns $#$ yes
-ShrinkColumns $#$ 
+ShrinkColumns $#$ yes
 END
 
 
@@ -249,7 +249,7 @@ ACTIVITY TITLE: Questions
 Q: If you rotate the screen to landscape, what layout does it use by default?
 TYPE: MC
 The same one as it used in the default portrait mode $#$ $#$ yes
-It magically creates a better layout $#$ Unfortunately, that's not true.
+It magically creates a better layout $#$ Unfortunately, that's not true. You need to create a better one if you want it.
 
 Q: If you decide to create a new layout file for landscape mode, where do you put it?  
 TYPE: MC
@@ -262,7 +262,7 @@ LESSON TITLE: Shared Preferences
 LESSON VIDEO: SharedPreferences/SharedPreferences_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you’ll learn how to persist (store after the app stops running) simple data. This is needed to store the number of buttons, which would be lost during a screen rotation. We'll review the activity lifecycle and use a very simple solution, SharedPreferences.
+<li>In this lesson, you'll learn how to persist (store after the app stops running) simple data. This is needed to store the number of buttons chosen, which would be lost during a screen rotation. We'll review the activity lifecycle and use a very simple storage solution, SharedPreferences.
 </li>
 </ul>
 CONTENT BELOW
@@ -272,7 +272,7 @@ ACTIVITY TITLE: Questions
 Q: Why is an activity destroyed when the screen rotates?
 TYPE: MC
 Because the designers of Android purposed to make the system inefficient $#$ You know that's not the case.
-Because the layout is loaded in onCreate()  $#$ $#$ yes
+Because the layout is loaded in onCreate().  $#$ $#$ yes
 
 Q: What is the first method to be called when an activity is destroyed? 
 TYPE: MC
@@ -301,8 +301,8 @@ END
 ACTIVITY TITLE: Questions
 Q: Is it difficult from a programming standpoint to support an additional language in your app?  
 TYPE: MC
-Yes $#$ It may be tedious, and you would need skill in another language, but you just need a new strings.xml.
-No $#$ $#$ It may be tedious, and you would need skill in another language, but you just need a new strings.xml. $#$ yes
+Yes $#$ It may be tedious, but you just need a new strings.xml. (Easy if either you know the language or you find someone else who does.) 
+No $#$ It may be tedious, but you just need a new strings.xml. (Easy if either you know the language or you find someone else who does.) $#$ yes
 
 Q: Where do you change the language on your phone?
 TYPE: MC
@@ -314,7 +314,7 @@ LESSON TITLE: Lab: Passing Data in Intents
 LESSON VIDEO: LabBasketballJersey/LabBasketballJersey_player.html
 CONTENT ABOVE
 <ul>
-<li>The lab specification is <a href="https://docs.google.com/document/d/1nsif5GdeFADpqMkK2m-E2a3L-ajOM0teIPQfBZKRvDE">here</a>.</li>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1nsif5GdeFADpqMkK2m-E2a3L-ajOM0teIPQfBZKRvDE" target="_blank">here</a>.</li>
 <li>When done, be sure to submit your zipped Eclipse project (BasketballJersey), plus video demo, to the Moodle dropbox.</li>
 <li>Then go complete the Moodle "Unit 2: Intents and Activities self-evaluation" survey before calling it a day.</li>
 </ul>

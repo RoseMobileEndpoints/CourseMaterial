@@ -30,26 +30,23 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> How many menu options does the Lights Out Menu app have?<br>",
+	"<b>1.</b> Why do we need to give the radio group an ID when building the layout?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["1", false, "Try again. Only one option would be boring!" ],
-				["2", false, "Try again. More than that." ],
-				["3", false, "Try again. More than that." ],
-				["4", true, "Correct. " ],
-				["5", false, "Try again. Not that many." ],
+				["So that we can detect which button was pressed", false, "Try again. To do that, we'd give each radio button an ID." ],
+				["So that we can put the TextView above it in a RelativeLayout", true, "Correct. " ],
+				["It is good practice to put IDs on everything in a layout", false, "Try again. That may be the case, but it's not why we *need* it." ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> What type of layout does the main menu use?<br>",
+	"<b>2.</b> What type of listener is used to respond to radio buttons?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["RelativeLayout", false, "Try again. That would work, but it can be done more simply using another one." ],
-				["LinearLayout", true, "Correct. " ],
-				["FrameLayout", false, "Try again. That would be painful since you'd have to position each button and text view using gravity." ],
-				["AbsoluteLayout", false, "Try again. That type of layout, in which positions are specified in pixels, is deprecated (scheduled to be phased out in a future release)." ],
+				["onRadioClickListener", false, "Try again. That's too specific." ],
+				["onClickListener", true, "Correct. Just like any other button." ],
+				["There is no such listener", false, "Try again. There is one. Hint: it's the same one as used for any other button." ],
 		]
 	},
 ];

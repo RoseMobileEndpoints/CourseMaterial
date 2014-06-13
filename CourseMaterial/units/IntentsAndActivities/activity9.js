@@ -30,26 +30,22 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> How many menu options does the Lights Out Menu app have?<br>",
+	"<b>1.</b> If you rotate the screen to landscape, what layout does it use by default?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["1", false, "Try again. Only one option would be boring!" ],
-				["2", false, "Try again. More than that." ],
-				["3", false, "Try again. More than that." ],
-				["4", true, "Correct. " ],
-				["5", false, "Try again. Not that many." ],
+				["The same one as it used in the default portrait mode", true, "Correct. " ],
+				["It magically creates a better layout", false, "Try again. Unfortunately, that's not true. You need to create a better one if you want it." ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> What type of layout does the main menu use?<br>",
+	"<b>2.</b> If you decide to create a new layout file for landscape mode, where do you put it?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["RelativeLayout", false, "Try again. That would work, but it can be done more simply using another one." ],
-				["LinearLayout", true, "Correct. " ],
-				["FrameLayout", false, "Try again. That would be painful since you'd have to position each button and text view using gravity." ],
-				["AbsoluteLayout", false, "Try again. That type of layout, in which positions are specified in pixels, is deprecated (scheduled to be phased out in a future release)." ],
+				["res/layout", false, "Try again. That's where the default layout goes." ],
+				["res/layout_land", false, "Try again. It does need the hyphen, not an underscore." ],
+				["res/layout-land", true, "Correct. Exactly like this." ],
 		]
 	},
 ];

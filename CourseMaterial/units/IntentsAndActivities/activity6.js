@@ -30,26 +30,43 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> How many menu options does the Lights Out Menu app have?<br>",
+	"<b>1.</b> What is the format of an Intent extra?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["1", false, "Try again. Only one option would be boring!" ],
-				["2", false, "Try again. More than that." ],
-				["3", false, "Try again. More than that." ],
-				["4", true, "Correct. " ],
-				["5", false, "Try again. Not that many." ],
+				["An array element", false, "Try again. " ],
+				["A key-value pair", true, "Correct. " ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> What type of layout does the main menu use?<br>",
+	"<b>2.</b> What method do we use to start an activity that we expect will pass back data?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["RelativeLayout", false, "Try again. That would work, but it can be done more simply using another one." ],
-				["LinearLayout", true, "Correct. " ],
-				["FrameLayout", false, "Try again. That would be painful since you'd have to position each button and text view using gravity." ],
-				["AbsoluteLayout", false, "Try again. That type of layout, in which positions are specified in pixels, is deprecated (scheduled to be phased out in a future release)." ],
+				["startActivityForResult", true, "Correct. " ],
+				["startActivityForReturn", false, "Try again. " ],
+				["onActivityResult", false, "Try again. " ],
+				["onActivityReturn", false, "Try again. " ],
+		]
+	},
+	"<br><br>",
+	"<b>3.</b> What method is called when the activity that holds the return data has finished?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["startActivityForResult", false, "Try again. " ],
+				["startActivityForReturn", false, "Try again. " ],
+				["onActivityResult", true, "Correct. " ],
+				["onActivityReturn", false, "Try again. " ],
+		]
+	},
+	"<br><br>",
+	"<b>4.</b> Note that the callback uses two codes: a request code and a result code.<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["Got it", true, "Correct. The calling activity sets the request code to flag which activity it is calling (REQUEST_CODE_someactivity) and the result code sets the result code to RESULT_OK if it finishes normally or RESULT_CANCELLED if the back button was pressed." ],
+				["Huh?", false, "Try again. The calling activity sets the request code to flag which activity it is calling (REQUEST_CODE_someactivity) and the result code sets the result code to RESULT_OK if it finishes normally or RESULT_CANCELLED if the back button was pressed." ],
 		]
 	},
 ];

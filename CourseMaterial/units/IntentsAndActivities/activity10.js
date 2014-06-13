@@ -30,26 +30,37 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> How many menu options does the Lights Out Menu app have?<br>",
+	"<b>1.</b> Why is an activity destroyed when the screen rotates?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["1", false, "Try again. Only one option would be boring!" ],
-				["2", false, "Try again. More than that." ],
-				["3", false, "Try again. More than that." ],
-				["4", true, "Correct. " ],
-				["5", false, "Try again. Not that many." ],
+				["Because the designers of Android purposed to make the system inefficient", false, "Try again. You know that's not the case." ],
+				["Because the layout is loaded in onCreate().", true, "Correct. " ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> What type of layout does the main menu use?<br>",
+	"<b>2.</b> What is the first method to be called when an activity is destroyed?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["RelativeLayout", false, "Try again. That would work, but it can be done more simply using another one." ],
-				["LinearLayout", true, "Correct. " ],
-				["FrameLayout", false, "Try again. That would be painful since you'd have to position each button and text view using gravity." ],
-				["AbsoluteLayout", false, "Try again. That type of layout, in which positions are specified in pixels, is deprecated (scheduled to be phased out in a future release)." ],
+				["onDestroy()", false, "Try again. That is the last one to be called." ],
+				["onStop()", false, "Try again. " ],
+				["onPause()", true, "Correct. " ],
+				["onClick()", false, "Try again. That method is for a totally different purpose." ],
 		]
+	},
+	"<br><br>",
+	"<b>3.</b> How are SharedPreferences like Intent extras? (Choose all that apply.)",
+	{
+		questionType : "multiple choice group",
+		questionsList : [
+				{
+					questionHTML : "",
+					choices : [ "They each use key-value pairs", "They each use an editor that must be committed for the changes to stick", "They each allow information to be used by multiple activities"],
+					correctIndex : [0,2]
+				}
+				],
+		allCorrectOutput : "Well done!",
+		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
 	},
 ];

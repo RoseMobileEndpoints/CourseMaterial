@@ -30,26 +30,21 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> How many menu options does the Lights Out Menu app have?<br>",
+	"<b>1.</b> Is it difficult from a programming standpoint to support an additional language in your app?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["1", false, "Try again. Only one option would be boring!" ],
-				["2", false, "Try again. More than that." ],
-				["3", false, "Try again. More than that." ],
-				["4", true, "Correct. " ],
-				["5", false, "Try again. Not that many." ],
+				["Yes", false, "Try again. It may be tedious, but you just need a new strings.xml. (Easy if either you know the language or you find someone else who does.)" ],
+				["No", true, "Correct. It may be tedious, but you just need a new strings.xml. (Easy if either you know the language or you find someone else who does.)" ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> What type of layout does the main menu use?<br>",
+	"<b>2.</b> Where do you change the language on your phone?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["RelativeLayout", false, "Try again. That would work, but it can be done more simply using another one." ],
-				["LinearLayout", true, "Correct. " ],
-				["FrameLayout", false, "Try again. That would be painful since you'd have to position each button and text view using gravity." ],
-				["AbsoluteLayout", false, "Try again. That type of layout, in which positions are specified in pixels, is deprecated (scheduled to be phased out in a future release)." ],
+				["Settings > Language and Input > Language", true, "Correct. " ],
+				["That's impossible", false, "Try again. " ],
 		]
 	},
 ];

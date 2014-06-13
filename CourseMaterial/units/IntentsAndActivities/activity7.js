@@ -30,26 +30,17 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> How many menu options does the Lights Out Menu app have?<br>",
+	"<b>1.</b> Which property is valid to use with TableLayouts? (Choose all that apply.)",
 	{
-		questionType : "multiple choice",
-		choices : [
-				["1", false, "Try again. Only one option would be boring!" ],
-				["2", false, "Try again. More than that." ],
-				["3", false, "Try again. More than that." ],
-				["4", true, "Correct. " ],
-				["5", false, "Try again. Not that many." ],
-		]
-	},
-	"<br><br>",
-	"<b>2.</b> What type of layout does the main menu use?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["RelativeLayout", false, "Try again. That would work, but it can be done more simply using another one." ],
-				["LinearLayout", true, "Correct. " ],
-				["FrameLayout", false, "Try again. That would be painful since you'd have to position each button and text view using gravity." ],
-				["AbsoluteLayout", false, "Try again. That type of layout, in which positions are specified in pixels, is deprecated (scheduled to be phased out in a future release)." ],
-		]
+		questionType : "multiple choice group",
+		questionsList : [
+				{
+					questionHTML : "",
+					choices : [ "StretchColumns", "ShrinkColumns"],
+					correctIndex : [0,1]
+				}
+				],
+		allCorrectOutput : "Well done!",
+		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
 	},
 ];

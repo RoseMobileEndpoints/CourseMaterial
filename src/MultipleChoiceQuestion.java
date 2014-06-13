@@ -28,7 +28,7 @@ public class MultipleChoiceQuestion extends Question {
 		System.out.println(Arrays.toString(tokens));
 		QuestionChoice choice = new QuestionChoice();
 		choice.value = tokens[0].trim();
-		choice.feedback = tokens[1].trim();
+		choice.feedback = tokens.length > 1 ? tokens[1].trim() : "";
 		choice.isCorrect = (tokens.length > 2);
 		choices.add(choice);
 	}
