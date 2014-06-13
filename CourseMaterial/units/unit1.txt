@@ -5,6 +5,7 @@ LINK TO OUTPUT: CourseMaterial/units/ButtonsAndMVC
 LINK TO VIDEOS: ../../../../CourseMaterial/videos/    
 LINK TO SLIDES: https://docs.google.com/presentation/d/1YUc3sQH5oQYxUjlp9pia70SNpeLtQvBaVzPqkYO28c0/edit#slide=id.g349a12dcf_0243
 
+Total = 94 min.
 
 LESSON TITLE: New Android Project
 LESSON VIDEO: NewAndroidProject/NewAndroidProject_player.html
