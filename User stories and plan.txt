@@ -1,5 +1,6 @@
 USER STORIES AND PLAN
 
+SPRINT 1
 Reads in a lesson template and spit it back to another file called lesson.html.
 Parses a unit file and spit info back 
 Reads in a lesson template with variables and spit it out with random values swapped in.
@@ -15,17 +16,21 @@ Creates activity files each with the next/previous
 Creates activity files all with the correct js file.
 Creates lesson files each with the full nav bar 
 Nav bars have the active set properly.
-Creates activity files each with the full nav bar 
+Creates activity files each with the full nav bar
+
+SPRINT 2
 Generates quiz .js files:
 	Can read in quiz sections
 	Parses question choices
 	Can generate dummy questions of type MC
 	Can generate real questions of type MC
-
 	Can generate dummy questions of type MS
 	Can generate real questions of type MS
+
+	Writes to the properly-named js file.
+
+Next sprint:
 	Can generate dummy questions of type free
 	Can generate real questions of type free
-	Writes to the properly-named js file.
 	
 Runs from a config file that further configures folders and files to use.

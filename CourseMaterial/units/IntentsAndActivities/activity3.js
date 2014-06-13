@@ -34,11 +34,11 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
-			["1 ", false, "Try again.  Only one option would be boring!" ],
-			["2 ", false, "Try again.  More than that." ],
-			["3 ", false, "Try again.  More than that." ],
-			["4 ", true, "Correct.  " ],
-			["5 ", false, "Try again.  Not that many." ],
+				["1", false, "Try again. Only one option would be boring!" ],
+				["2", false, "Try again. More than that." ],
+				["3", false, "Try again. More than that." ],
+				["4", true, "Correct. " ],
+				["5", false, "Try again. Not that many." ],
 		]
 	},
 	"<br><br>",
@@ -46,10 +46,10 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
-			["RelativeLayout ", false, "Try again.  That would work, but it can be done more simply using another one." ],
-			["LinearLayout ", true, "Correct.  " ],
-			["FrameLayout ", false, "Try again.  That would be painful since you'd have to position each button and text view using gravity." ],
-			["AbsoluteLayout ", true, "Correct.  " ],
+				["RelativeLayout", false, "Try again. That would work, but it can be done more simply using another one." ],
+				["LinearLayout", true, "Correct. " ],
+				["FrameLayout", false, "Try again. That would be painful since you'd have to position each button and text view using gravity." ],
+				["AbsoluteLayout", true, "Correct. " ],
 		]
 	},
 ];

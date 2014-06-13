@@ -42,7 +42,7 @@ public abstract class Question {
 	}
 
 	public void setPrompt(String prompt) {
-		this.prompt = prompt;
+		this.prompt = prompt.trim();
 	}
 
 	protected ArrayList<QuestionChoice> getChoices() {

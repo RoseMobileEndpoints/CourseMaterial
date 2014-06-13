@@ -34,17 +34,24 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
-			["HelloButton ", false, "Try again.  That was last time." ],
-			["LightsOutMenu ", true, "Correct.  " ],
-			["TicTacToe ", false, "Try again.  That was last time." ],
-			["MovieQuotes ", false, "Try again.  We'll use that one to learn Endpoints later this term." ],
+				["HelloButton", false, "Try again. That was last time." ],
+				["LightsOutMenu", true, "Correct. " ],
+				["TicTacToe", false, "Try again. That was last time." ],
+				["MovieQuotes", false, "Try again. We'll use that one to learn Endpoints later this term." ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> What are some of the things you'll learn about in this unit?<br>",
+	"<b>2.</b> What are some of the things you'll learn about in this unit? (Choose all that apply.)",
 	{
 		questionType : "multiple choice group",
-		choices : [
-		]
+		questionsList : [
+				{
+					questionHTML : "",
+					choices : [ "Building apps with multiple screens", "radio buttons", "geocoding", "landscape layout"],
+					correctIndex : [0,1,3]
+				}
+				],
+		allCorrectOutput : "Well done!",
+		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
 	},
 ];

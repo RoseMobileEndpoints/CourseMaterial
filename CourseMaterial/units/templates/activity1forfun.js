@@ -8,7 +8,7 @@ var activity = [
 				['Nothing', true],
 				['Your name or initials', true, 'Yes, that will help me much while grading!' ],
 				['The name of the CEO of Google', false, 'Interesting, but seeing the name Larry Page on your app is not helpful to me.' ],
-				],	
+				]	
 	},
 
     '<br><br>',

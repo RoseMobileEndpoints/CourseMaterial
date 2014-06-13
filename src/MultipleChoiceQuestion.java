@@ -14,6 +14,7 @@ public class MultipleChoiceQuestion extends Question {
 		super();
 	}
 
+	@Override
 	public void addQuestionChoice(String line) {
 		line = line.trim();
 		if (line.length() == 0) {
@@ -26,8 +27,8 @@ public class MultipleChoiceQuestion extends Question {
 		String[] tokens = line.split(NON_PRINTABLE);
 		System.out.println(Arrays.toString(tokens));
 		QuestionChoice choice = new QuestionChoice();
-		choice.value = tokens[0];
-		choice.feedback = tokens[1];
+		choice.value = tokens[0].trim();
+		choice.feedback = tokens[1].trim();
 		choice.isCorrect = (tokens.length > 2);
 		choices.add(choice);
 	}
@@ -45,7 +46,7 @@ public class MultipleChoiceQuestion extends Question {
 		sb.append("\t\tchoices : [\n");
 
 		for (QuestionChoice choice : choices) {
-			sb.append("\t\t\t" + choice.toString() + "\n");
+			sb.append("\t\t\t\t" + choice.toString() + "\n");
 		}
 
 		sb.append("\t\t]\n");
