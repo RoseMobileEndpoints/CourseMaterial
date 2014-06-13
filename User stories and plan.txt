@@ -19,8 +19,8 @@ Creates activity files each with the full nav bar
 Generates quiz .js files:
 	Can read in quiz sections
 	Parses question choices
-
 	Can generate dummy questions of type MC
+
 	Can generate real questions of type MC
 	Can generate dummy questions of type MS
 	Can generate real questions of type MS

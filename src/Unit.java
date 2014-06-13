@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -19,6 +18,7 @@ public class Unit {
 	private String unitContents;
 	private String lessonTemplate;
 	private String activityTemplate;
+	private String quizTemplate;
 
 	private String title;
 	private String outputLink;
@@ -47,6 +47,9 @@ public class Unit {
 
 		String atName = Paths.get(dir + "activityTemplate.html").toString();
 		activityTemplate = fileContentsFromName(atName);
+		
+		String qtName = Paths.get(dir + "activityQuizCopyright.txt").toString();
+		quizTemplate = fileContentsFromName(qtName);
 
 		tasks = new ArrayList<Task>();
 		parse(unitName);
@@ -115,6 +118,10 @@ public class Unit {
 				break;
 			case 8:
 				// end
+				if (currentQuestion != null) {
+					((Activity)currentTask).addQuestion(currentQuestion);
+					currentQuestion = null;
+				}
 				tasks.add(currentTask);
 				currentTask = null;
 				state = IN_UNIT;
@@ -145,7 +152,6 @@ public class Unit {
 					((Lesson) currentTask).appendContentBelow(line);
 				} else if (state == IN_ACTIVITY) {
 					System.out.println("Read a choice on line " + lineCount + ":" + line);
-					// TODO: save it. Parse it later (I think) when I generate the whole question.
 					currentQuestion.addQuestionChoice(line);
 				} else {
 					System.out.println("Ignoring line " + lineCount + ":" + line);
@@ -213,14 +219,7 @@ public class Unit {
 
 		for (int i = 0; i < tasks.size(); i++) {
 			Task task = tasks.get(i);
-
-			String name = task.getFileName();
-			String fullName = Paths.get(this.outputLink + "/" + name)
-					.toString();
-
-			PrintWriter pw = new PrintWriter(new File(fullName));
-			task.generateFile(pw);
-			pw.close();
+			task.generateFile();
 		}
 
 	}
@@ -246,6 +245,10 @@ public class Unit {
 		return activityTemplate;
 	}
 
+	String getQuizTemplate() {
+		return quizTemplate;
+	}
+
 	Task getNextTask(Task task) {
 		for (int i = 0; i < tasks.size(); i++) {
 			if (tasks.get(i) == task && i < tasks.size()-1) {
@@ -265,6 +268,10 @@ public class Unit {
 	
 	List<Task> getTasks() {
 		return tasks;
+	}
+
+	public String getOutputLink() {
+		return outputLink;
 	}
 	
 }

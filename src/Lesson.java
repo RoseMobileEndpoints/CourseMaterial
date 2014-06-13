@@ -1,4 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.nio.file.Paths;
 
 /**
  * A lesson.
@@ -66,18 +69,22 @@ public class Lesson extends Task {
 	}
 
 	@Override
-	public void generateFile(PrintWriter pw) {
+	public void generateFile() throws FileNotFoundException {
+		String name = getFileName();
+		String fullName = Paths
+				.get(this.getUnit().getOutputLink() + "/" + name).toString();
+		PrintWriter pw = new PrintWriter(new File(fullName));
 		String template = this.getUnit().getLessonTemplate();
 		template = template.replace("$LESSON_TITLE", this.getTitle());
 		template = template.replace("$LESSON_VIDEO_LINK", this.videoLink);
 		template = template.replace("$LESSON_CONTENT_ABOVE", this.contentAbove);
 		template = template.replace("$LESSON_CONTENT_BELOW", this.contentBelow);
 		template = replaceNextAndPrevious(template);
-		System.out.println("------------------------LESSON " + this.getNumber());
+		System.out
+				.println("------------------------LESSON " + this.getNumber());
 		template = replaceNavBar(template);
 		pw.print(template);
-
+		pw.close();
 	}
-
 
 }

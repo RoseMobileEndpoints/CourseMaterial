@@ -1,4 +1,4 @@
-import java.io.PrintWriter;
+import java.io.FileNotFoundException;
 import java.util.List;
 
 /**
@@ -42,7 +42,7 @@ public abstract class Task {
 		this.number = number;
 	}
 
-	public abstract void generateFile(PrintWriter pw);
+	public abstract void generateFile() throws FileNotFoundException;
 
 	protected String replaceNextAndPrevious(String template) {
 		Task previousTask = this.getUnit().getPreviousTask(this);

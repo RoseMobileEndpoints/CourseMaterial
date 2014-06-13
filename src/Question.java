@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import javax.activation.UnsupportedDataTypeException;
 
@@ -46,7 +47,14 @@ public class Question {
 	}
 
 	public void addQuestionChoice(String line) {
-		String[] tokens = line.split("$#$");
+		line = line.trim();
+		if (line.length() == 0) {
+			return;
+		}
+		String NON_PRINTABLE = Character.toString((char)0xAB00); 
+		line = line.replace("$#$", NON_PRINTABLE); // A non-printable ethiopic character, not likely to be used by a user of this program.
+		String[] tokens = line.split(NON_PRINTABLE);
+		System.out.println(Arrays.toString(tokens));
 		QuestionChoice choice = new QuestionChoice(); 
 		if (this.type == QuestionType.MULTIPLE_CHOICE) {
 			choice.value = tokens[0];
@@ -59,4 +67,14 @@ public class Question {
 			choices.add(choice);
 		}
 	}
+	
+	@Override
+	public String toString() {
+		String s = "QUESTION:";
+		s += prompt + "\n";
+		s += type.toString() + "\n";
+		return s;
+	}
+	
+	
 }

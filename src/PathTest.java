@@ -14,7 +14,6 @@ import java.nio.file.Paths;
 public class PathTest {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		// TODO Auto-generated method stub.
 		Path p1 = Paths.get("test/activity1.html");
 		System.out.println(p1.toString());
 		Path pathDir = p1.getParent();
