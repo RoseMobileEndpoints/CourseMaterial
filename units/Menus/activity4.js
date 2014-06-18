@@ -34,7 +34,7 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
-				["A button press", false, "Try again. " ],
+				["A button press", false, "Try again. Not just any press..." ],
 				["A long press", true, "Correct. " ],
 				["The home icon is pressed", false, "Try again. That would bring you to the parent activity." ],
 		]
