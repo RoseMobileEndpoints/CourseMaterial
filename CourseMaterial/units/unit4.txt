@@ -27,8 +27,8 @@ END
 
 
 
-LESSON TITLE: Lab: Passing Data in Intents
-LESSON VIDEO: LabPassingDataInIntents/LabGettingStartedWithButtons_player.html
+LESSON TITLE: Lab: Blackjack Dialogs
+LESSON VIDEO: LabBlackjackDialogs/LabBlackjackDialogs_player.html
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1zMKKqXsrVdFG6TIRohpp4ls0QgJAgFTPJfg6fbhSQp8">here</a>.</li>
