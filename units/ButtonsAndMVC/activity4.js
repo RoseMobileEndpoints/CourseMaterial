@@ -68,7 +68,7 @@ var activity = [
 		choices : [
 				['setOnClickListener()', false, 'No. Later we will use that to listen to button clicks.' ],
 				['buttonPressedForModel()', false, 'No. Good guess. But do not guess. Look at the code.' ],
-				['pressedButtonALocation()', true, 'Correct.']]
+				['pressedButtonAtLocation()', true, 'Correct.']]
 	}	
 ];
 
