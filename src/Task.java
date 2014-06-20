@@ -49,7 +49,7 @@ public abstract class Task {
 		String previousLink = "";
 		if (previousTask != null) {
 			previousLink = String.format("<a href=\""
-					+ previousTask.getFileName() + "\"> Previous Page </a>");
+					+ previousTask.getFileName() + "\"> Previous Task </a>");
 		}
 		template = template.replace("$PREVIOUS_LINK", previousLink);
 
@@ -57,7 +57,7 @@ public abstract class Task {
 		String nextLink = "";
 		if (nextTask != null) {
 			nextLink = String.format("<a href=\"" + nextTask.getFileName()
-					+ "\"> Next Page </a>");
+					+ "\"> Next Task </a>");
 		}
 		template = template.replace("$NEXT_LINK", nextLink);
 		return template;
