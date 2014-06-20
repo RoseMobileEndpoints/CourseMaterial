@@ -40,10 +40,6 @@ public class Main {
 		Scanner scanner = new Scanner(configFile);
 		unitName = scanner.next();
 		templateDir = scanner.next();
-
-		while (scanner.hasNext()) {
-			// no-op
-		}
 		scanner.close();
 	}
 
