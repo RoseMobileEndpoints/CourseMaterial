@@ -6,11 +6,10 @@ LINK TO VIDEOS: ../../../../CourseMaterial/videos/Dialogs
 LINK TO SLIDES: https://docs.google.com/presentation/d/1P5UyAo9UZ2fIACMYF3RyXGgBJh5-g2DD_okI8ZFwzUQ
 
 1 Overview
-2 AboutDialog
-3 ExitDialog
-4 ListDialogs
-5 ProgressDialogs
-6 CustomDialogs
+2 AlertDialogs
+3 AlertDialogsWithItems
+4 CustomDialogs
+5 LabPickersAndBlackjack
 
 // Lessons here
 
@@ -27,8 +26,8 @@ END
 
 
 
-LESSON TITLE: Lab: Blackjack Dialogs
-LESSON VIDEO: LabBlackjackDialogs/LabBlackjackDialogs_player.html
+LESSON TITLE: Lab: Pickers and Blackjack
+LESSON VIDEO: LabPickersAndBlackjack/LabPickersAndBlackjack_player.html
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1zMKKqXsrVdFG6TIRohpp4ls0QgJAgFTPJfg6fbhSQp8">here</a>.</li>
