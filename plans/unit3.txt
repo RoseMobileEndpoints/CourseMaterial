@@ -117,7 +117,7 @@ LESSON TITLE: Iconography
 LESSON VIDEO: Iconography/Iconography_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll learn where to find Android's custom icons and how to create your own. This is important if you post your app on Google Play</li>
+<li>In this lesson, you'll learn where to find Android's custom icons and how to create your own. This is important if you post your app on Google Play.</li>
 </ul>
 CONTENT BELOW
 END
