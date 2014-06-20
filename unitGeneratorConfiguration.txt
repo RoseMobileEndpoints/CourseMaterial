@@ -1,2 +1,8 @@
-CourseMaterial/units/unit4.txt
-CourseMaterial/units/templates/
+../CourseMaterial/plans/unit3.txt
+../CourseMaterial/tools/unitGenerator/templates/
+
+The first one is the lesson plan file for this unit.
+	It contains an output directory for that unit as well.
+The second is the relative location to the templates to be used to generate this unit. 
+Currently all of these files are in a different git repo, the CourseMaterials one that checks out to the public folder. 
+CONSIDER: those things should be in the repo, so all collaborators can check them, but they shouldn't be public. We should have a public folder in the repo, like we do for SVN.  
