@@ -1,0 +1,137 @@
+UNIT TITLE: Dialogs
+// Outputs to the CourseMaterials repo, checked out as a sibling to this tools repo.
+LINK TO OUTPUT: ../CourseMaterial/units/Dialogs
+LINK TO VIDEOS: ../../videos/Dialogs  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1P5UyAo9UZ2fIACMYF3RyXGgBJh5-g2DD_okI8ZFwzUQ
+
+1 Overview 5:22
+2 AlertDialogs 13:15
+3 AlertDialogsWithItems 16:33 
+4 CustomDialogs   9:36
+5 LabPickersAndBlackjack 5:10
+// Total: 50 min
+
+
+LESSON TITLE: Dialogs Overview
+LESSON VIDEO: DialogsOverview/DialogsOverview_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll get an overview of the various types of dialogs you can use in your apps.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What are dialogs?
+TYPE: MC
+Conversations that you have with another person $#$ Those are dialogues.
+Conversations that you have with your Android device $#$ You talk _with_ your phone, not _to_ your phone, right? 
+Windows that pop up with info or asking for info $#$ $#$ yes
+END
+
+
+LESSON TITLE: AlertDialogs
+LESSON VIDEO: AlertDialogs/AlertDialogs_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn about standard very flexible AlertDialogs.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+ACTIVITY TITLE: Questions
+Q: Why did we create an instance of an anonymous subclass of DialogFragment?
+TYPE: MC
+So we could override onCreateDialog $#$ $#$ yes
+No reason.  $#$ 
+
+Q: What else must you do with the DialogFragment, besides instantiate it, to have it pop up? 
+
+TYPE: MC
+popUp() $#$ Recall, we entered df.(what method?)
+show() $#$ $#$ yes
+setVisible(true) $#$ Recall, we entered df.(what method?)
+
+Q: What is the standard order, from left to right, of buttons in the AlertDialog?
+TYPE: MC
+neutral, negative, positive $#$ Recall that the optional neutral button is in the middle.
+positive, neutral, negative $#$ The negative (cancel) button always comes first.
+negative, neutral, positive $#$ $#$ yes
+None of the above $#$ It is definitely one of them.
+
+Q: Give several options that we set in the builder in this lesson. 
+TYPE: MS
+Title $#$ yes 
+Message $#$ yes
+Icon $#$ yes 
+Ringtone $#$
+END
+
+
+LESSON TITLE: AlertDialogs with Items
+LESSON VIDEO: AlertDialogsWithItems/AlertDialogsWithItems_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to show a list of items instead of a message in one of three ways: items only, radio buttons, or checklists.</li>
+<li>You'll also learn about array resources.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Which new xml resource did we learn about in this lesson?
+TYPE: MC
+string $#$ We learned about those in our first unit!
+color $#$ We learned about those in our first unit!
+array $#$ $#$ yes
+layout $#$ We learned about those in our first unit!
+
+Q: Which onClickListener did we use in this lesson?
+TYPE: MC
+DialogInterface.onClickListener $#$ $#$ yes
+View.OnClickListener
+
+Q: Which method is used to display radioButtons?
+TYPE: MC
+setItems() $#$ Those are for a simple item list.
+setSingleChoiceItems() $#$ $#$ yes
+setMultiCoiceItems() $#$ Those are for check boxes.
+END
+
+
+LESSON TITLE: Custom Dialogs
+LESSON VIDEO: CustomDialogs/CustomDialogs_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you will learn how to make custom dialogs, and learn how to correct subtle bugs caused by incorrect use of findViewById</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What advantage is there in creating a custom dialog instead of activity with a dialog theme?
+TYPE: MC
+It is more flexible $#$
+It takes less overhead $#$ $#$ yes
+None; you should always use the activity.
+
+Q: What advantage is there in creating a custom dialog instead of an AlertDialog?
+TYPE: MC
+It is more flexible $#$ You can specify any layout desired, like moving buttons to the center. $#$ yes
+It takes less overhead $#$ If anything it might require a bit more overhead because the layout must be inflated.
+None; you should always use the AlertDialog. $#$ It's true that AlertDialogs will almost always be sufficient.
+END
+
+LESSON TITLE: Lab: Pickers and Blackjack
+LESSON VIDEO: LabPickersAndBlackjack/LabPickersAndBlackjack_player.html
+CONTENT ABOVE
+<ul>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1zMKKqXsrVdFG6TIRohpp4ls0QgJAgFTPJfg6fbhSQp8">here</a>.</li>
+<li>When done, be sure to submit your zipped Eclipse projects (DateTimePickers and Blackjack Dialogs), plus video demo, to the Moodle dropbox.</li>
+<li>Then go complete the Moodle "Menus and Dialogs self-evaluation" survey before calling it a day.</li>
+</ul>
+CONTENT BELOW
+END
+
+
