@@ -1,0 +1,31 @@
+UNIT TITLE: Fragments
+// Outputs to the CourseMaterials repo, checked out as a sibling to this tools repo.
+LINK TO OUTPUT: ../CourseMaterial/units/Fragments
+LINK TO VIDEOS: ../../videos/Fragments  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1WoikNuEMzF7WWH07u8Ef-zCXcKp-_XRbEc7Gd668M9s
+
+1 Overview, Lab intro
+2 Lab
+
+// Lessons here
+
+LESSON TITLE: Fragments Overview
+LESSON VIDEO: FragmentsOverview/FragmentsOverview_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll get an overview of how fragments work.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: Lab: Fragments
+LESSON VIDEO: LabFragments/LabFragments_player.html
+CONTENT ABOVE
+<ul>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1Lcms8HwlY0vLFevg7ORFbOebOFECPfJd-xyU9eI1uoY" target="_blank">here</a>.</li>
+<li>When done, be sure to submit your zipped Eclipse project (Blackjack Dialogs), plus video demo, to the Moodle dropbox.</li>
+<li>We'll wait until after the dialogs unit to complete the "Fragments and Adapters self-evaluation" survey.</li>
+</ul>
+CONTENT BELOW
+END

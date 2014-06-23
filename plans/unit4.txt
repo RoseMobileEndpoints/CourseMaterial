@@ -127,7 +127,7 @@ LESSON TITLE: Lab: Pickers and Blackjack
 LESSON VIDEO: LabPickersAndBlackjack/LabPickersAndBlackjack_player.html
 CONTENT ABOVE
 <ul>
-<li>The lab specification is <a href="https://docs.google.com/document/d/1zMKKqXsrVdFG6TIRohpp4ls0QgJAgFTPJfg6fbhSQp8">here</a>.</li>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1zMKKqXsrVdFG6TIRohpp4ls0QgJAgFTPJfg6fbhSQp8" target="_blank">here</a>.</li>
 <li>When done, be sure to submit your zipped Eclipse projects (DateTimePickers and Blackjack Dialogs), plus video demo, to the Moodle dropbox.</li>
 <li>Then go complete the Moodle "Menus and Dialogs self-evaluation" survey before calling it a day.</li>
 </ul>
