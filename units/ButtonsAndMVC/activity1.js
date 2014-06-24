@@ -46,7 +46,7 @@ var activity = [
 		choices : [
 				["Always use just your initials", false, "Try again. That was for the last question." ],
 				["use findViewById", false, "Try again. We will learn about that in an upcoming video." ],
-				["reverse URL", true, "Correct. Exactly. Please use something like edu.rosehulman.yourusername.theappname" ],
+				["reverse URL", true, "Correct. Please use something like edu.rosehulman.yourusername.theappname" ],
 		]
 	},
 	"<br><br>",
