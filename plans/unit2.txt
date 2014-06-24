@@ -314,7 +314,7 @@ CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1nsif5GdeFADpqMkK2m-E2a3L-ajOM0teIPQfBZKRvDE" target="_blank">here</a>.</li>
 <li>When done, be sure to submit your zipped Eclipse project (BasketballJersey), plus video demo, to the Moodle dropbox.</li>
-<li>Then go complete the Moodle "Unit 2: Intents and Activities self-evaluation" survey before calling it a day.</li>
+<li>Then go complete the Moodle "Intents and Activities" self-evaluation survey before calling it a day.</li>
 </ul>
 CONTENT BELOW
 END

@@ -128,7 +128,7 @@ CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1n1K0E7htAXx6EddkZt2bSONoTDzaKq8RvsJN3E-nHYY" target="_blank">here</a>.</li>
 <li>When done, be sure to submit your zipped Eclipse project (Snakes), plus video demo, to the Moodle dropbox.</li>
-<li>We'll wait until after the dialogs unit to complete the "Menus and Dialogs self-evaluation" survey.</li>
+<li>We'll wait until after the dialogs unit to complete the "Menus and Dialogs" self-evaluation survey.</li>
 </ul>
 CONTENT BELOW
 END
