@@ -1,5 +1,4 @@
 UNIT TITLE: Adapters
-// Outputs to the CourseMaterials repo, checked out as a sibling to this tools repo.
 LINK TO OUTPUT: ../units/Adapters
 LINK TO VIDEOS: ../../videos/Adapters  
 LINK TO SLIDES: https://docs.google.com/presentation/d/1ktv4pOcdlwBdj6PsVXwgxbdZUhFycmq18kiI58mvvhU
