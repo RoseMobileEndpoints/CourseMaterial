@@ -1,6 +1,5 @@
 UNIT TITLE: Menus
-LINK TO OUTPUT: ../CourseMaterial/units/Menus
-// Outputs to the CourseMaterials repo, checked out as a sibling to this tools repo.
+LINK TO OUTPUT: ../units/Menus
 LINK TO VIDEOS: ../../videos/Menus/    
 LINK TO SLIDES: https://docs.google.com/presentation/d/1NomlKtlYdr3_S3pViz0peR9I6gIc_JsOoSwm2qTzxss
 

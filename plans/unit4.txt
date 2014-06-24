@@ -1,6 +1,6 @@
 UNIT TITLE: Dialogs
 // Outputs to the CourseMaterials repo, checked out as a sibling to this tools repo.
-LINK TO OUTPUT: ../CourseMaterial/units/Dialogs
+LINK TO OUTPUT: ../units/Dialogs
 LINK TO VIDEOS: ../../videos/Dialogs  
 LINK TO SLIDES: https://docs.google.com/presentation/d/1P5UyAo9UZ2fIACMYF3RyXGgBJh5-g2DD_okI8ZFwzUQ
 

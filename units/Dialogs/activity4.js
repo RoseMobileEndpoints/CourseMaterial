@@ -45,7 +45,7 @@ var activity = [
 		questionType : "multiple choice",
 		choices : [
 				["It is more flexible", true, "Correct. You can specify any layout desired, like moving buttons to the center." ],
-				["It takes less overhead", false, "Try again. If anything it might require a bit more overhead because hte layout must be inflated." ],
+				["It takes less overhead", false, "Try again. If anything it might require a bit more overhead because the layout must be inflated." ],
 				["None; you should always use the AlertDialog.", false, "Try again. It's true that AlertDialogs will almost always be sufficient." ],
 		]
 	},
