@@ -30,43 +30,37 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-
-    '<b>1.</b> When creating a new project, I would like you to add what info to the name of each project?<br>',
-    
+	"<b>1.</b> When creating a new project, I would like you to add what info to the name of each project?<br>",
 	{
-		questionType : 'multiple choice',
+		questionType : "multiple choice",
 		choices : [
-				['Nothing', false, 'No, there was something.' ],
-				['Your name or initials', true, 'Yes, that will help me much while grading!' ],
-				['The name of the CEO of Google', false, 'Interesting, but seeing the name Larry Page on your app is not helpful to me.' ]
-				]	
+				["Nothing", false, "Try again. There was something." ],
+				["Your name or initials", true, "Correct. That will help me much while grading!" ],
+				["The name of the CEO of Google", false, "Try again. Interesting, but seeing the name Larry Page on your app is not helpful to me." ],
+		]
 	},
-
-    '<br><br>',
-    '<b>2.</b> What naming convention is used for packages?<br>',
-    
+	"<br><br>",
+	"<b>2.</b> What naming convention is used for packages?<br>",
 	{
-		questionType : 'multiple choice',
+		questionType : "multiple choice",
 		choices : [
-				['Always use just your initials', false, 'Nope. That was for the last question.' ],
-				['use findViewById', false, 'No, but we will learn about that in an upcoming video!' ],
-				['reverse URL', true, 'Exactly. Please use something like edu.rosehulman.yourusername.theappname' ]]
+				["Always use just your initials", false, "Try again. That was for the last question." ],
+				["use findViewById", false, "Try again. We will learn about that in an upcoming video." ],
+				["reverse URL", true, "Correct. Exactly. Please use something like edu.rosehulman.yourusername.theappname" ],
+		]
 	},
-	
-    '<br><br>',
-
-    '<b>3.</b> What can you find in the AndroidManifest.xml file? (Choose all that apply.)<br>',
+	"<br><br>",
+	"<b>3.</b> What can you find in the AndroidManifest.xml file? Look at the file if you aren't sure. (Choose all that apply.)",
 	{
-		questionType : 'multiple choice group',
+		questionType : "multiple choice group",
 		questionsList : [
 				{
-					questionHTML : '',
-					choices : [ 'The package name', 'The Activity that will be launched', 'What versions of Android your app supports' ],
+					questionHTML : "",
+					choices : [ "The package name", "The Activity that will be launched", "What versions of Android your app is written for"],
 					correctIndex : [0,1,2]
 				}
 				],
-		allCorrectOutput : 'Well done!',
-		someIncorrectOutput : 'Please try again. Hint: look back at that file for each of these.',
-	}
+		allCorrectOutput : "Well done!",
+		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
+	},
 ];
-

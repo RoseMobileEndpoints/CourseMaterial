@@ -29,41 +29,34 @@
 //    asks for help. For more information on how to specify the object, please
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
-
-
-
-
 var activity = [
-    '<b>1.</b> To make it easier later on to distinguish which button was pressed, how do we store the 9 buttons in code?<br>',
+	"<b>1.</b> To make it easier later on to distinguish which button was pressed, how do we store the 9 buttons in code?<br>",
 	{
-		questionType : 'multiple choice',
+		questionType : "multiple choice",
 		choices : [
-				['as an array', false, 'No. That is possible, but you would need to convert from a (row,column) pair to an index.' ],
-				['as a 2d array', true, 'Correct. Tables work well as 2d arrays.' ],
-				['as 9 separate variables', false, 'No. That would work but is cumbersome.' ]
-				]	
+				["as an array", false, "Try again. That is possible, but you would need to convert from a (row,column) pair to an index." ],
+				["as a 2d array", true, "Correct. Tables work well as 2d arrays." ],
+				["as 9 separate variables", false, "Try again. That would work but is cumbersome." ],
+		]
 	},
-
-    '<br><br>',
-    '<b>2.</b> Which class responded to all the button clicks?<br>',
+	"<br><br>",
+	"<b>2.</b> Which class responded to the button clicks?<br>",
 	{
-		questionType : 'multiple choice',
+		questionType : "multiple choice",
 		choices : [
-				['Each button', false, 'No. You would need to override the Button class to do that, since Buttons are not OnClickListeners.' ],
-				['An anonymous listener for each button', false, 'No. That could work, but it is not what we did.'],
-				['MainActivity', true, 'Correct.' ]
-				]	
+				["Each button", false, "Try again. You would need to override the Button class to do that, since Buttons are not OnClickListeners." ],
+				["An anonymous listener for each button", false, "Try again. That could work, but it is not what we did." ],
+				["MainActivity", true, "Correct. " ],
+		]
 	},
-
-    '<br><br>',
-    '<b>3.</b> Because of that choice, onClick must use getId() to distinguish between how many buttons?<br>',
+	"<br><br>",
+	"<b>3.</b> Because of that choice, onClick must use getId() to distinguish between how many buttons?<br>",
 	{
-		questionType : 'multiple choice',
+		questionType : "multiple choice",
 		choices : [
-				['1', false, 'No. That was only the new game button.' ],
-				['9', false, 'No. You forgot the new game button!' ],
-				['10', true, 'Correct. 9 tic tac toe buttons plus the new game button.' ]]
-	}
-	
+				["1", false, "Try again. That was only the new game button." ],
+				["9", false, "Try again. You forgot the new game button!" ],
+				["10", true, "Correct. 9 tic tac toe buttons plus the new game button." ],
+		]
+	},
 ];
-

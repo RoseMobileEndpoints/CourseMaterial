@@ -30,38 +30,37 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-    '<b>1.</b> What is the main reason we place our strings in the strings.xml values file?<br>',
-    {
-		questionType : 'multiple choice',
-		choices : [
-				['We like doing more work', false, 'No, although that may be true for you.' ],
-				['Android complains if we use hardcoded strings', false, 'No. Not the main reason, although that is true.' ],
-				['It makes it easier to maintain the strings', true, 'Correct. Especially if we want to do localization (swap languages) later.' ]
-				]	
-	},
-
-    '<br><br>',
-    '<b>2.</b> What is true of the format of colors in colors.xml? (Choose all that apply.)',
+	"<b>1.</b> What is the main reason we place our strings in the strings.xml values file?<br>",
 	{
-		questionType : 'multiple choice group',
+		questionType : "multiple choice",
+		choices : [
+				["We like doing more work", false, "Try again. But we admit that may be true for you." ],
+				["Android complains if we use hardcoded strings", false, "Try again. That isn't the main reason, although that is true." ],
+				["It makes it easier to maintain the strings", true, "Correct. Especially if we want to do localization (swap languages) later." ],
+		]
+	},
+	"<br><br>",
+	"<b>2.</b> What is true of the format of colors in colors.xml? (Choose all that apply.)",
+	{
+		questionType : "multiple choice group",
 		questionsList : [
 				{
-					questionHTML : '',
-					choices : [ 'RGB can each be 1 digit', 'RGB can each be 2 digits', 'Alpha (transparency) is optional', 'They must start with #', 'They can use decimal instead of hex' ],
+					questionHTML : "",
+					choices : [ "RGB can each be 1 digit", "RGB can each be 2 digits", "Alpha (transparency) is optional", "They must start with #", "They can use decimal instead of hex"],
 					correctIndex : [0,1,2,3]
 				}
 				],
-		allCorrectOutput : 'Well done!',
-		someIncorrectOutput : 'Please try again. Hint: look back at the slides.',
+		allCorrectOutput : "Well done!",
+		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
 	},
-
-    '<br><br>',
-    '<b>3.</b> If you want a view to stretch across the screen, what value should you use for android:layout_width?<br>',
-    {
-		questionType : 'multiple choice',
+	"<br><br>",
+	"<b>3.</b> If you want a view to stretch across the screen, what value should you use for android:layout_width?<br>",
+	{
+		questionType : "multiple choice",
 		choices : [
-				['matchParent', true, 'Correct.' ],
-				['fillParent', false, 'No, that is what it used to be called. (It will work fine if you use it, so you still get full credit.)' ],
-				['wrap content', false, 'No, that will only be as large as the text within it.' ]]
-	}	
+				["matchParent", true, "Correct. " ],
+				["fillParent", false, "Try again. That is what it used to be called. (And it will work fine if you use it, so you still get full credit.)" ],
+				["wrap content", false, "Try again. That will only be as large as the text within it." ],
+		]
+	},
 ];

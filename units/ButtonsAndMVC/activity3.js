@@ -30,57 +30,53 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-    '<b>1.</b> How do you refer to a string in code?<br>',
+	"<b>1.</b> How do you refer to a string in code?<br>",
 	{
-		questionType : 'multiple choice',
+		questionType : "multiple choice",
 		choices : [
-				['getResources.getColor(R.color.somename)', false, 'No.' ],
-				['getString(R.string.somename)', true, 'Correct.' ],
-				['findViewById(R.id.somename)', false, 'No.' ]
-				]	
+				["getResources().getColor(R.color.somename)", false, "Try again. " ],
+				["getString(R.string.somename)", true, "Correct. " ],
+				["findViewById(R.id.somename)", false, "Try again. " ],
+		]
 	},
-
-    '<br><br>',
-    '<b>2.</b> How do you refer to a color in code?<br>',
+	"<br><br>",
+	"<b>2.</b> How do you refer to a color in code?<br>",
 	{
-		questionType : 'multiple choice',
+		questionType : "multiple choice",
 		choices : [
-				['getResources.getColor(R.color.somename)', true, 'Correct.' ],
-				['getString(R.string.somename)', false, 'No.' ],
-				['findViewById(R.id.somename)', false, 'No.' ]
-				]	
+				["getResources().getColor(R.color.somename)", true, "Correct. " ],
+				["getString(R.string.somename)", false, "Try again. " ],
+				["findViewById(R.id.somename)", false, "Try again. " ],
+		]
 	},
-
-    '<br><br>',
-    '<b>3.</b> How do you refer to a view in code?<br>',
+	"<br><br>",
+	"<b>3.</b> How do you refer to a view in code?<br>",
 	{
-		questionType : 'multiple choice',
+		questionType : "multiple choice",
 		choices : [
-				['getResources.getColor(R.color.somename)', false, 'No.' ],
-				['getString(R.string.somename)', false, 'No.' ],
-				['findViewById(R.id.somename)', true, 'Correct.' ]
-				]	
+				["getResources().getColor(R.color.somename)", false, "Try again. " ],
+				["getString(R.string.somename)", false, "Try again. " ],
+				["findViewById(R.id.somename)", true, "Correct. " ],
+		]
 	},
-
-    '<br><br>',
-    '<b>4.</b> You use findViewById to get a Button. However, that method returns a View, so what else do you need to do to assign it to a Button? <br>',
+	"<br><br>",
+	"<b>4.</b> You use findViewById to get a Button. However, that method returns a View, so what else do you need to do to assign it to a Button?<br>",
 	{
-		questionType : 'multiple choice',
+		questionType : "multiple choice",
 		choices : [
-				['Nothing, just assign to a Button', false, 'No. They are different types.' ],
-				['Pass the View returned by findViewById to the Button constructor', false, 'No.' ],
-				['Cast it', true, 'Correct. For example, Button b = (Button)findViewById(R.id.someid);' ]]
+				["Nothing, just assign to a Button", false, "Try again. They are different types, so it won't compile." ],
+				["Pass the View returned by findViewById to the Button constructor", false, "Try again. " ],
+				["Cast it", true, "Correct. For example, Button b = (Button)findViewById(R.id.someid);" ],
+		]
 	},
-    
-    '<br><br>',
-    '<b>5.</b> What method is used to add a listener to a Button?<br>',
+	"<br><br>",
+	"<b>5.</b> What method is used to add a listener to a Button?<br>",
 	{
-		questionType : 'multiple choice',
+		questionType : "multiple choice",
 		choices : [
-				['addListener()', false, 'No, but right idea. What kind of listener? There are several.' ],
-				['addActionListener()', false, 'No, that is from the Swing library in Java.' ],
-				['setOnClickListener().', true, 'Correct.' ]]
-	}
-	
+				["addListener()", false, "Try again. Right idea, though. What kind of listener? There are several." ],
+				["addActionListener()", false, "Try again. That is from the Swing library in Java." ],
+				["setOnClickListener()", true, "Correct. " ],
+		]
+	},
 ];
-

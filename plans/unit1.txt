@@ -1,16 +1,17 @@
 UNIT TITLE: Buttons and MVC
-LINK TO OUTPUT: CourseMaterial/units/ButtonsAndMVC
-// Use first for production, second for testing
-//LINK TO VIDEOS: ../../videos/ButtonsAndMVC/    
-LINK TO VIDEOS: ../../../../CourseMaterial/videos/ButtonsAndMVC/
-LINK TO SLIDES: https://docs.google.com/presentation/d/1YUc3sQH5oQYxUjlp9pia70SNpeLtQvBaVzPqkYO28c0/edit#slide=id.g349a12dcf_0243
+LINK TO OUTPUT: ../CourseMaterial/units/ButtonsAndMVC
+LINK TO VIDEOS: ../../videos/ButtonsAndMVC  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1YUc3sQH5oQYxUjlp9pia70SNpeLtQvBaVzPqkYO28c0
 
+1. New project
+2. HelloButton view
+3. Hello Button controller
+4. MVC / TTT model
+5. TTT view
+6. TTT controller
+7. Lab intro
+// Total = 94 min.
 
-
-
-
-
-Total = 94 min.
 
 LESSON TITLE: New Android Project
 LESSON VIDEO: NewAndroidProject/NewAndroidProject_player.html
@@ -24,7 +25,25 @@ CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
+Q: When creating a new project, I would like you to add what info to the name of each project?
+TYPE: MC
+Nothing $#$ There was something.
+Your name or initials $#$ That will help me much while grading!$#$ yes
+The name of the CEO of Google $#$ Interesting, but seeing the name Larry Page on your app is not helpful to me.
+
+Q: What naming convention is used for packages?
+TYPE: MC
+Always use just your initials $#$ That was for the last question.
+use findViewById $#$ We will learn about that in an upcoming video.
+reverse URL $#$ Please use something like edu.rosehulman.yourusername.theappname $#$ yes
+
+Q: What can you find in the AndroidManifest.xml file? Look at the file if you aren't sure.
+TYPE: MS
+The package name $#$ yes 
+The Activity that will be launched $#$ yes
+What versions of Android your app is written for $#$ yes
 END
+
 
 LESSON TITLE: Hello Button View
 LESSON VIDEO: HelloButtonView/HelloButtonView_player.html
@@ -36,7 +55,27 @@ CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
+Q: What is the main reason we place our strings in the strings.xml values file?
+TYPE: MC
+We like doing more work $#$ But we admit that may be true for you.
+Android complains if we use hardcoded strings $#$ That isn't the main reason, although that is true.
+It makes it easier to maintain the strings $#$ Especially if we want to do localization (swap languages) later. $#$ yes
+
+Q: What is true of the format of colors in colors.xml?
+TYPE: MS
+RGB can each be 1 digit $#$ yes 
+RGB can each be 2 digits $#$ yes
+Alpha (transparency) is optional $#$ yes
+They must start with # $#$ yes
+They can use decimal instead of hex $#$
+
+Q: If you want a view to stretch across the screen, what value should you use for android:layout_width?
+TYPE: MC
+matchParent $#$ $#$ yes
+fillParent $#$ That is what it used to be called. (And it will work fine if you use it, so you still get full credit.)
+wrap content $#$ That will only be as large as the text within it.
 END
+
 
 LESSON TITLE: Hello Button Controller
 LESSON VIDEO: HelloButtonController/HelloButtonController_player.html
@@ -48,7 +87,37 @@ CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
+Q: How do you refer to a string in code?
+TYPE: MC
+getResources().getColor(R.color.somename)
+getString(R.string.somename) $#$ $#$ yes
+findViewById(R.id.somename) $#$ 
+
+Q: How do you refer to a color in code?
+TYPE: MC
+getResources().getColor(R.color.somename) $#$ $#$ yes
+getString(R.string.somename)
+findViewById(R.id.somename)
+
+Q: How do you refer to a view in code?
+TYPE: MC
+getResources().getColor(R.color.somename)
+getString(R.string.somename) 
+findViewById(R.id.somename) $#$ $#$ yes
+
+Q: You use findViewById to get a Button. However, that method returns a View, so what else do you need to do to assign it to a Button?
+TYPE: MC
+Nothing, just assign to a Button $#$ They are different types, so it won't compile.
+Pass the View returned by findViewById to the Button constructor $#$
+Cast it $#$ For example, Button b = (Button)findViewById(R.id.someid); $#$ yes
+
+Q: What method is used to add a listener to a Button?
+TYPE: MC
+addListener() $#$ Right idea, though. What kind of listener? There are several.
+addActionListener() $#$ That is from the Swing library in Java.
+setOnClickListener() $#$ $#$ yes
 END
+
 
 LESSON TITLE: MVC and Tic Tac Toe Model
 LESSON VIDEO: MVCAndTicTacToeModel/MVCAndTicTacToeModel_player.html
@@ -60,7 +129,31 @@ CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
+Q: Consider the model-view-controller (MVC) design pattern. By using xml layouts, you are separating which two?
+TYPE: MC
+M&V $#$ The xml is the view, but it is our responsibility to separate out the model from the controller if needed.
+M&C $#$ That is our job.
+V&C $#$ $#$ yes
+
+Q: Which two tend to get put together in simple apps?
+TYPE: MC
+M&V $#$ The view is separated by using xml layouts.
+M&C $#$ Consider HelloButton: the only thing that would go in the model is the click counter. $#$ yes
+V&C $#$ These are separated by using xml layouts.
+
+Q: Which model method should you call to get the game state string?
+TYPE: MC
+stringForGameState() $#$ $#$ yes
+ticTacToeState() $#$ Look back at the given code.
+getGameStateString() $#$ That does sound reasonable, but look back at the given code..
+
+Q: Which model method should you call when a button is pressed?
+TYPE: MC
+setOnClickListener() $#$ Later we will use that to listen to button clicks.
+buttonPressedForModel() $#$ Good guess. But don't guess. Look at the code.
+pressedButtonAtLocation() $#$ $#$ yes
 END
+
 
 LESSON TITLE: TicTacToe View
 LESSON VIDEO: TicTacToeView/TicTacToeView_player.html
@@ -72,6 +165,30 @@ CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
+Q: What value do we use for the stretchColumns property to cause all columns in the table to stretch?
+TYPE: MC
+* $#$ That is a wildcard. $#$ yes
+? $#$ That is sometimes used as a wildcard character, but not here.
+all
+
+Q: What color is Rose-Hulman red?
+TYPE: MC
+#FFFFFF $#$ That is white.
+#0939B5 $#$ Since the third hex pair has the largest numerical value, that would be blue - see colorpicker.com to see what shade if you are curious.
+#B50939 $#$ Good memory. Want a job in Communications? $#$ yes
+
+Q: What method would we use to align the bottom edge of a button with the bottom of the RelativeLayout it is part of? If you aren't sure, type it in the xml editor and read the documentation that pops up.
+TYPE: MC
+android:layout_alignBaseline $#$ But that is a valid xml property.
+android:layout_alignBottom $#$ That aligns the bottom of two sibling views.
+android:layout_alignParentBottom $#$ Since the layout contains the button, it is the parent of the button. $#$ yes
+
+Q: To specify the position of view A relative to view B, what must be true? 
+TYPE: MS
+view A must have an ID $#$  
+view B must have an ID $#$ yes
+view A must be declared before view B in the xml $#$  
+view B must be declared before view A in the xml $#$ yes
 END
 
 LESSON TITLE: TicTacToe Controller
@@ -84,15 +201,32 @@ CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
+Q: To make it easier later on to distinguish which button was pressed, how do we store the 9 buttons in code?
+TYPE: MC
+as an array $#$ That is possible, but you would need to convert from a (row,column) pair to an index.
+as a 2d array $#$ Tables work well as 2d arrays. $#$ yes
+as 9 separate variables $#$ That would work but is cumbersome.
+
+Q: Which class responded to the button clicks?
+TYPE: MC
+Each button $#$ You would need to override the Button class to do that, since Buttons are not OnClickListeners.
+An anonymous listener for each button $#$ That could work, but it is not what we did.
+MainActivity $#$ $#$ yes
+
+Q: Because of that choice, onClick must use getId() to distinguish between how many buttons?
+TYPE: MC
+1 $#$ That was only the new game button.
+9 $#$ You forgot the new game button!
+10 $#$ 9 tic tac toe buttons plus the new game button. $#$ yes
 END
 
 LESSON TITLE: Lab: Getting Started with Buttons
 LESSON VIDEO: LabGettingStartedWithButtons/LabGettingStartedWithButtons_player.html
 CONTENT ABOVE
 <ul>
-<li>The lab specification is <a href="https://docs.google.com/document/d/1B1bTD2u_JuVOUXUOPO8p6rn9dwmt1DWzminoy3PtqbY/edit">here</a>.</li>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1B1bTD2u_JuVOUXUOPO8p6rn9dwmt1DWzminoy3PtqbY" target="_blank">here</a>.</li>
 <li>When done, be sure to submit your zipped Eclipse projects (MyFirstApp and LightsOut), plus video demos, to the Moodle dropbox.</li>
-<li>Then go complete the Moodle "Unit 1: Buttons and MVC self-evaluation" survey before calling it a day.</li>
+<li>Then go complete the Moodle "Buttons and MVC self-evaluation" survey before calling it a day.</li>
 </ul>
 CONTENT BELOW
 END

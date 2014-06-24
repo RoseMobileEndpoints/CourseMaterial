@@ -30,49 +30,47 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-    '<b>1.</b> What value do we use for the stretchColumns property to cause all columns in the table to stretch?<br>',
+	"<b>1.</b> What value do we use for the stretchColumns property to cause all columns in the table to stretch?<br>",
 	{
-		questionType : 'multiple choice',
+		questionType : "multiple choice",
 		choices : [
-				['*', true, 'Yes, that is a wildcard.' ],
-				['?', false, 'No. That is a wildcard character in some instances, but not here.' ],
-				['all', false, 'No.' ]
-				]	
+				["*", true, "Correct. That is a wildcard." ],
+				["?", false, "Try again. That is sometimes used as a wildcard character, but not here." ],
+				["all", false, "Try again. " ],
+		]
 	},
-
-    '<br><br>',
-    '<b>2.</b> What color is Rose-Hulman red?<br>',
+	"<br><br>",
+	"<b>2.</b> What color is Rose-Hulman red?<br>",
 	{
-		questionType : 'multiple choice',
+		questionType : "multiple choice",
 		choices : [
-				['FFFFFF', false,  'No. That is white'],
-				['#0939B5', false, 'No. Since the third hex pair has the largest numerical value, that would be blue - see colorpicker.com to see what shade if you are curious.'], 
-				['#B50939.', true, 'Yes. Good memory. Want a job in Communications?']]	
+				["#FFFFFF", false, "Try again. That is white." ],
+				["#0939B5", false, "Try again. Since the third hex pair has the largest numerical value, that would be blue - see colorpicker.com to see what shade if you are curious." ],
+				["#B50939", true, "Correct. Good memory. Want a job in Communications?" ],
+		]
 	},
-
-    '<br><br>',
-    "<b>3.</b> What method would we use to align the bottom edge of a button with the bottom of the RelativeLayout it is part of? If you aren't sure, type it in the xml editor and read the documentation that pops up.<br>",
+	"<br><br>",
+	"<b>3.</b> What method would we use to align the bottom edge of a button with the bottom of the RelativeLayout it is part of? If you aren't sure, type it in the xml editor and read the documentation that pops up.<br>",
 	{
-		questionType : 'multiple choice',
+		questionType : "multiple choice",
 		choices : [
-				['android:layout_alignBaseline', false, 'No. But that is a valid xml property.' ],
-				['android:layout_alignBottom', false, 'No. That aligns the bottom of two sibling views.' ],
-				['android:layout_alignParentBottom', true, 'Correct. Since the layout contains the button, it is the parent of the button.' ]]
+				["android:layout_alignBaseline", false, "Try again. But that is a valid xml property." ],
+				["android:layout_alignBottom", false, "Try again. That aligns the bottom of two sibling views." ],
+				["android:layout_alignParentBottom", true, "Correct. Since the layout contains the button, it is the parent of the button." ],
+		]
 	},
-	    
- 	'<br><br>',
-    '<b>4.</b> To specify the position of view A relative to view B, what must be true? (Choose all that apply.)',
+	"<br><br>",
+	"<b>4.</b> To specify the position of view A relative to view B, what must be true? (Choose all that apply.)",
 	{
-		questionType : 'multiple choice group',
+		questionType : "multiple choice group",
 		questionsList : [
 				{
-					questionHTML : '',
-					choices : [ 'view A must have an ID', 'view B must have an ID', 'view A must be declared before view B in the xml', 'view B must be declared before view A in the xml'],
-					correctIndex : [1, 3]
+					questionHTML : "",
+					choices : [ "view A must have an ID", "view B must have an ID", "view A must be declared before view B in the xml", "view B must be declared before view A in the xml"],
+					correctIndex : [1,3]
 				}
 				],
-		allCorrectOutput : 'Well done!',
-		someIncorrectOutput : 'Please try again.',
-	}
-	];
-
+		allCorrectOutput : "Well done!",
+		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
+	},
+];
