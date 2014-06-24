@@ -4,8 +4,9 @@ LINK TO OUTPUT: ../CourseMaterial/units/Fragments
 LINK TO VIDEOS: ../../videos/Fragments  
 LINK TO SLIDES: https://docs.google.com/presentation/d/1WoikNuEMzF7WWH07u8Ef-zCXcKp-_XRbEc7Gd668M9s
 
-1 Overview, Lab intro
-2 Lab
+1 Overview, Lab intro 7:40
+2 Lab  2:58
+// Total = 11 min
 
 // Lessons here
 
@@ -22,12 +23,12 @@ ACTIVITY TITLE: Questions
 Q: What are android.app.Fragments?
 TYPE: MC
 Little shards of glass $#$ .
-Little shards of code encapsulating layout and controller $#$ The name fragment is appropriate, since these pieces can be re-arranged within activities. $#$ yes
+Little shards of code encapsulating layout and controller $#$ But thinking of fragment as shards is appropriate, since these pieces can be re-arranged within activities. $#$ yes
 
 Q: How does the layout xml of a fragment differ from that of an activity?
 TYPE: MC
 Not at all $#$ $#$ yes
-Thet use the fragment xml tag $#$ We did see the fragment tag in the FAQ, but that was for permanently adding a fragment to an activity, not for the layout of the fragment itself.
+They use the fragment xml tag $#$ We did see the fragment tag in the FAQ, but that was for permanently adding a fragment to an activity, not for specifying the layout of the fragment itself.
 
 Q: How is a Fragment class typically structured differently than an Activity class? 
 TYPE: MS
@@ -41,7 +42,7 @@ LESSON VIDEO: LabFragments/LabFragments_player.html
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1Lcms8HwlY0vLFevg7ORFbOebOFECPfJd-xyU9eI1uoY" target="_blank">here</a>.</li>
-<li>When done, be sure to submit your zipped Eclipse project (Blackjack Dialogs), plus video demo, to the Moodle dropbox.</li>
+<li>When done, be sure to submit your zipped Eclipse project (Fragments), plus video demo, to the Moodle dropbox.</li>
 <li>We'll wait until after the dialogs unit to complete the "Fragments and Adapters self-evaluation" survey.</li>
 </ul>
 CONTENT BELOW
