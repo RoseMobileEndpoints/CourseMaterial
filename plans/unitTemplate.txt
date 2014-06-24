@@ -55,6 +55,12 @@ TYPE: MC
 $#$ .
 
 Q: 
+TYPE: MC
+ $#$ .
+ $#$ $#$ yes
+$#$ .
+
+Q: 
 TYPE: MS
  $#$ yes 
  $#$ yes
