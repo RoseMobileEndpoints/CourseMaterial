@@ -1,6 +1,6 @@
 UNIT TITLE: Fragments
 // Outputs to the CourseMaterials repo, checked out as a sibling to this tools repo.
-LINK TO OUTPUT: ../CourseMaterial/units/Fragments
+LINK TO OUTPUT: ../units/Fragments
 LINK TO VIDEOS: ../../videos/Fragments  
 LINK TO SLIDES: https://docs.google.com/presentation/d/1WoikNuEMzF7WWH07u8Ef-zCXcKp-_XRbEc7Gd668M9s
 
@@ -14,7 +14,7 @@ LESSON TITLE: Fragments Overview
 LESSON VIDEO: FragmentsOverview/FragmentsOverview_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll get an overview of how fragments work. It is a long introduction to the concepts in the lab. </li>
+<li>This unit consists of a short overview of fragments and a detailed lab. This lesson is an extended introduction to the concepts you'll learn about in the lab. </li>
 </ul>
 CONTENT BELOW
 END

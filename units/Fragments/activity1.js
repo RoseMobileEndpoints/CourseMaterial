@@ -35,7 +35,7 @@ var activity = [
 		questionType : "multiple choice",
 		choices : [
 				["Little shards of glass", false, "Try again. ." ],
-				["Little shards of code encapsulating layout and controller", true, "Correct. The name fragment is appropriate, since these pieces can be re-arranged within activities." ],
+				["Little shards of code encapsulating layout and controller", true, "Correct. But thinking of fragment as shards is appropriate, since these pieces can be re-arranged within activities." ],
 		]
 	},
 	"<br><br>",
@@ -44,7 +44,7 @@ var activity = [
 		questionType : "multiple choice",
 		choices : [
 				["Not at all", true, "Correct. " ],
-				["Thet use the fragment xml tag", false, "Try again. We did see the fragment tag in the FAQ, but that was for permanently adding a fragment to an activity, not for the layout of the fragment itself." ],
+				["They use the fragment xml tag", false, "Try again. We did see the fragment tag in the FAQ, but that was for permanently adding a fragment to an activity, not for specifying the layout of the fragment itself." ],
 		]
 	},
 	"<br><br>",
