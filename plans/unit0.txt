@@ -1,0 +1,93 @@
+UNIT TITLE: Introduction to Android
+LINK TO OUTPUT: ../CourseMaterial/units/IntroductionToAndroid
+LINK TO VIDEOS: ../../videos/IntroductionToAndroid  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1RivoehwTZWHcHub1Cq0u-dz85Ewr3QfVipBBJAIAz2k
+
+1 Intro 8:12
+2 CoffeeCounter 12:39
+// Total: 21 min
+
+
+// Lessons here
+
+LESSON TITLE: Introduction
+LESSON VIDEO: IntroToAndroid/IntroToAndroid_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn why mobile is popular and what you can do with Android.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: Syllabus
+LESSON VIDEO: 
+CONTENT ABOVE
+<ul>
+	<li>Read the syllabus now. Make sure you understand the flow of each weekly unit:
+		<p><a href="https://docs.google.com/document/d/1Ws565NQUOmVSbWc5SG00Pw6ogrFundILgQsgFLaWanA" target="_blank">Syllabus</a></p>
+	</li>
+</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: Installation
+LESSON VIDEO: 
+CONTENT ABOVE
+<ul>
+	 <li>Installation: Follow the instructions at Google's website to install the SDK:
+		<p>
+		  <a href="http://developer.android.com/sdk/index.html" target="_blank">http://developer.android.com/sdk/index.html</a>
+		</p> You can just choose the "Download the SDK" option if you are installing on Windows. For other platforms, follow the links on that
+		site.
+	  </li>
+	  <li>HelloWorld: Go to <a href="http://developer.android.com/training/index.html" target="_blank">http://developer.android.com/training/index.html</a>
+		Under Get started &gt; Building Your First App, do Creating an Android Project and Running Your Application. You can run it on the
+		emulator or a real device. Show me. (You should have done this in our face to face meeting. If not, then send me a video of the
+		running app.)
+	  </li>
+	</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: Coffee Counter
+LESSON VIDEO: CoffeeCounter/CoffeeCounter_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll see the development of a simple app that one could create "out of the box" with no experience in Android. Don't worry if you don't absorb every detail. I just want to warm you up so that we can start off strong in the next unit.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Which UI element was NOT used in the demo app?
+TYPE: MC
+Button $#$ There were two buttons.
+TextView $#$ The message -I drank 4 cups- was displayed in a TextView.
+Slider $#$ $#$ yes
+ImageView $#$ That is how the photo of the coffee cups was displayed.
+
+Q: Where in the app did we set an OnClickListener to respond to Button presses?
+TYPE: MC
+activity_main.xml $#$ That was for the layout.
+MainActivity.java $#$ $#$ yes
+AndroidManifest.xml $#$ We have not used that file yet. 
+
+Q: How can you change the TextSize (font size in a TextView)? (There is more than one correct answer, so try different ones - there is no panelty for taking a question multiple times.)
+TYPE: MC
+Edit the raw .xml $#$ Experienced developers often do that. But it is not the only way. $#$ yes
+Change the properties in the GUI editor $#$ That is what I did in the video. Very convenient especially when you are looking for a certain property. $#$ yes
+Capture the TextView using findViewByID and then call .setTextSize() $#$ I used the GUI editor, but you can do it in code. $#$ yes 
+Change the AndroidManifest file $#$ We haven't used that file yet. Any of the other options work, though.
+END
+
+LESSON TITLE: Lab: GettingStarted
+LESSON VIDEO: 
+CONTENT ABOVE
+<ul>
+<li>There is no lab for this unit. To finish it, please complete the Moodle "Introduction" self-evaluation survey before calling it a day.</li>
+</ul>
+CONTENT BELOW
+END
