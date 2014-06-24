@@ -1,8 +1,6 @@
 UNIT TITLE: Intents and Activities
-LINK TO OUTPUT: CourseMaterial/units/IntentsAndActivities
-// Use first for production, second for testing
-LINK TO VIDEOS: ../../videos/IntentsAndActivities/    
-//LINK TO VIDEOS: ../../../../CourseMaterial/videos/IntentsAndActivities/
+LINK TO OUTPUT: ../units/IntentsAndActivities
+LINK TO VIDEOS: ../../videos/IntentsAndActivities/   
 LINK TO SLIDES: https://docs.google.com/presentation/d/1JDbkQDuvbg34lXzdRsqH2aMvUekXeY_OPyKbnuGwgeg
 
 1 Intents and Activities Unit. 4 min
