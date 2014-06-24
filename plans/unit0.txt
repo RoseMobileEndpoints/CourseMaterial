@@ -1,5 +1,5 @@
 UNIT TITLE: Introduction to Android
-LINK TO OUTPUT: ../CourseMaterial/units/IntroductionToAndroid
+LINK TO OUTPUT: ../units/IntroductionToAndroid
 LINK TO VIDEOS: ../../videos/IntroductionToAndroid  
 LINK TO SLIDES: https://docs.google.com/presentation/d/1RivoehwTZWHcHub1Cq0u-dz85Ewr3QfVipBBJAIAz2k
 
@@ -87,7 +87,7 @@ LESSON TITLE: Lab: GettingStarted
 LESSON VIDEO: 
 CONTENT ABOVE
 <ul>
-<li>There is no lab for this unit. To finish it, please complete the Moodle "Introduction" self-evaluation survey before calling it a day.</li>
+<li>There is no lab for this unit. To finish the unit, please complete the "Introduction" self-evaluation survey in Moodle.</li>
 </ul>
 CONTENT BELOW
 END
