@@ -13,11 +13,28 @@ LESSON TITLE: Fragments Overview
 LESSON VIDEO: FragmentsOverview/FragmentsOverview_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll get an overview of how fragments work.</li>
+<li>In this lesson, you'll get an overview of how fragments work. It is a long introduction to the concepts in the lab. </li>
 </ul>
 CONTENT BELOW
 END
 
+ACTIVITY TITLE: Questions
+Q: What are android.app.Fragments?
+TYPE: MC
+Little shards of glass $#$ .
+Little shards of code encapsulating layout and controller $#$ The name fragment is appropriate, since these pieces can be re-arranged within activities. $#$ yes
+
+Q: How does the layout xml of a fragment differ from that of an activity?
+TYPE: MC
+Not at all $#$ $#$ yes
+Thet use the fragment xml tag $#$ We did see the fragment tag in the FAQ, but that was for permanently adding a fragment to an activity, not for the layout of the fragment itself.
+
+Q: How is a Fragment class typically structured differently than an Activity class? 
+TYPE: MS
+Fragments extend android.app.Fragment while Activities extend android.app.Activity $#$ yes 
+Fragments have a more complex lifecycle, so more callback methods $#$ yes
+Activities can have onClickListeners, but Fragments cannot $#$  
+END
 
 LESSON TITLE: Lab: Fragments
 LESSON VIDEO: LabFragments/LabFragments_player.html
