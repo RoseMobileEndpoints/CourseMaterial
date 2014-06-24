@@ -3,15 +3,14 @@ LINK TO OUTPUT: ../CourseMaterial/units/ButtonsAndMVC
 LINK TO VIDEOS: ../../videos/ButtonsAndMVC  
 LINK TO SLIDES: https://docs.google.com/presentation/d/1YUc3sQH5oQYxUjlp9pia70SNpeLtQvBaVzPqkYO28c0
 
-1. New project
-2. HelloButton view
-3. Hello Button controller
-4. MVC / TTT model
-5. TTT view
-6. TTT controller
-7. Lab intro
+1. New project 12:27
+2. HelloButton view 13:27
+3. Hello Button controller 12:14
+4. MVC / TTT model 6:59
+5. TTT view 18:10
+6. TTT controller 27:48
+7. Lab intro 2:56
 // Total = 94 min.
-
 
 LESSON TITLE: New Android Project
 LESSON VIDEO: NewAndroidProject/NewAndroidProject_player.html
