@@ -1,4 +1,4 @@
-../CourseMaterial/plans/unit3.txt
+../CourseMaterial/plans/unit0.txt
 ../CourseMaterial/tools/unitGenerator/templates/
 
 The first one is the lesson plan file for this unit.

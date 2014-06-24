@@ -75,8 +75,22 @@ public class Lesson extends Task {
 				.get(this.getUnit().getOutputLink() + "/" + name).toString();
 		PrintWriter pw = new PrintWriter(new File(fullName));
 		String template = this.getUnit().getLessonTemplate();
+		
 		template = template.replace("$LESSON_TITLE", this.getTitle());
-		template = template.replace("$LESSON_VIDEO_LINK", this.videoLink);
+		
+
+		// Handle lessons with no activities.
+		if (this.videoLink != null && this.videoLink.length() > 0) {
+			// Add the video tag
+			template = template.replace("$VIDEO_TAG", Unit.VIDEO_TAG);
+			// From it, add the unit video base
+			template = template.replace("$VIDEO_LINK", getUnit().getVideoLink());
+			// From it, add the lesson video.
+			template = template.replace("$LESSON_VIDEO_LINK", this.videoLink);
+		} else {
+			// If there is no video for this lesson, don't add the tag.
+			template = template.replace("$VIDEO_TAG", "");
+		}
 		template = template.replace("$LESSON_CONTENT_ABOVE", this.contentAbove);
 		template = template.replace("$LESSON_CONTENT_BELOW", this.contentBelow);
 		template = replaceNextAndPrevious(template);

@@ -23,31 +23,34 @@ public class Unit {
 	private String title;
 	private String outputLink;
 	private String videoLink;
+
 	private String slideLink;
 	private List<Task> tasks;
 
-	
-	private static final int IN_UNIT = 0, IN_LESSON_CONTENT_ABOVE = 1, IN_LESSON_CONTENT_BELOW = 2, IN_ACTIVITY = 3;
+	static final String VIDEO_TAG = "<iframe class=\"tscplayer_inline\" name=\"tsc_player\" src=\"$VIDEO_LINK/$LESSON_VIDEO_LINK\" scrolling=\"no\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
 
-	
+	private static final int IN_UNIT = 0, IN_LESSON_CONTENT_ABOVE = 1,
+			IN_LESSON_CONTENT_BELOW = 2, IN_ACTIVITY = 3;
+
 	/**
 	 * Creates a unit from the given config file using default template files.
 	 * 
 	 * @param unitName
-	 * @param dir 
+	 * @param dir
 	 * 
 	 * @param lessonTemplateName
 	 * @throws FileNotFoundException
-	 * @throws UnsupportedDataTypeException 
+	 * @throws UnsupportedDataTypeException
 	 */
-	public Unit(String unitName, String dir) throws FileNotFoundException, UnsupportedDataTypeException {
-		//dir = "CourseMaterial/units/templates/";
+	public Unit(String unitName, String dir) throws FileNotFoundException,
+			UnsupportedDataTypeException {
+		// dir = "CourseMaterial/units/templates/";
 		String ltName = Paths.get(dir + "lessonTemplate.html").toString();
 		lessonTemplate = fileContentsFromName(ltName);
 
 		String atName = Paths.get(dir + "activityTemplate.html").toString();
 		activityTemplate = fileContentsFromName(atName);
-		
+
 		String qtName = Paths.get(dir + "activityQuizCopyright.txt").toString();
 		quizTemplate = fileContentsFromName(qtName);
 
@@ -56,13 +59,14 @@ public class Unit {
 		replaceUnitVariables();
 	}
 
-	private void parse(String unitName) throws FileNotFoundException, UnsupportedDataTypeException {
+	private void parse(String unitName) throws FileNotFoundException,
+			UnsupportedDataTypeException {
 		unitContents = fileContentsFromName(unitName);
 		Scanner sc = new Scanner(unitContents);
 		String[] startingTokens = new String[] { "UNIT TITLE:",
 				"LINK TO OUTPUT:", "LINK TO VIDEOS:", "LINK TO SLIDES:",
 				"LESSON TITLE:", "LESSON VIDEO:", "CONTENT ABOVE",
-				"CONTENT BELOW", "END", "ACTIVITY TITLE:", "Q:", "TYPE:"};
+				"CONTENT BELOW", "END", "ACTIVITY TITLE:", "Q:", "TYPE:" };
 
 		int state = IN_UNIT;
 
@@ -70,7 +74,7 @@ public class Unit {
 		Task currentTask = null;
 		Question currentQuestion = null;
 		String currentQuestionPrompt = null;
-		
+
 		int lineCount = 0;
 		while (sc.hasNextLine()) {
 			String line = sc.nextLine();
@@ -120,7 +124,7 @@ public class Unit {
 			case 8:
 				// end
 				if (currentQuestion != null) {
-					((Activity)currentTask).addQuestion(currentQuestion);
+					((Activity) currentTask).addQuestion(currentQuestion);
 					currentQuestion = null;
 				}
 				tasks.add(currentTask);
@@ -137,26 +141,28 @@ public class Unit {
 				// Quiz text prompt
 				// Save the last question if needed and start a new question.
 				if (currentQuestion != null) {
-					((Activity)currentTask).addQuestion(currentQuestion);
+					((Activity) currentTask).addQuestion(currentQuestion);
 				}
 				currentQuestionPrompt = remainder;
 				break;
 			case 11:
-				// Quiz type. 
+				// Quiz type.
 				currentQuestion = Question.makeQuestion(remainder);
 				currentQuestion.setPrompt(currentQuestionPrompt);
 				break;
-				
+
 			default:
 				if (state == IN_LESSON_CONTENT_ABOVE) {
 					((Lesson) currentTask).appendContentAbove(line);
 				} else if (state == IN_LESSON_CONTENT_BELOW) {
 					((Lesson) currentTask).appendContentBelow(line);
 				} else if (state == IN_ACTIVITY) {
-					System.out.println("Read a choice on line " + lineCount + ":" + line);
+					System.out.println("Read a choice on line " + lineCount
+							+ ":" + line);
 					currentQuestion.addQuestionChoice(line);
 				} else {
-					System.out.println("Ignoring line " + lineCount + ":" + line);
+					System.out.println("Ignoring line " + lineCount + ":"
+							+ line);
 				}
 				break;
 			}
@@ -187,8 +193,7 @@ public class Unit {
 	private void replaceUnitVariables() {
 		lessonTemplate = lessonTemplate.replace("$UNIT_TITLE", this.title);
 		lessonTemplate = lessonTemplate.replace("$SLIDE_LINK", this.slideLink);
-		lessonTemplate = lessonTemplate.replace("$VIDEO_LINK", this.videoLink);
-
+		// Moved video link to lesson: if there is no video in a lesson, adding this hurts it. 
 		activityTemplate = activityTemplate.replace("$UNIT_TITLE", this.title);
 		activityTemplate = activityTemplate.replace("$SLIDE_LINK",
 				this.slideLink);
@@ -253,21 +258,22 @@ public class Unit {
 
 	Task getNextTask(Task task) {
 		for (int i = 0; i < tasks.size(); i++) {
-			if (tasks.get(i) == task && i < tasks.size()-1) {
-				return tasks.get(i+1);
+			if (tasks.get(i) == task && i < tasks.size() - 1) {
+				return tasks.get(i + 1);
 			}
 		}
 		return null;
 	}
+
 	Task getPreviousTask(Task task) {
 		for (int i = 0; i < tasks.size(); i++) {
 			if (tasks.get(i) == task && i > 0) {
-				return tasks.get(i-1);
+				return tasks.get(i - 1);
 			}
 		}
 		return null;
 	}
-	
+
 	List<Task> getTasks() {
 		return tasks;
 	}
@@ -275,5 +281,8 @@ public class Unit {
 	public String getOutputLink() {
 		return outputLink;
 	}
-	
+
+	public String getVideoLink() {
+		return this.videoLink;
+	}
 }

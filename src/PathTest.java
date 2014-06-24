@@ -1,8 +1,3 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 
 /**
@@ -13,16 +8,16 @@ import java.nio.file.Paths;
  */
 public class PathTest {
 
-	public static void main(String[] args) throws FileNotFoundException {
-		Path p1 = Paths.get("test/activity1.html");
-		System.out.println(p1.toString());
-		Path pathDir = p1.getParent();
-		File fileDir = new File(pathDir.toString());
-		System.out.println(fileDir.mkdirs());
-
-		File file = new File(p1.toString());
-		PrintWriter pw = new PrintWriter(file);
-		pw.close();
-	}
+//	public static void main(String[] args) throws FileNotFoundException {
+//		Path p1 = Paths.get("test/activity1.html");
+//		System.out.println(p1.toString());
+//		Path pathDir = p1.getParent();
+//		File fileDir = new File(pathDir.toString());
+//		System.out.println(fileDir.mkdirs());
+//
+//		File file = new File(p1.toString());
+//		PrintWriter pw = new PrintWriter(file);
+//		pw.close();
+//	}
 
 }

@@ -1,5 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
@@ -22,6 +24,19 @@ public class Main {
 	public static void main(String[] args) {
 		@SuppressWarnings("unused")
 		Main main = new Main();
+		
+		final Class<?> referenceClass = Main.class;
+		final URL url =
+		    referenceClass.getProtectionDomain().getCodeSource().getLocation();
+
+		try{
+		    final File jarPath = new File(url.toURI()).getParentFile();
+		    JOptionPane.showMessageDialog(null, jarPath); // this is the path you want 
+		} catch(final URISyntaxException e){
+		    // etc.
+		}
+		
+		
 	}
 
 	public Main() {
