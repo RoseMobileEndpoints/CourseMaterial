@@ -1,0 +1,77 @@
+UNIT TITLE: SQLite
+// Outputs to the CourseMaterials repo, checked out as a sibling to this tools repo. 
+// Outputs directly.
+LINK TO OUTPUT: ../units/SQLite
+LINK TO VIDEOS: ../../videos/SQLite  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1owF0wNA1BPjzZ6TSvEULaZmM_2UTHN3GY4L3nzYND90
+
+1 Overview
+2 Setup
+3 OpenDatabase
+4 CreateDatabase
+5 Add an item
+6 SimpleCursorAdapter to view an item
+7 Update
+8 Delete 
+9 Summary
+
+
+// Lessons here
+
+LESSON TITLE: SQLite Overview
+LESSON VIDEO: SQLiteOverview/SQLiteOverview_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn what SQLite is.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+
+
+
+LESSON TITLE: Lab: Rose Homework Using SQLite
+LESSON VIDEO: LabSQLite/LabSQLite_player.html
+CONTENT ABOVE
+<ul>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1PgK5ysZ3CwC-w5Sp3cBIQjoY4b_aPqhsNbR2hu-BwWU" target="_blank">here</a>.</li>
+<li>When done, be sure to submit your zipped Eclipse project (Rose Homework), plus video demo, to the Moodle dropbox.</li>
+<li>Then go complete the Moodle "SQLite" self-evaluation survey before calling it a day.</li>
+</ul>
+CONTENT BELOW
+END
+
+LESSON TITLE: 
+LESSON VIDEO: /_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li></li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ .
+ $#$ $#$ yes
+$#$ .
+
+Q: 
+TYPE: MC
+ $#$ .
+ $#$ $#$ yes
+$#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
+
+
+
