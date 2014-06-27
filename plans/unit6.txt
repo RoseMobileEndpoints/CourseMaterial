@@ -3,33 +3,187 @@ LINK TO OUTPUT: ../units/Adapters
 LINK TO VIDEOS: ../../videos/Adapters  
 LINK TO SLIDES: https://docs.google.com/presentation/d/1ktv4pOcdlwBdj6PsVXwgxbdZUhFycmq18kiI58mvvhU
 
-1. Overview
-2. 
-// Lab (optional? Or create from scratch)
+1. Overview of what an adapter is. Demo the full app. 5:00
+2. ListView. 9:35
+3. ExtendingBaseAdapter with text views. Adding to getCount(). Adding onItemClickListener 13:42
+4. CustomViews Add with buttons, iamgeviews (very short: add color, and keep color on each). 6:00
+5. CustomCompoundView  19:37
+6. Extending ArrayAdapter for other objects. Simple toString(), then extend ArrayAdapter. 16:44 
+7. Summary (skipping this lab): E 
+// Total: 
 
 // Lessons here
 
 LESSON TITLE: Adapters Overview
-LESSON VIDEO: AdaptersOverview/AdaptersOverview_player.html
+LESSON VIDEO: AdapterOverview/AdapterOverview_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll .</li>
+<li>In this lesson, you'll get an overview of what adapters are and what types of adapters and adapter views are available.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What does an adapter do?
+TYPE: MC
+Converts from layout files to views $#$ Inflaters do that.
+Replicates views $#$ It uses a data source that could be an array or even a database or the contact list on your phone $#$ yes
+Changes voltage $#$ Wrong field of study!
+END
+
+
+
+LESSON TITLE: List Views
+LESSON VIDEO: ListView/ListView_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to create a ListView and populate it using an array and the simplest of ArrayAdapters.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Was your name used in the demo?
+TYPE: MC
+Yes $#$ Hope you enjoyed that. I'm glad you signed up early for the course! $#$ yes
+No $#$ Sorry - I used those people who signed up earliest for the summer class.  $#$ yes
+
+Q: Which new Eclipse shortcut did we learn?
+TYPE: MC
+Ctrl-space $#$ Hopefully content-assist is an old friend.
+Alt-shift R $#$ That's for refactor/renaming - hopefully you already knew that one. 
+Alt-shift A, S $#$ Makes it convenient to code when we don't know all the string resources we will need ahead of time. $#$ yes
+
+Q: What layout did we use for a row in the ListView?
+TYPE: MC
+android.R.simple_list_item_1 $#$ $#$ yes
+R.simple_list_item_1 $#$ We used a built-in resource.
+
+Q: Which one is these is NOT a parameter to the ArrayAdapter constructor?
+TYPE: MC
+Array $#$ It needs a data source.
+Context $#$ It needs the context too to create views.
+Layout $#$ It needs the layout of a single view.
+ListView $#$ You bind the adapter to a ListView by calling setAdapter(). $#$ yes
+END
+
+
+
+LESSON TITLE: Extending the BaseAdapter class
+LESSON VIDEO: ExtendingBaseAdapter/ExtendingBaseAdapter_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to override the methods in this abstract class. </li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Which is NOT an abstract method in BaseAdapter?
+TYPE: MC
+getContext() $#$ $#$ yes
+getCount() $#$ 
+getItem() $#$ 
+getItemId() $#$ 
+getView() $#$
+
+Q: Why do we test to see if convertView is null?
+TYPE: MC
+Efficiency $#$ There is no need to recreate objects that have already been allocated in memory. $#$ yes
+The code is cleaner and easier to maintain that way $#$ Not necessarily.
+
+Q: What method is used to tell the adapter that it needs to update?
+TYPE: MC
+notifyAll() $#$ That Java method is used when multithreading.
+notifyDataSetChanged() $#$ $#$ yes
+notifyDataSetInvalidated() 
+
+Q: How do we listen to clicks on views in a ListView?
+TYPE: MC
+onItemClickListener() $#$ $#$ yes
+onClickListener() $#$ That was for single views.
+OnItemLongClickListener() $#$ That isn't the one we used, but it does listen for (long) clicks on ListView items $#$ yes
+END
+
+
+
+LESSON TITLE: Custom Views
+LESSON VIDEO: CustomViews/CustomViews_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to replace each item in a ListView with other single views like buttons and images. </li>
 </ul>
 CONTENT BELOW
 END
 
 
-LESSON TITLE: Lab: Better Adapter
-LESSON VIDEO: LabBetterAdapter/LabBetterAdapter_player.html
+
+
+LESSON TITLE: Custom Compound Views
+LESSON VIDEO: CustomCompoundView/CustomCompoundView_player.html
 CONTENT ABOVE
 <ul>
-<li>When you make a new Android application project using the wizard, you have an option to make an activity that follows a master/detail flow. Here you will   lab specification is <a href="https://docs.google.com/document/d/1zMKKqXsrVdFG6TIRohpp4ls0QgJAgFTPJfg6fbhSQp8" target="_blank">here</a>.</li>
-<li>When done, be sure to submit your zipped Eclipse project (BetterAdapter), plus video demo, to the Moodle dropbox.</li>
-<li>Then go complete the Moodle "Fragments and Adapters" self evaluation survey before calling it a day.</li>
+<li>In this lesson, you'll learn how to extend LinearLayout in code so you can serve up compound views as items in the ListView.</li>
+<li>We display real data (month names) in the rows.</li>
+<li>Finally, we give the layout a nice, notepage-looking format declaratively.</li>
 </ul>
 CONTENT BELOW
 END
 
+ACTIVITY TITLE: Questions
+Q: What method did we call to get the month name from the adapter when we clicked that item?
+TYPE: MC
+getItem() $#$  $#$ yes
+getCount() $#$ 
+getItemId() $#$ 
+getItem().getMonth() $#$ That would work if the item was an object with a month field - our items were just strings.
+
+Q: When inflating the row_view.xml file, how do we get the left and right text views?
+TYPE: MC
+Call a constructor: new TextView(mContext) $#$ That was before we had the xml.
+Find them: findViewById(R.id.row_view.xml) $#$ Good review. $#$ yes
+END
 
 
+
+LESSON TITLE: Extending ArrayAdapters
+LESSON VIDEO: ExtendingArrayAdapter/ExtendingArrayAdapter_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to extend the ArrayAdapter class</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: If you make an ArrayAdapter<SomeObject>, what will be displayed in each view?
+TYPE: MC
+the results of the array's toString() $#$ Unfortunately, the array class' toString method isn't very helpful.
+each item's getView() $#$
+the result of each item's toString() $#$ $#$ yes
+
+Q: How do you get the parts of an object to display in a two line view? 
+TYPE: MC
+Override getView() and call getItem() to access the object $#$ $#$ yes
+Annotate your class with the .text1 and .text2 identifiers. $#$ We haven't used annotations yet in this course. But we will when we study Google Cloud Endpoints!
+It just works automatically $#$
+
+Q: Do we need to test to see if convertView is null when we override ArrayAdapter's getView()?
+TYPE: MC
+Yes $#$ The call to super.getView() already checks for that. 
+No $#$ $#$ yes
+END
+
+
+
+LESSON TITLE: Summary
+LESSON VIDEO: SummaryAdapters/SummaryAdapters_player.html
+CONTENT ABOVE
+<ul>
+<li>There is no lab in this unit. </li>
+<li>However, we still look at directions for further study on adapters.</li> 
+<li>Also, please complete the Moodle "Fragments and Adapters" self evaluation survey before calling it a day.</li>
+</ul>
+CONTENT BELOW
+END
 
