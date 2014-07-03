@@ -5,73 +5,204 @@ LINK TO OUTPUT: ../units/SQLite
 LINK TO VIDEOS: ../../videos/SQLite  
 LINK TO SLIDES: https://docs.google.com/presentation/d/1owF0wNA1BPjzZ6TSvEULaZmM_2UTHN3GY4L3nzYND90
 
-1 Overview
-2 Setup
-3 OpenDatabase
-4 CreateDatabase
-5 Add an item
-6 SimpleCursorAdapter to view an item
-7 Update
-8 Delete 
-9 Summary
-
+1 SQLiteOverview 8:01
+2 ProjectSetup 8:30
+3 CreatingDatabase 18:08
+4 AddingItem 8:48
+6 QueryingItems 14:24
+7 UpdatingItem 16:21
+8 DeletingItem 5:57
+9 LabSQLite 8:00
+// Total = 89 min
 
 // Lessons here
+
 
 LESSON TITLE: SQLite Overview
 LESSON VIDEO: SQLiteOverview/SQLiteOverview_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll learn what SQLite is.</li>
+<li>In this lesson, you'll learn what SQLite is, the idea of ContentValues and Cursors, and some basic SQLite commands.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What is a ContentValues?
+TYPE: MC
+A constuct that binds a data source to an xml layout file to replicate views $#$ That is an adapter. We will learn about CursorAdapters later in this unit.
+A row in a database table that corresponds to a single model object $#$ $#$ yes
+A pointer to a result set returned by a query $#$ That is a Cursor.
+
+Q: What is a Cursor?
+TYPE: MC
+A constuct that binds a data source to an xml layout file to replicate views $#$ That is an adapter. We will learn about CursorAdapters later in this unit.
+A row in a database table that corresponds to a single model object $#$ That is a ContentValues (see previous question)
+A pointer to a result set returned by a query $#$ $#$ yes
+
+Q: Are Cursors iterable?
+TYPE: MC
+Yes $#$ That's why they have methods like moveToFirst() and moveToNext() $#$ yes
+No
+
+Q: What does CRUD stand for in computing?
+TYPE: MC
+A dirty or greasy substance $#$ That's the dictionary definition - our CRUD is much more useful than that!
+Create/Read/Update/Delete $#$ This concept is broader than SQLite or even databases - you have implemented these operations before, say using arrays, although without persistance. $#$ yes
+
+Q: What SQLIte method is used to implement the R in CRUD?
+TYPE: MC
+delete $#$ That's the D.
+insert $#$ That's the C, for Create.
+query $#$ Query Reads the database and returns the Cursor of results that satisfy the query condition $#$ yes
+update $#$ That's the U.
+END
+
+
+
+LESSON TITLE: Project Setup
+LESSON VIDEO: ProjectSetup/ProjectSetup_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll download and see what you have for the starting code for this unit's example.</li>
 </ul>
 CONTENT BELOW
 END
 
 
 
+LESSON TITLE: Creating the Database
+LESSON VIDEO: CreatingDatabase/CreatingDatabase_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to subclass the SQLiteOpenHelper class to create your database.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What did we add to the DataAdapter in this lesson?
+TYPE: MS
+Adding constants for the table keys $#$ yes
+Backing up the CRUD methods
+Creating instances of SQLiteOpenHelper and SQLiteDatabase. $#$ yes 
+Executing SQLite CREATE statements. $#$ yes
+
+Q: How does SimpleCursorAdapter relate to other adapters we studied?
+TYPE: MC
+It extends BaseAdapter $#$ $#$ yes
+It extends ArrayAdapter $#$ 
+END
+
+
+
+LESSON TITLE: Adding an Item
+LESSON VIDEO: AddingItem/AddingItem_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to use ContentValues to add a new item to the database.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What is a ContentValues?
+TYPE: MC
+A constuct that binds a data source to an xml layout file to replicate views $#$ That is an adapter. We will learn about CursorAdapters later in this unit.
+A row in a database table that corresponds to a single model object $#$ You knew this was a review question, right? $#$ yes
+A pointer to a result set returned by a query $#$ That is a Cursor.
+
+Q: When do you assign an ID to an item inserted into the database?
+TYPE: MC
+When creating the ContentValues $#$ How would you know what value to use? 
+After inserting the item $#$ insert() returns the value to use. $#$ yes
+When you update the item $#$ It would be too late, since you need the ID to search for the item to update. 
+END
+
+LESSON TITLE: Querying for Items
+LESSON VIDEO: QueryingItems/QueryingItems_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to write a query to get all items from the database.</li>
+<li>You'll also learn how to create a CursorAdapter to display the info in that Cursor in a ListView.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What is a database projection? 
+TYPE: MC
+A list of which rows from the database you are querying for $#$ That's the selection (the where clause).
+A list of which columns from the database you are querying for $#$ $#$ yes
+
+Q: How do you tell the CursorAdapter which database columns should be displayed in which text views?
+TYPE: MC
+The columns and TextViews are parameters to the constructor $#$ $#$ yes
+There is a default ordering based on ID $#$ It gives you more flexibility than that.
+
+Q: When we first setup the CursorAdapter, it didn't show a recently added item until the app was re-launched or rotated. What did we do to show an item that was just added?
+TYPE: MC
+We added the item to an ArrayList as well and called notifyDataSetChanged() on the adapter. $#$ Not a bad idea. We didn't do that here, but we could in the lab.
+We requeried the database and passed the new Cursor to the adapter. $#$ $#$ yes
+We didn't add that functionality.
+END
+
+
+
+LESSON TITLE: Updating an Item
+LESSON VIDEO: UpdatingItem/UpdatingItem_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to update an item in the database. </li>
+<li>You'll also learn how to query the database for a single item.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: To auto-populate the update dialog with an item, we needed to query for only that item. How do we do that? 
+TYPE: MC
+Specify a selection (where clause) with the id $#$ Aren't you glad you saved the ID in the model object when it was inserted? $#$ yes
+Specify a projection (columns) with the id $#$ That just tells you which columns to return - it doesn't affect which table row(s) you get in the Cursor.
+
+Q: What value does the database's update() method return?
+TYPE: MC
+Nothing. It is a void method, which is why we didn't assign a return value to a variable. $#$ Look it up.
+A boolean telling whether or not it was successful.
+An int telling how many rows were updated. $#$ $#$ yes
+END
+
+
+
+LESSON TITLE: Deleting an Item
+LESSON VIDEO: DeletingItem/DeletingItem_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to delete an item or items from the database.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Did you appreciate how easy delete was was to do?
+TYPE: MC
+Yes $#$ It is always good to be thankful! $#$ yes
+No $#$ Too bad - I thought you would.
+
+Q: Did you notice how I kept mistyping 'whereClause' as 'whereClaude' in this unit? 
+TYPE: MC
+Yes $#$ Just muscle memory in my fingers, formed from repeatedly typing the name of my friend and colleague, Claude Anderson. :) $#$ yes
+No $#$ Just muscle memory in my fingers, formed from repeatedly typing the name of my friend and colleague, Claude Anderson. :) $#$ yes
+END
 
 
 LESSON TITLE: Lab: Rose Homework Using SQLite
 LESSON VIDEO: LabSQLite/LabSQLite_player.html
 CONTENT ABOVE
 <ul>
-<li>The lab specification is <a href="https://docs.google.com/document/d/1PgK5ysZ3CwC-w5Sp3cBIQjoY4b_aPqhsNbR2hu-BwWU" target="_blank">here</a>.</li>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1iJQCX6Z1skhfBIuNKoPv6JcPB0gKHENjfehxizBk6Bo" target="_blank">here</a>.</li>
 <li>When done, be sure to submit your zipped Eclipse project (Rose Homework), plus video demo, to the Moodle dropbox.</li>
 <li>Then go complete the Moodle "SQLite" self-evaluation survey before calling it a day.</li>
 </ul>
 CONTENT BELOW
 END
-
-LESSON TITLE: 
-LESSON VIDEO: /_player.html
-CONTENT ABOVE
-<ul>
-<li>In this lesson, </li>
-<li></li>
-</ul>
-CONTENT BELOW
-END
-
-ACTIVITY TITLE: Questions
-Q: 
-TYPE: MC
- $#$ .
- $#$ $#$ yes
-$#$ .
-
-Q: 
-TYPE: MC
- $#$ .
- $#$ $#$ yes
-$#$ .
-
-Q: 
-TYPE: MS
- $#$ yes 
- $#$ yes
- $#$  
- $#$ yes
-END
-
-
-
