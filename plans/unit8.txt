@@ -1,72 +1,51 @@
 UNIT TITLE: AppEngine
 // Outputs directly.
 LINK TO OUTPUT: ../units/AppEngine
-LINK TO VIDEOS: ../../videos/AppEngine  
-LINK TO SLIDES: https://docs.google.com/presentation/d/1P5UyAo9UZ2fIACMYF3RyXGgBJh5-g2DD_okI8ZFwzUQ
+LINK TO VIDEOS: ../../videos/AppEngine
+LINK TO SLIDES: https://docs.google.com/presentation/d/1SzS6vb0Hqm2s5Ct7PkKh15BY47x9MU4rTJ9spM7xjxM
 
 1 Overview
-2 AboutDialog
-3 ExitDialog
-4 ListDialogs
-5 ProgressDialogs
-6 CustomDialogs
+2 Lab intro
 
 // Lessons here
 
 LESSON TITLE: AppEngine Overview
-LESSON VIDEO: AppEngineOverview/AppEngineOverview_player.html
+LESSON VIDEO: IntroToAppEngine/IntroToAppEngine_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll get an overview of the various types of dialogs you can use in your apps.</li>
-</ul>
-CONTENT BELOW
-END
-
-
-
-
-
-LESSON TITLE: Lab: Passing Data in Intents
-LESSON VIDEO: LabPassingDataInIntents/LabGettingStartedWithButtons_player.html
-CONTENT ABOVE
-<ul>
-<li>The lab specification is <a href="https://docs.google.com/document/d/1zMKKqXsrVdFG6TIRohpp4ls0QgJAgFTPJfg6fbhSQp8" target="_blank">here</a>.</li>
-<li>When done, be sure to submit your zipped Eclipse project (Blackjack Dialogs), plus video demo, to the Moodle dropbox.</li>
-<li>Then go complete the Moodle "Dialogs" self-evaluation survey before calling it a day.</li>
-</ul>
-CONTENT BELOW
-END
-
-LESSON TITLE: 
-LESSON VIDEO: /_player.html
-CONTENT ABOVE
-<ul>
-<li>In this lesson, </li>
-<li></li>
+<li>In this lesson you will learn why a developer might choose AppEngine as a service.</li>
 </ul>
 CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: 
-TYPE: MC
- $#$ .
- $#$ $#$ yes
-$#$ .
-
-Q: 
-TYPE: MC
- $#$ .
- $#$ $#$ yes
-$#$ .
-
-Q: 
+Q: What can AppEngine be used for?
 TYPE: MS
- $#$ yes 
- $#$ yes
- $#$  
- $#$ yes
+Creating web apps $#$ yes 
+Creating backends for Android apps $#$ yes
+Creating Android apps
+Creating backends for iOS apps $#$ yes
+Creating iOS apps
+
+Q: If I have a web app with a Project ID of cluekeeperweb, must I use http://cluekeeperweb.appspot.com as my URL?
+TYPE: MC
+Yes $#$ The nice thing is no one has to know that your app is hosted by google.
+No $#$ Isn't that convenient? They use http://cluekeeper.com. Did you know that even www.angrybirds.com is really an alias for an appspot app? $#$ yes
 END
+
+
+
+LESSON TITLE: Lab: AppEngine install
+LESSON VIDEO: InstallTestLab/InstallTestLab_player.html
+CONTENT ABOVE
+<ul>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1lzetitdvee5NLJLwa4P88GincZQbNGJcy52RHe9Yc0E" target="_blank">here</a>.</li>
+<li>This lab is a bit different: no code or video demo needed - you'll submit a link to a running backend, per the lab instructions.</li>
+<li>We'll wait until after the Endpoints unit to complete the "AppEngine and Endpoints" self-evaluation survey.</li>
+</ul>
+CONTENT BELOW
+END
+
 
 
 

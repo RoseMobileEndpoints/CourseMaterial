@@ -2,71 +2,92 @@ UNIT TITLE: Endpoints
 // Outputs directly.
 LINK TO OUTPUT: ../units/Endpoints
 LINK TO VIDEOS: ../../videos/Endpoints  
-LINK TO SLIDES: https://docs.google.com/presentation/d/1P5UyAo9UZ2fIACMYF3RyXGgBJh5-g2DD_okI8ZFwzUQ
+LINK TO SLIDES: https://docs.google.com/presentation/d/1FjzwS8xLvCmtznYU3asEqwiSJA6KEq0X9GbWPntM2H8
 
-1 Overview
-2 AboutDialog
-3 ExitDialog
-4 ListDialogs
-5 ProgressDialogs
-6 CustomDialogs
+Overview
+_____ Part A:  Setup
+_____ Part B:  Backend Model
+_____ Part C:  Testing: Web app
+_____ Part D:  Endpoints API: Create
+_____ Part E:  Endpoints API: Read, Update, Delete
+Lab
 
 // Lessons here
 
 LESSON TITLE: Endpoints Overview
-LESSON VIDEO: DialogsOverview/DialogsOverview_player.html
+LESSON VIDEO: EndpointsOverview/EndpointsOverview_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll get an overview of the various types of dialogs you can use in your apps.</li>
+<li>In this lesson you will what Endpoints is and get an overview of the process of creating an Endpoints API.</li>
 </ul>
 CONTENT BELOW
 END
 
 
 
-
-
-LESSON TITLE: Lab: Passing Data in Intents
-LESSON VIDEO: LabPassingDataInIntents/LabGettingStartedWithButtons_player.html
-CONTENT ABOVE
-<ul>
-<li>The lab specification is <a href="https://docs.google.com/document/d/1zMKKqXsrVdFG6TIRohpp4ls0QgJAgFTPJfg6fbhSQp8" target="_blank">here</a>.</li>
-<li>When done, be sure to submit your zipped Eclipse project (Blackjack Dialogs), plus video demo, to the Moodle dropbox.</li>
-<li>Then go complete the Moodle "Dialogs" self-evaluation survey before calling it a day.</li>
-</ul>
-CONTENT BELOW
-END
-
-LESSON TITLE: 
-LESSON VIDEO: /_player.html
+LESSON TITLE: Setup
+LESSON VIDEO: Setup/Setup_player.html
 CONTENT ABOVE
 <ul>
 <li>In this lesson, </li>
-<li></li>
+<li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
 END
 
-ACTIVITY TITLE: Questions
-Q: 
-TYPE: MC
- $#$ .
- $#$ $#$ yes
-$#$ .
+LESSON TITLE: Backend Model
+LESSON VIDEO: BackendModel/BackendModel_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
 
-Q: 
-TYPE: MC
- $#$ .
- $#$ $#$ yes
-$#$ .
-
-Q: 
-TYPE: MS
- $#$ yes 
- $#$ yes
- $#$  
- $#$ yes
+LESSON TITLE: MovieQuotes Web App
+LESSON VIDEO: MovieQuotesWebApp/MovieQuotesWebApp_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
 END
 
 
+
+LESSON TITLE: Endpoints API: Create
+LESSON VIDEO: EndpointsAPICreate/EndpointsAPICreate_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+
+
+LESSON TITLE: Endpoints API: Read, Update, Delete
+LESSON VIDEO: EndpointsAPIReadUpdateDelete/EndpointsAPIReadUpdateDelete_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: Lab: WeatherpicsBackend
+LESSON VIDEO: LabPassingDataInIntents/LabGettingStartedWithButtons_player.html
+CONTENT ABOVE
+<ul>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1_aANt_3DM2uGvDhllatRiZUK9bzKiwYoarOL_P2N1zU" target="_blank">here</a>.</li>
+<li>When done, be sure to submit your zipped Eclipse project (Weatherpics Backend), plus video demo, to the Moodle dropbox.</li>
+<li>Then go complete the Moodle "Endpoints" self-evaluation survey before calling it a day.</li>
+</ul>
+CONTENT BELOW
+END
 
