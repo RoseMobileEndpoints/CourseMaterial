@@ -1,19 +1,20 @@
-UNIT TITLE: EndpointsBackend
+UNIT TITLE: EndpointsAndroidClient
 // Outputs directly.
-LINK TO OUTPUT: ../units/EndpointsBackend
-LINK TO VIDEOS: ../../videos/EndpointsBackend 
-LINK TO SLIDES: https://docs.google.com/presentation/d/1FjzwS8xLvCmtznYU3asEqwiSJA6KEq0X9GbWPntM2H8
+LINK TO OUTPUT: ../units/EndpointsAndroidClient
+LINK TO VIDEOS: ../../videos/EndpointsAndroidClient 
+LINK TO SLIDES: https://docs.google.com/document/d/16Ue-XKXmuAxnofi9ryxUzFcoPW9u11kmAyyN-xsOVrI
 
-Overview
-Setup
-Backend Model
-Testing: Web app
-Endpoints API: Create
-Endpoints API: Read, Update, Delete
-LabWeatherpicsBackend
+Client:
+GeneratingAndroidClientCode
+UsingAndroidClientCode (import, set up service object)
+MovieQuoteListUsingAsynchTask
+InsertingOrEditingQuote
+DeletingQuote
+Lab: WeatherpicsAndroidClient
 
 // Lessons here
 
+// NEED AN OVERVIEW?
 LESSON TITLE: Endpoints Overview
 LESSON VIDEO: EndpointsOverview/EndpointsOverview_player.html
 CONTENT ABOVE
@@ -25,8 +26,8 @@ END
 
 
 
-LESSON TITLE: Setup
-LESSON VIDEO: Setup/Setup_player.html
+LESSON TITLE: Generating Android Client Code
+LESSON VIDEO: GeneratingAndroidClientCode/GeneratingAndroidClientCode_player.html
 CONTENT ABOVE
 <ul>
 <li>In this lesson, </li>
@@ -35,8 +36,8 @@ CONTENT ABOVE
 CONTENT BELOW
 END
 
-LESSON TITLE: Backend Model
-LESSON VIDEO: BackendModel/BackendModel_player.html
+LESSON TITLE: Using Android Client Code
+LESSON VIDEO: UsingAndroidClientCode/UsingAndroidClientCode_player.html
 CONTENT ABOVE
 <ul>
 <li>In this lesson, </li>
@@ -45,20 +46,8 @@ CONTENT ABOVE
 CONTENT BELOW
 END
 
-LESSON TITLE: MovieQuotes Web App
-LESSON VIDEO: MovieQuotesWebApp/MovieQuotesWebApp_player.html
-CONTENT ABOVE
-<ul>
-<li>In this lesson, </li>
-<li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
-</ul>
-CONTENT BELOW
-END
-
-
-
-LESSON TITLE: Endpoints API: Create
-LESSON VIDEO: EndpointsAPICreate/EndpointsAPICreate_player.html
+LESSON TITLE: MovieQuote List Using an AsynchTask
+LESSON VIDEO: MovieQuoteListUsingAsynchTask/MovieQuoteListUsingAsynchTask_player.html
 CONTENT ABOVE
 <ul>
 <li>In this lesson, </li>
@@ -69,8 +58,8 @@ END
 
 
 
-LESSON TITLE: Endpoints API: Read, Update, Delete
-LESSON VIDEO: EndpointsAPIReadUpdateDelete/EndpointsAPIReadUpdateDelete_player.html
+LESSON TITLE: Inserting or Editing a Quote
+LESSON VIDEO: InsertingOrEditingQuote/InsertingOrEditingQuote_player.html
 CONTENT ABOVE
 <ul>
 <li>In this lesson, </li>
@@ -80,12 +69,24 @@ CONTENT BELOW
 END
 
 
-LESSON TITLE: Lab: WeatherpicsBackend
-LESSON VIDEO: LabWeatherpicsBackend/LabWeatherpicsBackend_player.html
+
+LESSON TITLE: Deleting a Quote
+LESSON VIDEO: DeletingQuote/DeletingQuote_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: Lab: WeatherpicsAndroidClient
+LESSON VIDEO: LabWeatherpicsAndroidClient/LabWeatherpicsAndroidClient_player.html
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1_aANt_3DM2uGvDhllatRiZUK9bzKiwYoarOL_P2N1zU" target="_blank">here</a>.</li>
-<li>When done, be sure to submit your zipped Eclipse project (Weatherpics Backend), plus video demo, to the Moodle dropbox.</li>
+<li>When done, be sure to submit your zipped Eclipse project (Weatherpics), plus video demo, to the Moodle dropbox.</li>
 <li>Then go complete the Moodle "Endpoints" self-evaluation survey before calling it a day.</li>
 </ul>
 CONTENT BELOW
