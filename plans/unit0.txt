@@ -59,6 +59,7 @@ CONTENT ABOVE
 <li>In this lesson, you'll see the development of a simple app that one could create "out of the box" with no experience in Android. Don't worry if you don't absorb every detail. I just want to warm you up so that we can start off strong in the next unit.</li>
 </ul>
 CONTENT BELOW
+<script src="https://gist.github.com/mboutell/aee3e39d2f9bad21a134.js"></script>
 END
 
 ACTIVITY TITLE: Questions
