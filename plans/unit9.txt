@@ -9,7 +9,11 @@ Setup
 Backend Model
 Testing: Web app
 Endpoints API: Create
-Endpoints API: Read, Update, Delete
+Endpoints API: Read
+Endpoints API: Update
+Endpoints API: Delete
+DeployToAppEngine
+TroubleshootingAndViewingData
 LabWeatherpicsBackend
 
 // Lessons here
@@ -22,8 +26,6 @@ CONTENT ABOVE
 </ul>
 CONTENT BELOW
 END
-
-
 
 LESSON TITLE: Setup
 LESSON VIDEO: Setup/Setup_player.html
