@@ -6,16 +6,17 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1FjzwS8xLvCmtznYU3asEqwiS
 
 EndpointsOverview 			9:05
 TheRoadToLearningEndpoints 	3:13
-Setup						Done
-Backend Model				Done
-Testing: Web app         	Done
-Endpoints API: Create    	Done
-Endpoints API: Read			Done
+Setup						9:13
+Backend Model				8:48
+Testing: Web app         	9:00
+Endpoints API: Create    	15:13
+Endpoints API: Read			4:15
 Endpoints API: Update		3:23
 Endpoints API: Delete		5:28
 DeployToAppEngine			5:25
 TroubleshootingAndViewingData	8:24
 LabWeatherpicsBackend   	2:38
+// TOTAL: 
 
 // Lessons here
 
@@ -42,7 +43,7 @@ LESSON TITLE: Setup
 LESSON VIDEO: Setup/Setup_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you will register your app ID, set up your project using AppEngine Launcher and Eclipse, and run and deploy the starting code.</li>
+<li>In this lesson, you will register your app ID, set up your project using App Engine Launcher and Eclipse, and run and deploy the starting code.</li>
 <li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
@@ -58,7 +59,7 @@ Only GAE Launcher can deploy a web app $#$ Eclipse can do this too, as we'll see
 
 Q: How do you check whether the web app starting code is running successfully? 
 TYPE: MC
-You can't check until you deploy it $#$ We do lots of testing of hte backend locally.
+You can't check until you deploy it $#$ We can do extensive testing of the backend locally.
 Just run it and point your browser to localhost $#$ $#$ yes
 END
 
@@ -75,7 +76,7 @@ CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: Which class does MovieQuote directly extend? (Big hint: its a class inside the Endpoints Proto Datastore code you downloaded.)
+Q: Which class does MovieQuote directly extend? (Big hint: it's a class inside the Endpoints Proto Datastore code you downloaded.)
 TYPE: MC
 EndpointsModel $#$ $#$ yes
 ndb.model $#$ EndpointsModel extends ndb.model, so that is the 'super-super' class.
@@ -89,10 +90,10 @@ Nucleic acid database $#$ True, but not in this context.
 
 Q: We used all these property types in MovieQuotes except which one? 
 TYPE: MC
-DateTimeProperty $#$ We used that for the time it was last touched.
+DateTimeProperty $#$ We used that for the time the movie was last touched.
 IntegerProperty $#$ $#$ yes
-StringProperty $#$ We used that twice
-None: we used them all
+StringProperty $#$ We used two string properties
+None: we used them all $#$
 END
 
 
@@ -140,11 +141,11 @@ path $#$ yes
 http_method $#$ yes
 user_required
 
-Q: How do we test the insert API on our machines? 
+Q: How do we test the insertion method of the API on our machines? 
 TYPE: MC
 Use the Explorer $#$ $#$ yes 
-Run the webapp $#$ The webapp doesn't use the API 
-We can't test it until we deploy it $#$ We can test using localhost:/_ah/api/explorer
+Run the webapp $#$ The webapp doesn't use the API. 
+We can't test it until we deploy it $#$ We can test using localhost:/_ah/api/explorer.
 END
 
 
@@ -186,7 +187,7 @@ TYPE: MC
 Overload the insert method to take another type of quote as a parameter $#$
 Check to see if the object to be inserted is already in the datastore $#$ $#$ yes
 
-Q: What porprty must be set when testing to overwrite an existing quote?
+Q: What property must be set to overwrite an existing quote?
 TYPE: MC
 movie $#$ 
 quote $#$ 
