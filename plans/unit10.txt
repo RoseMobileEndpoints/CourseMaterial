@@ -14,7 +14,7 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1Dkvkp_KbjmpNjYR5IwHPJ5Ta
 8. EditQuote							1:37	
 9. DeleteQuote							6:24
 10. LabWeatherpicsAndroidClient			2:04
-// Total:
+// Total:	62 min.
 
 
 
