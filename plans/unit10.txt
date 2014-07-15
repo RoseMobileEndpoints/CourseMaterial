@@ -4,15 +4,16 @@ LINK TO OUTPUT: ../units/EndpointsAndroidClient
 LINK TO VIDEOS: ../../videos/EndpointsAndroidClient 
 LINK TO SLIDES: https://docs.google.com/presentation/d/1Dkvkp_KbjmpNjYR5IwHPJ5Tabc31AANur7_Q6CSP3jQ
 
-1. Overview								Prep
-2. Setup								
-3. GeneratingAndroidClientCode			
-4. CreatingServiceObject				
-5. ReadAllMovieQuotesUsingAsynchTask	
-6. InsertingAQuote						
-7. EditingQuote							
-8. DeletingQuote						
-9. Lab: WeatherpicsAndroidClient		Prep
+1. Overview								4:30
+2. Setup								1:40
+3. GeneratingAndroidClientCode			9:58
+4. CreatingServiceObject				5:25
+5. AsynchTask							7:13
+6. ReadAllMovieQuotes					14:07
+7. InsertQuote							9:08
+8. EditQuote							1:37	
+9. DeleteQuote							6:24
+10. LabWeatherpicsAndroidClient			2:04
 // Total:
 
 
@@ -21,7 +22,7 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1Dkvkp_KbjmpNjYR5IwHPJ5Ta
 // Lessons here
 
 LESSON TITLE: Overview
-LESSON VIDEO: EndpointsAndroidClientOverview/EndpointsAndroidClientOverview_player.html
+LESSON VIDEO: Overview/Overview_player.html
 CONTENT ABOVE
 <ul>
 <li>In this lesson you will survey how to write an Android client that connects to an Endpoints backend.</li>
@@ -35,7 +36,7 @@ LESSON TITLE: Setup
 LESSON VIDEO: Setup/Setup_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson you will prepare your app for Endpoints.</li>
+<li>In this lesson you will download your app in preparation for adding Endpoints code.</li>
 <li>Link to <a href="https://docs.google.com/document/d/16Ue-XKXmuAxnofi9ryxUzFcoPW9u11kmAyyN-xsOVrI" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
@@ -47,13 +48,34 @@ LESSON TITLE: Generating Android Client Code
 LESSON VIDEO: GeneratingAndroidClientCode/GeneratingAndroidClientCode_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, </li>
+<li>In this lesson, you'll learn how to generate code for an Android client using Windows. If you need help doing this on a Mac, please see the instructions doc.</li>
 <li>Link to <a href="https://docs.google.com/document/d/16Ue-XKXmuAxnofi9ryxUzFcoPW9u11kmAyyN-xsOVrI" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
 END
 
-LESSON TITLE: Using Android Client Code
+ACTIVITY TITLE: Questions
+Q: What command must be run to generate the Android client code?
+TYPE: MC
+{google appengine location}\\endpointscfg.py $#$ $#$ yes
+{google appengine location}\\generateAndroidCode $#$ 
+
+Q: Take a look at the generated code. Which file has a getItems() method?
+TYPE: MC
+Moviequotes $#$ This one is the Service object - we'll use it next time.
+MovieQuote $#$ Similar name as the first. But this is a single quote.
+MovieQuoteCollection $#$ We'll use this when we query the backend for all the quotes. $#$ yes
+
+Q: Take a look at the generated code. Which file has a getEntityKey() method?
+TYPE: MC
+Moviequotes $#$ This one is the Service object - we'll use it next time.
+MovieQuote $#$ Each quote has an entity key. We'll use this when we delete quotes. $#$ yes
+MovieQuoteCollection $#$ We'll use this when we query the backend for all the quotes.
+END
+
+
+
+LESSON TITLE: Creating a Service Object
 LESSON VIDEO: CreatingServiceObject/CreatingServiceObject_player.html
 CONTENT ABOVE
 <ul>
@@ -63,52 +85,146 @@ CONTENT ABOVE
 CONTENT BELOW
 END
 
+ACTIVITY TITLE: Questions
+Q: Our service object comes from which class?
+TYPE: MC
+Moviequotes $#$ Yes, this is the name of our backend. $#$ 
+MovieQuote $#$ Similar name as the first. But this is the model object for a single quote.
+MovieQuoteCollection $#$ We'll use this when we query the backend for all the quotes.
+END
 
 
-LESSON TITLE: Read All Movie Quotes Using an AsynchTask
-LESSON VIDEO: ReadAllMovieQuotesUsingAsynchTask/ReadAllMovieQuotesUsingAsynchTask_player.html
+
+LESSON TITLE: AsynchTasks
+LESSON VIDEO: AsynchTask/AsynchTask_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you will learn how to read all movie quotes fom the server. You will do this off the main UI thread using an AsynchTask.</li>
+<li>In this lesson, you will learn the basics of using AsynchTasks to do work off the main UI thread.</li>
 <li>Link to <a href="https://docs.google.com/document/d/16Ue-XKXmuAxnofi9ryxUzFcoPW9u11kmAyyN-xsOVrI" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What is the main reason we use AsynchTasks in our apps?
+TYPE: MC
+To keep our apps responsive during network or database calls. $#$ $#$ yes
+Because AsynchTask is such a cool-sounding class name. $#$ It is, but that's not the main reason.
+Because we can. $#$ 
+
+Q: What method in an AsynchTask must always be implemented?
+TYPE: MC
+onPreExecute $#$ This is where you set up a ProgressBar if you want one - totally optional.
+doInBackground $#$ $#$ yes
+onProgressUpdate $#$ This is where you update the ProgressBar - totally optional.
+onPostExecute $#$ We often do this to examine the results of the task and to update the UI. But it isn't required to do this.
+
+Q: What is used for a parameter type in an AsynchTask if there is no parameter?
+TYPE: MC
+null $#$ 
+Null $#$ At least you remembered that class names are capitalized.
+void $#$ Close.
+Void $#$ $#$ yes
+END
+
+
+
+LESSON TITLE: Read All Movie Quotes
+LESSON VIDEO: ReadAllQuotes/ReadAllQuotes_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you will learn how to use an AsynchTask to read all movie quotes fom the server. </li>
+<li>Link to <a href="https://docs.google.com/document/d/16Ue-XKXmuAxnofi9ryxUzFcoPW9u11kmAyyN-xsOVrI" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Why don't we just create and execute the moviequotes list command all in 1 line?
+TYPE: MS
+We must handle exceptions. $#$ yes
+It is too long to fit on 1 line $#$ 
+We want to modify the query to set a limit and order $#$ yes
+
+Q: What must you change in the manifest file to communicate with the backend?
+TYPE: MC
+add INTERNET permissions $#$ $#$ yes
+add the Moviequotes activity as MAIN/LAUNCHER $#$ Moviequotes is a service - you use your own Activity.
+
+Q: Once doInBackground() completes, the items from the backend don't appear right away. What else must we do? 
+TYPE: MC
+Just be patient. Wait until it updates. $#$ You'll wait a long time unless you write some code to cause the items to appear.
+Call onPostExecute $#$ Right idea, but we don't call that method - we implement it.
+implement onPostExecute $#$ This is where we update the adapter with the returned movie quotes collection. $#$ yes
 END
 
 
 
 LESSON TITLE: Inserting a Quote
-LESSON VIDEO: InsertingQuote/InsertingQuote_player.html
+LESSON VIDEO: InsertQuote/InsertQuote_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, </li>
+<li>In this lesson, you'll learn how to insert a quote to the backend using an AsynchTask.</li>
 <li>Link to <a href="https://docs.google.com/document/d/16Ue-XKXmuAxnofi9ryxUzFcoPW9u11kmAyyN-xsOVrI" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
+END
+
+Type of parameter to insert?
+MovieQuote
+
+ACTIVITY TITLE: Questions
+Q: What is the type of the parameter that is passed to the InsertQuoteTask's doInBackground()  method?
+TYPE: MC
+Long 
+String $#$ That's the type of the parameter that is passed to the DeleteQuoteTask's doInBackground() method.
+Void $#$ We are passing an argument, so it isn't Void.
+MovieQuote $#$ $#$ yes
+MovieQuoteCollection $#$ Our API only allows us to insert a single quote at a time.
+
+Q: What is wrong with this code to update the quotes after one is inserted? <code style=\"font-weight: bold; padding: 5px; background: rgb(234, 248, 248); display: inline-block;\"> // ... ready to insert<br>(new InsertQuoteTask()).execute(currentQuote);<br>updateQuotes()<br>//...</code>
+TYPE: MC
+Nothing. Updating after an insertion is good since it moves the newly inserted quote up to the top of the list. $#$ Updating is good, but you should do it in the InsertQuoteTask's onPostExecute() method.
+insert isn't guaranteed to finish before the UI is updated. $#$ You are calling updateQuotes from the UI thread, which is happening concurrently with the InsertQuoteTask. (Actually, in practice, it would still probably work most of the time.) $#$ yes
 END
 
 
 
 LESSON TITLE: Editing a Quote
-LESSON VIDEO: EditingQuote/EditingQuote_player.html
+LESSON VIDEO: EditQuote/EditQuote_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, </li>
+<li>In this lesson, you'll learn that it's easy to edit a quote from the client.</li>
 <li>Link to <a href="https://docs.google.com/document/d/16Ue-XKXmuAxnofi9ryxUzFcoPW9u11kmAyyN-xsOVrI" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
 END
 
+ACTIVITY TITLE: Questions
+Q: What changes did we have to make to the InsertQuoteTask to edit an existing quote?
+TYPE: MC
+Nothing - of course no change was needed. $#$ Existing quotes are already in the datastore, and the backend code handles this case. $#$ yes
+Make sure that the quote has an entity key $#$ It came from the datastore, so it has an entity key. $#$ yes
+END
+
 
 
 LESSON TITLE: Deleting a Quote
-LESSON VIDEO: DeletingQuote/DeletingQuote_player.html
+LESSON VIDEO: DeleteQuote/DeleteQuote_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, </li>
+<li>In this lesson, you'll learn how to delete a quote from the backend using the quote's entity key.</li>
 <li>Link to <a href="https://docs.google.com/document/d/16Ue-XKXmuAxnofi9ryxUzFcoPW9u11kmAyyN-xsOVrI" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What string is passed to the delete method?
+TYPE: MC
+The name of the movie $#$ This isn't guaranteed to be unique.
+The string resulting when toString() is called on the object to be deleted $#$ This isn't guaranteed to be unique.
+The entity key $#$ $#$ yes
 END
 
 
