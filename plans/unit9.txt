@@ -16,7 +16,7 @@ Endpoints API: Delete		5:28
 DeployToAppEngine			5:25
 TroubleshootingAndViewingData	8:24
 LabWeatherpicsBackend   	2:38
-// TOTAL: 
+// TOTAL: 83 min
 
 // Lessons here
 
