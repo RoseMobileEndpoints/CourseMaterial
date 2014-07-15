@@ -4,17 +4,18 @@ LINK TO OUTPUT: ../units/EndpointsBackend
 LINK TO VIDEOS: ../../videos/EndpointsBackend 
 LINK TO SLIDES: https://docs.google.com/presentation/d/1FjzwS8xLvCmtznYU3asEqwiSJA6KEq0X9GbWPntM2H8
 
-EndpointsOverview 
-Setup
-Backend Model
-Testing: Web app
-Endpoints API: Create
-Endpoints API: Read
-Endpoints API: Update
-Endpoints API: Delete
-DeployToAppEngine
-TroubleshootingAndViewingData
-LabWeatherpicsBackend
+EndpointsOverview 			9:05
+TheRoadToLearningEndpoints 	3:13
+Setup						Done
+Backend Model				Done
+Testing: Web app         	Done
+Endpoints API: Create    	Done
+Endpoints API: Read			Done
+Endpoints API: Update		3:23
+Endpoints API: Delete		5:28
+DeployToAppEngine			5:25
+TroubleshootingAndViewingData	8:24
+LabWeatherpicsBackend   	2:38
 
 // Lessons here
 
@@ -27,52 +28,150 @@ CONTENT ABOVE
 CONTENT BELOW
 END
 
+LESSON TITLE: The Road to Learning Endpoints
+LESSON VIDEO: TheRoadToLearningEndpoints/TheRoadToLearningEndpoints_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson you will get a high-level overview of the next 2 units.</li>
+<li>Link to the <a href="https://docs.google.com/file/d/0B0fYpl3FdcbZUjIwYkt2aUhheVU" target="_blank">summary</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
 LESSON TITLE: Setup
 LESSON VIDEO: Setup/Setup_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, </li>
+<li>In this lesson, you will register your app ID, set up your project using AppEngine Launcher and Eclipse, and run and deploy the starting code.</li>
 <li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
 END
+
+ACTIVITY TITLE: Questions
+Q: Why do we use App Engine Launcher instead just using Eclipse for everything related to our project? 
+TYPE: MC
+GAE Launcher has a better IDE $#$ Absolutely not.
+GAE Launcher creates better code from scratch $#$ I didn't mention it in the video, but it's true. Eclipse can do everything else just fine. $#$ yes
+Only GAE Launcher can run a web app $#$ Eclipse can do this too.
+Only GAE Launcher can deploy a web app $#$ Eclipse can do this too, as we'll see.
+
+Q: How do you check whether the web app starting code is running successfully? 
+TYPE: MC
+You can't check until you deploy it $#$ We do lots of testing of hte backend locally.
+Just run it and point your browser to localhost $#$ $#$ yes
+END
+
+
 
 LESSON TITLE: Backend Model
 LESSON VIDEO: BackendModel/BackendModel_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, </li>
+<li>In this lesson, we'll set up the MovieQuotes model object.</li>
 <li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
 END
+
+ACTIVITY TITLE: Questions
+Q: Which class does MovieQuote directly extend? (Big hint: its a class inside the Endpoints Proto Datastore code you downloaded.)
+TYPE: MC
+EndpointsModel $#$ $#$ yes
+ndb.model $#$ EndpointsModel extends ndb.model, so that is the 'super-super' class.
+GoogleAppEngineModel $#$ 
+
+Q: What does ndb stand for?
+TYPE: MC
+Non-directional beacon $#$ True, but not in this context. Did you look this up in wikipedia?
+No-SQL database $#$ $#$ yes
+Nucleic acid database $#$ True, but not in this context.
+
+Q: We used all these property types in MovieQuotes except which one? 
+TYPE: MC
+DateTimeProperty $#$ We used that for the time it was last touched.
+IntegerProperty $#$ $#$ yes
+StringProperty $#$ We used that twice
+None: we used them all
+END
+
+
 
 LESSON TITLE: MovieQuotes Web App
 LESSON VIDEO: MovieQuotesWebApp/MovieQuotesWebApp_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, </li>
+<li>In this lesson, we'll test our model using a simple web app we give you.</li>
 <li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
 END
 
+ACTIVITY TITLE: Questions
+Q: Were you able to get the web app running?
+TYPE: MC
+Yes $#$ Great! $#$ yes
+No $#$ Sorry. Your first step in troubleshooting is to look for runtime errors in the Eclipse console. If there are none or you can't figure it out, you can also can compare your models.py and app.yaml to the one you downloaded from us to look for errors. As a last resort, you may use our files - that should fix it. Feel free to ask for help if not. $#$ yes
+END
 
 
 LESSON TITLE: Endpoints API: Create
 LESSON VIDEO: EndpointsAPICreate/EndpointsAPICreate_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, </li>
+<li>In this lesson, you will learn how to add a model object to the ndb datastore. </li>
 <li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
 END
 
+ACTIVITY TITLE: Questions
+Q: What EndpointsModel method do we use to insert an object into the datastore?
+TYPE: MC
+insert $#$
+put $#$ $#$ yes
+add $#$ 
+none - we didn't insert it into the datastore
+
+Q: What annotations did we have to add to our insert method? Recall we are not using authentication yet. 
+TYPE: MS
+name $#$ yes
+path $#$ yes
+http_method $#$ yes
+user_required
+
+Q: How do we test the insert API on our machines? 
+TYPE: MC
+Use the Explorer $#$ $#$ yes 
+Run the webapp $#$ The webapp doesn't use the API 
+We can't test it until we deploy it $#$ We can test using localhost:/_ah/api/explorer
+END
 
 
-LESSON TITLE: Endpoints API: Read, Update, Delete
-LESSON VIDEO: EndpointsAPIReadUpdateDelete/EndpointsAPIReadUpdateDelete_player.html
+
+LESSON TITLE: Endpoints API: Read
+LESSON VIDEO: EndpointsAPIRead/EndpointsAPIRead_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you will learn how to write simple query for an EndpointsModel.</li>
+<li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What new annotation do we add to a query_method that we didn't for insert?
+TYPE: MC
+query_fields $#$ $#$ yes
+name $#$ 
+path $#$ 
+http_method $#$
+END
+
+
+
+LESSON TITLE: Endpoints API: Update
+LESSON VIDEO: EndpointsAPIUpdate/EndpointsAPIUpdate_player.html
 CONTENT ABOVE
 <ul>
 <li>In this lesson, </li>
@@ -80,13 +179,97 @@ CONTENT ABOVE
 </ul>
 CONTENT BELOW
 END
+
+ACTIVITY TITLE: Questions
+Q: How do you augment insert to let it update quotes?
+TYPE: MC
+Overload the insert method to take another type of quote as a parameter $#$
+Check to see if the object to be inserted is already in the datastore $#$ $#$ yes
+
+Q: What porprty must be set when testing to overwrite an existing quote?
+TYPE: MC
+movie $#$ 
+quote $#$ 
+entityKey $#$ Yes - each object has a unique entity key. $#$ yes
+END
+
+
+
+LESSON TITLE: Endpoints API: Delete
+LESSON VIDEO: EndpointsAPIDelete/EndpointsAPIDelete_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you will learn how to remove objects from the datastore. </li>
+<li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: If the item to be deleted is not in the datastore, what did we do?
+TYPE: MC
+Threw an endpoints.NotFoundException $#$ $#$ yes
+Ignored it $#$ 
+
+Q: How do you decorate a method in the Endpoints API to make a parameter to be required?
+TYPE: MC
+Set the 'user_required' property to true $#$ .
+Add it in {} to the path. $#$ $#$ yes
+END
+
+
+
+LESSON TITLE: Deploying to App Engine
+LESSON VIDEO: DeployToAppEngine/DeployToAppEngine_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, we'll deploy our app to App Engine and test the API of the live version. This is the last step before working on the client.</li>
+<li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: How can we deploy our app to appspot.com?
+TYPE: MS
+Use App Engine Launcher $#$ yes
+Use Eclipse  $#$ yes
+
+Q: Once it appears that the app is deployed, if it still doesn't load, what is the problem?
+TYPE: MC
+It takes a few minutes for the indexes to build. $#$ That's likely the problem $#$ yes
+There is an error in your code $#$ This is possible. I used the wrong URL for the hostname and it didn't load. $#$ yes
+END
+
+
+
+LESSON TITLE: Troubleshooting and Viewing Data
+LESSON VIDEO: TroubleshootingAndViewingData/TroubleshootingAndViewingData_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, we'll see where to find the datastore and the logs when testing online. </li>
+<li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Which locations can you use to find the datastore or error logs, either locally or deployed?
+TYPE: MS
+console.developers.google.com > Compute > AppEngine > Logs $#$ yes 
+console.developers.google.com > Storage > Cloud Datastore > Query $#$ yes
+localhost:{admin port} > Datastore Viewer $#$ yes
+Eclipse > console $#$ yes
+App Engine Launcher > Logs $#$ yes
+END
+
 
 
 LESSON TITLE: Lab: WeatherpicsBackend
 LESSON VIDEO: LabWeatherpicsBackend/LabWeatherpicsBackend_player.html
 CONTENT ABOVE
 <ul>
-<li>The lab specification is <a href="https://docs.google.com/document/d/1_aANt_3DM2uGvDhllatRiZUK9bzKiwYoarOL_P2N1zU" target="_blank">here</a>.</li>
+<li>Here is the <a href="https://docs.google.com/document/d/1_aANt_3DM2uGvDhllatRiZUK9bzKiwYoarOL_P2N1zU" target="_blank">lab specification</a>.</li>
 <li>When done, be sure to submit your zipped Eclipse project (Weatherpics Backend), plus video demo, to the Moodle dropbox.</li>
 <li>Then go complete the Moodle "Endpoints" self-evaluation survey before calling it a day.</li>
 </ul>
