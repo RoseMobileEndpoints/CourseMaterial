@@ -45,7 +45,7 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
-				["You can't check until you deploy it", false, "Try again. We do lots of testing of hte backend locally." ],
+				["You can't check until you deploy it", false, "Try again. We can do extensive testing of the backend locally." ],
 				["Just run it and point your browser to localhost", true, "Correct. " ],
 		]
 	},

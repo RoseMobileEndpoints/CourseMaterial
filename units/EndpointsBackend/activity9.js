@@ -30,12 +30,12 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> If the item to be deleted is not in the datastore, what did we do?<br>",
+	"<b>1.</b> If the item to be deleted is not in the datastore, what should we do?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["Threw an endpoints.NotFoundException", true, "Correct. " ],
-				["Ignored it", false, "Try again. " ],
+				["Throw an endpoints.NotFoundException", true, "Correct. " ],
+				["Ignore it", false, "Try again. " ],
 		]
 	},
 	"<br><br>",
@@ -43,8 +43,8 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
-				["Set the 'user_required' property to true", false, "Try again. ." ],
-				["Add it in {} to the path.", true, "Correct. " ],
+				["Set the 'user_required' property to true", false, "Try again. " ],
+				["Add it, enclosed in {}, to the path.", true, "Correct. " ],
 		]
 	},
 ];

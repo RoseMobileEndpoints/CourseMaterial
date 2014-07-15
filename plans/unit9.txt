@@ -207,15 +207,15 @@ CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: If the item to be deleted is not in the datastore, what did we do?
+Q: If the item to be deleted is not in the datastore, what should we do?
 TYPE: MC
-Threw an endpoints.NotFoundException $#$ $#$ yes
-Ignored it $#$ 
+Throw an endpoints.NotFoundException $#$ $#$ yes
+Ignore it $#$ 
 
 Q: How do you decorate a method in the Endpoints API to make a parameter to be required?
 TYPE: MC
-Set the 'user_required' property to true $#$ .
-Add it in {} to the path. $#$ $#$ yes
+Set the 'user_required' property to true $#$
+Add it, enclosed in {}, to the path. $#$ $#$ yes
 END
 
 
@@ -245,7 +245,7 @@ END
 
 
 LESSON TITLE: Troubleshooting and Viewing Data
-LESSON VIDEO: TroubleshootingAndViewingData/TroubleshootingAndViewingData_player.html
+LESSON VIDEO: TroubleshootAndViewData/TroubleshootAndViewData_player.html
 CONTENT ABOVE
 <ul>
 <li>In this lesson, we'll see where to find the datastore and the logs when testing online. </li>

@@ -39,7 +39,7 @@ var activity = [
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> What porprty must be set when testing to overwrite an existing quote?<br>",
+	"<b>2.</b> What property must be set to overwrite an existing quote?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [

@@ -30,7 +30,7 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> Which class does MovieQuote directly extend? (Big hint: its a class inside the Endpoints Proto Datastore code you downloaded.)<br>",
+	"<b>1.</b> Which class does MovieQuote directly extend? (Big hint: it's a class inside the Endpoints Proto Datastore code you downloaded.)<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
@@ -54,9 +54,9 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
-				["DateTimeProperty", false, "Try again. We used that for the time it was last touched." ],
+				["DateTimeProperty", false, "Try again. We used that for the time the movie was last touched." ],
 				["IntegerProperty", true, "Correct. " ],
-				["StringProperty", false, "Try again. We used that twice" ],
+				["StringProperty", false, "Try again. We used two string properties" ],
 				["None: we used them all", false, "Try again. " ],
 		]
 	},

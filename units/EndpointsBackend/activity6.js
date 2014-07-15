@@ -55,13 +55,13 @@ var activity = [
 		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
 	},
 	"<br><br>",
-	"<b>3.</b> How do we test the insert API on our machines?<br>",
+	"<b>3.</b> How do we test the insertion method of the API on our machines?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
 				["Use the Explorer", true, "Correct. " ],
-				["Run the webapp", false, "Try again. The webapp doesn't use the API" ],
-				["We can't test it until we deploy it", false, "Try again. We can test using localhost:/_ah/api/explorer" ],
+				["Run the webapp", false, "Try again. The webapp doesn't use the API." ],
+				["We can't test it until we deploy it", false, "Try again. We can test using localhost:/_ah/api/explorer." ],
 		]
 	},
 ];
