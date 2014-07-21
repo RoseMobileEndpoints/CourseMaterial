@@ -1,0 +1,128 @@
+UNIT TITLE: OAuthBackend
+// Outputs directly.
+LINK TO OUTPUT: ../units/OAuthBackend
+LINK TO VIDEOS: ../../videos/OAuthBackend 
+LINK TO SLIDES: https://docs.google.com/presentation/d/17xT5oWnnHasgv3vfhVHNR9nIVTi4fOyk83DH7Y1-xKs
+
+OAuthOverview 			x:xx
+DownloadStartingCode 	
+EndpointsReadyModels 	
+APIClass				
+GetWebClientID         	
+ListMethods    			
+InsertMethods
+DeleteMethods			
+DeployAndTest
+// TOTAL: xx min
+
+// Lessons here
+
+LESSON TITLE: OAuth Overview
+LESSON VIDEO: OAuthOverview/OAuthOverview_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson you will see a demo of this lesson's app.</li>
+</ul>
+CONTENT BELOW
+END
+
+LESSON TITLE: DownloadStartingCode
+LESSON VIDEO: DownloadStartingCode/DownloadStartingCode_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you will register your app ID and download the starting code.</li>
+<li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+
+
+LESSON TITLE: Make Endpoints-ready Models
+LESSON VIDEO: EndpointsReadyModels/EndpointsReadyModels_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, we'll modify the given model classes to make them ready for Endpoints.</li>
+<li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+
+
+LESSON TITLE: APIClass
+LESSON VIDEO: APIClass/APIClass_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, we'll start to write the API, focusing on those things that are required to use OAuth.</li>
+<li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: GetWebClientID
+LESSON VIDEO: GetWebClientID/GetWebClientID_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you will learn how to . </li>
+<li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+LESSON TITLE: ListMethods
+LESSON VIDEO: ListMethods/ListMethods_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you will learn how to .</li>
+<li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: InsertMethods
+LESSON VIDEO: InsertMethods/InsertMethods_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you will learn how to . </li>
+<li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+
+
+LESSON TITLE: DeleteMethods
+LESSON VIDEO: DeleteMethods/DeleteMethods_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, we'll see where to find the datastore and the logs when testing online. </li>
+<li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: Deploying to App Engine and Test
+LESSON VIDEO: DeployAndTest/DeployAndTest_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, we'll deploy our app to App Engine and test the API of the live version. This is the last step before working on the client.</li>
+<li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
+</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: Summary and Troubleshooting
+LESSON VIDEO: SummaryOAuthBackend/SummarySummaryOAuthBackend_player.html
+CONTENT ABOVE
+<ul>
+<li>There is no lab in this unit. If you want to use OAuth in your project, you are ready!</li>
+<li>We'll wait until after we write the Android client to complete the "OAuth" self-evaluation survey.</li>
+</ul>
+CONTENT BELOW
+END
+
