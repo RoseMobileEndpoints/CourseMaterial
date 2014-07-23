@@ -4,7 +4,7 @@ LINK TO OUTPUT: ../units/OAuthBackend
 LINK TO VIDEOS: ../../videos/OAuthBackend 
 LINK TO SLIDES: https://docs.google.com/presentation/d/17xT5oWnnHasgv3vfhVHNR9nIVTi4fOyk83DH7Y1-xKs
 
-OAuthOverview 			x:xx
+OAuthOverview 			9:42
 DownloadStartingCode 	
 EndpointsReadyModels 	
 APIClass				
@@ -13,6 +13,7 @@ ListMethods
 InsertMethods
 DeleteMethods			
 DeployAndTest
+SummaryOAuthBackend
 // TOTAL: xx min
 
 // Lessons here
@@ -21,10 +22,31 @@ LESSON TITLE: OAuth Overview
 LESSON VIDEO: OAuthOverview/OAuthOverview_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson you will see a demo of this lesson's app.</li>
+<li>In this lesson you will see a demo of this lesson's app, and learn how this app is more complex than ones in previous units.</li>
 </ul>
 CONTENT BELOW
 END
+
+
+ACTIVITY TITLE: Questions
+Q: In what ways do we expect the Grade Recorder API to be more complex than the Movie Quotes API?
+TYPE: MS
+Grades are numbers, not strings. $#$
+It has multiple classes to write CRUD methods for $#$ yes
+It uses authentication $#$ yes
+
+Q: How many model classes does the Grade Recorder app use?
+TYPE: MC
+1 $#$ 
+2 $#$ 
+3 $#$ Student, Assignment, and GradeEntry $#$ yes
+4 $#$ 
+
+Q: Tangent: What web front-end framework does the GradeRecorder web app use?
+TYPE: FREE
+/bootstrap?/i $#$ Good eye! $#$ Hint: It was developed by Twitter. $#$ bootstrap
+END
+
 
 LESSON TITLE: DownloadStartingCode
 LESSON VIDEO: DownloadStartingCode/DownloadStartingCode_player.html

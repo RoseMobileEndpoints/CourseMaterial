@@ -1,4 +1,4 @@
-./unit12OAuthAndroidClient.txt
+./unit11.txt
 ../tools/unitGenerator/templates/
 
 The first one is the lesson plan file for this unit.
@@ -6,3 +6,5 @@ The first one is the lesson plan file for this unit.
 The second is the relative location to the templates to be used to generate this unit. 
 Currently all of these files are in a different git repo, the CourseMaterials one that checks out to the public folder. 
 CONSIDER: Move the output path from the unitX.txt file here.
+
+./unit12OAuthAndroidClient.txt

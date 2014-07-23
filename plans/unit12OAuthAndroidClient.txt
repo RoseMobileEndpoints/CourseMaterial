@@ -3,12 +3,12 @@ LINK TO OUTPUT: ../units/OAuthAndroidClient
 LINK TO VIDEOS: ../../videos/OAuthAndroidClient 
 LINK TO SLIDES: https://docs.google.com/presentation/d/1BozZbfqMDWg5iTpsrThR1Yhn2b9rYAFe8mBTd_bf9Jc
 
-Overview
-Get Client ID
-Starting Code
-Add Google Play for Authentication
-Generate client code and fix errors
-Summary
+OverviewOAuthAndroidClient
+GetAndroidClientID
+StartingCode
+AddGooglePlay
+GenerateAndUseClientCode
+SummaryOAuthAndroidClient
 // Total:	xx min.
 
 
@@ -16,8 +16,8 @@ Summary
 
 // Lessons here
 
-LESSON TITLE: Overview
-LESSON VIDEO: Overview/Overview_player.html
+LESSON TITLE: OverviewOAuthAndroidClient
+LESSON VIDEO: OverviewOAuthAndroidClient/OverviewOAuthAndroidClient_player.html
 CONTENT ABOVE
 <ul>
 <li>In this lesson you will survey how to write an Android client that connects to an Endpoints backend using authentication.</li>
