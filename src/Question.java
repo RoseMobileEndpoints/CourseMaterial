@@ -29,6 +29,16 @@ public abstract class Question {
 		}
 	}
 
+	// CONSIDER: This ignores isCorrect. So there should be a
+	// MultipleQuestionChoice and and FreeQuestionChoice that each extend an
+	// abstract QuestionChoice.
+	class FreeQuestionChoice extends QuestionChoice {
+		String positiveFeedback;
+		String answer;
+
+		// CONSIDER: Override toString?
+	}
+
 	private String prompt;
 	ArrayList<QuestionChoice> choices;
 	private int number;
@@ -61,8 +71,8 @@ public abstract class Question {
 		this.number = number;
 	}
 
-	public abstract void addQuestionChoice(String line); 
-	
+	public abstract void addQuestionChoice(String line);
+
 	// Factory method
 	public static Question makeQuestion(String typeString)
 			throws UnsupportedDataTypeException {
@@ -72,7 +82,7 @@ public abstract class Question {
 		} else if (typeString.equals("MS")) {
 			return new MultipleSelectQuestion();
 		} else if (typeString.startsWith("FREE")) {
-			return null;
+			return new FreeTextQuestion();
 		} else {
 			throw new UnsupportedDataTypeException(
 					"Cannot understand question type " + typeString);
