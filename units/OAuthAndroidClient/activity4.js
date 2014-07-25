@@ -30,37 +30,15 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> In what ways do we expect the Grade Recorder API to be more complex than the Movie Quotes API? (Choose all that apply.)",
-	{
-		questionType : "multiple choice group",
-		questionsList : [
-				{
-					questionHTML : "",
-					choices : [ "Grades are numbers, not strings.", "It has multiple classes to write CRUD methods for", "It uses authentication"],
-					correctIndex : [1,2]
-				}
-				],
-		allCorrectOutput : "Well done!",
-		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
-	},
-	"<br><br>",
-	"<b>2.</b> How many model classes does the Grade Recorder app use?<br>",
+	"<b>1.</b> What is the only thing you do NOT need to do to use Google Play services?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["1", false, "Try again. " ],
-				["2", false, "Try again. " ],
-				["3", true, "Correct. Student, Assignment, and GradeEntry" ],
-				["4", false, "Try again. " ],
+				["Make sure your SDK has the library", false, "Try again. This is the first step." ],
+				["Make a new project in your workspace from the existing code", false, "Try again. " ],
+				["Change your project properties to refer to the library", false, "Try again. " ],
+				["Add the library to the build path", true, "Correct. This isn't needed." ],
+				["Add a google play services version to the manifest.", false, "Try again. If you forget this, it will throw a null pointer exception with a very explicit message about how and where to add the version." ],
 		]
-	},
-	"<br><br>",
-	"<b>3.</b> Tangent: What web front-end framework does the GradeRecorder web app use?<br>",
-	{
-		questionType : "freetext",
-		correctAnswerRegex : /bootstrap/i,
-		correctAnswerOutput : "Correct! You got it - guess you know something about web dev too.",
-		incorrectAnswerOutput : "Try again. Hint: It was developed by Twitter.",
-		showAnswerOutput : "Here is the answer: bootstrap"
 	},
 ];

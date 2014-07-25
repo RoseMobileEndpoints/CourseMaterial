@@ -30,37 +30,17 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> In what ways do we expect the Grade Recorder API to be more complex than the Movie Quotes API? (Choose all that apply.)",
+	"<b>1.</b> What did we change to make the given models use Endpoints? (Choose all that apply.)",
 	{
 		questionType : "multiple choice group",
 		questionsList : [
 				{
 					questionHTML : "",
-					choices : [ "Grades are numbers, not strings.", "It has multiple classes to write CRUD methods for", "It uses authentication"],
-					correctIndex : [1,2]
+					choices : [ "Make each model class extend EndpointsModel instead of ndb.Model", "Add _message_fields_schema to each class to expose the entityKey (for deletion by key)", "Add the endpoints library to code and to app.yaml"],
+					correctIndex : [0,1,2]
 				}
 				],
 		allCorrectOutput : "Well done!",
 		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
-	},
-	"<br><br>",
-	"<b>2.</b> How many model classes does the Grade Recorder app use?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["1", false, "Try again. " ],
-				["2", false, "Try again. " ],
-				["3", true, "Correct. Student, Assignment, and GradeEntry" ],
-				["4", false, "Try again. " ],
-		]
-	},
-	"<br><br>",
-	"<b>3.</b> Tangent: What web front-end framework does the GradeRecorder web app use?<br>",
-	{
-		questionType : "freetext",
-		correctAnswerRegex : /bootstrap/i,
-		correctAnswerOutput : "Correct! You got it - guess you know something about web dev too.",
-		incorrectAnswerOutput : "Try again. Hint: It was developed by Twitter.",
-		showAnswerOutput : "Here is the answer: bootstrap"
 	},
 ];

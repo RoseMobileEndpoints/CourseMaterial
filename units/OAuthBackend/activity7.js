@@ -30,37 +30,30 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> In what ways do we expect the Grade Recorder API to be more complex than the Movie Quotes API? (Choose all that apply.)",
-	{
-		questionType : "multiple choice group",
-		questionsList : [
-				{
-					questionHTML : "",
-					choices : [ "Grades are numbers, not strings.", "It has multiple classes to write CRUD methods for", "It uses authentication"],
-					correctIndex : [1,2]
-				}
-				],
-		allCorrectOutput : "Well done!",
-		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
-	},
-	"<br><br>",
-	"<b>2.</b> How many model classes does the Grade Recorder app use?<br>",
+	"<b>1.</b> How do we distuinguish between an insert and an update in our insert method?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["1", false, "Try again. " ],
-				["2", false, "Try again. " ],
-				["3", true, "Correct. Student, Assignment, and GradeEntry" ],
-				["4", false, "Try again. " ],
+				["Check to see if the item to be inserted is already in the datastore", true, "Correct. " ],
+				["Pass in an optional boolean flag to the insert method", false, "Try again. " ],
 		]
 	},
 	"<br><br>",
-	"<b>3.</b> Tangent: What web front-end framework does the GradeRecorder web app use?<br>",
+	"<b>2.</b> Why did we use an ID on a grade entry?<br>",
 	{
-		questionType : "freetext",
-		correctAnswerRegex : /bootstrap/i,
-		correctAnswerOutput : "Correct! You got it - guess you know something about web dev too.",
-		incorrectAnswerOutput : "Try again. Hint: It was developed by Twitter.",
-		showAnswerOutput : "Here is the answer: bootstrap"
+		questionType : "multiple choice",
+		choices : [
+				["So that each student can only have one grade entry", true, "Correct. " ],
+				["Because every object needs an ID", false, "Try again. " ],
+		]
+	},
+	"<br><br>",
+	"<b>3.</b> What is the difference between an ID and an entity group?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["IDs are globally unique, while entityKeys are only unique within an entity group", false, "Try again. " ],
+				["Entity keys are globally unique, while IDs are only unique within an entity group", true, "Correct. " ],
+		]
 	},
 ];

@@ -5,16 +5,16 @@ LINK TO VIDEOS: ../../videos/OAuthBackend
 LINK TO SLIDES: https://docs.google.com/presentation/d/17xT5oWnnHasgv3vfhVHNR9nIVTi4fOyk83DH7Y1-xKs
 
 OAuthOverview 			9:42
-DownloadStartingCode 	
-EndpointsReadyModels 	
-APIClass				
-GetWebClientID         	
-ListMethods    			
-InsertMethods
-DeleteMethods			
-DeployAndTest
-SummaryOAuthBackend
-// TOTAL: xx min
+DownloadStartingCode 	7:38	
+EndpointsReadyModels 	5:52
+APIClass				7:45		
+GetWebClientID         	2:01
+ListMethods    			21:07
+InsertMethods			16:30
+DeleteMethods			10:23
+DeployAndTest			9:01
+SummaryOAuthBackend		1:44
+// TOTAL: 92 min
 
 // Lessons here
 
@@ -44,8 +44,9 @@ TYPE: MC
 
 Q: Tangent: What web front-end framework does the GradeRecorder web app use?
 TYPE: FREE
-/bootstrap?/i $#$ Good eye! $#$ Hint: It was developed by Twitter. $#$ bootstrap
+/bootstrap/i $#$ You got it - guess you know something about web dev too. $#$ Hint: It was developed by Twitter. $#$ bootstrap
 END
+
 
 
 LESSON TITLE: DownloadStartingCode
@@ -56,6 +57,13 @@ CONTENT ABOVE
 <li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Did you play around with the web client in localhost?
+TYPE: MC
+Yes $#$ Hope you are enjoying this app. $#$ yes
+No $#$ Please do so, at least briefly. It will help you understand the app.
 END
 
 
@@ -70,6 +78,14 @@ CONTENT ABOVE
 CONTENT BELOW
 END
 
+ACTIVITY TITLE: Questions
+Q: What did we change to make the given models use Endpoints?
+TYPE: MS
+Make each model class extend EndpointsModel instead of ndb.Model $#$ yes
+Add _message_fields_schema to each class to expose the entityKey (for deletion by key) $#$ yes
+Add the endpoints library to code and to app.yaml $#$ yes
+END
+
 
 
 LESSON TITLE: APIClass
@@ -82,36 +98,92 @@ CONTENT ABOVE
 CONTENT BELOW
 END
 
+ACTIVITY TITLE: Questions
+Q: What new annotations do we need to give values to for the sake of authentication?
+TYPE: MS
+allowed_client_ids $#$ yes
+audiences $#$  $#$ yes
+scopes $#$
+owner_domain $#$
+
+Q: Do you need to add an allowed client ID for the API Explorer?
+TYPE: MC
+Yes $#$ By adding the constant, endpoints.API_EXPLORER_CLIENT_ID $#$ yes
+No $#$ We don't need to define the constant, but we do need to add an existing constant.
+END
+
+
 
 LESSON TITLE: GetWebClientID
 LESSON VIDEO: GetWebClientID/GetWebClientID_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you will learn how to . </li>
+<li>In this lesson, you will learn how to generate a client ID for your web app.</li>
 <li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
 END
 
+ACTIVITY TITLE: Questions
+Q: Did you get a web client ID?
+TYPE: MC
+Yes $#$  $#$ yes
+No $#$ You will need one if you want to test your deployed web app.
+END
+
+
+
 LESSON TITLE: ListMethods
 LESSON VIDEO: ListMethods/ListMethods_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you will learn how to .</li>
+<li>In this lesson, you will learn how to change the annotation for a method to require an authenticated user.</li>
+<li>You'll also learn how to write an ancestor query (to get all records with the same parent key).</li>
 <li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
 END
+
+ACTIVITY TITLE: Questions
+Q: For authenticated methods, you set user_required to what value?
+TYPE: MC
+\"True\" $#$ That was a bug in my code in the list and insert methods. 
+True $#$ $#$ yes
+False $#$ 
+
+Q: The get_parent_key(user) helper method belongs to which class?
+TYPE: MC
+endpoints (google's code) $#$ We gave it to you. Go find it in main.py to convince yourself.
+main (the starting code) $#$  $#$ yes
+END
+
 
 
 LESSON TITLE: InsertMethods
 LESSON VIDEO: InsertMethods/InsertMethods_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you will learn how to . </li>
+<li>In this lesson, we'll write the two needed insert methods. </li>
 <li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: How do we distuinguish between an insert and an update in our insert method?
+TYPE: MC
+Check to see if the item to be inserted is already in the datastore $#$  $#$ yes
+Pass in an optional boolean flag to the insert method $#$
+
+Q: Why did we use an ID on a grade entry?
+TYPE: MC
+So that each student can only have one grade entry $#$ $#$ yes  
+Because every object needs an ID $#$
+
+Q: What is the difference between an ID and an entity group?
+TYPE: MC
+IDs are globally unique, while entityKeys are only unique within an entity group $#$  
+Entity keys are globally unique, while IDs are only unique within an entity group $#$ $#$ yes
 END
 
 
@@ -120,11 +192,19 @@ LESSON TITLE: DeleteMethods
 LESSON VIDEO: DeleteMethods/DeleteMethods_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, we'll see where to find the datastore and the logs when testing online. </li>
+<li>In this lesson, we'll write the two needed delete methods</li>
 <li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
 END
+
+ACTIVITY TITLE: Questions
+Q: Which is more complicated to delete, an assignment or a grade entry?
+TYPE: MC
+Assignment $#$ Yes, since you need to query for delete the related grade entries as well. $#$ yes
+GradeEntry $#$ 
+END
+
 
 
 LESSON TITLE: Deploying to App Engine and Test
@@ -137,9 +217,17 @@ CONTENT ABOVE
 CONTENT BELOW
 END
 
+ACTIVITY TITLE: Questions
+Q: Did you deploy and test your app?
+TYPE: MC
+Yes $#$ Good. $#$ yes
+No $#$ You'll want to do so before you write the client, so you can test this part of the system in isolation.
+END
+
+
 
 LESSON TITLE: Summary and Troubleshooting
-LESSON VIDEO: SummaryOAuthBackend/SummarySummaryOAuthBackend_player.html
+LESSON VIDEO: SummaryOAuthBackend/SummaryOAuthBackend_player.html
 CONTENT ABOVE
 <ul>
 <li>There is no lab in this unit. If you want to use OAuth in your project, you are ready!</li>
@@ -147,4 +235,3 @@ CONTENT ABOVE
 </ul>
 CONTENT BELOW
 END
-

@@ -30,37 +30,26 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> In what ways do we expect the Grade Recorder API to be more complex than the Movie Quotes API? (Choose all that apply.)",
+	"<b>1.</b> What new annotations do we need to give values to for the sake of authentication? (Choose all that apply.)",
 	{
 		questionType : "multiple choice group",
 		questionsList : [
 				{
 					questionHTML : "",
-					choices : [ "Grades are numbers, not strings.", "It has multiple classes to write CRUD methods for", "It uses authentication"],
-					correctIndex : [1,2]
+					choices : [ "allowed_client_ids", "audiences", "scopes", "owner_domain"],
+					correctIndex : [0,1]
 				}
 				],
 		allCorrectOutput : "Well done!",
 		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
 	},
 	"<br><br>",
-	"<b>2.</b> How many model classes does the Grade Recorder app use?<br>",
+	"<b>2.</b> Do you need to add an allowed client ID for the API Explorer?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["1", false, "Try again. " ],
-				["2", false, "Try again. " ],
-				["3", true, "Correct. Student, Assignment, and GradeEntry" ],
-				["4", false, "Try again. " ],
+				["Yes", true, "Correct. By adding the constant, endpoints.API_EXPLORER_CLIENT_ID" ],
+				["No", false, "Try again. We don't need to define the constant, but we do need to add an existing constant." ],
 		]
-	},
-	"<br><br>",
-	"<b>3.</b> Tangent: What web front-end framework does the GradeRecorder web app use?<br>",
-	{
-		questionType : "freetext",
-		correctAnswerRegex : /bootstrap/i,
-		correctAnswerOutput : "Correct! You got it - guess you know something about web dev too.",
-		incorrectAnswerOutput : "Try again. Hint: It was developed by Twitter.",
-		showAnswerOutput : "Here is the answer: bootstrap"
 	},
 ];

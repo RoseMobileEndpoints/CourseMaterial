@@ -3,20 +3,18 @@ LINK TO OUTPUT: ../units/OAuthAndroidClient
 LINK TO VIDEOS: ../../videos/OAuthAndroidClient 
 LINK TO SLIDES: https://docs.google.com/presentation/d/1BozZbfqMDWg5iTpsrThR1Yhn2b9rYAFe8mBTd_bf9Jc
 
-OverviewOAuthAndroidClient
-GetAndroidClientID
-StartingCode
-AddGooglePlay
-GenerateAndUseClientCode
-SummaryOAuthAndroidClient
-// Total:	xx min.
-
-
+OverviewOAuthAndroidClient		4:15
+GetAndroidClientID				2:53			
+StartingCode					6:10	
+AddGooglePlay					6:34
+GenerateAndUseClientCode		7:13
+SummaryOAuthAndroidClient		6:16
+// Total:	33 min.
 
 
 // Lessons here
 
-LESSON TITLE: OverviewOAuthAndroidClient
+LESSON TITLE: OAuth Android Client
 LESSON VIDEO: OverviewOAuthAndroidClient/OverviewOAuthAndroidClient_player.html
 CONTENT ABOVE
 <ul>
@@ -27,8 +25,8 @@ END
 
 
 
-LESSON TITLE: GetClientID
-LESSON VIDEO: GetClientID/GetClientID_player.html
+LESSON TITLE: Get Android Client ID
+LESSON VIDEO: GetAndroidClientID/GetAndroidClientID_player.html
 CONTENT ABOVE
 <ul>
 <li>In this lesson you will download your app in preparation for adding Endpoints code.</li>
@@ -36,6 +34,25 @@ CONTENT ABOVE
 </ul>
 CONTENT BELOW
 END
+
+ACTIVITY TITLE: Questions
+Q: Did you get an Android client ID?
+TYPE: MC
+Yes $#$  $#$ yes
+No $#$ You will need one if you want to test your client. Do it, then re-deploy your app.
+
+Q: What did I forget to show in the video?
+TYPE: MC
+How to get an Android client ID $#$
+How to get the SHA-1 fingerprint from your development machine $#$
+That you need to re-deploy your app once you add the client ID $#$  $#$ yes
+
+Q: Did you re-deploy your app?
+TYPE: MC
+Yes $#$ Good. $#$ yes
+No $#$ Proceed at your own risk. Your client won't be able to authenticate.
+END
+
 
 
 LESSON TITLE: Starting Code
@@ -48,6 +65,23 @@ CONTENT ABOVE
 CONTENT BELOW
 END
 
+ACTIVITY TITLE: Questions
+Q: What is the only change we did NOT have to make to use authentication?
+TYPE: MC
+Make sure the package name matches what you used to generate the Android client id
+Add the client id of the Android client to the credentials object $#$ $#$ yes
+Add the client id of the web client to the credentials object 
+Add permissions for credentials, internet, and account pickers to the manifest 
+Use the credentials when building the service 
+
+Q: Which client ID do we need to add to the credentials object?
+TYPE: MC
+The id of the Android client  $#$ This id isn't needed because it was generated from the package name and SHA-1 fingerprint.
+The id of the web client $#$ This is because it is used for the audience. $#$ yes
+END
+
+
+
 LESSON TITLE: Add Google Play for Authentication
 LESSON VIDEO: AddGooglePlay/AddGooglePlay_player.html
 CONTENT ABOVE
@@ -58,16 +92,33 @@ CONTENT ABOVE
 CONTENT BELOW
 END
 
+ACTIVITY TITLE: Questions
+Q: What is the only thing you do NOT need to do to use Google Play services?
+TYPE: MC
+Make sure your SDK has the library $#$ This is the first step.
+Make a new project in your workspace from the existing code $#$ 
+Change your project properties to refer to the library $#$
+Add the library to the build path $#$ This isn't needed. $#$ yes
+Add a google play services version to the manifest. $#$ If you forget this, it will throw a null pointer exception with a very explicit message about how and where to add the version. 
+END
+
 
 
 LESSON TITLE: Generate and Use ClientCode
 LESSON VIDEO: GenerateAndUseClientCode/GenerateAndUseClientCode_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you will learn the basics of using AsynchTasks to do work off the main UI thread.</li>
+<li>In this lesson, you will generate the client code and copy it into your project.</li>
 <li>Link to <a href="https://docs.google.com/document/d/1f5wsT4Ysogvur7F91Q36aMpuJESgaGmtY5vp3XgDo50" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Have you memorized which 8 generated libraries you need from endpoints?
+TYPE: MC
+Yes $#$ Wow, I'mpressed. $#$ yes
+No $#$ I just recently did, but it's not something I'd expect you to do so soon. $#$ yes
 END
 
 

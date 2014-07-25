@@ -30,37 +30,31 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> In what ways do we expect the Grade Recorder API to be more complex than the Movie Quotes API? (Choose all that apply.)",
-	{
-		questionType : "multiple choice group",
-		questionsList : [
-				{
-					questionHTML : "",
-					choices : [ "Grades are numbers, not strings.", "It has multiple classes to write CRUD methods for", "It uses authentication"],
-					correctIndex : [1,2]
-				}
-				],
-		allCorrectOutput : "Well done!",
-		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
-	},
-	"<br><br>",
-	"<b>2.</b> How many model classes does the Grade Recorder app use?<br>",
+	"<b>1.</b> Did you get an Android client ID?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["1", false, "Try again. " ],
-				["2", false, "Try again. " ],
-				["3", true, "Correct. Student, Assignment, and GradeEntry" ],
-				["4", false, "Try again. " ],
+				["Yes", true, "Correct. " ],
+				["No", false, "Try again. You will need one if you want to test your client. Do it, then re-deploy your app." ],
 		]
 	},
 	"<br><br>",
-	"<b>3.</b> Tangent: What web front-end framework does the GradeRecorder web app use?<br>",
+	"<b>2.</b> What did I forget to show in the video?<br>",
 	{
-		questionType : "freetext",
-		correctAnswerRegex : /bootstrap/i,
-		correctAnswerOutput : "Correct! You got it - guess you know something about web dev too.",
-		incorrectAnswerOutput : "Try again. Hint: It was developed by Twitter.",
-		showAnswerOutput : "Here is the answer: bootstrap"
+		questionType : "multiple choice",
+		choices : [
+				["How to get an Android client ID", false, "Try again. " ],
+				["How to get the SHA-1 fingerprint from your development machine", false, "Try again. " ],
+				["That you need to re-deploy your app once you add the client ID", true, "Correct. " ],
+		]
+	},
+	"<br><br>",
+	"<b>3.</b> Did you re-deploy your app?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["Yes", true, "Correct. Good." ],
+				["No", false, "Try again. Proceed at your own risk. Your client won't be able to authenticate." ],
+		]
 	},
 ];
