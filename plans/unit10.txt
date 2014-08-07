@@ -88,7 +88,7 @@ END
 ACTIVITY TITLE: Questions
 Q: Our service object comes from which class?
 TYPE: MC
-Moviequotes $#$ Yes, this is the name of our backend. $#$ 
+Moviequotes $#$ Yes, this is the name of our backend. $#$ yes
 MovieQuote $#$ Similar name as the first. But this is the model object for a single quote.
 MovieQuoteCollection $#$ We'll use this when we query the backend for all the quotes.
 END

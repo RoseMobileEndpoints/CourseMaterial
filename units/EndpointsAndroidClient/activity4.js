@@ -34,7 +34,7 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
-				["Moviequotes", false, "Try again. Yes, this is the name of our backend." ],
+				["Moviequotes", true, "Correct. Yes, this is the name of our backend." ],
 				["MovieQuote", false, "Try again. Similar name as the first. But this is the model object for a single quote." ],
 				["MovieQuoteCollection", false, "Try again. We'll use this when we query the backend for all the quotes." ],
 		]
