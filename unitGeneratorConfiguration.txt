@@ -1,8 +1,9 @@
+interactive
 ../CourseMaterial/plans/unit11.txt
 ../CourseMaterial/tools/unitGenerator/templates/
 
-The first one is the lesson plan file for this unit.
-	It contains an output directory for that unit as well.
-The second is the relative location to the templates to be used to generate this unit. 
-Currently all of these files are in a different git repo, the CourseMaterials one that checks out to the public folder. 
-CONSIDER: those things should be in the repo, so all collaborators can check them, but they shouldn't be public. We should have a public folder in the repo, like we do for SVN.  
+Comments:
+Line 1: Batch mode or interactive mode. Batch is faster, interactive lets you choose files and folders.
+Line 2: If in batch mode, this gives the relative path to the lesson plan file for this unit, which contains an output directory for that unit as well.
+Line 3: The relative path of the templates to be used to generate this unit. 
+

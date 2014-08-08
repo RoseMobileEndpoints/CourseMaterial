@@ -42,7 +42,7 @@ public class Unit {
 	 * @throws FileNotFoundException
 	 * @throws UnsupportedDataTypeException
 	 */
-	public Unit(String unitName, String dir) throws FileNotFoundException,
+	public Unit(File unitFile, String dir) throws FileNotFoundException,
 			UnsupportedDataTypeException {
 		// dir = "CourseMaterial/units/templates/";
 		String ltName = Paths.get(dir + "lessonTemplate.html").toString();
@@ -55,13 +55,14 @@ public class Unit {
 		quizTemplate = fileContentsFromName(qtName);
 
 		tasks = new ArrayList<Task>();
-		parse(unitName);
+		
+		parse(unitFile);
 		replaceUnitVariables();
 	}
 
-	private void parse(String unitName) throws FileNotFoundException,
+	private void parse(File unitFile) throws FileNotFoundException,
 			UnsupportedDataTypeException {
-		unitContents = fileContentsFromName(unitName);
+		unitContents = fileContentsFromFile(unitFile);
 		Scanner sc = new Scanner(unitContents);
 		String[] startingTokens = new String[] { "UNIT TITLE:",
 				"LINK TO OUTPUT:", "LINK TO VIDEOS:", "LINK TO SLIDES:",
@@ -173,13 +174,17 @@ public class Unit {
 			tasks.add(currentTask);
 		}
 		sc.close();
-
 	}
 
 	private String fileContentsFromName(String fileName)
 			throws FileNotFoundException {
+		return fileContentsFromFile(new File(fileName));
+	}
+
+	private String fileContentsFromFile(File file)
+			throws FileNotFoundException {
 		StringBuilder sb = new StringBuilder();
-		Scanner scanner = new Scanner(new File(fileName));
+		Scanner scanner = new Scanner(file);
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine();
 			sb.append(line);
