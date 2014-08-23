@@ -16,8 +16,6 @@ import javax.activation.UnsupportedDataTypeException;
  * @author Matt Boutell. Created Jun 6, 2014.
  */
 public class Unit {
-	private OutputFormat outputFormat;
-
 	private String unitContents;
 	private String lessonTemplate;
 	private String activityTemplate;
@@ -66,10 +64,20 @@ public class Unit {
 			UnsupportedDataTypeException {
 		unitContents = fileContentsFromFile(unitFile);
 		Scanner sc = new Scanner(unitContents);
-		String[] startingTokens = new String[] { "UNIT TITLE:",
-				"LINK TO OUTPUT:", "LINK TO VIDEOS:", "LINK TO SLIDES:",
-				"LESSON TITLE:", "LESSON VIDEO:", "CONTENT ABOVE",
-				"CONTENT BELOW", "END", "ACTIVITY TITLE:", "Q:", "TYPE:" };
+		String[] startingTokens = new String[] { 
+				"UNIT TITLE:",
+				"LINK TO OUTPUT:", 
+				"LINK TO VIDEOS:", 
+				"LINK TO SLIDES:",
+				"LESSON TITLE:", 
+				"LESSON VIDEO:", 
+				"CONTENT ABOVE",
+				"CONTENT BELOW", 
+				"END", 
+				"ACTIVITY TITLE:", 
+				"Q:", 
+				"TYPE:" 
+		};
 
 		int state = IN_UNIT;
 
@@ -227,12 +235,13 @@ public class Unit {
 	}
 
 	/**
-	 * Generates all the html files (lesson and activity) for this unit.
+	 * Adds text to the two given CourseBuilder files for this unit.
 	 * 
+	 * @param cbUnitWriter
+	 * @param cbLessonWriter
 	 * @param unitNumber
 	 * 
 	 * @throws IOException
-	 * 
 	 */
 	public void generateCourseBuilderFiles(PrintWriter cbUnitWriter,
 			PrintWriter cbLessonWriter, int unitNumber) throws IOException {
@@ -247,15 +256,21 @@ public class Unit {
 			if (task.getClass() == Lesson.class) {
 				Lesson lesson = (Lesson) task;
 				Task nextTask = getNextTask(task);
-				boolean hasQuiz = (nextTask != null && nextTask.getClass() == Activity.class);
-				s = String.format("%d,%s,%d,%s,%s,%s,%s,%s,%s", unitNumber,
-						title, task.getNumber(), task.getTitle(),
-						hasQuiz ? "yes" : "", hasQuiz ? nextTask.getTitle()
-								: "", slideLink, "videoLink", lesson
-								.getContentAboveWithoutNewlines());
+				boolean hasQuiz =
+						(nextTask != null && nextTask.getClass() == Activity.class);
+				s = String.format(
+						"%d,%s,%d,%s,%s,%s,%s,%s,%s",
+						unitNumber,
+						title,
+						task.getNumber(),
+						task.getTitle(),
+						hasQuiz ? "yes" : "",
+						hasQuiz ? nextTask.getTitle() : "",
+						slideLink,
+						"videoLink",
+						lesson.getContentAboveWithoutNewlines());
 				cbLessonWriter.println(s);
 			}
-
 		}
 	}
 
