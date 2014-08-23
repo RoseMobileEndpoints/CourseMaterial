@@ -33,7 +33,7 @@ SPRINT 3:
 	Can generate real questions of type free
 	Runs from a config file that further configures folders and files to use.
 
-SPRINT 4: User friendliness (Due, 8/15) 
+SPRINT 4: User friendliness (IN PROGRESS?, Due 8/31) 
 	Can run in interactive or batch mode
 		Next: Test and Debug passing unit file, not String. 
 		Pass output filedir, ignore that from unit file.
@@ -52,14 +52,23 @@ SPRINT 4: User friendliness (Due, 8/15)
 	What options would be nice to have in interactive mode?
 		Location of unit file, output folder, coursebuilder vs standalone (later)
 			
-Backlog
+SPRINT 5: Output to CourseBuilder format Due 8/31
 	Can process multiple config files at once in batch mode.
-	Use this to add "Copyright (c) 2014 All rights reserved." to each template and thus each page.   
+	Use this to add "(c) 2014 Rose-Hulman." to each template and thus each page.   
 
 	Config file tells what output format (standalone vs. course builder) we are using. 
-	Can output in coursebuilder format by specifying in config file
+	[todo] Can output in coursebuilder format by specifying in config file
 
-	Currently runs best from the CourseMaterials git repo that checks out to the public folder. CONSIDER: move this codebase to the CourseMaterials repo, so all collaborators can check them, but they shouldn't be public. We should have a public folder in the repo, like we do for SVN.  
-	
+	Post all videos to youtube, or make coursebuilder handle Camtasia videos.
+
+
+Backlog
+
+	Currently runs best from the CourseMaterials git repo that checks out to the public folder. 
+	CONSIDER: move this codebase to the CourseMaterials repo, 
+	so all collaborators can check them, but they shouldn't be public. 
+	We should have a public folder in the repo, like we do for SVN.  
+	Follow dirs in:
+	http://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/
 	
 	

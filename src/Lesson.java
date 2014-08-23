@@ -101,4 +101,11 @@ public class Lesson extends Task {
 		pw.close();
 	}
 
+	/**
+	 * @return The CONTENT_ABOVE as a string without newlines.
+	 */
+	public String getContentAboveWithoutNewlines() {
+		return contentAbove.replace("\n", "");
+	}
+
 }

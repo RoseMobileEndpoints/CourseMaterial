@@ -17,7 +17,7 @@ import javax.activation.UnsupportedDataTypeException;
  */
 public class Unit {
 	private OutputFormat outputFormat;
-	
+
 	private String unitContents;
 	private String lessonTemplate;
 	private String activityTemplate;
@@ -37,9 +37,10 @@ public class Unit {
 
 	/**
 	 * Creates a unit from the given config file using default template files.
-	 * @param unitFile 
+	 * 
+	 * @param unitFile
 	 * @param dir
-	 * @param outputFormat 
+	 * @param outputFormat
 	 * @throws FileNotFoundException
 	 * @throws UnsupportedDataTypeException
 	 */
@@ -56,7 +57,7 @@ public class Unit {
 		quizTemplate = fileContentsFromName(qtName);
 
 		tasks = new ArrayList<Task>();
-		
+
 		parse(unitFile);
 		replaceUnitVariables();
 	}
@@ -182,8 +183,7 @@ public class Unit {
 		return fileContentsFromFile(new File(fileName));
 	}
 
-	private String fileContentsFromFile(File file)
-			throws FileNotFoundException {
+	private String fileContentsFromFile(File file) throws FileNotFoundException {
 		StringBuilder sb = new StringBuilder();
 		Scanner scanner = new Scanner(file);
 		while (scanner.hasNextLine()) {
@@ -199,7 +199,8 @@ public class Unit {
 	private void replaceUnitVariables() {
 		lessonTemplate = lessonTemplate.replace("$UNIT_TITLE", this.title);
 		lessonTemplate = lessonTemplate.replace("$SLIDE_LINK", this.slideLink);
-		// Moved video link to lesson: if there is no video in a lesson, adding this hurts it. 
+		// Moved video link to lesson: if there is no video in a lesson, adding
+		// this hurts it.
 		activityTemplate = activityTemplate.replace("$UNIT_TITLE", this.title);
 		activityTemplate = activityTemplate.replace("$SLIDE_LINK",
 				this.slideLink);
@@ -208,13 +209,13 @@ public class Unit {
 	/**
 	 * Generates all the html files (lesson and activity) for this unit.
 	 * 
+	 * @param unitNumber
+	 * 
 	 * @throws IOException
 	 * 
 	 */
-	public void generateFiles(PrintWriter cbUnitWriter, PrintWriter cbLessonWriter) throws IOException {
+	public void generateFiles() throws IOException {
 
-		// TODO: Handle the coursebuilder outputFormat
-		
 		System.out.println(this.toString());
 		createOutputDirectory();
 
@@ -223,6 +224,39 @@ public class Unit {
 			task.generateFile();
 		}
 
+	}
+
+	/**
+	 * Generates all the html files (lesson and activity) for this unit.
+	 * 
+	 * @param unitNumber
+	 * 
+	 * @throws IOException
+	 * 
+	 */
+	public void generateCourseBuilderFiles(PrintWriter cbUnitWriter,
+			PrintWriter cbLessonWriter, int unitNumber) throws IOException {
+
+		// Handle coursebuilder outputFormat
+		String s = String.format("%d,U,%d,%s,,TRUE", unitNumber, unitNumber,
+				title);
+		cbUnitWriter.println(s);
+
+		for (int i = 0; i < tasks.size(); i++) {
+			Task task = tasks.get(i);
+			if (task.getClass() == Lesson.class) {
+				Lesson lesson = (Lesson) task;
+				Task nextTask = getNextTask(task);
+				boolean hasQuiz = (nextTask != null && nextTask.getClass() == Activity.class);
+				s = String.format("%d,%s,%d,%s,%s,%s,%s,%s,%s", unitNumber,
+						title, task.getNumber(), task.getTitle(),
+						hasQuiz ? "yes" : "", hasQuiz ? nextTask.getTitle()
+								: "", slideLink, "videoLink", lesson
+								.getContentAboveWithoutNewlines());
+				cbLessonWriter.println(s);
+			}
+
+		}
 	}
 
 	@Override

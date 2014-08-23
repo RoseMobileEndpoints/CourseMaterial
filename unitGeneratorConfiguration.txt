@@ -1,7 +1,7 @@
 batch
 coursebuilder
-single
-../CourseMaterial/plans/unit11.txt
+multiple
+../CourseMaterial/plans/all_units.txt
 ../CourseMaterial/tools/unitGenerator/templates/
 
 Comments:
@@ -18,3 +18,9 @@ Line 4: If in batch mode, this gives the relative path and filename to either:
 
 Line 5: The relative path of the templates to be used to generate this unit. 
 
+
+single
+../CourseMaterial/plans/unit11.txt
+
+multiple
+../CourseMaterial/plans/all_units.txt
