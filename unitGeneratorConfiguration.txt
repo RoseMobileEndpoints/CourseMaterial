@@ -1,14 +1,12 @@
 batch
-standalone
-multiple
-../CourseMaterial/plans/all_units.txt
+coursebuilder
+single
+../CourseMaterial/plans/unit11.txt
 ../CourseMaterial/tools/unitGenerator/templates/
 
 Comments:
 Line 1: batch|interactive: Batch mode is faster, interactive lets you choose files and folders.
-
 Line 2: standalone|coursebuilder: output format. Generate standalone webpages or the csv files required by CourseBuilder.   
-
 Line 3: single|multiple: Process a single unit or multiple ones.
 
 Line 4: If in batch mode, this gives the relative path and filename to either:

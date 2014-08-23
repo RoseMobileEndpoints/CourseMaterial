@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -42,7 +43,7 @@ public class Unit {
 	 * @throws FileNotFoundException
 	 * @throws UnsupportedDataTypeException
 	 */
-	public Unit(File unitFile, String dir, OutputFormat outputFormat) throws FileNotFoundException,
+	public Unit(File unitFile, String dir) throws FileNotFoundException,
 			UnsupportedDataTypeException {
 		// dir = "CourseMaterial/units/templates/";
 		String ltName = Paths.get(dir + "lessonTemplate.html").toString();
@@ -58,8 +59,6 @@ public class Unit {
 		
 		parse(unitFile);
 		replaceUnitVariables();
-		
-		this.outputFormat = outputFormat;
 	}
 
 	private void parse(File unitFile) throws FileNotFoundException,
@@ -206,28 +205,16 @@ public class Unit {
 				this.slideLink);
 	}
 
-	private void createOutputDirectory() throws IOException {
-
-		Path p1 = Paths.get(this.outputLink);
-		System.out.println(p1.toString());
-		File outputDirectory = new File(p1.toString());
-
-		if (outputDirectory.exists())
-			return;
-		if (!outputDirectory.mkdirs()) {
-			throw new IOException("Unable to create output directory "
-					+ outputDirectory);
-		}
-	}
-
 	/**
 	 * Generates all the html files (lesson and activity) for this unit.
 	 * 
 	 * @throws IOException
 	 * 
 	 */
-	public void generateFiles() throws IOException {
+	public void generateFiles(PrintWriter cbUnitWriter, PrintWriter cbLessonWriter) throws IOException {
 
+		// TODO: Handle the coursebuilder outputFormat
+		
 		System.out.println(this.toString());
 		createOutputDirectory();
 
@@ -249,6 +236,20 @@ public class Unit {
 			sb.append(task.toString());
 		}
 		return sb.toString();
+	}
+
+	private void createOutputDirectory() throws IOException {
+
+		Path p1 = Paths.get(this.outputLink);
+		System.out.println(p1.toString());
+		File outputDirectory = new File(p1.toString());
+
+		if (outputDirectory.exists())
+			return;
+		if (!outputDirectory.mkdirs()) {
+			throw new IOException("Unable to create output directory "
+					+ outputDirectory);
+		}
 	}
 
 	String getLessonTemplate() {

@@ -16,6 +16,8 @@ import javax.swing.filechooser.FileFilter;
  */
 public class Main {
 
+	static boolean DEBUG = true;
+	
 	private String unitName;
 	private String templateDir;
 
@@ -53,7 +55,7 @@ public class Main {
 			}
 
 			collection = new UnitCollection(singleUnitFile, unitFile);
-			//collection.process(templateDir, outputFormat);
+			collection.process(templateDir, outputFormat);
 			
 			final Class<?> referenceClass = Main.class;
 			final URL url = referenceClass.getProtectionDomain()

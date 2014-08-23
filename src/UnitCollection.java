@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -22,6 +23,9 @@ public class UnitCollection {
 				Scanner sc = new Scanner(unitFile);
 				while (sc.hasNextLine()) {
 					String s = sc.nextLine();
+					if (Main.DEBUG) {
+						s = "../CourseMaterial/plans/" + s;
+					}
 					System.out.println(s);
 					unitFiles.add(new File(s));
 				}
@@ -40,13 +44,29 @@ public class UnitCollection {
 	public void process(String templateDir, OutputFormat outputFormat)
 			throws IOException {
 		// Open coursebuilder files and output headers
-		
-		for (File unitFile : unitFiles) {
-			Unit unit = new Unit(unitFile, templateDir, outputFormat);
-			unit.generateFiles();
+		PrintWriter cbUnitWriter = null;
+		PrintWriter cbLessonWriter = null;
+		if (outputFormat == OutputFormat.COURSE_BUILDER) {
+			// CONSIDER: Where should I write these two files? Add a path?
+			cbUnitWriter = new PrintWriter(new File("unit.csv"));
+			String unitHeader = "id,type,unit_id,title,release_date,now_available";
+			unitHeader += "\n";
+			cbUnitWriter.write(unitHeader);
+
+			cbLessonWriter = new PrintWriter(new File("lesson.csv"));
+			String lessonHeader = "unit_id,unit_title,lesson_id,lesson_title,lesson_activity,lesson_activity_name,";
+			lessonHeader += "lesson_notes,lesson_video_id,lesson_objectives";
+			lessonHeader += "\n";
+			cbLessonWriter.write(lessonHeader);
 		}
 		
-		// Close coursebuilder files 
+		for (File unitFile : unitFiles) {
+			Unit unit = new Unit(unitFile, templateDir);
+			unit.generateFiles(cbUnitWriter, cbLessonWriter);
+		}
+		
+		cbUnitWriter.close();
+		cbLessonWriter.close();
 	}
 
 }
