@@ -34,7 +34,6 @@ No $#$ Isn't that convenient? They use http://cluekeeper.com. Did you know that 
 END
 
 
-
 LESSON TITLE: Lab: AppEngine install
 LESSON VIDEO: InstallTestLab/InstallTestLab_player.html
 CONTENT ABOVE
@@ -45,7 +44,3 @@ CONTENT ABOVE
 </ul>
 CONTENT BELOW
 END
-
-
-
-
