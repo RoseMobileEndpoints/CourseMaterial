@@ -15,6 +15,8 @@ import javax.activation.UnsupportedDataTypeException;
  * @author Matt Boutell. Created Jun 6, 2014.
  */
 public class Unit {
+	private OutputFormat outputFormat;
+	
 	private String unitContents;
 	private String lessonTemplate;
 	private String activityTemplate;
@@ -34,15 +36,13 @@ public class Unit {
 
 	/**
 	 * Creates a unit from the given config file using default template files.
-	 * 
-	 * @param unitName
+	 * @param unitFile 
 	 * @param dir
-	 * 
-	 * @param lessonTemplateName
+	 * @param outputFormat 
 	 * @throws FileNotFoundException
 	 * @throws UnsupportedDataTypeException
 	 */
-	public Unit(File unitFile, String dir) throws FileNotFoundException,
+	public Unit(File unitFile, String dir, OutputFormat outputFormat) throws FileNotFoundException,
 			UnsupportedDataTypeException {
 		// dir = "CourseMaterial/units/templates/";
 		String ltName = Paths.get(dir + "lessonTemplate.html").toString();
@@ -58,6 +58,8 @@ public class Unit {
 		
 		parse(unitFile);
 		replaceUnitVariables();
+		
+		this.outputFormat = outputFormat;
 	}
 
 	private void parse(File unitFile) throws FileNotFoundException,

@@ -8,6 +8,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
 
+
 /**
  * Runs the unit course material generator.
  * 
@@ -23,7 +24,10 @@ public class Main {
 	}
 
 	private RunMode runMode;
-
+	private OutputFormat outputFormat;
+	private boolean singleUnitFile = true;
+	private UnitCollection collection;
+	
 	/**
 	 * Starts here.
 	 * 
@@ -37,20 +41,20 @@ public class Main {
 	public Main() {
 		try {
 			parseConfigFile();
+
 			File unitFile;
 			if (runMode == RunMode.BATCH) {
 				System.out.println("Batch mode");
-				 unitFile = new File(unitName);
+				unitFile = new File(unitName);
 			} else {
 				// Gets locations from the user using file choosers
 				unitFile = getInputFile();
 				getOutputPath();
 			}
-			
-			
-			Unit unit = new Unit(unitFile, templateDir);
-			unit.generateFiles();
 
+			collection = new UnitCollection(singleUnitFile, unitFile);
+			//collection.process(templateDir, outputFormat);
+			
 			final Class<?> referenceClass = Main.class;
 			final URL url = referenceClass.getProtectionDomain()
 					.getCodeSource().getLocation();
@@ -58,8 +62,7 @@ public class Main {
 			String s = String.format("Running in %s mode\n", runMode.toString()
 					.toLowerCase());
 			final File jarPath = new File(url.toURI()).getParentFile();
-			s += String.format("Running from %s\n", jarPath); // this is the
-																// path you want
+			s += String.format("Running from %s\n", jarPath); 
 			s += "Completed generating pages for unit";
 			JOptionPane.showMessageDialog(null, s);
 
@@ -72,12 +75,15 @@ public class Main {
 		}
 	}
 
+
 	private void parseConfigFile() throws FileNotFoundException {
 		File configFile = new File("unitGeneratorConfiguration.txt");
 		Scanner scanner = new Scanner(configFile);
-		String runString = scanner.nextLine();
-		runMode = runString.toLowerCase().contains("batch") ? RunMode.BATCH
+		runMode = scanner.nextLine().toLowerCase().contains("batch") ? RunMode.BATCH
 				: RunMode.INTERACTIVE;
+		outputFormat = scanner.nextLine().toLowerCase().contains("builder") ? OutputFormat.COURSE_BUILDER
+				: OutputFormat.STANDALONE;
+		singleUnitFile = scanner.nextLine().toLowerCase().contains("single");
 		unitName = scanner.nextLine();
 		templateDir = scanner.nextLine();
 		scanner.close();
