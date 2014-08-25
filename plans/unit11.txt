@@ -20,6 +20,7 @@ SummaryOAuthBackend		1:44
 
 LESSON TITLE: OAuth Overview
 LESSON VIDEO: OAuthOverview/OAuthOverview_player.html
+YOUTUBE ID: g_TJZL0bTYc
 CONTENT ABOVE
 <ul>
 <li>In this lesson you will see a demo of this lesson's app, and learn how this app is more complex than ones in previous units.</li>
@@ -51,6 +52,7 @@ END
 
 LESSON TITLE: DownloadStartingCode
 LESSON VIDEO: DownloadStartingCode/DownloadStartingCode_player.html
+YOUTUBE ID: Im0i3vF7Dh8
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will register your app ID and download the starting code.</li>
@@ -70,6 +72,7 @@ END
 
 LESSON TITLE: Make Endpoints-ready Models
 LESSON VIDEO: EndpointsReadyModels/EndpointsReadyModels_player.html
+YOUTUBE ID: bscA5ck3cS8
 CONTENT ABOVE
 <ul>
 <li>In this lesson, we'll modify the given model classes to make them ready for Endpoints.</li>
@@ -90,6 +93,7 @@ END
 
 LESSON TITLE: APIClass
 LESSON VIDEO: APIClass/APIClass_player.html
+YOUTUBE ID: Vsm2Mcq5kXc
 CONTENT ABOVE
 <ul>
 <li>In this lesson, we'll start to write the API, focusing on those things that are required to use OAuth.</li>
@@ -116,6 +120,7 @@ END
 
 LESSON TITLE: GetWebClientID
 LESSON VIDEO: GetWebClientID/GetWebClientID_player.html
+YOUTUBE ID: 9tcqIosycjA
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will learn how to generate a client ID for your web app.</li>
@@ -135,6 +140,7 @@ END
 
 LESSON TITLE: ListMethods
 LESSON VIDEO: ListMethods/ListMethods_player.html
+YOUTUBE ID: WIElgnq8LgU
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will learn how to change the annotation for a method to require an authenticated user.</li>
@@ -161,6 +167,7 @@ END
 
 LESSON TITLE: InsertMethods
 LESSON VIDEO: InsertMethods/InsertMethods_player.html
+YOUTUBE ID: LUTva2dinUU
 CONTENT ABOVE
 <ul>
 <li>In this lesson, we'll write the two needed insert methods. </li>
@@ -190,6 +197,7 @@ END
 
 LESSON TITLE: DeleteMethods
 LESSON VIDEO: DeleteMethods/DeleteMethods_player.html
+YOUTUBE ID: 0PffywYS46I
 CONTENT ABOVE
 <ul>
 <li>In this lesson, we'll write the two needed delete methods</li>
@@ -209,6 +217,7 @@ END
 
 LESSON TITLE: Deploying to App Engine and Test
 LESSON VIDEO: DeployAndTest/DeployAndTest_player.html
+YOUTUBE ID: 7oR2M0MQYrA
 CONTENT ABOVE
 <ul>
 <li>In this lesson, we'll deploy our app to App Engine and test the API of the live version. This is the last step before working on the client.</li>
@@ -228,6 +237,7 @@ END
 
 LESSON TITLE: Summary and Troubleshooting
 LESSON VIDEO: SummaryOAuthBackend/SummaryOAuthBackend_player.html
+YOUTUBE ID: tOVXw45Ef40
 CONTENT ABOVE
 <ul>
 <li>There is no lab in this unit. If you want to use OAuth in your project, you are ready!</li>

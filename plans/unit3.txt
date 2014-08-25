@@ -15,6 +15,7 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1NomlKtlYdr3_S3pViz0peR9I
 
 LESSON TITLE: Menus and the Action Bar
 LESSON VIDEO: MenuUnit/MenuUnit_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll get an overview of the three types of menus we'll study: menu items on the ActionBar, submenus, and the Contextual Action Bar</li>
@@ -24,6 +25,7 @@ END
 
 LESSON TITLE: Menu Items in the Action Bar
 LESSON VIDEO: ActionBar/ActionBar_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to add menu items to the ActionBar declaratively (using xml) and how to respond to them programmatically (using a callback). </li>
@@ -57,6 +59,7 @@ END
 
 LESSON TITLE: Submenus
 LESSON VIDEO: Submenus/Submenus_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn about submenus.</li>
@@ -79,6 +82,7 @@ END
 
 LESSON TITLE: Contextual Action Bar
 LESSON VIDEO: ContextualActionBar/ContextualActionBar_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to make a custom action bar replace the given one to give more information about an item.</li>
@@ -114,6 +118,7 @@ END
 
 LESSON TITLE: Iconography
 LESSON VIDEO: Iconography/Iconography_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn where to find Android's custom icons and how to create your own. This is important if you post your app on Google Play.</li>
@@ -123,6 +128,7 @@ END
 
 LESSON TITLE: Lab: Snakes on a Menu
 LESSON VIDEO: LabSnakes/LabSnakes_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1n1K0E7htAXx6EddkZt2bSONoTDzaKq8RvsJN3E-nHYY" target="_blank">here</a>.</li>

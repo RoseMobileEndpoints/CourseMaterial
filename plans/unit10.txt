@@ -23,6 +23,7 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1Dkvkp_KbjmpNjYR5IwHPJ5Ta
 
 LESSON TITLE: Overview
 LESSON VIDEO: Overview/Overview_player.html
+YOUTUBE ID: 4-R9MqBymO8
 CONTENT ABOVE
 <ul>
 <li>In this lesson you will survey how to write an Android client that connects to an Endpoints backend.</li>
@@ -34,6 +35,7 @@ END
 
 LESSON TITLE: Setup
 LESSON VIDEO: Setup/Setup_player.html
+YOUTUBE ID: ZWoC_sPr5EA
 CONTENT ABOVE
 <ul>
 <li>In this lesson you will download your app in preparation for adding Endpoints code.</li>
@@ -46,6 +48,7 @@ END
 
 LESSON TITLE: Generating Android Client Code
 LESSON VIDEO: GeneratingAndroidClientCode/GeneratingAndroidClientCode_player.html
+YOUTUBE ID: kZZL5iDcMn0
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to generate code for an Android client using Windows. If you need help doing this on a Mac, please see the instructions doc.</li>
@@ -77,6 +80,7 @@ END
 
 LESSON TITLE: Creating a Service Object
 LESSON VIDEO: CreatingServiceObject/CreatingServiceObject_player.html
+YOUTUBE ID: IVC7lkdWEIg
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will create a Service object to connect to the backend.</li>
@@ -95,11 +99,12 @@ END
 
 
 
-LESSON TITLE: AsynchTasks
+LESSON TITLE: Async Tasks
 LESSON VIDEO: AsynchTask/AsynchTask_player.html
+YOUTUBE ID: qka_6iOxMC0
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you will learn the basics of using AsynchTasks to do work off the main UI thread.</li>
+<li>In this lesson, you will learn the basics of using AsyncTasks to do work off the main UI thread.</li>
 <li>Link to <a href="https://docs.google.com/document/d/16Ue-XKXmuAxnofi9ryxUzFcoPW9u11kmAyyN-xsOVrI" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
@@ -131,6 +136,7 @@ END
 
 LESSON TITLE: Read All Movie Quotes
 LESSON VIDEO: ReadAllQuotes/ReadAllQuotes_player.html
+YOUTUBE ID: uSQtWjiRShY
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will learn how to use an AsynchTask to read all movie quotes fom the server. </li>
@@ -162,6 +168,7 @@ END
 
 LESSON TITLE: Inserting a Quote
 LESSON VIDEO: InsertQuote/InsertQuote_player.html
+YOUTUBE ID: HBD9rM0r4Hc
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to insert a quote to the backend using an AsynchTask.</li>
@@ -192,6 +199,7 @@ END
 
 LESSON TITLE: Editing a Quote
 LESSON VIDEO: EditQuote/EditQuote_player.html
+YOUTUBE ID: Ja-X8zR1T1g
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn that it's easy to edit a quote from the client.</li>
@@ -211,6 +219,7 @@ END
 
 LESSON TITLE: Deleting a Quote
 LESSON VIDEO: DeleteQuote/DeleteQuote_player.html
+YOUTUBE ID: Q4ij5mF9HzU
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to delete a quote from the backend using the quote's entity key.</li>
@@ -231,6 +240,7 @@ END
 
 LESSON TITLE: Lab: WeatherpicsAndroidClient
 LESSON VIDEO: LabWeatherpicsAndroidClient/LabWeatherpicsAndroidClient_player.html
+YOUTUBE ID: u25p3VSm9P4
 CONTENT ABOVE
 <ul>
 <li>Here is the <a href="https://docs.google.com/document/d/1kRjcAb839ONp1nhKxAaAWrQxio9JrD7OJRuPdofHFKY" target="_blank">lab specification</a>.</li>

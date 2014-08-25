@@ -16,6 +16,7 @@ SummaryOAuthAndroidClient		6:16
 
 LESSON TITLE: OAuth Android Client
 LESSON VIDEO: OverviewOAuthAndroidClient/OverviewOAuthAndroidClient_player.html
+YOUTUBE ID: N0GTfemQtsI
 CONTENT ABOVE
 <ul>
 <li>In this lesson you will survey how to write an Android client that connects to an Endpoints backend using authentication.</li>
@@ -27,6 +28,7 @@ END
 
 LESSON TITLE: Get Android Client ID
 LESSON VIDEO: GetAndroidClientID/GetAndroidClientID_player.html
+YOUTUBE ID: dw0d6PrWjlo
 CONTENT ABOVE
 <ul>
 <li>In this lesson you will download your app in preparation for adding Endpoints code.</li>
@@ -57,6 +59,7 @@ END
 
 LESSON TITLE: Starting Code
 LESSON VIDEO: StartingCode/StartingCode_player.html
+YOUTUBE ID: 8B5hlejev1A
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to generate code for an Android client using Windows. If you need help doing this on a Mac, please see the instructions doc.</li>
@@ -84,6 +87,7 @@ END
 
 LESSON TITLE: Add Google Play for Authentication
 LESSON VIDEO: AddGooglePlay/AddGooglePlay_player.html
+YOUTUBE ID: Zz7yir_tXmM
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will learn how to add external libraries, specifically Google Play.</li>
@@ -106,6 +110,7 @@ END
 
 LESSON TITLE: Generate and Use ClientCode
 LESSON VIDEO: GenerateAndUseClientCode/GenerateAndUseClientCode_player.html
+YOUTUBE ID: chHKUdRn9k0
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will generate the client code and copy it into your project.</li>
@@ -125,6 +130,7 @@ END
 
 LESSON TITLE: Summary and Troubleshooting
 LESSON VIDEO: SummaryOAuthAndroidClient/SummaryOAuthAndroidClient_player.html
+YOUTUBE ID: J-eNa8rwoag
 CONTENT ABOVE
 <ul>
 <li>There is no lab in this unit. If you want to use OAuth in your project, you are ready!</li>

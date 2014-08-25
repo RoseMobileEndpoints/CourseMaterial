@@ -16,6 +16,7 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1ktv4pOcdlwBdj6PsVXwgxbdZ
 
 LESSON TITLE: Adapters Overview
 LESSON VIDEO: AdapterOverview/AdapterOverview_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll get an overview of what adapters are and what types of adapters and adapter views are available.</li>
@@ -35,6 +36,7 @@ END
 
 LESSON TITLE: List Views
 LESSON VIDEO: ListView/ListView_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to create a ListView and populate it using an array and the simplest of ArrayAdapters.</li>
@@ -71,6 +73,7 @@ END
 
 LESSON TITLE: Extending the BaseAdapter class
 LESSON VIDEO: ExtendingBaseAdapter/ExtendingBaseAdapter_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to override the methods in this abstract class. </li>
@@ -109,6 +112,7 @@ END
 
 LESSON TITLE: Custom Views
 LESSON VIDEO: CustomViews/CustomViews_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to replace each item in a ListView with other single views like buttons and images. </li>
@@ -121,6 +125,7 @@ END
 
 LESSON TITLE: Custom Compound Views
 LESSON VIDEO: CustomCompoundView/CustomCompoundView_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to extend LinearLayout in code so you can serve up compound views as items in the ListView.</li>
@@ -148,6 +153,7 @@ END
 
 LESSON TITLE: Extending ArrayAdapters
 LESSON VIDEO: ExtendingArrayAdapter/ExtendingArrayAdapter_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to extend the ArrayAdapter class</li>
@@ -178,6 +184,7 @@ END
 
 LESSON TITLE: Summary
 LESSON VIDEO: SummaryAdapters/SummaryAdapters_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>There is no lab in this unit. </li>

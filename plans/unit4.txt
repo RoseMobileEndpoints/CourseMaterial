@@ -14,6 +14,7 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1P5UyAo9UZ2fIACMYF3RyXGgB
 
 LESSON TITLE: Dialogs Overview
 LESSON VIDEO: DialogsOverview/DialogsOverview_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll get an overview of the various types of dialogs you can use in your apps.</li>
@@ -32,6 +33,7 @@ END
 
 LESSON TITLE: AlertDialogs
 LESSON VIDEO: AlertDialogs/AlertDialogs_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn about standard very flexible AlertDialogs.</li>
@@ -71,6 +73,7 @@ END
 
 LESSON TITLE: AlertDialogs with Items
 LESSON VIDEO: AlertDialogsWithItems/AlertDialogsWithItems_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to show a list of items instead of a message in one of three ways: items only, radio buttons, or checklists.</li>
@@ -102,6 +105,7 @@ END
 
 LESSON TITLE: Custom Dialogs
 LESSON VIDEO: CustomDialogs/CustomDialogs_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will learn how to make custom dialogs, and learn how to correct subtle bugs caused by incorrect use of findViewById</li>
@@ -125,6 +129,7 @@ END
 
 LESSON TITLE: Lab: Pickers and Blackjack
 LESSON VIDEO: LabPickersAndBlackjack/LabPickersAndBlackjack_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1zMKKqXsrVdFG6TIRohpp4ls0QgJAgFTPJfg6fbhSQp8" target="_blank">here</a>.</li>

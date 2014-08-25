@@ -8,7 +8,6 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1RivoehwTZWHcHub1Cq0u-dz8
 // Total: 21 min
 
 
-// Lessons here
 
 LESSON TITLE: Introduction
 LESSON VIDEO: IntroToAndroid/IntroToAndroid_player.html
@@ -21,6 +20,7 @@ CONTENT BELOW
 END
 
 
+
 LESSON TITLE: Syllabus
 LESSON VIDEO: 
 CONTENT ABOVE
@@ -31,6 +31,7 @@ CONTENT ABOVE
 </ul>
 CONTENT BELOW
 END
+
 
 
 LESSON TITLE: Installation
@@ -53,8 +54,10 @@ CONTENT BELOW
 END
 
 
+
 LESSON TITLE: Coffee Counter
 LESSON VIDEO: CoffeeCounter/CoffeeCounter_player.html
+YOUTUBE ID: 
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll see the development of a simple app that one could create "out of the box" with no experience in Android. Don't worry if you don't absorb every detail. I just want to warm you up so that we can start off strong in the next unit.</li>
@@ -84,6 +87,8 @@ Change the properties in the GUI editor $#$ That is what I did in the video. Ver
 Capture the TextView using findViewByID and then call .setTextSize() $#$ I used the GUI editor, but you can do it in code. $#$ yes 
 Change the AndroidManifest file $#$ We haven't used that file yet. Any of the other options work, though.
 END
+
+
 
 LESSON TITLE: Lab: GettingStarted
 LESSON VIDEO: 
