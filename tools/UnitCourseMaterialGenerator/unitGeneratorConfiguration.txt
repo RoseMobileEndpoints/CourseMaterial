@@ -1,8 +1,8 @@
 batch
 coursebuilder
 multiple
-../CourseMaterial/plans/all_units.txt
-../CourseMaterial/tools/unitGenerator/templates/
+../../plans/all_units.txt
+templates/
 
 Comments:
 Line 1: batch|interactive: Batch mode is faster, interactive lets you choose files and folders.
@@ -20,7 +20,7 @@ Line 5: The relative path of the templates to be used to generate this unit.
 
 
 single
-../CourseMaterial/plans/unit11.txt
+../../plans/unit11.txt
 
 multiple
 ../CourseMaterial/plans/all_units.txt

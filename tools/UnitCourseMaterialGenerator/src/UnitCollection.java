@@ -25,7 +25,7 @@ public class UnitCollection {
 			while (sc.hasNextLine()) {
 				String s = sc.nextLine();
 				if (Main.DEBUG) {
-					s = "../CourseMaterial/plans/" + s;
+					s = "../../plans/" + s;
 				}
 				System.out.println(s);
 				unitFiles.add(new File(s));
