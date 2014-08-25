@@ -70,7 +70,8 @@ public class Unit {
 				"LINK TO VIDEOS:", 
 				"LINK TO SLIDES:",
 				"LESSON TITLE:", 
-				"LESSON VIDEO:", 
+				"LESSON VIDEO:",
+				"YOUTUBE ID:",
 				"CONTENT ABOVE",
 				"CONTENT BELOW", 
 				"END", 
@@ -127,12 +128,15 @@ public class Unit {
 				((Lesson) currentTask).setVideo(remainder);
 				break;
 			case 6:
-				state = IN_LESSON_CONTENT_ABOVE;
+				((Lesson) currentTask).setYouTubeVideo(remainder);
 				break;
 			case 7:
-				state = IN_LESSON_CONTENT_BELOW;
+				state = IN_LESSON_CONTENT_ABOVE;
 				break;
 			case 8:
+				state = IN_LESSON_CONTENT_BELOW;
+				break;
+			case 9:
 				// end
 				if (currentQuestion != null) {
 					((Activity) currentTask).addQuestion(currentQuestion);
@@ -142,13 +146,13 @@ public class Unit {
 				currentTask = null;
 				state = IN_UNIT;
 				break;
-			case 9:
+			case 10:
 				// Activity
 				currentTask = new Activity(this, nLessonsRead);
 				currentTask.setTitle(remainder);
 				state = IN_ACTIVITY;
 				break;
-			case 10:
+			case 11:
 				// Quiz text prompt
 				// Save the last question if needed and start a new question.
 				if (currentQuestion != null) {
@@ -156,7 +160,7 @@ public class Unit {
 				}
 				currentQuestionPrompt = remainder;
 				break;
-			case 11:
+			case 12:
 				// Quiz type.
 				currentQuestion = Question.makeQuestion(remainder);
 				currentQuestion.setPrompt(currentQuestionPrompt);
@@ -267,7 +271,7 @@ public class Unit {
 						hasQuiz ? "yes" : "",
 						hasQuiz ? nextTask.getTitle() : "",
 						slideLink,
-						"videoLink",
+						lesson.getYouTubeId(),
 						lesson.getCsvFriendlyContentAbove());
 				cbLessonWriter.println(s);
 			}

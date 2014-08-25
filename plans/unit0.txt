@@ -12,7 +12,7 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1RivoehwTZWHcHub1Cq0u-dz8
 
 LESSON TITLE: Introduction
 LESSON VIDEO: IntroToAndroid/IntroToAndroid_player.html
-YOUTUBE_ID: JGf6UFw5tgA
+YOUTUBE ID: JGf6UFw5tgA
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn why mobile is popular and what you can do with Android.</li>

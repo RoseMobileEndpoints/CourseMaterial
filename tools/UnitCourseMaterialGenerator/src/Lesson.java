@@ -12,6 +12,7 @@ public class Lesson extends Task {
 	private String videoLink;
 	private String contentAbove;
 	private String contentBelow;
+	private String youTubeId;
 
 	/**
 	 * Creates a lesson with the given unit and number.
@@ -34,6 +35,16 @@ public class Lesson extends Task {
 		this.videoLink = videoLink;
 	}
 
+	/**
+	 * Sets the youtube video.
+	 *
+	 * @param youTubeId
+	 */
+	public void setYouTubeVideo(String youTubeId) {
+		this.youTubeId = youTubeId;
+	}
+
+	
 	/**
 	 * Adds a line to the contentAbove
 	 * 
@@ -58,6 +69,7 @@ public class Lesson extends Task {
 		sb.append("Lesson " + this.getNumber() + "\n");
 		sb.append("Title: " + this.getTitle() + "\n");
 		sb.append("Video link: " + this.videoLink + "\n");
+		sb.append("Youtube ID: " + this.youTubeId + "\n");
 		sb.append("Contents above:\n" + this.contentAbove);
 		sb.append("Contents below:\n" + this.contentBelow);
 		return sb.toString();
@@ -112,4 +124,10 @@ public class Lesson extends Task {
 		return "\"" + temp + "\"";
 	}
 
+	/**
+	 * @return The YouTubeId
+	 */
+	public String getYouTubeId() {
+		return youTubeId;
+	}
 }
