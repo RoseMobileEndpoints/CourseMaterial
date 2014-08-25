@@ -40,14 +40,26 @@ SPRINT 4: Output to CourseBuilder format Due 8/31
 	Config file tells what output format (standalone vs. course builder) we are using. 
 	Can output in coursebuilder format by specifying in config file
 
-SPRINT 5: User friendliness (IN PROGRESS?, Due 8/31) 
+SPRINT 5, 8/25: Done.
+	Currently runs best from the CourseMaterials git repo that checks out to the public folder. 
+	Moved this codebase to the CourseMaterials repo, 
+	so all collaborators can check them, but they shouldn't be public. Just delete when checking out to a public area.
+	Checkout script does this.
+	Follow dirs in:
+	http://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/
+
+SPRINT 6, 8/31
+	Post all videos to youtube and insert links.
+
+
+SPRINT 6: User friendliness (IN PROGRESS?, Due 8/31) 
 	Can run in interactive or batch mode
 		Next: Test and Debug passing unit file, not String. 
 		Pass output filedir, ignore that from unit file.
 
 	File format OK for units? 
 	Merge output and video names into 1 format. 
-	Allow spaces in unit name 
+	Allow spaces in unit name (check this) 
 	Confirm relative location of output and videos.
 	
 	Paths for Batch mode: OK?
@@ -59,15 +71,6 @@ SPRINT 5: User friendliness (IN PROGRESS?, Due 8/31)
 	What options would be nice to have in interactive mode?
 		Location of unit file, output folder, coursebuilder vs standalone (later)
 			
-
-
-Backlog
-	[todo] Post all videos to youtube, or make coursebuilder handle Camtasia videos.
-	Currently runs best from the CourseMaterials git repo that checks out to the public folder. 
-	CONSIDER: move this codebase to the CourseMaterials repo, 
-	so all collaborators can check them, but they shouldn't be public. 
-	We should have a public folder in the repo, like we do for SVN.  
-	Follow dirs in:
-	http://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/
 	
+Backlog
 	
