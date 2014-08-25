@@ -268,7 +268,7 @@ public class Unit {
 						hasQuiz ? nextTask.getTitle() : "",
 						slideLink,
 						"videoLink",
-						lesson.getContentAboveWithoutNewlines());
+						lesson.getCsvFriendlyContentAbove());
 				cbLessonWriter.println(s);
 			}
 		}

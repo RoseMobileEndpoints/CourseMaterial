@@ -75,16 +75,16 @@ public class Lesson extends Task {
 				.get(this.getUnit().getOutputLink() + "/" + name).toString();
 		PrintWriter pw = new PrintWriter(new File(fullName));
 		String template = this.getUnit().getLessonTemplate();
-		
+
 		template = template.replace("$LESSON_TITLE", this.getTitle());
-		
 
 		// Handle lessons with no activities.
 		if (this.videoLink != null && this.videoLink.length() > 0) {
 			// Add the video tag
 			template = template.replace("$VIDEO_TAG", Unit.VIDEO_TAG);
 			// From it, add the unit video base
-			template = template.replace("$VIDEO_LINK", getUnit().getVideoLink());
+			template = template
+					.replace("$VIDEO_LINK", getUnit().getVideoLink());
 			// From it, add the lesson video.
 			template = template.replace("$LESSON_VIDEO_LINK", this.videoLink);
 		} else {
@@ -104,8 +104,12 @@ public class Lesson extends Task {
 	/**
 	 * @return The CONTENT_ABOVE as a string without newlines.
 	 */
-	public String getContentAboveWithoutNewlines() {
-		return contentAbove.replace("\n", "");
+	public String getCsvFriendlyContentAbove() {
+		String temp = contentAbove
+				.replace("\n", "")
+				.replace("\t", "")
+				.replace("\"", "'");
+		return "\"" + temp + "\"";
 	}
 
 }
