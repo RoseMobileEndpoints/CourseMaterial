@@ -122,7 +122,7 @@ END
 ACTIVITY TITLE: Questions
 Q: Have you memorized which 8 generated libraries you need from endpoints?
 TYPE: MC
-Yes $#$ Wow, I'mpressed. $#$ yes
+Yes $#$ Wow, I'm impressed. $#$ yes
 No $#$ I just recently did, but it's not something I'd expect you to do so soon. $#$ yes
 END
 

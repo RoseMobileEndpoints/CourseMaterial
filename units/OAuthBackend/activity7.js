@@ -30,7 +30,7 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> How do we distuinguish between an insert and an update in our insert method?<br>",
+	"<b>1.</b> How do we distinguish between an insert and an update in our insert method?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [

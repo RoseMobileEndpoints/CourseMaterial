@@ -34,7 +34,7 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
-				["Yes", true, "Correct. Wow, I'mpressed." ],
+				["Yes", true, "Correct. Wow, I'm impressed." ],
 				["No", true, "Correct. I just recently did, but it's not something I'd expect you to do so soon." ],
 		]
 	},

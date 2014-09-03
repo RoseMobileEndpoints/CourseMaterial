@@ -177,7 +177,7 @@ CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: How do we distuinguish between an insert and an update in our insert method?
+Q: How do we distinguish between an insert and an update in our insert method?
 TYPE: MC
 Check to see if the item to be inserted is already in the datastore $#$  $#$ yes
 Pass in an optional boolean flag to the insert method $#$

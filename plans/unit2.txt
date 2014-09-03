@@ -21,7 +21,7 @@ Total = 132 min
 
 LESSON TITLE: Intents and Activities Unit
 LESSON VIDEO: IntentAndActivitiesUnit/IntentAndActivitiesUnit_player.html
-YOUTUBE ID: 
+YOUTUBE ID: 1BdVlONGS68
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn about apps that have multiple screens (Activities). You'll also learn about mechanisms for communicating information between activities: Intent extras and SharedPreferences.</li>
@@ -52,7 +52,7 @@ END
 
 LESSON TITLE: Lab: Layouts
 LESSON VIDEO: LabLayouts/LabLayouts_player.html
-YOUTUBE ID: 
+YOUTUBE ID: XA7GspNhJ38
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1bcVJLLxZc1rHWWhAJbrivBELdS6ykNixM3GJHv0IL3I" target="_blank">here</a>.</li>
@@ -65,7 +65,7 @@ END
 
 LESSON TITLE: Main Menu (Review)
 LESSON VIDEO: MainMenu/MainMenu_player.html
-YOUTUBE ID: 
+YOUTUBE ID: LpIeFQt_-2I
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll review how to make a simple app from scratch.</li>
@@ -95,7 +95,7 @@ END
 
 LESSON TITLE: New Activities
 LESSON VIDEO: NewActivities/NewActivities_player.html
-YOUTUBE ID: 
+YOUTUBE ID: aSh4l45MYi0
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to create and launch new activities using Intents.</li>
@@ -145,7 +145,7 @@ END
 
 LESSON TITLE: Radio Buttons 
 LESSON VIDEO: RadioButtons/RadioButtons_player.html
-YOUTUBE ID: 
+YOUTUBE ID: LS_9cq1OHP4
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to use a RadioGroup of RadioButtons so that we can change the size of our LightsOut game board.</li>
@@ -171,7 +171,7 @@ END
 
 LESSON TITLE: Intent Extras
 LESSON VIDEO: IntentExtras/IntentExtras_player.html
-YOUTUBE ID: 
+YOUTUBE ID: HBxujJDdy8M
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to pass data from one intent to another using <em>extras</em>.</li>
@@ -210,7 +210,7 @@ END
 
 LESSON TITLE: Lights Out Activity Part 1: Setup 
 LESSON VIDEO: LightsOutActivitySetup/LightsOutActivitySetup_player.html
-YOUTUBE ID: 
+YOUTUBE ID: Ly-lR9Z7I2Y
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll review MVC and launching activities using intents by setting up the LightsOutActivity.</li>
@@ -229,7 +229,7 @@ END
 
 LESSON TITLE: Lights Out Activity Part 2: Creating Views in Code
 LESSON VIDEO: CreatingViewsInCode/CreatingViewsInCode_player.html
-YOUTUBE ID: 
+YOUTUBE ID: xW1_AQeOJM4
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to create views like table rows and buttons in code, so that your Lights Out game can support a variable number of buttons.</li>
@@ -255,7 +255,7 @@ END
 
 LESSON TITLE: Landscape Layout
 LESSON VIDEO: LandscapeLayout/LandscapeLayout_player.html
-YOUTUBE ID: 
+YOUTUBE ID: xtOddXd1oRQ
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to deal with the effects of a rotated screen by creating a new xml file in the layout-land folder.</li>
@@ -280,7 +280,7 @@ END
 
 LESSON TITLE: Shared Preferences
 LESSON VIDEO: SharedPreferences/SharedPreferences_player.html
-YOUTUBE ID: 
+YOUTUBE ID: igvkRu9cdpU
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to persist (store after the app stops running) simple data. This is needed to store the number of buttons chosen, which would be lost during a screen rotation. We'll review the activity lifecycle and use a very simple storage solution, SharedPreferences.
@@ -313,7 +313,7 @@ END
 
 LESSON TITLE: Localization and Runtime Resources
 LESSON VIDEO: LocalizationAndRuntimeResources/LocalizationAndRuntimeResources_player.html
-YOUTUBE ID: 
+YOUTUBE ID: ym4QHS2OLmI
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to make your app use values like Strings depend on the locale (language). </li>
@@ -337,7 +337,7 @@ END
 
 LESSON TITLE: Lab: Passing Data in Intents
 LESSON VIDEO: LabBasketballJersey/LabBasketballJersey_player.html
-YOUTUBE ID: 
+YOUTUBE ID: kztLOGHmt7A
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1nsif5GdeFADpqMkK2m-E2a3L-ajOM0teIPQfBZKRvDE" target="_blank">here</a>.</li>

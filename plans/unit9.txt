@@ -22,7 +22,7 @@ LabWeatherpicsBackend   	2:38
 
 LESSON TITLE: Endpoints Overview
 LESSON VIDEO: EndpointsOverview/EndpointsOverview_player.html
-YOUTUBE ID: 
+YOUTUBE ID: 9eezD6XW0K4
 CONTENT ABOVE
 <ul>
 <li>In this lesson you will what Endpoints is and get an overview of the process of creating an Endpoints API.</li>
@@ -32,7 +32,7 @@ END
 
 LESSON TITLE: The Road to Learning Endpoints
 LESSON VIDEO: TheRoadToLearningEndpoints/TheRoadToLearningEndpoints_player.html
-YOUTUBE ID: 
+YOUTUBE ID: UoNVZrP46kw
 CONTENT ABOVE
 <ul>
 <li>In this lesson you will get a high-level overview of the next 2 units.</li>
@@ -43,7 +43,7 @@ END
 
 LESSON TITLE: Setup
 LESSON VIDEO: Setup/Setup_player.html
-YOUTUBE ID: 
+YOUTUBE ID: clms0SvmeHA
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will register your app ID, set up your project using App Engine Launcher and Eclipse, and run and deploy the starting code.</li>
@@ -70,7 +70,7 @@ END
 
 LESSON TITLE: Backend Model
 LESSON VIDEO: BackendModel/BackendModel_player.html
-YOUTUBE ID: 
+YOUTUBE ID: BnKindG0L-g
 CONTENT ABOVE
 <ul>
 <li>In this lesson, we'll set up the MovieQuotes model object.</li>
@@ -104,7 +104,7 @@ END
 
 LESSON TITLE: MovieQuotes Web App
 LESSON VIDEO: MovieQuotesWebApp/MovieQuotesWebApp_player.html
-YOUTUBE ID: 
+YOUTUBE ID: 8Q5MRtu_-mo
 CONTENT ABOVE
 <ul>
 <li>In this lesson, we'll test our model using a simple web app we give you.</li>
@@ -123,7 +123,7 @@ END
 
 LESSON TITLE: Endpoints API: Create
 LESSON VIDEO: EndpointsAPICreate/EndpointsAPICreate_player.html
-YOUTUBE ID: 
+YOUTUBE ID: r_tMJcqnNUY
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will learn how to add a model object to the ndb datastore. </li>
@@ -158,7 +158,7 @@ END
 
 LESSON TITLE: Endpoints API: Read
 LESSON VIDEO: EndpointsAPIRead/EndpointsAPIRead_player.html
-YOUTUBE ID: 
+YOUTUBE ID: ewaKFNSAvq4
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will learn how to write simple query for an EndpointsModel.</li>
@@ -180,7 +180,7 @@ END
 
 LESSON TITLE: Endpoints API: Update
 LESSON VIDEO: EndpointsAPIUpdate/EndpointsAPIUpdate_player.html
-YOUTUBE ID: 
+YOUTUBE ID: D3LqswTqaf0
 CONTENT ABOVE
 <ul>
 <li>In this lesson, </li>
@@ -206,7 +206,7 @@ END
 
 LESSON TITLE: Endpoints API: Delete
 LESSON VIDEO: EndpointsAPIDelete/EndpointsAPIDelete_player.html
-YOUTUBE ID: 
+YOUTUBE ID: t7QEL7MQ1zk
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will learn how to remove objects from the datastore. </li>
@@ -231,7 +231,7 @@ END
 
 LESSON TITLE: Deploying to App Engine
 LESSON VIDEO: DeployToAppEngine/DeployToAppEngine_player.html
-YOUTUBE ID: 
+YOUTUBE ID: PFGPaUYQzEg
 CONTENT ABOVE
 <ul>
 <li>In this lesson, we'll deploy our app to App Engine and test the API of the live version. This is the last step before working on the client.</li>
@@ -256,7 +256,7 @@ END
 
 LESSON TITLE: Troubleshooting and Viewing Data
 LESSON VIDEO: TroubleshootAndViewData/TroubleshootAndViewData_player.html
-YOUTUBE ID: 
+YOUTUBE ID: pRXZr6O3lto
 CONTENT ABOVE
 <ul>
 <li>In this lesson, we'll see where to find the datastore and the logs when testing online. </li>
@@ -279,7 +279,7 @@ END
 
 LESSON TITLE: Lab: WeatherpicsBackend
 LESSON VIDEO: LabWeatherpicsBackend/LabWeatherpicsBackend_player.html
-YOUTUBE ID: 
+YOUTUBE ID: XDSYoMPPfWI
 CONTENT ABOVE
 <ul>
 <li>Here is the <a href="https://docs.google.com/document/d/1_aANt_3DM2uGvDhllatRiZUK9bzKiwYoarOL_P2N1zU" target="_blank">lab specification</a>.</li>

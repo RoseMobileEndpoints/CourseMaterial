@@ -20,7 +20,7 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1owF0wNA1BPjzZ6TSvEULaZmM
 
 LESSON TITLE: SQLite Overview
 LESSON VIDEO: SQLiteOverview/SQLiteOverview_player.html
-YOUTUBE ID: 
+YOUTUBE ID: SUv99Xa0iIw
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn what SQLite is, the idea of ContentValues and Cursors, and some basic SQLite commands.</li>
@@ -63,7 +63,7 @@ END
 
 LESSON TITLE: Project Setup
 LESSON VIDEO: ProjectSetup/ProjectSetup_player.html
-YOUTUBE ID: 
+YOUTUBE ID: J_bWdraYiy4
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll download and see what you have for the starting code for this unit's example.</li>
@@ -75,7 +75,7 @@ END
 
 LESSON TITLE: Creating the Database
 LESSON VIDEO: CreatingDatabase/CreatingDatabase_player.html
-YOUTUBE ID: 
+YOUTUBE ID: nWOPJ_9BWwE
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to subclass the SQLiteOpenHelper class to create your database.</li>
@@ -101,7 +101,7 @@ END
 
 LESSON TITLE: Adding an Item
 LESSON VIDEO: AddingItem/AddingItem_player.html
-YOUTUBE ID: 
+YOUTUBE ID: P2IPWoZsUlo
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to use ContentValues to add a new item to the database.</li>
@@ -125,7 +125,7 @@ END
 
 LESSON TITLE: Querying for Items
 LESSON VIDEO: QueryingItems/QueryingItems_player.html
-YOUTUBE ID: 
+YOUTUBE ID: jPPOUFvcocU
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to write a query to get all items from the database.</li>
@@ -156,7 +156,7 @@ END
 
 LESSON TITLE: Updating an Item
 LESSON VIDEO: UpdatingItem/UpdatingItem_player.html
-YOUTUBE ID: 
+YOUTUBE ID: Lvy7zUjkc4Y
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to update an item in the database. </li>
@@ -182,7 +182,7 @@ END
 
 LESSON TITLE: Deleting an Item
 LESSON VIDEO: DeletingItem/DeletingItem_player.html
-YOUTUBE ID: 
+YOUTUBE ID: d7xEvG9QWCs
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to delete an item or items from the database.</li>
@@ -205,7 +205,7 @@ END
 
 LESSON TITLE: Lab: Rose Homework Using SQLite
 LESSON VIDEO: LabSQLite/LabSQLite_player.html
-YOUTUBE ID: 
+YOUTUBE ID: zp771pWIHyI
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1iJQCX6Z1skhfBIuNKoPv6JcPB0gKHENjfehxizBk6Bo" target="_blank">here</a>.</li>

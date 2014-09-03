@@ -12,7 +12,7 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1WoikNuEMzF7WWH07u8Ef-zCX
 
 LESSON TITLE: Fragments Overview
 LESSON VIDEO: FragmentsOverview/FragmentsOverview_player.html
-YOUTUBE ID: 
+YOUTUBE ID: qmyW8ZGFoUY
 CONTENT ABOVE
 <ul>
 <li>This unit consists of a short overview of fragments and a detailed lab. This lesson is an extended introduction to the concepts you'll learn about in the lab. </li>
@@ -40,7 +40,7 @@ END
 
 LESSON TITLE: Lab: Fragments
 LESSON VIDEO: LabFragments/LabFragments_player.html
-YOUTUBE ID: 
+YOUTUBE ID: h75Ky5yj5Po
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1Lcms8HwlY0vLFevg7ORFbOebOFECPfJd-xyU9eI1uoY" target="_blank">here</a>.</li>

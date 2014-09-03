@@ -14,7 +14,7 @@ LINK TO SLIDES: https://docs.google.com/presentation/d/1YUc3sQH5oQYxUjlp9pia70SN
 
 LESSON TITLE: New Android Project
 LESSON VIDEO: NewAndroidProject/NewAndroidProject_player.html
-YOUTUBE ID: 
+YOUTUBE ID: wIQjVZRSWC0
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn about the files that are created in a vanilla Hello World project. 
@@ -48,7 +48,7 @@ END
 
 LESSON TITLE: Hello Button View
 LESSON VIDEO: HelloButtonView/HelloButtonView_player.html
-YOUTUBE ID: 
+YOUTUBE ID: dF9Wct370Ug
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn about making UIs from a specification, including layouts and string and color resources.</li>
@@ -82,7 +82,7 @@ END
 
 LESSON TITLE: Hello Button Controller
 LESSON VIDEO: HelloButtonController/HelloButtonController_player.html
-YOUTUBE ID: 
+YOUTUBE ID: nEfkl0a5UV8
 CONTENT ABOVE
 <ul>
 <li>This lesson teaches you how to use button's onClickListeners, and you'll learn how to grab views from the layout, and strings and colors from your resource files.</li>
@@ -126,7 +126,7 @@ END
 
 LESSON TITLE: MVC and Tic Tac Toe Model
 LESSON VIDEO: MVCAndTicTacToeModel/MVCAndTicTacToeModel_player.html
-YOUTUBE ID: 
+YOUTUBE ID: 3FdbXHdr7RU
 CONTENT ABOVE
 <ul>
 <li>This lesson is about the Model-View-Controller design pattern and how Android supports it. We look briefly at a model for a TicTacToe game.</li>
@@ -164,7 +164,7 @@ END
 
 LESSON TITLE: TicTacToe View
 LESSON VIDEO: TicTacToeView/TicTacToeView_player.html
-YOUTUBE ID: 
+YOUTUBE ID: clxcO3ravzs
 CONTENT ABOVE
 <ul>
 <li>More practice creating UIs to specification. Introducing TableLayouts.</li>
@@ -203,7 +203,7 @@ END
 
 LESSON TITLE: TicTacToe Controller
 LESSON VIDEO: TicTacToeController/TicTacToeController_player.html
-YOUTUBE ID: 
+YOUTUBE ID: pZM1PkwRfe0
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to respond when listing to multiple buttons.</li>
@@ -233,7 +233,7 @@ END
 
 LESSON TITLE: Lab: Getting Started with Buttons
 LESSON VIDEO: LabGettingStartedWithButtons/LabGettingStartedWithButtons_player.html
-YOUTUBE ID: 
+YOUTUBE ID: fGP64Hd4zhM
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1B1bTD2u_JuVOUXUOPO8p6rn9dwmt1DWzminoy3PtqbY" target="_blank">here</a>.</li>
