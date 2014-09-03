@@ -40,10 +40,15 @@ public class Activity extends Task {
 		return "activity" + getNumber() + ".js";
 	}
 
+	public String getCourseBuilderJavaScriptFileName() {
+		return "activity-" + getUnit().getNumber() + "." + getNumber() + ".js";
+	}
+
 	@Override
 	public void generateFile() throws FileNotFoundException {
 		generateHtml();
 		generateJavascript();
+		generateJavascriptForCourseBuilder();
 	}
 
 	private void generateHtml() throws FileNotFoundException {
@@ -82,6 +87,26 @@ public class Activity extends Task {
 		pw.close();
 	}
 
+	// CONSIDER: Just copy the regular javascript file instead of regenerating it!
+	private void generateJavascriptForCourseBuilder() throws FileNotFoundException {
+		String name = getCourseBuilderJavaScriptFileName();
+		String fullName = Paths
+				.get("coursebuilder/" + name).toString();
+
+		PrintWriter pw = new PrintWriter(new File(fullName));
+		String template = this.getUnit().getQuizTemplate();
+		pw.println(template);
+		pw.println("var activity = [");
+		for (int i = 0; i < questions.size(); i++) {
+			pw.print(questions.get(i).toString());
+			if (i < questions.size() - 1) {
+				pw.println("\t\"<br><br>\",");
+			}
+		}
+		
+		pw.println("];");
+		pw.close();
+	}
 	
 	
 	public void addQuestion(Question currentQuestion) {

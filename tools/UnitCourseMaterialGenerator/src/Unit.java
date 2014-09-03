@@ -27,6 +27,7 @@ public class Unit {
 
 	private String slideLink;
 	private List<Task> tasks;
+	private int number;
 
 	static final String VIDEO_TAG = "<iframe class=\"tscplayer_inline\" name=\"tsc_player\" src=\"$VIDEO_LINK/$LESSON_VIDEO_LINK\" scrolling=\"no\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
 
@@ -38,11 +39,11 @@ public class Unit {
 	 * 
 	 * @param unitFile
 	 * @param dir
-	 * @param outputFormat
+	 * @param unitNumber 
 	 * @throws FileNotFoundException
 	 * @throws UnsupportedDataTypeException
 	 */
-	public Unit(File unitFile, String dir) throws FileNotFoundException,
+	public Unit(File unitFile, String dir, int unitNumber) throws FileNotFoundException,
 			UnsupportedDataTypeException {
 		// dir = "CourseMaterial/units/templates/";
 		String ltName = Paths.get(dir + "lessonTemplate.html").toString();
@@ -57,6 +58,9 @@ public class Unit {
 		tasks = new ArrayList<Task>();
 
 		parse(unitFile);
+
+		this.number = unitNumber;
+		
 		replaceUnitVariables();
 	}
 
@@ -346,4 +350,9 @@ public class Unit {
 	public String getVideoLink() {
 		return this.videoLink;
 	}
+	
+	public int getNumber() {
+		return this.number;
+	}
+	
 }

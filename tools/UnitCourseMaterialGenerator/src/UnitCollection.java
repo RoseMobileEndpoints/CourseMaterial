@@ -48,12 +48,11 @@ public class UnitCollection {
 		PrintWriter cbUnitWriter = null;
 		PrintWriter cbLessonWriter = null;
 		if (outputFormat == OutputFormat.COURSE_BUILDER) {
-			// CONSIDER: Where should I write these two files? Add a path?
-			cbUnitWriter = new PrintWriter(new File("unit.csv"));
+			cbUnitWriter = new PrintWriter(new File("coursebuilder/unit.csv"));
 			String unitHeader = "id,type,unit_id,title,release_date,now_available";
 			cbUnitWriter.println(unitHeader);
 
-			cbLessonWriter = new PrintWriter(new File("lesson.csv"));
+			cbLessonWriter = new PrintWriter(new File("coursebuilder/lesson.csv"));
 			String lessonHeader = "unit_id,unit_title,lesson_id,lesson_title,lesson_activity,lesson_activity_name,";
 			lessonHeader += "lesson_notes,lesson_video_id,lesson_objectives";
 			cbLessonWriter.println(lessonHeader);
@@ -61,7 +60,7 @@ public class UnitCollection {
 
 		for (int i = 0; i < unitFiles.size(); i++) {
 			File unitFile = unitFiles.get(i);
-			Unit unit = new Unit(unitFile, templateDir);
+			Unit unit = new Unit(unitFile, templateDir, i+1);
 			unit.generateFiles();
 			if (outputFormat == OutputFormat.COURSE_BUILDER) {
 				unit.generateCourseBuilderFiles(cbUnitWriter, cbLessonWriter,
