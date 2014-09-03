@@ -251,7 +251,7 @@ public class Unit {
 			PrintWriter cbLessonWriter, int unitNumber) throws IOException {
 
 		// Handle coursebuilder outputFormat
-		String s = String.format("%d,U,%d,%s,,TRUE", unitNumber, unitNumber,
+		String s = String.format("%d,U,%d,%s,,True", unitNumber, unitNumber,
 				title);
 		cbUnitWriter.println(s);
 
