@@ -49,11 +49,11 @@ public class UnitCollection {
 		PrintWriter cbLessonWriter = null;
 		if (outputFormat == OutputFormat.COURSE_BUILDER) {
 			// CONSIDER: Where should I write these two files? Add a path?
-			cbUnitWriter = new PrintWriter(new File("unitGenerated.csv"));
+			cbUnitWriter = new PrintWriter(new File("unit.csv"));
 			String unitHeader = "id,type,unit_id,title,release_date,now_available";
 			cbUnitWriter.println(unitHeader);
 
-			cbLessonWriter = new PrintWriter(new File("lessonGenerated.csv"));
+			cbLessonWriter = new PrintWriter(new File("lesson.csv"));
 			String lessonHeader = "unit_id,unit_title,lesson_id,lesson_title,lesson_activity,lesson_activity_name,";
 			lessonHeader += "lesson_notes,lesson_video_id,lesson_objectives";
 			cbLessonWriter.println(lessonHeader);
