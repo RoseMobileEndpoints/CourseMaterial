@@ -56,6 +56,7 @@ SPRINT 6: User friendliness (IN PROGRESS?, Due 8/31)
 	Can run in interactive or batch mode
 		Next: Test and Debug passing unit file, not String. 
 		Pass output filedir, ignore that from unit file.
+		Goal: hardcoded (in config file) relative path, so moved to correct location for me!
 
 	File format OK for units? 
 	Merge output and video names into 1 format. 
