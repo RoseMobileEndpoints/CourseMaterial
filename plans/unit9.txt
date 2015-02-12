@@ -127,6 +127,7 @@ YOUTUBE ID: r_tMJcqnNUY
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will learn how to add a model object to the ndb datastore. </li>
+<li>In the video we'll add the <b>hostname</b> field to the annotation.</li></ul><div style='text-align: center; font: bold 18px Arial; color: red;'>DO NOT ADD THE HOSTNAME FIELD!</div><ul><li>When the video was made it was fine to add hostname='blah', but now you should not have the hostname field at all (just leave it out).  There have been changes to Endpoints since the video was made.  If you do what the video does then it won't let you do localhost API Explorer testing, which we'll need later!</li>
 <li>Link to <a href="https://docs.google.com/document/d/1mgcc4fBaMCpo2-nJFjsWjNWsj239mpa-LDEN7p7MWoE" target="_blank">instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
