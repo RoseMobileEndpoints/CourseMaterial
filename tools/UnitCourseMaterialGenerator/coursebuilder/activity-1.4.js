@@ -30,35 +30,43 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> Which UI element was NOT used in the demo app?<br>",
+	"<b>1.</b> Consider the model-view-controller (MVC) design pattern. By using xml layouts, you are separating which two?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["Button", false, "Try again. There were two buttons." ],
-				["TextView", false, "Try again. The message -I drank 4 cups- was displayed in a TextView." ],
-				["Slider", true, "Correct. " ],
-				["ImageView", false, "Try again. That is how the photo of the coffee cups was displayed." ],
+				["M&V", false, "Try again. The xml is the view, but it is our responsibility to separate out the model from the controller if needed." ],
+				["M&C", false, "Try again. That is our job." ],
+				["V&C", true, "Correct. " ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> Where in the app did we set an OnClickListener to respond to Button presses?<br>",
+	"<b>2.</b> Which two tend to get put together in simple apps?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["activity_main.xml", false, "Try again. That was for the layout." ],
-				["MainActivity.java", true, "Correct. " ],
-				["AndroidManifest.xml", false, "Try again. We have not used that file yet." ],
+				["M&V", false, "Try again. The view is separated by using xml layouts." ],
+				["M&C", true, "Correct. Consider HelloButton: the only thing that would go in the model is the click count." ],
+				["V&C", false, "Try again. These are separated by using xml layouts." ],
 		]
 	},
 	"<br><br>",
-	"<b>3.</b> How can you change the TextSize (font size in a TextView)? (There is more than one correct answer, so try different ones - there is no panelty for taking a question multiple times.)<br>",
+	"<b>3.</b> Which TicTacToeGame model method should you call to get the game state string?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["Edit the raw .xml", true, "Correct. Experienced developers often do that. But it is not the only way." ],
-				["Change the properties in the GUI editor", true, "Correct. That is what I did in the video. Very convenient especially when you are looking for a certain property." ],
-				["Capture the TextView using findViewByID and then call .setTextSize()", true, "Correct. I used the GUI editor, but you can do it in code." ],
-				["Change the AndroidManifest file", false, "Try again. We haven't used that file yet. Any of the other options work, though." ],
+				["stringForGameState()", true, "Correct. " ],
+				["ticTacToeState()", false, "Try again. Look back at the given code." ],
+				["getGameStateString()", false, "Try again. That does sound reasonable, but look back at the given code." ],
+		]
+	},
+	"<br><br>",
+	"<b>4.</b> Which model method should you call when a button is pressed?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["setOnClickListener()", false, "Try again. Later we will use that to listen to button clicks." ],
+				["buttonPressedForModel()", false, "Try again. Good guess. But don't guess. Look at the code." ],
+				["pressedButtonAtLocation()", true, "Correct. " ],
 		]
 	},
 ];

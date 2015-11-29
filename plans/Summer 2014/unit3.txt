@@ -1,0 +1,143 @@
+UNIT TITLE: Menus
+LINK TO OUTPUT: ../units/Menus
+LINK TO VIDEOS: ../../videos/Menus/    
+LINK TO SLIDES: https://docs.google.com/presentation/d/1NomlKtlYdr3_S3pViz0peR9I6gIc_JsOoSwm2qTzxss
+
+1 MenuUnit 2:27 
+2 ActionBar. 23:24 
+3 Submenu 9:57 
+4 ContextualActionBar 14:07 
+5 Iconography 5:24 
+6 Lab and summary 3:17 
+// Total = 59 min.
+
+// Lessons here
+
+LESSON TITLE: Menus and the Action Bar
+LESSON VIDEO: MenuUnit/MenuUnit_player.html
+YOUTUBE ID: aL-0zrAEQKY
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll get an overview of the three types of menus we'll study: menu items on the ActionBar, submenus, and the Contextual Action Bar</li>
+</ul>
+CONTENT BELOW
+END
+
+LESSON TITLE: Menu Items in the Action Bar
+LESSON VIDEO: ActionBar/ActionBar_player.html
+YOUTUBE ID: _4_P0YuFPQo
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to add menu items to the ActionBar declaratively (using xml) and how to respond to them programmatically (using a callback). </li>
+<li>There is also a 3 minute tangent on sending emails from your app using the ACTION_SENDTO intent.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What is the main reason we should declare menus declaratively (in xml)?
+TYPE: MC
+It is easier $#$ I think it's a good reason too. But it's not the main reason.
+It supports the MVC paradigm better than declaring them in code $#$ $#$ yes
+
+Q: Which callback is NOT always needed when dealing with menus?
+TYPE: MC
+onCreateOptionsMenu $#$ You need that to inflate the menu.
+onOptionItemSelected $#$ That one is called whenever a menu item is selected - like onClick() for buttons.
+onPrepareOptionsMenu $#$ $#$ yes
+
+Q: Why do we include a title on each menu item, even if we have an icon for it?
+TYPE: MS
+If there is no room for the icon, the title will appear in the overflow menu $#$ yes 
+If you long press the icon, the title will appear as a hint. $#$ yes
+
+Q: What does setDisplayHomeAsUpEnabled do?
+TYPE: MC
+It lets you specify which activity should be launched if you press the home caret in the ActionBar $#$ $#$ yes
+It lets you specify which activity should be launched if you press the back button $#$ The back button and the home button can take you to different places.
+END
+
+LESSON TITLE: Submenus
+LESSON VIDEO: Submenus/Submenus_player.html
+YOUTUBE ID: --WUut7lM70
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn about submenus.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: How is a submenu declared in xml?
+TYPE: MC
+It uses the &lt;submenu&gt; tag $#$ There is no such tag.
+It is a menu inside a group.
+Is is a menu inside another item $#$ $#$ yes
+
+Q: How does one respond to submenu item presses? 
+TYPE: MC
+Look for the menu item's ID in the onOptionsSubmenuItemSelected() callback $#$ There is no such method.
+Just like menu item presses $#$ Look for the menu item's ID in the onOptionsItemSelected() callback $#$ yes
+END
+
+LESSON TITLE: Contextual Action Bar
+LESSON VIDEO: ContextualActionBar/ContextualActionBar_player.html
+YOUTUBE ID: blJMA9CHkyc
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to make a custom action bar replace the given one to give more information about an item.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: In standard practice, what user action causes the Contextual Action Bar (CAB) to launch?
+TYPE: MC
+A button press $#$ Not just any press...
+A long press $#$ $#$ yes
+The home icon is pressed $#$ That would bring you to the parent activity.
+
+Q: The CAB is implemented using which object?
+TYPE: MC
+ActionMode $#$ $#$ yes
+ActionBar $#$ 
+
+Q: Which one of these method is not like the other?
+TYPE: MC
+onClick() $#$ 
+onLongClick() $#$ 
+onOptionsItemSelected() $#$
+onCreate() $#$ All the others are callbacks for various actions. $#$ yes
+onActionItemClicked() $#$
+
+Q: How is a context menu different than other menus?
+TYPE: MC
+Its menu items include condensed titles $#$ I included them in my example, but that was arbitrary.
+There is no difference $#$ $#$ yes
+END
+
+LESSON TITLE: Iconography
+LESSON VIDEO: Iconography/Iconography_player.html
+YOUTUBE ID: 5crK4Zzc1lQ
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn where to find Android's custom icons and how to create your own. This is important if you post your app on Google Play.</li>
+</ul>
+CONTENT BELOW
+END
+
+LESSON TITLE: Lab: Snakes on a Menu
+LESSON VIDEO: LabSnakes/LabSnakes_player.html
+YOUTUBE ID: 6Zix5xiAYXQ
+CONTENT ABOVE
+<ul>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1n1K0E7htAXx6EddkZt2bSONoTDzaKq8RvsJN3E-nHYY" target="_blank">here</a>.</li>
+<li>When done, be sure to submit your zipped Eclipse project (Snakes), plus video demo, to the Moodle dropbox.</li>
+<li>We'll wait until after the dialogs unit to complete the "Menus and Dialogs" self-evaluation survey.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+
+

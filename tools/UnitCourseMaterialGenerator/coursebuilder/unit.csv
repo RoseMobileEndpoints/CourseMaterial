@@ -1,14 +1,3 @@
 id,type,unit_id,title,release_date,now_available
-1,U,1,Introduction to Android,,True
-2,U,2,Buttons and MVC,,True
-3,U,3,Intents and Activities,,True
-4,U,4,Menus,,True
-5,U,5,Dialogs,,True
-6,U,6,Fragments,,True
-7,U,7,Adapters,,True
-8,U,8,SQLite,,True
-9,U,9,AppEngine,,True
-10,U,10,EndpointsBackend,,True
-11,U,11,EndpointsAndroidClient,,True
-12,U,12,OAuthBackend,,True
-13,U,13,OAuthAndroidClient,,True
+1,U,1,Buttons and MVC,,True
+2,U,2,Menus and Dialogs,,True

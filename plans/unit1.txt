@@ -1,20 +1,14 @@
 UNIT TITLE: Buttons and MVC
-LINK TO OUTPUT: ../units/ButtonsAndMVC
+// Output directly
+LINK TO OUTPUT: ../../units/ButtonsAndMVC
 LINK TO VIDEOS: ../../videos/ButtonsAndMVC  
-LINK TO SLIDES: https://docs.google.com/presentation/d/1YUc3sQH5oQYxUjlp9pia70SNpeLtQvBaVzPqkYO28c0
+LINK TO SLIDES: https://docs.google.com/presentation/d/1tvQwswjle4X6hWRDJy1CDccu0soHqd9BrlUxC8oPFFg
 
-1. New project 12:27
-2. HelloButton view 13:27
-3. Hello Button controller 12:14
-4. MVC / TTT model 6:59
-5. TTT view 18:10
-6. TTT controller 27:48
-7. Lab intro 2:56
-// Total = 94 min.
+// Lessons go here
 
-LESSON TITLE: New Android Project
-LESSON VIDEO: NewAndroidProject/NewAndroidProject_player.html
-YOUTUBE ID: wIQjVZRSWC0
+LESSON TITLE: Buttons and MVC Overview
+LESSON VIDEO: ButtonsAndMvcOverview/ButtonsAndMvcOverview_player.html
+YOUTUBE ID: KCapercqiwY
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn about the files that are created in a vanilla Hello World project. 
@@ -25,30 +19,38 @@ CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: When creating a new project, I would like you to add what info to the name of each project?
+Q: When you create new projects in this unit, what type of Activity do you select? 
 TYPE: MC
-Nothing $#$ There was something.
-Your name or initials $#$ That will help me much while grading!$#$ yes
-The name of the CEO of Google $#$ Interesting, but seeing the name Larry Page on your app is not helpful to me.
+No activity $#$ There was something.
+Empty Activity $#$ That is the most basic one and we'll use it in this unit. Later you will use others. $#$ yes
+Blank Activity $#$ That will be for the next unit, when we need menus.
+Navigation Drawer Activity $#$ We'll use that later this term. Of course, you are free to play around with Nav Drawers or others now if you like. 
 
 Q: What naming convention is used for packages?
 TYPE: MC
-Always use just your initials $#$ That was for the last question.
+just use your initials $#$ That isn't descriptive enough
 use findViewById $#$ We will learn about that in an upcoming video.
-reverse URL $#$ Please use something like edu.rosehulman.yourusername.theappname $#$ yes
+reverse URL $#$ By choosing a company name of yourusername.rosehulman.edu, your package will be edu.rosehulman.yourusername.theappname $#$ yes
 
 Q: What can you find in the AndroidManifest.xml file? Look at the file if you aren't sure.
 TYPE: MS
 The package name $#$ yes 
 The Activity that will be launched $#$ yes
-What versions of Android your app is written for $#$ yes
+What versions of Android your app is written for $#$
+
+Q: In which values file does our screen text go?
+TYPE: MC
+colors.xml $#$ Next lesson, we'll learn about specifying RGB colors
+dimens.xml $#$ That's for margins and other dimensions you need to be re-used.
+strings.xml $#$ $#$ yes
+styles.xml $#$ That's for specifying themes.
 END
 
 
 
 LESSON TITLE: Hello Button View
 LESSON VIDEO: HelloButtonView/HelloButtonView_player.html
-YOUTUBE ID: dF9Wct370Ug
+YOUTUBE ID: 4fgtOgYdUMM
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn about making UIs from a specification, including layouts and string and color resources.</li>
@@ -63,6 +65,15 @@ We like doing more work $#$ But we admit that may be true for you.
 Android complains if we use hardcoded strings $#$ That isn't the main reason, although that is true.
 It makes it easier to maintain the strings $#$ Especially if we want to do localization (swap languages) later. $#$ yes
 
+Q: For English, what two items do we need to put in a plurals string?
+TYPE: MS
+zero $#$
+one $#$ yes 
+two $#$
+few $#$
+many $#$
+other $#$ yes
+
 Q: What is true of the format of colors in colors.xml?
 TYPE: MS
 RGB can each be 1 digit $#$ yes 
@@ -75,17 +86,21 @@ Q: If you want a view to stretch across the screen, what value should you use fo
 TYPE: MC
 matchParent $#$ $#$ yes
 fillParent $#$ That is what it used to be called. (And it will work fine if you use it, so you still get full credit.)
-wrap content $#$ That will only be as large as the text within it.
+wrapContent $#$ That will only be as large as the text within it.
+
+Q: When it is important to give an ID to a widget in the layout?
+TYPE: MS
+To refer to it in code $#$ $#$ yes
+Every widget needs an ID $#$ 
+To specify where another widget is located relative to this widget $#$ yes
 END
-
-
 
 LESSON TITLE: Hello Button Controller
 LESSON VIDEO: HelloButtonController/HelloButtonController_player.html
-YOUTUBE ID: nEfkl0a5UV8
+YOUTUBE ID: fL3L2TnHs_Q
 CONTENT ABOVE
 <ul>
-<li>This lesson teaches you how to use button's onClickListeners, and you'll learn how to grab views from the layout, and strings and colors from your resource files.</li>
+<li>This lesson teaches you how to use button's onClickListeners, and you'll learn how to capture views from the layout, and strings and colors from your resource files.</li>
 </ul>
 CONTENT BELOW
 END
@@ -93,27 +108,37 @@ END
 ACTIVITY TITLE: Questions
 Q: How do you refer to a string in code?
 TYPE: MC
-getResources().getColor(R.color.somename)
+ContextCompat.getColor(context, R.color.somename) $#$
 getString(R.string.somename) $#$ $#$ yes
+getResources().getQuantityString(R.plurals.somename, how_many) $#$ Only if you need cases based on plurals.
+findViewById(R.id.somename) $#$ 
+
+Q: How do you refer to plurals in code?
+TYPE: MC
+ContextCompat.getColor(context, R.color.somename) $#$
+getString(R.string.somename) $#$ Only if you wanted to handle the different cases without Android support
+getResources().getQuantityString(R.plurals.somename, how_many) $#$ $#$ yes
 findViewById(R.id.somename) $#$ 
 
 Q: How do you refer to a color in code?
 TYPE: MC
-getResources().getColor(R.color.somename) $#$ $#$ yes
-getString(R.string.somename)
-findViewById(R.id.somename)
+ContextCompat.getColor(context, R.color.somename) $#$ $#$ yes
+getString(R.string.somename) $#$
+getResources().getQuantityString(R.plurals.somename, how_many) $#$
+findViewById(R.id.somename) $#$
 
-Q: How do you refer to a view in code?
+Q: How do you refer to (capture) a view in code?
 TYPE: MC
-getResources().getColor(R.color.somename)
-getString(R.string.somename) 
+ContextCompat.getColor(context, R.color.somename) $#$ 
+getString(R.string.somename) $#$
+getResources().getQuantityString(R.plurals.somename, how_many) $#$
 findViewById(R.id.somename) $#$ $#$ yes
 
 Q: You use findViewById to get a Button. However, that method returns a View, so what else do you need to do to assign it to a Button?
 TYPE: MC
 Nothing, just assign to a Button $#$ They are different types, so it won't compile.
 Pass the View returned by findViewById to the Button constructor $#$
-Cast it $#$ For example, Button b = (Button)findViewById(R.id.someid); $#$ yes
+Typecast it $#$ For example, Button b = (Button)findViewById(R.id.someid); $#$ yes
 
 Q: What method is used to add a listener to a Button?
 TYPE: MC
@@ -126,7 +151,7 @@ END
 
 LESSON TITLE: MVC and Tic Tac Toe Model
 LESSON VIDEO: MVCAndTicTacToeModel/MVCAndTicTacToeModel_player.html
-YOUTUBE ID: 3FdbXHdr7RU
+YOUTUBE ID: R33mXKGkdYc
 CONTENT ABOVE
 <ul>
 <li>This lesson is about the Model-View-Controller design pattern and how Android supports it. We look briefly at a model for a TicTacToe game.</li>
@@ -144,14 +169,14 @@ V&C $#$ $#$ yes
 Q: Which two tend to get put together in simple apps?
 TYPE: MC
 M&V $#$ The view is separated by using xml layouts.
-M&C $#$ Consider HelloButton: the only thing that would go in the model is the click counter. $#$ yes
+M&C $#$ Consider HelloButton: the only thing that would go in the model is the click count. $#$ yes
 V&C $#$ These are separated by using xml layouts.
 
-Q: Which model method should you call to get the game state string?
+Q: Which TicTacToeGame model method should you call to get the game state string?
 TYPE: MC
 stringForGameState() $#$ $#$ yes
 ticTacToeState() $#$ Look back at the given code.
-getGameStateString() $#$ That does sound reasonable, but look back at the given code..
+getGameStateString() $#$ That does sound reasonable, but look back at the given code.
 
 Q: Which model method should you call when a button is pressed?
 TYPE: MC
@@ -164,7 +189,7 @@ END
 
 LESSON TITLE: TicTacToe View
 LESSON VIDEO: TicTacToeView/TicTacToeView_player.html
-YOUTUBE ID: clxcO3ravzs
+YOUTUBE ID: 0fsmIFaVImY
 CONTENT ABOVE
 <ul>
 <li>More practice creating UIs to specification. Introducing TableLayouts.</li>
@@ -182,8 +207,8 @@ all
 Q: What color is Rose-Hulman red?
 TYPE: MC
 #FFFFFF $#$ That is white.
-#0939B5 $#$ Since the third hex pair has the largest numerical value, that would be blue - see colorpicker.com to see what shade if you are curious.
-#B50939 $#$ Good memory. Want a job in Communications? $#$ yes
+#000080 $#$ Since the third hex pair has the largest numerical value, that would be blue - see colorpicker.com to see what shade if you are curious.
+#800000 $#$ Good memory. Want a job in Communications? $#$ yes
 
 Q: What method would we use to align the bottom edge of a button with the bottom of the RelativeLayout it is part of? If you aren't sure, type it in the xml editor and read the documentation that pops up.
 TYPE: MC
@@ -203,7 +228,7 @@ END
 
 LESSON TITLE: TicTacToe Controller
 LESSON VIDEO: TicTacToeController/TicTacToeController_player.html
-YOUTUBE ID: pZM1PkwRfe0
+YOUTUBE ID: kps2PvKMS4g
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to respond when listing to multiple buttons.</li>
@@ -229,16 +254,35 @@ TYPE: MC
 1 $#$ That was only the new game button.
 9 $#$ You forgot the new game button!
 10 $#$ 9 tic tac toe buttons plus the new game button. $#$ yes
+
+Q: What neat method did we use to programmatically generate IDs for each button?
+TYPE: MC
+getIdentifier() $#$ $#$ yes
+getId() $#$ It can also create other identifiers that aren't IDs $#$
+findViewById() $#$ That refers to IDs that already exist in the layout that has been inflated. $#$
+
+Q: How do we get debug output to the logs in our IDE?
+TYPE: MC
+System.out.println() $#$ That's Java. $#$
+Log.d() $#$ $#$ yes
+console.log() $#$ That's Javascript.
+
+Q: What did we use for the first parameter of the Log.d() method?
+TYPE: MC
+The message, 'Button pressed for ' + row + ' ' + column $#$ That was the second parameter $#$
+The tag, Constants.TTT $#$ Close. I do create log tag variables like this in larger programs. $#$
+The tag, 'TTT' $#$ Yes, although creating a constant like Constants.TAG which equals 'TTT' would scale better. $#$ yes
 END
 
-LESSON TITLE: Lab: Getting Started with Buttons
-LESSON VIDEO: LabGettingStartedWithButtons/LabGettingStartedWithButtons_player.html
-YOUTUBE ID: fGP64Hd4zhM
+
+
+LESSON TITLE: Lab: LightsOut
+LESSON VIDEO: LabLightsOut/LabLightsOut_player.html
+YOUTUBE ID: 7O8JbCaaY5I
 CONTENT ABOVE
 <ul>
-<li>The lab specification is <a href="https://docs.google.com/document/d/1B1bTD2u_JuVOUXUOPO8p6rn9dwmt1DWzminoy3PtqbY" target="_blank">here</a>.</li>
-<li>When done, be sure to submit your zipped Eclipse projects (MyFirstApp and LightsOut), plus video demos, to the Moodle dropbox.</li>
-<li>Then go complete the Moodle "Buttons and MVC" self-evaluation survey before calling it a day.</li>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1_eQnvUilkf0oj5IoqNAjTvZ-hC-6pbGBZC1xPXwimrQ"  target="_blank">here</a>.</li>
+<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "Buttons and MVC" self-evaluation survey before calling it a day.</li>
 </ul>
 CONTENT BELOW
 END

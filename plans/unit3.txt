@@ -1,143 +1,224 @@
-UNIT TITLE: Menus
-LINK TO OUTPUT: ../units/Menus
-LINK TO VIDEOS: ../../videos/Menus/    
-LINK TO SLIDES: https://docs.google.com/presentation/d/1NomlKtlYdr3_S3pViz0peR9I6gIc_JsOoSwm2qTzxss
+UNIT TITLE: Adapters
+LINK TO OUTPUT: ../units/Adapters
+LINK TO VIDEOS: ../../videos/Adapters  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1LjlmQajj5ODKJZmVaRBKXoy8Oj0mLbbae54MlOWoQKg
 
-1 MenuUnit 2:27 
-2 ActionBar. 23:24 
-3 Submenu 9:57 
-4 ContextualActionBar 14:07 
-5 Iconography 5:24 
-6 Lab and summary 3:17 
-// Total = 59 min.
+AdapterOverview
+ArrayAdapter
+BaseAdapter
+ModifyList
+RecyclerAdapter
+RecyclerAdapterAdvantages
+LabFoodRater
 
 // Lessons here
 
-LESSON TITLE: Menus and the Action Bar
-LESSON VIDEO: MenuUnit/MenuUnit_player.html
-YOUTUBE ID: aL-0zrAEQKY
+LESSON TITLE: Adapters Overview
+LESSON VIDEO: AdapterOverview/AdapterOverview_player.html
+YOUTUBE ID: ?
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll get an overview of the three types of menus we'll study: menu items on the ActionBar, submenus, and the Contextual Action Bar</li>
-</ul>
-CONTENT BELOW
-END
-
-LESSON TITLE: Menu Items in the Action Bar
-LESSON VIDEO: ActionBar/ActionBar_player.html
-YOUTUBE ID: _4_P0YuFPQo
-CONTENT ABOVE
-<ul>
-<li>In this lesson, you'll learn how to add menu items to the ActionBar declaratively (using xml) and how to respond to them programmatically (using a callback). </li>
-<li>There is also a 3 minute tangent on sending emails from your app using the ACTION_SENDTO intent.</li>
+<li>In this lesson, you'll get an overview of what adapters are and what types of adapters and adapter views are available.</li>
 </ul>
 CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: What is the main reason we should declare menus declaratively (in xml)?
+Q: What does an adapter do?
 TYPE: MC
-It is easier $#$ I think it's a good reason too. But it's not the main reason.
-It supports the MVC paradigm better than declaring them in code $#$ $#$ yes
+Converts from layout files to views $#$ Inflaters do that.
+Replicates views $#$ It uses a data source that could be an array or even a database or the contact list on your phone $#$ yes
+Changes voltage $#$ Wrong field of study!
+END
 
-Q: Which callback is NOT always needed when dealing with menus?
+
+
+LESSON TITLE: ArrayAdapter
+LESSON VIDEO: ArrayAdapter/ArrayAdapter_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to create a ListView and populate it using an array and the simplest of ArrayAdapters.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Was your name used in the demo?
 TYPE: MC
-onCreateOptionsMenu $#$ You need that to inflate the menu.
-onOptionItemSelected $#$ That one is called whenever a menu item is selected - like onClick() for buttons.
-onPrepareOptionsMenu $#$ $#$ yes
+Yes $#$ Hope you enjoyed that. I'm glad you signed up early for the course! $#$ yes
+No $#$ Sorry - I used those people who signed up earliest for the summer class.  $#$ yes
 
-Q: Why do we include a title on each menu item, even if we have an icon for it?
+Q: Which new Eclipse shortcut did we learn?
+TYPE: MC
+Ctrl-space $#$ Hopefully content-assist is an old friend.
+Alt-shift R $#$ That's for refactor/renaming - hopefully you already knew that one. 
+Alt-shift A, S $#$ Makes it convenient to code when we don't know all the string resources we will need ahead of time. $#$ yes
+
+Q: What layout did we use for a row in the ListView?
+TYPE: MC
+android.R.simple_list_item_1 $#$ $#$ yes
+R.simple_list_item_1 $#$ We used a built-in resource.
+
+Q: Which one is these is NOT a parameter to the ArrayAdapter constructor?
+TYPE: MC
+Array $#$ It needs a data source.
+Context $#$ It needs the context too to create views.
+Layout $#$ It needs the layout of a single view.
+ListView $#$ You bind the adapter to a ListView by calling setAdapter(). $#$ yes
+END
+
+
+
+LESSON TITLE: Extending the BaseAdapter class
+LESSON VIDEO: BaseAdapter/BaseAdapter_player.html
+YOUTUBE ID: o5dMJCGaww4
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to override the methods in this abstract class. </li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Which is NOT an abstract method in BaseAdapter?
+TYPE: MC
+getContext() $#$ $#$ yes
+getCount() $#$ 
+getItem() $#$ 
+getItemId() $#$ 
+getView() $#$
+
+Q: Why do we test to see if convertView is null?
+TYPE: MC
+Efficiency $#$ There is no need to recreate objects that have already been allocated in memory. $#$ yes
+The code is cleaner and easier to maintain that way $#$ Not necessarily.
+
+Q: What method is used to tell the adapter that it needs to update?
+TYPE: MC
+notifyAll() $#$ That Java method is used when multithreading.
+notifyDataSetChanged() $#$ $#$ yes
+notifyDataSetInvalidated() 
+
+Q: How do we listen to clicks on views in a ListView?
+TYPE: MC
+onItemClickListener() $#$ $#$ yes
+onClickListener() $#$ That was for single views.
+OnItemLongClickListener() $#$ That isn't the one we used, but it does listen for (long) clicks on ListView items $#$ yes
+END
+
+
+
+LESSON TITLE: Modifying a List in an Adapter
+LESSON VIDEO: ModifyList/ModifyList_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li></li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
 TYPE: MS
-If there is no room for the icon, the title will appear in the overflow menu $#$ yes 
-If you long press the icon, the title will appear as a hint. $#$ yes
-
-Q: What does setDisplayHomeAsUpEnabled do?
-TYPE: MC
-It lets you specify which activity should be launched if you press the home caret in the ActionBar $#$ $#$ yes
-It lets you specify which activity should be launched if you press the back button $#$ The back button and the home button can take you to different places.
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
 END
 
-LESSON TITLE: Submenus
-LESSON VIDEO: Submenus/Submenus_player.html
-YOUTUBE ID: --WUut7lM70
+
+
+LESSON TITLE: RecyclerAdapter
+LESSON VIDEO: RecyclerAdapter/RecyclerAdapter_player.html
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll learn about submenus.</li>
+<li>In this lesson, </li>
+<li></li>
 </ul>
 CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: How is a submenu declared in xml?
+Q: 
 TYPE: MC
-It uses the &lt;submenu&gt; tag $#$ There is no such tag.
-It is a menu inside a group.
-Is is a menu inside another item $#$ $#$ yes
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
 
-Q: How does one respond to submenu item presses? 
+Q: 
 TYPE: MC
-Look for the menu item's ID in the onOptionsSubmenuItemSelected() callback $#$ There is no such method.
-Just like menu item presses $#$ Look for the menu item's ID in the onOptionsItemSelected() callback $#$ yes
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
 END
 
-LESSON TITLE: Contextual Action Bar
-LESSON VIDEO: ContextualActionBar/ContextualActionBar_player.html
-YOUTUBE ID: blJMA9CHkyc
+
+
+
+
+
+LESSON TITLE: RecyclerAdapter Advantages
+LESSON VIDEO: RecyclerAdapterAdvantages/RecyclerAdapterAdvantages_player.html
+YOUTUBE ID: ?
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll learn how to make a custom action bar replace the given one to give more information about an item.</li>
+<li>In this lesson, you'll learn how </li>
 </ul>
 CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: In standard practice, what user action causes the Contextual Action Bar (CAB) to launch?
+Q: 
 TYPE: MC
-A button press $#$ Not just any press...
-A long press $#$ $#$ yes
-The home icon is pressed $#$ That would bring you to the parent activity.
+ $#$ $#$ yes
+ $#$ 
+ $#$ 
 
-Q: The CAB is implemented using which object?
+Q: 
 TYPE: MC
-ActionMode $#$ $#$ yes
-ActionBar $#$ 
+ $#$ $#$ yes
+ $#$ 
+ $#$ 
 
-Q: Which one of these method is not like the other?
+Q: 
 TYPE: MC
-onClick() $#$ 
-onLongClick() $#$ 
-onOptionsItemSelected() $#$
-onCreate() $#$ All the others are callbacks for various actions. $#$ yes
-onActionItemClicked() $#$
+ $#$ $#$ yes
+ $#$ 
+ $#$ 
 
-Q: How is a context menu different than other menus?
-TYPE: MC
-Its menu items include condensed titles $#$ I included them in my example, but that was arbitrary.
-There is no difference $#$ $#$ yes
 END
 
-LESSON TITLE: Iconography
-LESSON VIDEO: Iconography/Iconography_player.html
-YOUTUBE ID: 5crK4Zzc1lQ
+
+
+LESSON TITLE: Lab: FoodRater
+LESSON VIDEO: LabFoodRater/LabFoodRater_player.html
+YOUTUBE ID: ?
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll learn where to find Android's custom icons and how to create your own. This is important if you post your app on Google Play.</li>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1ef4K5p66_5oM4OaSaHSfkeIFWhw4F_CYMagkCtYKkqM" target="_blank">here</a>.</li>
+<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "Adapters" self-evaluation survey before calling it a day.</li>
 </ul>
 CONTENT BELOW
 END
-
-LESSON TITLE: Lab: Snakes on a Menu
-LESSON VIDEO: LabSnakes/LabSnakes_player.html
-YOUTUBE ID: 6Zix5xiAYXQ
-CONTENT ABOVE
-<ul>
-<li>The lab specification is <a href="https://docs.google.com/document/d/1n1K0E7htAXx6EddkZt2bSONoTDzaKq8RvsJN3E-nHYY" target="_blank">here</a>.</li>
-<li>When done, be sure to submit your zipped Eclipse project (Snakes), plus video demo, to the Moodle dropbox.</li>
-<li>We'll wait until after the dialogs unit to complete the "Menus and Dialogs" self-evaluation survey.</li>
-</ul>
-CONTENT BELOW
-END
-
-
-
 

@@ -34,23 +34,37 @@ CONTENT ABOVE
 CONTENT BELOW
 END
 
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
 
 
 
 
-
-
-LESSON TITLE: Lab: Passing Data in Intents
-LESSON VIDEO: LabPassingDataInIntents/LabGettingStartedWithButtons_player.html
+LESSON TITLE: Lab: FoodRater
+LESSON VIDEO: LabFoodRater/LabFoodRater_player.html
+YOUTUBE ID: ?
 CONTENT ABOVE
 <ul>
-<li>Here is the <a href="https://docs.google.com/document/d/1kRjcAb839ONp1nhKxAaAWrQxio9JrD7OJRuPdofHFKY" target="_blank">lab specification</a>.</li>
-<li>When done, be sure to submit your zipped Eclipse project (Blackjack Dialogs), plus video demo, to the Moodle dropbox.</li>
-
-<li>We'll wait until after we write the Android client to complete the "OAuth" self-evaluation survey.</li>
--------or-----------
-<li>Then go complete the Moodle "Dialogs" self-evaluation survey before calling it a day.</li>
-
+<li>The lab specification is <a href="https://docs.google.com/document/d/1ef4K5p66_5oM4OaSaHSfkeIFWhw4F_CYMagkCtYKkqM" target="_blank">here</a>.</li>
+<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "Adapters" self-evaluation survey before calling it a day.</li>
 </ul>
 CONTENT BELOW
 END
@@ -69,27 +83,4 @@ CONTENT ABOVE
 </ul>
 CONTENT BELOW
 END
-
-ACTIVITY TITLE: Questions
-Q: 
-TYPE: MC
- $#$ .
- $#$ $#$ yes
-$#$ .
-
-Q: 
-TYPE: MC
- $#$ .
- $#$ $#$ yes
-$#$ .
-
-Q: 
-TYPE: MS
- $#$ yes 
- $#$ yes
- $#$  
- $#$ yes
-END
-
-
 
