@@ -15,7 +15,7 @@ LabFoodRater
 
 LESSON TITLE: Adapters Overview
 LESSON VIDEO: AdapterOverview/AdapterOverview_player.html
-YOUTUBE ID: ?
+YOUTUBE ID: W5g5Sirgd7o
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll get an overview of what adapters are and what types of adapters and adapter views are available.</li>
@@ -29,13 +29,20 @@ TYPE: MC
 Converts from layout files to views $#$ Inflaters do that.
 Replicates views $#$ It uses a data source that could be an array or even a database or the contact list on your phone $#$ yes
 Changes voltage $#$ Wrong field of study!
-END
 
+Q: Select every type of adapter we will study in this unit. (Hint: there are 3)
+TYPE: MS
+ACAdapter $#$ 
+ArrayAdapter $#$ yes
+BaseAdapter $#$ yes
+GridAdapter $#$
+RecyclerAdapte $#$ yes
+END
 
 
 LESSON TITLE: ArrayAdapter
 LESSON VIDEO: ArrayAdapter/ArrayAdapter_player.html
-YOUTUBE ID: ?
+YOUTUBE ID: 9wurtLHbXBA
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to create a ListView and populate it using an array and the simplest of ArrayAdapters.</li>
@@ -46,53 +53,9 @@ END
 ACTIVITY TITLE: Questions
 Q: Was your name used in the demo?
 TYPE: MC
-Yes $#$ Hope you enjoyed that. I'm glad you signed up early for the course! $#$ yes
-No $#$ Sorry - I used those people who signed up earliest for the summer class.  $#$ yes
+Yes $#$ Hope you enjoyed that. Your name was one of the most common names given to babies born in the U.S. in the year 2000 $#$ yes
+No $#$ Sorry - but maybe having a unique name is better than having a popular one.  $#$ yes
 
-Q: Which new Eclipse shortcut did we learn?
-TYPE: MC
-Ctrl-space $#$ Hopefully content-assist is an old friend.
-Alt-shift R $#$ That's for refactor/renaming - hopefully you already knew that one. 
-Alt-shift A, S $#$ Makes it convenient to code when we don't know all the string resources we will need ahead of time. $#$ yes
-
-Q: What layout did we use for a row in the ListView?
-TYPE: MC
-android.R.simple_list_item_1 $#$ $#$ yes
-R.simple_list_item_1 $#$ We used a built-in resource.
-
-Q: Which one is these is NOT a parameter to the ArrayAdapter constructor?
-TYPE: MC
-Array $#$ It needs a data source.
-Context $#$ It needs the context too to create views.
-Layout $#$ It needs the layout of a single view.
-ListView $#$ You bind the adapter to a ListView by calling setAdapter(). $#$ yes
-END
-
-
-
-LESSON TITLE: Extending the BaseAdapter class
-LESSON VIDEO: BaseAdapter/BaseAdapter_player.html
-YOUTUBE ID: o5dMJCGaww4
-CONTENT ABOVE
-<ul>
-<li>In this lesson, you'll learn how to override the methods in this abstract class. </li>
-</ul>
-CONTENT BELOW
-END
-
-ACTIVITY TITLE: Questions
-Q: Which is NOT an abstract method in BaseAdapter?
-TYPE: MC
-getContext() $#$ $#$ yes
-getCount() $#$ 
-getItem() $#$ 
-getItemId() $#$ 
-getView() $#$
-
-Q: Why do we test to see if convertView is null?
-TYPE: MC
-Efficiency $#$ There is no need to recreate objects that have already been allocated in memory. $#$ yes
-The code is cleaner and easier to maintain that way $#$ Not necessarily.
 
 Q: What method is used to tell the adapter that it needs to update?
 TYPE: MC
@@ -100,120 +63,150 @@ notifyAll() $#$ That Java method is used when multithreading.
 notifyDataSetChanged() $#$ $#$ yes
 notifyDataSetInvalidated() 
 
-Q: How do we listen to clicks on views in a ListView?
+Q: What layout did we use for a row in the ListView?
 TYPE: MC
-onItemClickListener() $#$ $#$ yes
-onClickListener() $#$ That was for single views.
-OnItemLongClickListener() $#$ That isn't the one we used, but it does listen for (long) clicks on ListView items $#$ yes
+android.R.layout.simple_list_item_1 $#$ $#$ yes
+R.layout.simple_list_item_1 $#$ We used a built-in Android resource, so prefix it with android.
+
+Q: Which one is these is NOT a parameter to the ArrayAdapter constructor?
+TYPE: MC
+Array $#$ It needs a data source.
+Context $#$ It needs the context too to create views.
+Layout $#$ It needs the layout of a single view.
+ListView $#$ You bind the adapter to a ListView by calling setAdapter() after you construct the adapter. $#$ yes
+END
+
+
+
+LESSON TITLE: Extending the BaseAdapter class
+LESSON VIDEO: BaseAdapter/BaseAdapter_player.html
+YOUTUBE ID: Dik0x1Nzis0
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to override the methods in this abstract class, especially getView(). </li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Which is NOT an abstract method in BaseAdapter?
+TYPE: MC
+getCount() $#$ 
+getItem() $#$ 
+getItemId() $#$ 
+getView() $#$
+getContext() $#$ $#$ yes
+
+Q: Why do we test to see if convertView is null?
+TYPE: MC
+Efficiency $#$ There is no need to recreate objects that have already been allocated in memory. $#$ yes
+The code is cleaner and easier to maintain that way $#$ Not necessarily.
 END
 
 
 
 LESSON TITLE: Modifying a List in an Adapter
 LESSON VIDEO: ModifyList/ModifyList_player.html
+YOUTUBE ID: FmFImpmaJK4
 CONTENT ABOVE
 <ul>
-<li>In this lesson, </li>
-<li></li>
+<li>In this lesson, we will write methods to add and remove items from the adapter's list of model objects.</li>
 </ul>
 CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: 
+Q: How do we listen to long clicks on views in a ListView?
 TYPE: MC
- $#$ $#$ yes
- $#$ .
- $#$ .
+OnItemClickListener() $#$ That isn't the one we used, but it does listen for regular clicks on ListView items 
+onClickListener() $#$ That was for single clicks on single views.
+onItemLongClickListener() $#$ $#$ yes
+onLongClickListener() $#$ That was for single views.
 
-Q: 
+Q: Which class holds the list of data managed by the adapter?
 TYPE: MC
- $#$ $#$ yes
- $#$ .
- $#$ .
+The custom BaseAdapter $#$ That is cleanest. $#$ yes
+The MainActivity (where the data is displayed)  $#$ It's possible to do that, just not as clean.
+The AppCompatActivity $#$ You shouldn't update the superclass.
 
-Q: 
-TYPE: MS
- $#$ yes 
- $#$ yes
- $#$  
- $#$ yes
+Q: Which class actually mutates the list of data (say, by adding, removing, or editing)? 
+TYPE: MC
+The custom BaseAdapter $#$ That is cleanest. $#$ yes
+The MainActivity (where the data is displayed)  $#$ Again, it's possible to do that, just not as clean.
+The AppCompatActivity $#$ You shouldn't update the superclass.
+
+Q: Which class holds the onItemLongClickListener()?
+TYPE: MC
+The custom BaseAdapter $#$ Unfortunately, no. It would be clean for each view to listen for a clicks on itself - this flaw was remedied with RecyclerAdapters.  
+The MainActivity (where the data is displayed)  $#$ Unfortunately so. It would be clean for each view to listen for a clicks on itself - this flaw was remedied with RecyclerAdapters. $#$ yes
+The AppCompatActivity $#$ You shouldn't update the superclass.
 END
 
 
 
 LESSON TITLE: RecyclerAdapter
 LESSON VIDEO: RecyclerAdapter/RecyclerAdapter_player.html
+YOUTUBE ID: 7GU9UIZzf70
 CONTENT ABOVE
 <ul>
-<li>In this lesson, </li>
+<li>In this lesson, you will learn how to use a RecyclerView and RecyclerAdapter</li>
 <li></li>
 </ul>
 CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: 
+Q: Which if these is NOT an advantage of using a RecyclerView over a ListView?
 TYPE: MC
- $#$ $#$ yes
- $#$ .
- $#$ .
+More efficient $#$ RecyclerViews are faster since they don't capture views as frequently.
+More flexible $#$ RecyclerViews can have 3 layout managers 
+Built-in support for multi-select $#$ There are 3rd party libaries that do this. $#$ yes
+Built-in animations for insert/remove $#$ Yes if you do notifyItemInserted/Deleted
 
-Q: 
+Q: What's the biggest structural change to the code when using a RecyclerAdapter?
 TYPE: MC
- $#$ $#$ yes
- $#$ .
- $#$ .
+ViewHolder inner class $#$ $#$ yes
+notifyItemInserted/Deleted $#$ Those are nice, but are called just like notifyDataSetChanged() is called.
+getCount is now getItemCount $#$ That's the smallest change!
 
-Q: 
-TYPE: MS
- $#$ yes 
- $#$ yes
- $#$  
- $#$ yes
+Q: Where do we listen for long presses now? 
+TYPE: MC
+The RecyclerAdapter $#$ Ah, yes. $#$ yes  
+The MainActivity (where the data is displayed)  $#$ Not the case for RecyclerViews like it was for ListViews
+The AppCompatActivity $#$ You shouldn't update the superclass.
 END
-
-
-
 
 
 
 LESSON TITLE: RecyclerAdapter Advantages
 LESSON VIDEO: RecyclerAdapterAdvantages/RecyclerAdapterAdvantages_player.html
-YOUTUBE ID: ?
+YOUTUBE ID: UzcT_srwClQ
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll learn how </li>
+<li>In this lesson, you'll learn about some ways to take advantage of RecyclerAdapters: animations, layout managers, and CardViews.</li>
 </ul>
 CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: 
+Q: What is the argument value of 2 do in GridLayoutManager(this, 2)
 TYPE: MC
- $#$ $#$ yes
- $#$ 
- $#$ 
-
-Q: 
+A layout with two rows $#$ The number of rows also depends on the number of items managed by the adapter.
+A layout with two columns $#$ $#$ yes
+A compound row view with two views $#$ No, you can get two views using your row view .xml layout.
+ 
+Q: What type of view did I use to get a distinct area, with rounded corners, for each item?
 TYPE: MC
- $#$ $#$ yes
- $#$ 
- $#$ 
-
-Q: 
-TYPE: MC
- $#$ $#$ yes
- $#$ 
- $#$ 
-
+CardView $#$ $#$ yes
+ImageView $#$ 
+RecyclerView $#$  
 END
 
 
 
 LESSON TITLE: Lab: FoodRater
 LESSON VIDEO: LabFoodRater/LabFoodRater_player.html
-YOUTUBE ID: ?
+YOUTUBE ID: F49Rd8-HQZI
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1ef4K5p66_5oM4OaSaHSfkeIFWhw4F_CYMagkCtYKkqM" target="_blank">here</a>.</li>

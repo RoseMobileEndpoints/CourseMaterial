@@ -51,6 +51,8 @@ public class Main {
 			} else {
 				// Gets locations from the user using file choosers
 				unitFile = getInputFile();
+				System.out.println("*****************************************************************Unitfile: " + unitFile);
+						
 				getOutputPath();
 			}
 
@@ -73,6 +75,7 @@ public class Main {
 		} catch (NoFileSelectedException exception) {
 			signalToUser("No file selected.  Exiting.");
 		} catch (Exception exception) {
+			System.out.println(exception);
 			signalToUser(exception.getMessage());
 		}
 	}
