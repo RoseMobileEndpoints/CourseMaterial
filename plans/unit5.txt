@@ -1,15 +1,17 @@
-UNIT TITLE: Dialogs
-// Outputs directly.
-LINK TO OUTPUT: ../units/Dialogs
-LINK TO VIDEOS: ../../videos/Dialogs  
-LINK TO SLIDES: https://docs.google.com/presentation/d/1P5UyAo9UZ2fIACMYF3RyXGgBJh5-g2DD_okI8ZFwzUQ
+UNIT TITLE: Firebase
+LINK TO OUTPUT: ../units/Firebase
+LINK TO VIDEOS: ../../videos/Firebase  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1EFgp6bE-Aw4oNEQptJ93uFyjo3ppGnN5-trzoHqpxG8
 
-1 Overview
-2 AboutDialog
-3 ExitDialog
-4 ListDialogs
-5 ProgressDialogs
-6 CustomDialogs
+FirebaseOverview
+WhatIsFirebase
+SetupBackend
+WebClient (optional)
+SetupAndroid
+PushingToFirebase
+Delete
+Update
+LabWeatherpics
 
 // Lessons here
 

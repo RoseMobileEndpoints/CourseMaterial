@@ -1,0 +1,195 @@
+UNIT TITLE: Activities and Fragments
+// Outputs to the CourseMaterials repo, checked out as a sibling to this tools repo.
+LINK TO OUTPUT: ../units/ActivitiesAndFragments
+LINK TO VIDEOS: ../../videos/ActivitiesAndFragments  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1dZy22mUQ2ievQLZ0ZVqFRe7kAw_o1HKmcrA3LmExVkw
+
+ActivitiesAndFragmentsOverview
+Activity
+CreatingActivity
+UsingIntentExtras
+UsingSystemIntents
+NavigationDrawer: the template
+IntroductionToFragments 
+ListFragment and callback interfaces
+DetailFragment and communicating using Bundles
+Backstack 
+LabComicViewer
+	Include video on AsyncTasks
+
+	
+LESSON TITLE: Activities and Fragments Overview
+LESSON VIDEO: ActivitiesAndFragmentsOverview/ActivitiesAndFragmentsOverview_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn about apps that have multiple screens (Activities) and apps that have have multiple view&controllers (Fragments) within a screen. You'll learn about a popular interface that often uses fragments: the Navigation Drawer. You'll also learn about mechanisms for communicating information between activities and fragments: Intent extras and Bundles.</li>
+<li>You'll also see the apps that you will write in this unit: ColorChooser and Historical Docs</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What is the main app you'll code in this unit?
+TYPE: MC
+TicTacToe $#$ That was first week.
+PointOfSale $#$ That was second week.
+NameAdapter $#$ Getting closer; that was last week.
+HistoricalDocs $#$ $#$ yes
+MovieQuotes $#$ We'll use that one to learn Firebase next week.
+
+Q: What are some of the things you'll learn about in this unit?
+TYPE: MS
+Building apps with multiple screens $#$ yes 
+Launching system activities using intents $#$ yes
+geocoding $#$  
+Nav Drawers $#$ yes
+Firebase $#$ 
+END
+
+
+
+LESSON TITLE: Activity
+LESSON VIDEO: Activity/Activity_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn some basics of the Activity lifecycle. No coding this time.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Which methods are called as part of the Activity lifecycle?
+TYPE: MS
+onCreate() $#$ yes 
+onDestroy() $#$ yes 
+onStart() $#$ yes
+onStop() $#$ yes
+onResume() $#$ yes
+onPause() $#$ yes
+onDie()
+END
+
+
+
+LESSON TITLE: Creating an Activity
+LESSON VIDEO: CreatingActivity/CreatingActivity_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to create and launch new activities using Intents.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Which is the only thing that the new Activity wizard will NOT do for you?
+TYPE: MC
+Create a new class that extends Activity $#$ It does this.
+Create an intent to launch the Activity $#$ Plus, you need to call startActivity. It does all the others. $#$ yes
+Create a new layout file for the new Activity $#$ It does this, although you still need to modify it.
+Register the Activity in the AndroidManifest $#$ It does this.
+ 
+Q: How can you test an activity in isolation of the rest of the app? 
+TYPE: MC
+Move the intent filter with the MAIN action and LAUNCHER category to that activity. $#$ $#$ yes
+From that activity's java file, choose ctrl-F11 to run the app. $#$ That will still launch whichever activity is set as the main/launcher activity.
+Create the activity in the Android Manifest $#$ Creating it isn't enough. You must do something else in the Manifest.
+
+Q: Which is NOT a parameter passed to the Intent constructor?
+TYPE: MC
+The layout of the activity to be launched $#$ The activity to be launched specifies its own layout by calling setContentView(). $#$ yes
+The class of the activity to be launched $#$ This is the second parameter, for example, InfoActivity.class.
+The context $#$ This is the first parameter, for example, this (the current Activity). 
+END
+
+
+
+LESSON TITLE: Using Intent Extras
+LESSON VIDEO: UsingIntentExtras/UsingIntentExtras_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to pass data from one intent to another using <em>extras</em>.</li>
+<li>You'll also learn the callback to use when you want the second activity to return data back.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What is the format of an Intent extra?
+TYPE: MC
+An array element $#$ 
+A key-value pair $#$ $#$ yes
+
+Q: What method do we use to start an activity that we expect will pass back data?
+TYPE: MC
+startActivityForResult $#$ $#$ yes
+startActivityForReturn $#$ 
+onActivityResult $#$
+onActivityReturn $#$
+
+Q: What method is called when the activity that holds the return data has finished?
+TYPE: MC
+startActivityForResult $#$
+startActivityForReturn $#$ 
+onActivityResult $#$ $#$ yes
+onActivityReturn $#$
+
+Q: Note that the callback uses two codes: a request code and a result code. 
+TYPE: MC
+Got it $#$ The calling activity sets the request code to flag which activity it is calling (REQUEST_CODE_someactivity) and the result code sets the result code to RESULT_OK if it finishes normally or RESULT_CANCELLED if the back button was pressed. $#$ yes
+Huh? $#$ The calling activity sets the request code to flag which activity it is calling (REQUEST_CODE_someactivity) and the result code sets the result code to RESULT_OK if it finishes normally or RESULT_CANCELLED if the back button was pressed. 
+END
+
+
+
+
+
+
+
+
+
+
+
+
+LESSON TITLE: Fragments Intro
+LESSON VIDEO: ActivitiesAndFragmentsOverview/ActivitiesAndFragmentsOverview_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>This unit consists of a short overview of fragments and a detailed lab. This lesson is an extended introduction to the concepts you'll learn about in the lab. </li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What are android.app.Fragments?
+TYPE: MC
+Little shards of glass $#$ .
+Little shards of code encapsulating layout and controller $#$ But thinking of fragment as shards is appropriate, since these pieces can be re-arranged within activities. $#$ yes
+
+Q: How does the layout xml of a fragment differ from that of an activity?
+TYPE: MC
+Not at all $#$ $#$ yes
+They use the fragment xml tag $#$ We did see the fragment tag in the FAQ, but that was for permanently adding a fragment to an activity, not for specifying the layout of the fragment itself.
+
+Q: How is a Fragment class typically structured differently than an Activity class? 
+TYPE: MS
+Fragments extend android.app.Fragment while Activities extend android.app.Activity $#$ yes 
+Fragments have a more complex lifecycle, so more callback methods $#$ yes
+Activities can have onClickListeners, but Fragments cannot $#$  
+END
+
+
+LESSON TITLE: Lab: Comic Viewer
+LESSON VIDEO: ComicViewer/ComicViewer.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1qlSdq-yQTg8WCbxCKXc7q5jV6VDSpU3KZ8zYwPfx0ag/edit" target="_blank">here</a>.</li>
+<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "Menus and Dialogs" self-evaluation survey before calling it a day.</li>
+</ul>
+CONTENT BELOW
+END

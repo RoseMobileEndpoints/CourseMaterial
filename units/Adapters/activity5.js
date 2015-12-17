@@ -30,34 +30,23 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> Which if these is NOT an advantage of using a RecyclerView over a ListView?<br>",
+	"<b>1.</b> What method did we call to get the month name from the adapter when we clicked that item?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["More efficient", false, "Try again. RecyclerViews are faster since they don't capture views as frequently." ],
-				["More flexible", false, "Try again. RecyclerViews can have 3 layout managers" ],
-				["Built-in support for multi-select", true, "Correct. There are 3rd party libaries that do this." ],
-				["Built-in animations for insert/remove", false, "Try again. Yes if you do notifyItemInserted/Deleted" ],
+				["getItem()", true, "Correct. " ],
+				["getCount()", false, "Try again. " ],
+				["getItemId()", false, "Try again. " ],
+				["getItem().getMonth()", false, "Try again. That would work if the item was an object with a month field - our items were just strings." ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> What's the biggest structural change to the code when using a RecyclerAdapter?<br>",
+	"<b>2.</b> When inflating the row_view.xml file, how do we get the left and right text views?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["ViewHolder inner class", true, "Correct. " ],
-				["notifyItemInserted/Deleted", false, "Try again. Those are nice, but are called just like notifyDataSetChanged is called?" ],
-				["getCount is now getItemCount", false, "Try again. That's the smallest change!" ],
-		]
-	},
-	"<br><br>",
-	"<b>3.</b> Where do we listen for long presses now?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["The RecyclerAdapter", true, "Correct. Ah, yes." ],
-				["The MainActivity (where the data is displayed)", false, "Try again. Not the case for RecyclerViews like it was for ListViews" ],
-				["The AppCompatActivity", false, "Try again. You shouldn't update the superclass." ],
+				["Call a constructor: new TextView(mContext)", false, "Try again. That was before we had the xml." ],
+				["Find them: findViewById(R.id.row_view.xml)", true, "Correct. Good review." ],
 		]
 	},
 ];

@@ -45,8 +45,8 @@ var activity = [
 		questionType : "multiple choice",
 		choices : [
 				["#FFFFFF", false, "Try again. That is white." ],
-				["#000080", false, "Try again. Since the third hex pair has the largest numerical value, that would be blue - see colorpicker.com to see what shade if you are curious." ],
-				["#800000", true, "Correct. Good memory. Want a job in Communications?" ],
+				["#0939B5", false, "Try again. Since the third hex pair has the largest numerical value, that would be blue - see colorpicker.com to see what shade if you are curious." ],
+				["#B50939", true, "Correct. Good memory. Want a job in Communications?" ],
 		]
 	},
 	"<br><br>",

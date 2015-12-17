@@ -34,18 +34,18 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
-				["Yes", true, "Correct. Hope you enjoyed that. Your name was one of the most common names given to babies born in the U.S. in the year 2000" ],
-				["No", true, "Correct. Sorry - but maybe having a unique name is better than having a popular one." ],
+				["Yes", true, "Correct. Hope you enjoyed that. I'm glad you signed up early for the course!" ],
+				["No", true, "Correct. Sorry - I used those people who signed up earliest for the summer class." ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> What method is used to tell the adapter that it needs to update?<br>",
+	"<b>2.</b> Which new Eclipse shortcut did we learn?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["notifyAll()", false, "Try again. That Java method is used when multithreading." ],
-				["notifyDataSetChanged()", true, "Correct. " ],
-				["notifyDataSetInvalidated()", false, "Try again. " ],
+				["Ctrl-space", false, "Try again. Hopefully content-assist is an old friend." ],
+				["Alt-shift R", false, "Try again. That's for refactor/renaming - hopefully you already knew that one." ],
+				["Alt-shift A, S", true, "Correct. Makes it convenient to code when we don't know all the string resources we will need ahead of time." ],
 		]
 	},
 	"<br><br>",
@@ -53,8 +53,8 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
-				["android.R.layout.simple_list_item_1", true, "Correct. " ],
-				["R.layout.simple_list_item_1", false, "Try again. We used a built-in Android resource." ],
+				["android.R.simple_list_item_1", true, "Correct. " ],
+				["R.simple_list_item_1", false, "Try again. We used a built-in resource." ],
 		]
 	},
 	"<br><br>",
@@ -65,7 +65,7 @@ var activity = [
 				["Array", false, "Try again. It needs a data source." ],
 				["Context", false, "Try again. It needs the context too to create views." ],
 				["Layout", false, "Try again. It needs the layout of a single view." ],
-				["ListView", true, "Correct. You bind the adapter to a ListView by calling setAdapter() after you construct the adapter." ],
+				["ListView", true, "Correct. You bind the adapter to a ListView by calling setAdapter()." ],
 		]
 	},
 ];

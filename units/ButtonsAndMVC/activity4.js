@@ -45,18 +45,18 @@ var activity = [
 		questionType : "multiple choice",
 		choices : [
 				["M&V", false, "Try again. The view is separated by using xml layouts." ],
-				["M&C", true, "Correct. Consider HelloButton: the only thing that would go in the model is the click count." ],
+				["M&C", true, "Correct. Consider HelloButton: the only thing that would go in the model is the click counter." ],
 				["V&C", false, "Try again. These are separated by using xml layouts." ],
 		]
 	},
 	"<br><br>",
-	"<b>3.</b> Which TicTacToeGame model method should you call to get the game state string?<br>",
+	"<b>3.</b> Which model method should you call to get the game state string?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
 				["stringForGameState()", true, "Correct. " ],
 				["ticTacToeState()", false, "Try again. Look back at the given code." ],
-				["getGameStateString()", false, "Try again. That does sound reasonable, but look back at the given code." ],
+				["getGameStateString()", false, "Try again. That does sound reasonable, but look back at the given code.." ],
 		]
 	},
 	"<br><br>",

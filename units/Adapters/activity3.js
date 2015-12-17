@@ -34,11 +34,11 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
+				["getContext()", true, "Correct. " ],
 				["getCount()", false, "Try again. " ],
 				["getItem()", false, "Try again. " ],
 				["getItemId()", false, "Try again. " ],
 				["getView()", false, "Try again. " ],
-				["getContext()", true, "Correct. " ],
 		]
 	},
 	"<br><br>",
@@ -48,6 +48,26 @@ var activity = [
 		choices : [
 				["Efficiency", true, "Correct. There is no need to recreate objects that have already been allocated in memory." ],
 				["The code is cleaner and easier to maintain that way", false, "Try again. Not necessarily." ],
+		]
+	},
+	"<br><br>",
+	"<b>3.</b> What method is used to tell the adapter that it needs to update?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["notifyAll()", false, "Try again. That Java method is used when multithreading." ],
+				["notifyDataSetChanged()", true, "Correct. " ],
+				["notifyDataSetInvalidated()", false, "Try again. " ],
+		]
+	},
+	"<br><br>",
+	"<b>4.</b> How do we listen to clicks on views in a ListView?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["onItemClickListener()", true, "Correct. " ],
+				["onClickListener()", false, "Try again. That was for single views." ],
+				["OnItemLongClickListener()", true, "Correct. That isn't the one we used, but it does listen for (long) clicks on ListView items" ],
 		]
 	},
 ];

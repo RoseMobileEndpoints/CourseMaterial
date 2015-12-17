@@ -59,34 +59,4 @@ var activity = [
 				["10", true, "Correct. 9 tic tac toe buttons plus the new game button." ],
 		]
 	},
-	"<br><br>",
-	"<b>4.</b> What neat method did we use to programmatically generate IDs for each button?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["getIdentifier()", true, "Correct. " ],
-				["getId()", false, "Try again. It can also create other identifiers that aren't IDs" ],
-				["findViewById()", false, "Try again. That refers to IDs that already exist in the layout that has been inflated." ],
-		]
-	},
-	"<br><br>",
-	"<b>5.</b> How do we get debug output to the logs in our IDE?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["System.out.println()", false, "Try again. That's Java." ],
-				["Log.d()", true, "Correct. " ],
-				["console.log()", false, "Try again. That's Javascript." ],
-		]
-	},
-	"<br><br>",
-	"<b>6.</b> What did we use for the first parameter of the Log.d() method?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["The message, 'Button pressed for ' + row + ' ' + column", false, "Try again. That was the second parameter" ],
-				["The tag, Constants.TTT", false, "Try again. Close. I do create log tag variables like this in larger programs." ],
-				["The tag, 'TTT'", true, "Correct. Yes, although creating a constant like Constants.TAG which equals 'TTT' would scale better." ],
-		]
-	},
 ];

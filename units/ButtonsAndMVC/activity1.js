@@ -30,14 +30,13 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> When you create new projects in this unit, what type of Activity do you select?<br>",
+	"<b>1.</b> When creating a new project, I would like you to add what info to the name of each project?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["No activity", false, "Try again. There was something." ],
-				["Empty Activity", true, "Correct. That is the most basic one and we'll use it in this unit. Later you will use others." ],
-				["Blank Activity", false, "Try again. That will be for the next unit, when we need menus." ],
-				["Navigation Drawer Activity", false, "Try again. We'll use that later this term. Of course, you are free to play around with Nav Drawers or others now if you like." ],
+				["Nothing", false, "Try again. There was something." ],
+				["Your name or initials", true, "Correct. That will help me much while grading!" ],
+				["The name of the CEO of Google", false, "Try again. Interesting, but seeing the name Larry Page on your app is not helpful to me." ],
 		]
 	},
 	"<br><br>",
@@ -45,9 +44,9 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
-				["just use your initials", false, "Try again. That isn't descriptive enough" ],
+				["Always use just your initials", false, "Try again. That was for the last question." ],
 				["use findViewById", false, "Try again. We will learn about that in an upcoming video." ],
-				["reverse URL", true, "Correct. By choosing a company name of yourusername.rosehulman.edu, your package will be edu.rosehulman.yourusername.theappname" ],
+				["reverse URL", true, "Correct. Please use something like edu.rosehulman.yourusername.theappname" ],
 		]
 	},
 	"<br><br>",
@@ -58,21 +57,10 @@ var activity = [
 				{
 					questionHTML : "",
 					choices : [ "The package name", "The Activity that will be launched", "What versions of Android your app is written for"],
-					correctIndex : [0,1]
+					correctIndex : [0,1,2]
 				}
 				],
 		allCorrectOutput : "Well done!",
 		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
-	},
-	"<br><br>",
-	"<b>4.</b> In which values file does our screen text go?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["colors.xml", false, "Try again. Next lesson, we'll learn about specifying RGB colors" ],
-				["dimens.xml", false, "Try again. That's for margins and other dimensions you need to be re-used." ],
-				["strings.xml", true, "Correct. " ],
-				["styles.xml", false, "Try again. That's for specifying themes." ],
-		]
 	},
 ];

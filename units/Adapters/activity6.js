@@ -30,23 +30,32 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> What is the argument value of 2 do in GridLayoutManager(this, 2)<br>",
+	"<b>1.</b> If you make an ArrayAdapter<SomeObject>, what will be displayed in each view?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["A layout with two rows", false, "Try again. The number of rows also depends on the number of items" ],
-				["A layout with two columns", true, "Correct. " ],
-				["A compound row view with two views", false, "Try again. No, you can get two views using your row view .xml layout." ],
+				["the results of the array's toString()", false, "Try again. Unfortunately, the array class' toString method isn't very helpful." ],
+				["each item's getView()", false, "Try again. " ],
+				["the result of each item's toString()", true, "Correct. " ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> What type of view did I use to get a distinct area, with rounded corners, for each item?<br>",
+	"<b>2.</b> How do you get the parts of an object to display in a two line view?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["CardView", true, "Correct. " ],
-				["ImageView", false, "Try again. " ],
-				["RecyclerView", false, "Try again. " ],
+				["Override getView() and call getItem() to access the object", true, "Correct. " ],
+				["Annotate your class with the .text1 and .text2 identifiers.", false, "Try again. We haven't used annotations yet in this course. But we will when we study Google Cloud Endpoints!" ],
+				["It just works automatically", false, "Try again. " ],
+		]
+	},
+	"<br><br>",
+	"<b>3.</b> Do we need to test to see if convertView is null when we override ArrayAdapter's getView()?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["Yes", false, "Try again. The call to super.getView() already checks for that." ],
+				["No", true, "Correct. " ],
 		]
 	},
 ];

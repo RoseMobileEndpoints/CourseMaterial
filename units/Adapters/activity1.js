@@ -39,18 +39,4 @@ var activity = [
 				["Changes voltage", false, "Try again. Wrong field of study!" ],
 		]
 	},
-	"<br><br>",
-	"<b>2.</b> Select every type of adapter we will study in this unit. (Hint: there are 3) (Choose all that apply.)",
-	{
-		questionType : "multiple choice group",
-		questionsList : [
-				{
-					questionHTML : "",
-					choices : [ "ACAdapter", "ArrayAdapter", "BaseAdapter", "GridAdapter", "RecyclerAdapte"],
-					correctIndex : [1,2,4]
-				}
-				],
-		allCorrectOutput : "Well done!",
-		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
-	},
 ];

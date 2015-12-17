@@ -34,57 +34,43 @@ var activity = [
 	{
 		questionType : "multiple choice",
 		choices : [
-				["ContextCompat.getColor(context, R.color.somename)", false, "Try again. " ],
+				["getResources().getColor(R.color.somename)", false, "Try again. " ],
 				["getString(R.string.somename)", true, "Correct. " ],
-				["getResources().getQuantityString(R.plurals.somename, how_many)", false, "Try again. Only if you need cases based on plurals." ],
 				["findViewById(R.id.somename)", false, "Try again. " ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> How do you refer to plurals in code?<br>",
+	"<b>2.</b> How do you refer to a color in code?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["ContextCompat.getColor(context, R.color.somename)", false, "Try again. " ],
-				["getString(R.string.somename)", false, "Try again. Only if you wanted to handle the different cases without Android support" ],
-				["getResources().getQuantityString(R.plurals.somename, how_many)", true, "Correct. " ],
-				["findViewById(R.id.somename)", false, "Try again. " ],
-		]
-	},
-	"<br><br>",
-	"<b>3.</b> How do you refer to a color in code?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["ContextCompat.getColor(context, R.color.somename)", true, "Correct. " ],
+				["getResources().getColor(R.color.somename)", true, "Correct. " ],
 				["getString(R.string.somename)", false, "Try again. " ],
-				["getResources().getQuantityString(R.plurals.somename, how_many)", false, "Try again. " ],
 				["findViewById(R.id.somename)", false, "Try again. " ],
 		]
 	},
 	"<br><br>",
-	"<b>4.</b> How do you refer to (capture) a view in code?<br>",
+	"<b>3.</b> How do you refer to a view in code?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["ContextCompat.getColor(context, R.color.somename)", false, "Try again. " ],
+				["getResources().getColor(R.color.somename)", false, "Try again. " ],
 				["getString(R.string.somename)", false, "Try again. " ],
-				["getResources().getQuantityString(R.plurals.somename, how_many)", false, "Try again. " ],
 				["findViewById(R.id.somename)", true, "Correct. " ],
 		]
 	},
 	"<br><br>",
-	"<b>5.</b> You use findViewById to get a Button. However, that method returns a View, so what else do you need to do to assign it to a Button?<br>",
+	"<b>4.</b> You use findViewById to get a Button. However, that method returns a View, so what else do you need to do to assign it to a Button?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
 				["Nothing, just assign to a Button", false, "Try again. They are different types, so it won't compile." ],
 				["Pass the View returned by findViewById to the Button constructor", false, "Try again. " ],
-				["Typecast it", true, "Correct. For example, Button b = (Button)findViewById(R.id.someid);" ],
+				["Cast it", true, "Correct. For example, Button b = (Button)findViewById(R.id.someid);" ],
 		]
 	},
 	"<br><br>",
-	"<b>6.</b> What method is used to add a listener to a Button?<br>",
+	"<b>5.</b> What method is used to add a listener to a Button?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
