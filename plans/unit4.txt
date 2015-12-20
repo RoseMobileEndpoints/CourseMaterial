@@ -137,6 +137,12 @@ startActivityForReturn $#$
 onActivityResult $#$ $#$ yes
 onActivityReturn $#$
 
+Q: How does one activity send data back to the activity that called it for a result?
+TYPE: MC
+Mutate the values in the intent that was used to start the activity $#$ 
+Use a different intent and set the result $#$ Along with Activity.RESULT_OK  $#$ yes
+Call startActivity and send a new intent with the data back $#$ You want to pop the current activity off the backstack by calling finish(); calling startActivity would push yet another copy of the original activity onto the stack. 
+
 Q: Note that the callback uses two codes: a request code and a result code. 
 TYPE: MC
 Got it $#$ The calling activity sets the request code to flag which activity it is calling (REQUEST_CODE_someactivity) and the result code sets the result code to RESULT_OK if it finishes normally or RESULT_CANCELLED if the back button was pressed. $#$ yes
@@ -145,10 +151,37 @@ END
 
 
 
+LESSON TITLE: Navigation Drawer
+LESSON VIDEO: NavigationDrawer/NavigationDrawer_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>This lesson will teach you about the NavigationDrawer pattern and examine the default code in the template you get when you create a NavDrawerActivity. For more info, see <a href="https://www.google.com/design/spec/patterns/navigation-drawer.html">here</a> and <a href= "http://developer.android.com/training/implementing-navigation/nav-drawer.html">here</a> </li>
+</ul>
+CONTENT BELOW
+END
 
+ACTIVITY TITLE: Questions
+Q: What are the two parts of a NavigationView?
+TYPE: MS
+nav_header_main $#$ yes
+app_bar_main $#$ 
+content_main $#$ 
+activity_main_drawer $#$ you
 
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
 
-
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
 
 
 
@@ -181,6 +214,108 @@ Fragments extend android.app.Fragment while Activities extend android.app.Activi
 Fragments have a more complex lifecycle, so more callback methods $#$ yes
 Activities can have onClickListeners, but Fragments cannot $#$  
 END
+
+
+LESSON TITLE: 
+LESSON VIDEO: /_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li></li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
+
+
+
+LESSON TITLE: 
+LESSON VIDEO: /_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li></li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
+
+
+
+LESSON TITLE: 
+LESSON VIDEO: /_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li></li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
+
 
 
 LESSON TITLE: Lab: Comic Viewer
