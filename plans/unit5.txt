@@ -9,24 +9,55 @@ SetupBackend
 WebClient (optional)
 SetupAndroid
 PushingToFirebase
+EventListeners
 Delete
 Update
 LabWeatherpics
 
 // Lessons here
 
-LESSON TITLE: Dialogs Overview
-LESSON VIDEO: DialogsOverview/DialogsOverview_player.html
+LESSON TITLE: Firebase Overview
+LESSON VIDEO: FirebaseOverview/FirebaseOverview_player.html
 YOUTUBE ID: ?
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll get an overview of the various types of dialogs you can use in your apps.</li>
-<li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
+<li>In this lesson, you'll see a demo of MovieQuotes, the app that we'll write together in this unit.</li>
 </ul>
 CONTENT BELOW
 END
 
 
+LESSON TITLE: What Is Firebase?
+LESSON VIDEO: WhatIsFirebase/WhatIsFirebase_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn why Firebase is nice to use as a backend for mobile clients.</li>
+<li></li>
+</ul>
+CONTENT BELOW 
+END
+
+ACTIVITY TITLE: Questions
+Q: Which of these are characteristics of Firebase?
+TYPE: MS
+Cross-platform $#$ yes
+Has offline capabilities $#$ yes
+No-SQL $#$ yes
+Real-time $#$ yes 
+Supports authentication $#$ yes
+
+TYPE: MC
+Why is it particularly nice for Rose-Hulman students to use Firebase? $#$ $#$ yes
+Firebase was founded by Rose-Hulman graduates $#$ Michael Lehenbauer and Andrew Lee $#$
+ $#$ .
+
+END
+
+
+
+
+SetupBackend
 LESSON TITLE: 
 LESSON VIDEO: /_player.html
 CONTENT ABOVE
@@ -61,28 +92,222 @@ END
 
 
 
-LESSON TITLE: Lab: FoodRater
-LESSON VIDEO: LabFoodRater/LabFoodRater_player.html
-YOUTUBE ID: ?
+WebClient (optional)
+LESSON TITLE: 
+LESSON VIDEO: /_player.html
 CONTENT ABOVE
 <ul>
-<li>The lab specification is <a href="https://docs.google.com/document/d/1ef4K5p66_5oM4OaSaHSfkeIFWhw4F_CYMagkCtYKkqM" target="_blank">here</a>.</li>
-<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "Adapters" self-evaluation survey before calling it a day.</li>
+<li>In this lesson, </li>
+<li></li>
 </ul>
 CONTENT BELOW
 END
 
--------OR---------------
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
 
 
-LESSON TITLE: Summary and Troubleshooting
-LESSON VIDEO: SummaryOAuthAndroidClient/SummaryOAuthAndroidClient_player.html
+
+
+SetupAndroid
+LESSON TITLE: 
+LESSON VIDEO: /_player.html
 CONTENT ABOVE
 <ul>
-<li>There is no lab in this unit. If you want to use OAuth in your project, you are ready!</li>
-<li>We'll wait until after we write the Android client to complete the "OAuth" self-evaluation survey.</li>
--------or-----------
-<li>Then go complete the Moodle "OAuth" self-evaluation survey before calling it a day.</li>
+<li>In this lesson, </li>
+<li></li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
+
+
+
+
+PushingToFirebase
+LESSON TITLE: 
+LESSON VIDEO: /_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li></li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
+
+
+
+
+EventListeners
+LESSON TITLE: 
+LESSON VIDEO: /_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li></li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
+
+
+
+
+Delete
+LESSON TITLE: 
+LESSON VIDEO: /_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li></li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
+
+
+
+
+Update
+LESSON TITLE: 
+LESSON VIDEO: /_player.html
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li></li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
+
+
+
+LESSON TITLE: Lab: Weatherpics
+LESSON VIDEO: LabWeatherpics/LabWeatherpics_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1IYWjIMTnMEqxheQxSci1TXYswxDMQWKRCGq-IHt4y_8" target="_blank">here</a>.</li>
+<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "Adapters" self-evaluation survey before calling it a day.</li>
 </ul>
 CONTENT BELOW
 END

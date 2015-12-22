@@ -52,7 +52,6 @@ public class Main {
 				// Gets locations from the user using file choosers
 				unitFile = getInputFile();
 				System.out.println("*****************************************************************Unitfile: " + unitFile);
-						
 				getOutputPath();
 			}
 

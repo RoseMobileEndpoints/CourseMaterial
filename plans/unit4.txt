@@ -20,7 +20,7 @@ LabComicViewer
 	
 LESSON TITLE: Activities and Fragments Overview
 LESSON VIDEO: ActivitiesAndFragmentsOverview/ActivitiesAndFragmentsOverview_player.html
-YOUTUBE ID: ?
+YOUTUBE ID: qzu5jWDOGn0
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn about apps that have multiple screens (Activities) and apps that have have multiple view&controllers (Fragments) within a screen. You'll learn about a popular interface that often uses fragments: the Navigation Drawer. You'll also learn about mechanisms for communicating information between activities and fragments: Intent extras and Bundles.</li>
@@ -51,7 +51,7 @@ END
 
 LESSON TITLE: Activity
 LESSON VIDEO: Activity/Activity_player.html
-YOUTUBE ID: ?
+YOUTUBE ID: NbhhEIutuMQ
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn some basics of the Activity lifecycle. No coding this time.</li>
@@ -75,7 +75,7 @@ END
 
 LESSON TITLE: Creating an Activity
 LESSON VIDEO: CreatingActivity/CreatingActivity_player.html
-YOUTUBE ID: ?
+YOUTUBE ID: 7YS_ugDTI4o
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to create and launch new activities using Intents.</li>
@@ -99,16 +99,16 @@ Create the activity in the Android Manifest $#$ Creating it isn't enough. You mu
 
 Q: Which is NOT a parameter passed to the Intent constructor?
 TYPE: MC
-The layout of the activity to be launched $#$ The activity to be launched specifies its own layout by calling setContentView(). $#$ yes
-The class of the activity to be launched $#$ This is the second parameter, for example, InfoActivity.class.
 The context $#$ This is the first parameter, for example, this (the current Activity). 
+The class of the activity to be launched $#$ This is the second parameter, for example, InfoActivity.class.
+The layout of the activity to be launched $#$ The activity to be launched specifies its own layout by calling setContentView(). $#$ yes
 END
 
 
 
 LESSON TITLE: Using Intent Extras
 LESSON VIDEO: UsingIntentExtras/UsingIntentExtras_player.html
-YOUTUBE ID: ?
+YOUTUBE ID: lgnagHTQ4P4
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to pass data from one intent to another using <em>extras</em>.</li>
@@ -139,9 +139,9 @@ onActivityReturn $#$
 
 Q: How does one activity send data back to the activity that called it for a result?
 TYPE: MC
-Mutate the values in the intent that was used to start the activity $#$ 
-Use a different intent and set the result $#$ Along with Activity.RESULT_OK  $#$ yes
-Call startActivity and send a new intent with the data back $#$ You want to pop the current activity off the backstack by calling finish(); calling startActivity would push yet another copy of the original activity onto the stack. 
+Mutates the values in the intent that was used to start the activity $#$ 
+Uses a different intent and set the result $#$ Along with Activity.RESULT_OK  $#$ yes
+Calls startActivity and send a new intent with the data back $#$ You want to pop the current activity off the backstack by calling finish(); calling startActivity would push yet another copy of the original activity onto the stack. 
 
 Q: Note that the callback uses two codes: a request code and a result code. 
 TYPE: MC
@@ -151,12 +151,49 @@ END
 
 
 
-LESSON TITLE: Navigation Drawer
-LESSON VIDEO: NavigationDrawer/NavigationDrawer_player.html
-YOUTUBE ID: ?
+LESSON TITLE: Using System Intents
+LESSON VIDEO: UsingSystemIntents/UsingSystemIntents_player.html
+YOUTUBE ID: gSs2hOaRlrI
 CONTENT ABOVE
 <ul>
-<li>This lesson will teach you about the NavigationDrawer pattern and examine the default code in the template you get when you create a NavDrawerActivity. For more info, see <a href="https://www.google.com/design/spec/patterns/navigation-drawer.html">here</a> and <a href= "http://developer.android.com/training/implementing-navigation/nav-drawer.html">here</a> </li>
+<li>In this lesson, you'll get a brief intro to intents that you can use to launch activities from other apps.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What constant was passed as a parameter to the Intent constructor to create an email Intent?
+TYPE: MC
+ACTION_EMAIL $#$ No such thing.
+ACTION_SEARCH $#$ 
+ACTION_SEND $#$ It's not the one we used, but would work as well.
+ACTION_SENDTO $#$ $#$ yes
+
+Q: How are the email address, subject, and body added to the email that was composed?
+TYPE: MC
+As extras $#$ $#$ yes
+In a bundle $#$ No bundles used here, although bundles also use key-value pairs just like extras.
+
+Q: Name five of the system intents given in the list.
+TYPE: MS
+Contacts $#$ yes
+Camera $#$ yes
+Email $#$ yes
+Facebook $#$ 
+NavDrawer $#$
+Phone $#$ yes 
+Text Messaging $#$ yes
+END
+
+
+
+LESSON TITLE: Navigation Drawer
+LESSON VIDEO: NavigationDrawer/NavigationDrawer_player.html
+YOUTUBE ID: J1lVq_YYUGg
+CONTENT ABOVE
+<ul>
+<li>This lesson will teach you about the NavigationDrawer pattern and walk through the default code in the template you get when you create a NavigationDrawerActivity.</li> 
+<li>For more info, see <a href="https://www.google.com/design/spec/patterns/navigation-drawer.html">here</a> and <a href= "http://developer.android.com/training/implementing-navigation/nav-drawer.html">here</a> </li>
 </ul>
 CONTENT BELOW
 END
@@ -169,27 +206,42 @@ app_bar_main $#$
 content_main $#$ 
 activity_main_drawer $#$ you
 
-Q: 
+Q: What is the new listener for nav items?
 TYPE: MC
- $#$ $#$ yes
- $#$ .
- $#$ .
-
-Q: 
-TYPE: MS
- $#$ yes 
- $#$ yes
- $#$  
- $#$ yes
+OnNavDrawerItemSelectedListener $#$ 
+OnNavigationDrawerItemSelectedListener $#$ 
+OnNavigationItemSelectedListener $#$ $#$ yes
 END
 
 
 
+LESSON TITLE: HistoricalDocs Starting Code
+LESSON VIDEO: HistoricalDocsStartingCode/HistoricalDocsStartingCode_player.html
+YOUTUBE ID: Gr70Q76GcRI
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you will download starting code for the app we're doing to build in the remainder of this unit.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Were you able to get an app with a NavigationDrawerActivity working?
+TYPE: MC
+Yes $#$ Excellent. $#$ yes
+No $#$ OK, please try again or come for help. $#$ yes
+
+Q: Were you able to get the HistoricalDocs starting code running?
+TYPE: MC
+Yes $#$ Excellent. $#$ yes
+No $#$ The video tells where to put things and then I demo putting them there. If you try again and have issues, please come for help.  $#$ yes
+END
 
 
-LESSON TITLE: Fragments Intro
-LESSON VIDEO: ActivitiesAndFragmentsOverview/ActivitiesAndFragmentsOverview_player.html
-YOUTUBE ID: ?
+
+LESSON TITLE: Introduction to Fragments
+LESSON VIDEO: IntroductionToFragments/IntroductionToFragments_player.html
+YOUTUBE ID: NAnJKD-BrBw
 CONTENT ABOVE
 <ul>
 <li>This unit consists of a short overview of fragments and a detailed lab. This lesson is an extended introduction to the concepts you'll learn about in the lab. </li>
@@ -200,13 +252,23 @@ END
 ACTIVITY TITLE: Questions
 Q: What are android.app.Fragments?
 TYPE: MC
-Little shards of glass $#$ .
+Little shards of glass $#$ Hmm. True, but let's think in context.
 Little shards of code encapsulating layout and controller $#$ But thinking of fragment as shards is appropriate, since these pieces can be re-arranged within activities. $#$ yes
+
+Q: What is NOT a characteristic of Fragments?
+TYPE: MC
+They are like sub-activities 
+They live within an activity 
+They can be dynamically added or removed at runtime
+They can communicate with other parts of the activity 
+They are great for reconfiguring layouts on different-size devices 
+They cannot contain LinearLayouts, but need to contain FrameLayouts $#$ They are usually added to an Activity's FrameLayout, since they are simple containers, but the Fragment itself can use any layout.
+Transitions between them are quicker than transitions between activities 
 
 Q: How does the layout xml of a fragment differ from that of an activity?
 TYPE: MC
 Not at all $#$ $#$ yes
-They use the fragment xml tag $#$ We did see the fragment tag in the FAQ, but that was for permanently adding a fragment to an activity, not for specifying the layout of the fragment itself.
+They use the <code>fragment</code> xml tag $#$ There is a fragment tag that is used when permanently adding a fragment to an activity, but it's not for specifying the layout of the fragment itself.
 
 Q: How is a Fragment class typically structured differently than an Activity class? 
 TYPE: MS
@@ -216,115 +278,104 @@ Activities can have onClickListeners, but Fragments cannot $#$
 END
 
 
-LESSON TITLE: 
-LESSON VIDEO: /_player.html
-YOUTUBE ID: ?
+
+LESSON TITLE: ListFragment and Callback Interfaces
+LESSON VIDEO: ListFragment/ListFragment_player.html
+YOUTUBE ID: TBqRhit2FMY
 CONTENT ABOVE
 <ul>
-<li>In this lesson, </li>
-<li></li>
+<li>In this lesson, you will create a ListFragment that uses a callback interface to store a reference to the activity so the activity can switch out the fragment when the fragment code tells it to do so.
+</li>
 </ul>
 CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: 
+Q: What method in the Fragment lifecycle gives the first access to the Activity that holds the fragment?
 TYPE: MC
- $#$ $#$ yes
- $#$ .
- $#$ .
+onAttach $#$ $#$ yes
+onCreate $#$ 
+onCreateView $#$ 
+onActivityCreated $#$ That is the _last_ access (the activity is fully created at that point.)
 
-Q: 
+Q: What callback method do we require DocListFragment's calling Activity to implement?
 TYPE: MC
- $#$ $#$ yes
- $#$ .
- $#$ .
+onDocSelected $#$ We want the activity to respond when a document is selected. $#$ yes
+onFragmentInteraction $#$ That was the original name in the template code.
+onFragmentClicked $#$ No such method exists.
 
-Q: 
-TYPE: MS
- $#$ yes 
- $#$ yes
- $#$  
- $#$ yes
+Q: What happens if that interface isn't implemented?
+TYPE: MC
+We get a runtime error $#$ It was a ClassCastException $#$ yes
+We get a compile-time error $#$ 
+Nothing - it isn't required. $#$ 
 END
 
 
 
-LESSON TITLE: 
-LESSON VIDEO: /_player.html
-YOUTUBE ID: ?
+LESSON TITLE: DetailFragment and the NewInstance Pattern
+LESSON VIDEO: DetailFragment/DetailFragment_player.html
+YOUTUBE ID: ycVp0BtGfQo
 CONTENT ABOVE
 <ul>
-<li>In this lesson, </li>
-<li></li>
+<li>In this lesson, you'll write the DetailFragment class, which uses newInstance(), a factory pattern for constructing new fragments with extra information.</li>
 </ul>
 CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: 
-TYPE: MC
- $#$ $#$ yes
- $#$ .
- $#$ .
-
-Q: 
-TYPE: MC
- $#$ $#$ yes
- $#$ .
- $#$ .
-
-Q: 
+Q: Why should one use the newInstance() method rather than a constructor to create a fragment that needs info passed to it?
 TYPE: MS
- $#$ yes 
- $#$ yes
- $#$  
- $#$ yes
+When recreating a fragment, Android doesn't call constructors with arguments $#$ yes
+Setting the bundle arguments on your own is OK, but can be problematic if you forget to do it $#$ yes
+newInstance() takes the place of all Fragment constructors $#$ 
+
+Q: True or false: AndroidStudio gives good support for implementing the Parcelable interface.
+TYPE: MC
+True $#$ Abolutely. It only takes 2-3 clicks to tell it to do it for you. $#$ yes
+False $#$ I hope you aren't doing it all on your own - it's very tedious. 
+
+Q: What does the app do when a document is selected?
+TYPE: MC
+Highlights that document in the list by boldfacing it and changing the background color of the ViewHolder in that position in the RecyclerAdapter $#$ Cool idea, but we didn't do that.
+Creates a new detail fragment with that document and swaps it in in place of the list fragment. $#$ This was in the Callback's onDocSelected() $#$ yes
 END
 
 
 
-LESSON TITLE: 
-LESSON VIDEO: /_player.html
-YOUTUBE ID: ?
+LESSON TITLE: Backstack
+LESSON VIDEO: Backstack/Backstack_player.html
+YOUTUBE ID: P7B6_I8J788
 CONTENT ABOVE
 <ul>
-<li>In this lesson, </li>
-<li></li>
+<li>In this lesson, you'll get an introduction to managing the fragment backstack.</li>
 </ul>
 CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: 
-TYPE: MC
- $#$ $#$ yes
- $#$ .
- $#$ .
-
-Q: 
-TYPE: MC
- $#$ $#$ yes
- $#$ .
- $#$ .
-
-Q: 
+Q: When we selected a document, we added the replace transaction to the backstack. Why did we do that?
 TYPE: MS
- $#$ yes 
- $#$ yes
- $#$  
- $#$ yes
+The fragment backstack is used to manage all fragment replacements in the app. $#$ 
+The Activity backstack is managed for us, but we need to manage the fragment backstack. $#$ yes
+Otherwise, when we go back from the doc detail fragment, we exit the app instead of going back to the list $#$ yes
+
+Q: When we switch to a top level fragment, what do we need to do with the backstack so that the back button works properly? 
+TYPE: MC
+Clear it $#$ $#$ yes
+Push the current fragment transaction onto the stack $#$
+Pop the current transaction from the stack $#$ That might work here, but it is better just to clear it.
 END
 
 
 
 LESSON TITLE: Lab: Comic Viewer
 LESSON VIDEO: ComicViewer/ComicViewer.html
-YOUTUBE ID: ?
+YOUTUBE ID: jbrCvX8IvyA
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1qlSdq-yQTg8WCbxCKXc7q5jV6VDSpU3KZ8zYwPfx0ag/edit" target="_blank">here</a>.</li>
-<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "Menus and Dialogs" self-evaluation survey before calling it a day.</li>
+<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "Activities and Fragments" self-evaluation survey before calling it a day.</li>
 </ul>
 CONTENT BELOW
 END

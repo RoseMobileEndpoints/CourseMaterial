@@ -30,49 +30,49 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> When you create new projects in this unit, what type of Activity do you select?<br>",
+	"<b>1.</b> What are android.app.Fragments?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["No activity", false, "Try again. There was something." ],
-				["Empty Activity", true, "Correct. That is the most basic one and we'll use it in this unit. Later you will use others." ],
-				["Blank Activity", false, "Try again. That will be for the next unit, when we need menus." ],
-				["Navigation Drawer Activity", false, "Try again. We'll use that later this term. Of course, you are free to play around with Nav Drawers or others now if you like." ],
+				["Little shards of glass", false, "Try again. Hmm. True, but let's think in context." ],
+				["Little shards of code encapsulating layout and controller", true, "Correct. But thinking of fragment as shards is appropriate, since these pieces can be re-arranged within activities." ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> What naming convention is used for packages?<br>",
+	"<b>2.</b> What is NOT a characteristic of Fragments?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["just use your initials", false, "Try again. That isn't descriptive enough" ],
-				["use findViewById", false, "Try again. We will learn about that in an upcoming video." ],
-				["reverse URL", true, "Correct. By choosing a company name of yourusername.rosehulman.edu, your package will be edu.rosehulman.yourusername.theappname" ],
+				["They are like sub-activities", false, "Try again. " ],
+				["They live within an activity", false, "Try again. " ],
+				["They can be dynamically added or removed at runtime", false, "Try again. " ],
+				["They can communicate with other parts of the activity", false, "Try again. " ],
+				["They are great for reconfiguring layouts on different-size devices", false, "Try again. " ],
+				["They cannot contain LinearLayouts, but need to contain FrameLayouts", false, "Try again. They are usually added to an Activity's FrameLayout, since they are simple containers, but the Fragment itself can use any layout." ],
+				["Transitions between them are quicker than transitions between activities", false, "Try again. " ],
 		]
 	},
 	"<br><br>",
-	"<b>3.</b> What can you find in the AndroidManifest.xml file? Look at the file if you aren't sure. (Choose all that apply.)",
+	"<b>3.</b> How does the layout xml of a fragment differ from that of an activity?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["Not at all", true, "Correct. " ],
+				["They use the <code>fragment</code> xml tag", false, "Try again. There is a fragment tag that is used when permanently adding a fragment to an activity, but it's not for specifying the layout of the fragment itself." ],
+		]
+	},
+	"<br><br>",
+	"<b>4.</b> How is a Fragment class typically structured differently than an Activity class? (Choose all that apply.)",
 	{
 		questionType : "multiple choice group",
 		questionsList : [
 				{
 					questionHTML : "",
-					choices : [ "The package name", "The Activity that will be launched", "What versions of Android your app is written for"],
+					choices : [ "Fragments extend android.app.Fragment while Activities extend android.app.Activity", "Fragments have a more complex lifecycle, so more callback methods", "Activities can have onClickListeners, but Fragments cannot"],
 					correctIndex : [0,1]
 				}
 				],
 		allCorrectOutput : "Well done!",
 		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
-	},
-	"<br><br>",
-	"<b>4.</b> In which values file does our screen text go?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["colors.xml", false, "Try again. Next lesson, we'll learn about specifying RGB colors" ],
-				["dimens.xml", false, "Try again. That's for margins and other dimensions you need to be re-used." ],
-				["strings.xml", true, "Correct. " ],
-				["styles.xml", false, "Try again. That's for specifying themes." ],
-		]
 	},
 ];

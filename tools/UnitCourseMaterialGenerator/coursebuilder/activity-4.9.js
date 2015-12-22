@@ -30,43 +30,34 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> Consider the model-view-controller (MVC) design pattern. By using xml layouts, you are separating which two?<br>",
+	"<b>1.</b> What method in the Fragment lifecycle gives the first access to the Activity that holds the fragment?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["M&V", false, "Try again. The xml is the view, but it is our responsibility to separate out the model from the controller if needed." ],
-				["M&C", false, "Try again. That is our job." ],
-				["V&C", true, "Correct. " ],
+				["onAttach", true, "Correct. " ],
+				["onCreate", false, "Try again. " ],
+				["onCreateView", false, "Try again. " ],
+				["onActivityCreated", false, "Try again. That is the _last_ access (the activity is fully created at that point.)" ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> Which two tend to get put together in simple apps?<br>",
+	"<b>2.</b> What callback method do we require DocListFragment's calling Activity to implement?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["M&V", false, "Try again. The view is separated by using xml layouts." ],
-				["M&C", true, "Correct. Consider HelloButton: the only thing that would go in the model is the click count." ],
-				["V&C", false, "Try again. These are separated by using xml layouts." ],
+				["onDocSelected", true, "Correct. We want the activity to respond when a document is selected." ],
+				["onFragmentInteraction", false, "Try again. That was the original name in the template code." ],
+				["onFragmentClicked", false, "Try again. No such method exists." ],
 		]
 	},
 	"<br><br>",
-	"<b>3.</b> Which TicTacToeGame model method should you call to get the game state string?<br>",
+	"<b>3.</b> What happens if that interface isn't implemented?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["stringForGameState()", true, "Correct. " ],
-				["ticTacToeState()", false, "Try again. Look back at the given code." ],
-				["getGameStateString()", false, "Try again. That does sound reasonable, but look back at the given code." ],
-		]
-	},
-	"<br><br>",
-	"<b>4.</b> Which model method should you call when a button is pressed?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["setOnClickListener()", false, "Try again. Later we will use that to listen to button clicks." ],
-				["buttonPressedForModel()", false, "Try again. Good guess. But don't guess. Look at the code." ],
-				["pressedButtonAtLocation()", true, "Correct. " ],
+				["We get a runtime error", true, "Correct. It was a ClassCastException" ],
+				["We get a compile-time error", false, "Try again. " ],
+				["Nothing - it isn't required.", false, "Try again. " ],
 		]
 	},
 ];

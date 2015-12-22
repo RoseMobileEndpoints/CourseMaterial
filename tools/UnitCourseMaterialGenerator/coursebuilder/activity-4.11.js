@@ -30,49 +30,27 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> When you create new projects in this unit, what type of Activity do you select?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["No activity", false, "Try again. There was something." ],
-				["Empty Activity", true, "Correct. That is the most basic one and we'll use it in this unit. Later you will use others." ],
-				["Blank Activity", false, "Try again. That will be for the next unit, when we need menus." ],
-				["Navigation Drawer Activity", false, "Try again. We'll use that later this term. Of course, you are free to play around with Nav Drawers or others now if you like." ],
-		]
-	},
-	"<br><br>",
-	"<b>2.</b> What naming convention is used for packages?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["just use your initials", false, "Try again. That isn't descriptive enough" ],
-				["use findViewById", false, "Try again. We will learn about that in an upcoming video." ],
-				["reverse URL", true, "Correct. By choosing a company name of yourusername.rosehulman.edu, your package will be edu.rosehulman.yourusername.theappname" ],
-		]
-	},
-	"<br><br>",
-	"<b>3.</b> What can you find in the AndroidManifest.xml file? Look at the file if you aren't sure. (Choose all that apply.)",
+	"<b>1.</b> When we selected a document, we added the replace transaction to the backstack. Why did we do that? (Choose all that apply.)",
 	{
 		questionType : "multiple choice group",
 		questionsList : [
 				{
 					questionHTML : "",
-					choices : [ "The package name", "The Activity that will be launched", "What versions of Android your app is written for"],
-					correctIndex : [0,1]
+					choices : [ "The fragment backstack is used to manage all fragment replacements in the app.", "The Activity backstack is managed for us, but we need to manage the fragment backstack.", "Otherwise, when we go back from the doc detail fragment, we exit the app instead of going back to the list"],
+					correctIndex : [1,2]
 				}
 				],
 		allCorrectOutput : "Well done!",
 		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
 	},
 	"<br><br>",
-	"<b>4.</b> In which values file does our screen text go?<br>",
+	"<b>2.</b> When we switch to a top level fragment, what do we need to do with the backstack so that the back button works properly?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["colors.xml", false, "Try again. Next lesson, we'll learn about specifying RGB colors" ],
-				["dimens.xml", false, "Try again. That's for margins and other dimensions you need to be re-used." ],
-				["strings.xml", true, "Correct. " ],
-				["styles.xml", false, "Try again. That's for specifying themes." ],
+				["Clear it", true, "Correct. " ],
+				["Push the current fragment transaction onto the stack", false, "Try again. " ],
+				["Pop the current transaction from the stack", false, "Try again. That might work here, but it is better just to clear it." ],
 		]
 	},
 ];

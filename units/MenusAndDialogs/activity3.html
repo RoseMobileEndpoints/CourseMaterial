@@ -7,7 +7,7 @@
 <link href="../../css/custom.css" rel="stylesheet" type="text/css">
 <script src="../../js/jquery-1.7.2.min.js"></script>
 <script src="../../js/activity-generic-1.3.js"></script>
-<script src="activity6.js"></script>
+<script src="activity3.js"></script>
 <!-- base.before_head_tag_ends -->
 <style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style>
 </head>
@@ -51,25 +51,20 @@
         <ul class="gcb-breadcrumb"></ul>
         <div>
           <!-- TODO: Unit title -->
-          <h1 class="gcb-unit-header">Buttons and MVC</h1>
+          <h1 class="gcb-unit-header">Menus and Dialogs</h1>
         </div>
 		        <div class="gcb-nav" id="gcb-nav-y" role="navigation">
           <ul>
             <li>
               <div class="gcb-lesson-title-with-progress">
-                <a href="lesson1.html">Buttons and MVC Overview</a>
+                <a href="lesson1.html">Menus and Dialogs Overview</a>
               </div>
               <ul>
-                <li>
-                  <div class="gcb-activity-title-with-progress">
-                    <a href="activity1.html">Activity</a>
-                  </div>
-               </li>
              </ul>
            </li>
             <li>
               <div class="gcb-lesson-title-with-progress">
-                <a href="lesson2.html">Hello Button View</a>
+                <a href="lesson2.html">Floating Action Button</a>
               </div>
               <ul>
                 <li>
@@ -81,10 +76,10 @@
            </li>
             <li>
               <div class="gcb-lesson-title-with-progress">
-                <a href="lesson3.html">Hello Button Controller</a>
+                <a href="lesson3.html">Toolbar</a>
               </div>
               <ul>
-                <li>
+                <li class="active">
                   <div class="gcb-activity-title-with-progress">
                     <a href="activity3.html">Activity</a>
                   </div>
@@ -93,7 +88,7 @@
            </li>
             <li>
               <div class="gcb-lesson-title-with-progress">
-                <a href="lesson4.html">MVC and Tic Tac Toe Model</a>
+                <a href="lesson4.html">Snackbar</a>
               </div>
               <ul>
                 <li>
@@ -105,22 +100,17 @@
            </li>
             <li>
               <div class="gcb-lesson-title-with-progress">
-                <a href="lesson5.html">TicTacToe View</a>
+                <a href="lesson5.html">Iconography</a>
               </div>
               <ul>
-                <li>
-                  <div class="gcb-activity-title-with-progress">
-                    <a href="activity5.html">Activity</a>
-                  </div>
-               </li>
              </ul>
            </li>
             <li>
               <div class="gcb-lesson-title-with-progress">
-                <a href="lesson6.html">TicTacToe Controller</a>
+                <a href="lesson6.html">Dialogs</a>
               </div>
               <ul>
-                <li class="active">
+                <li>
                   <div class="gcb-activity-title-with-progress">
                     <a href="activity6.html">Activity</a>
                   </div>
@@ -129,7 +119,55 @@
            </li>
             <li>
               <div class="gcb-lesson-title-with-progress">
-                <a href="lesson7.html">Lab: LightsOut</a>
+                <a href="lesson7.html">Dialogs Part 2</a>
+              </div>
+              <ul>
+                <li>
+                  <div class="gcb-activity-title-with-progress">
+                    <a href="activity7.html">Activity</a>
+                  </div>
+               </li>
+             </ul>
+           </li>
+            <li>
+              <div class="gcb-lesson-title-with-progress">
+                <a href="lesson8.html">AlertDialogs with Items</a>
+              </div>
+              <ul>
+                <li>
+                  <div class="gcb-activity-title-with-progress">
+                    <a href="activity8.html">Activity</a>
+                  </div>
+               </li>
+             </ul>
+           </li>
+            <li>
+              <div class="gcb-lesson-title-with-progress">
+                <a href="lesson9.html">Confirmation Dialogs</a>
+              </div>
+              <ul>
+                <li>
+                  <div class="gcb-activity-title-with-progress">
+                    <a href="activity9.html">Activity</a>
+                  </div>
+               </li>
+             </ul>
+           </li>
+            <li>
+              <div class="gcb-lesson-title-with-progress">
+                <a href="lesson10.html">Floating Context Menus</a>
+              </div>
+              <ul>
+                <li>
+                  <div class="gcb-activity-title-with-progress">
+                    <a href="activity10.html">Activity</a>
+                  </div>
+               </li>
+             </ul>
+           </li>
+            <li>
+              <div class="gcb-lesson-title-with-progress">
+                <a href="lesson11.html">Lab: Jersey</a>
               </div>
               <ul>
              </ul>
@@ -149,7 +187,7 @@
                 <div class="gcb-col-3">
                   <p style="float: right; margin-top: 0px;">
                     <!-- TODO: Slide link -->
-                    <a role="button" class="gcb-button" id="lessonNotesLink" href="https://docs.google.com/presentation/d/1tvQwswjle4X6hWRDJy1CDccu0soHqd9BrlUxC8oPFFg" target="_blank"> Slides </a>
+                    <a role="button" class="gcb-button" id="lessonNotesLink" href="https://docs.google.com/presentation/d/1e_XfiXIHQ8gbiYdEAhZ7DHP-bUjNQP-Ev05NdExx-Ak" target="_blank"> Slides </a>
                   </p>
                 </div>
               </div>
@@ -160,12 +198,12 @@
 	            <div class="gcb-button-box">
 	                <div class="gcb-prev-button">
 	                  <!-- TODO: Fix link to prev page -->
-					<a href="lesson6.html"> Previous Task </a>
+					<a href="lesson3.html"> Previous Task </a>
 	<!--                   <a href="activity1.html"> Previous Page </a>  -->
 	                </div>
 	              <div class="gcb-next-button">
 	                <!-- TODO: Fix link to next page -->
-					<a href="lesson7.html"> Next Task </a>
+					<a href="lesson4.html"> Next Task </a>
 	<!--                <a href="activity1.html"> Next Page </a> -->
 	              </div>
 	            </div>

@@ -30,43 +30,22 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> Consider the model-view-controller (MVC) design pattern. By using xml layouts, you are separating which two?<br>",
+	"<b>1.</b> Which onClickListener did we use in this lesson?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["M&V", false, "Try again. The xml is the view, but it is our responsibility to separate out the model from the controller if needed." ],
-				["M&C", false, "Try again. That is our job." ],
-				["V&C", true, "Correct. " ],
+				["DialogInterface.onClickListener", true, "Correct. " ],
+				["View.OnClickListener", false, "Try again. " ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> Which two tend to get put together in simple apps?<br>",
+	"<b>2.</b> Which method is used to display radio buttons?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["M&V", false, "Try again. The view is separated by using xml layouts." ],
-				["M&C", true, "Correct. Consider HelloButton: the only thing that would go in the model is the click count." ],
-				["V&C", false, "Try again. These are separated by using xml layouts." ],
-		]
-	},
-	"<br><br>",
-	"<b>3.</b> Which TicTacToeGame model method should you call to get the game state string?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["stringForGameState()", true, "Correct. " ],
-				["ticTacToeState()", false, "Try again. Look back at the given code." ],
-				["getGameStateString()", false, "Try again. That does sound reasonable, but look back at the given code." ],
-		]
-	},
-	"<br><br>",
-	"<b>4.</b> Which model method should you call when a button is pressed?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["setOnClickListener()", false, "Try again. Later we will use that to listen to button clicks." ],
-				["buttonPressedForModel()", false, "Try again. Good guess. But don't guess. Look at the code." ],
-				["pressedButtonAtLocation()", true, "Correct. " ],
+				["setItems()", false, "Try again. Those are for a simple item list." ],
+				["setSingleChoiceItems()", true, "Correct. " ],
+				["setMultiChoiceItems()", false, "Try again. Those are for check boxes." ],
 		]
 	},
 ];

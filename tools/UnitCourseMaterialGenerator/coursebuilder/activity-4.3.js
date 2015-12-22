@@ -30,43 +30,34 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> Consider the model-view-controller (MVC) design pattern. By using xml layouts, you are separating which two?<br>",
+	"<b>1.</b> Which is the only thing that the new Activity wizard will NOT do for you?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["M&V", false, "Try again. The xml is the view, but it is our responsibility to separate out the model from the controller if needed." ],
-				["M&C", false, "Try again. That is our job." ],
-				["V&C", true, "Correct. " ],
+				["Create a new class that extends Activity", false, "Try again. It does this." ],
+				["Create an intent to launch the Activity", true, "Correct. Plus, you need to call startActivity. It does all the others." ],
+				["Create a new layout file for the new Activity", false, "Try again. It does this, although you still need to modify it." ],
+				["Register the Activity in the AndroidManifest", false, "Try again. It does this." ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> Which two tend to get put together in simple apps?<br>",
+	"<b>2.</b> How can you test an activity in isolation of the rest of the app?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["M&V", false, "Try again. The view is separated by using xml layouts." ],
-				["M&C", true, "Correct. Consider HelloButton: the only thing that would go in the model is the click count." ],
-				["V&C", false, "Try again. These are separated by using xml layouts." ],
+				["Move the intent filter with the MAIN action and LAUNCHER category to that activity.", true, "Correct. " ],
+				["From that activity's java file, choose ctrl-F11 to run the app.", false, "Try again. That will still launch whichever activity is set as the main/launcher activity." ],
+				["Create the activity in the Android Manifest", false, "Try again. Creating it isn't enough. You must do something else in the Manifest." ],
 		]
 	},
 	"<br><br>",
-	"<b>3.</b> Which TicTacToeGame model method should you call to get the game state string?<br>",
+	"<b>3.</b> Which is NOT a parameter passed to the Intent constructor?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["stringForGameState()", true, "Correct. " ],
-				["ticTacToeState()", false, "Try again. Look back at the given code." ],
-				["getGameStateString()", false, "Try again. That does sound reasonable, but look back at the given code." ],
-		]
-	},
-	"<br><br>",
-	"<b>4.</b> Which model method should you call when a button is pressed?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["setOnClickListener()", false, "Try again. Later we will use that to listen to button clicks." ],
-				["buttonPressedForModel()", false, "Try again. Good guess. But don't guess. Look at the code." ],
-				["pressedButtonAtLocation()", true, "Correct. " ],
+				["The context", false, "Try again. This is the first parameter, for example, this (the current Activity)." ],
+				["The class of the activity to be launched", false, "Try again. This is the second parameter, for example, InfoActivity.class." ],
+				["The layout of the activity to be launched", true, "Correct. The activity to be launched specifies its own layout by calling setContentView()." ],
 		]
 	},
 ];

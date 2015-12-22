@@ -30,34 +30,13 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> When you create new projects in this unit, what type of Activity do you select?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["No activity", false, "Try again. There was something." ],
-				["Empty Activity", true, "Correct. That is the most basic one and we'll use it in this unit. Later you will use others." ],
-				["Blank Activity", false, "Try again. That will be for the next unit, when we need menus." ],
-				["Navigation Drawer Activity", false, "Try again. We'll use that later this term. Of course, you are free to play around with Nav Drawers or others now if you like." ],
-		]
-	},
-	"<br><br>",
-	"<b>2.</b> What naming convention is used for packages?<br>",
-	{
-		questionType : "multiple choice",
-		choices : [
-				["just use your initials", false, "Try again. That isn't descriptive enough" ],
-				["use findViewById", false, "Try again. We will learn about that in an upcoming video." ],
-				["reverse URL", true, "Correct. By choosing a company name of yourusername.rosehulman.edu, your package will be edu.rosehulman.yourusername.theappname" ],
-		]
-	},
-	"<br><br>",
-	"<b>3.</b> What can you find in the AndroidManifest.xml file? Look at the file if you aren't sure. (Choose all that apply.)",
+	"<b>1.</b> Why should one use the newInstance() method rather than a constructor to create a fragment that needs info passed to it? (Choose all that apply.)",
 	{
 		questionType : "multiple choice group",
 		questionsList : [
 				{
 					questionHTML : "",
-					choices : [ "The package name", "The Activity that will be launched", "What versions of Android your app is written for"],
+					choices : [ "When recreating a fragment, Android doesn't call constructors with arguments", "Setting the bundle arguments on your own is OK, but can be problematic if you forget to do it", "newInstance() takes the place of all Fragment constructors"],
 					correctIndex : [0,1]
 				}
 				],
@@ -65,14 +44,21 @@ var activity = [
 		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
 	},
 	"<br><br>",
-	"<b>4.</b> In which values file does our screen text go?<br>",
+	"<b>2.</b> True or false: AndroidStudio gives good support for implementing the Parcelable interface.<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["colors.xml", false, "Try again. Next lesson, we'll learn about specifying RGB colors" ],
-				["dimens.xml", false, "Try again. That's for margins and other dimensions you need to be re-used." ],
-				["strings.xml", true, "Correct. " ],
-				["styles.xml", false, "Try again. That's for specifying themes." ],
+				["True", true, "Correct. Abolutely. It only takes 2-3 clicks to tell it to do it for you." ],
+				["False", false, "Try again. I hope you aren't doing it all on your own - it's very tedious." ],
+		]
+	},
+	"<br><br>",
+	"<b>3.</b> What does the app do when a document is selected?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["Highlights that document in the list by boldfacing it and changing the background color of the ViewHolder in that position in the RecyclerAdapter", false, "Try again. Cool idea, but we didn't do that." ],
+				["Creates a new detail fragment with that document and swaps it in in place of the list fragment.", true, "Correct. This was in the Callback's onDocSelected()" ],
 		]
 	},
 ];

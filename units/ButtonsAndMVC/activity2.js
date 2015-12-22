@@ -40,7 +40,21 @@ var activity = [
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> What is true of the format of colors in colors.xml? (Choose all that apply.)",
+	"<b>2.</b> For English, what two items do we need to put in a plurals string? (Choose all that apply.)",
+	{
+		questionType : "multiple choice group",
+		questionsList : [
+				{
+					questionHTML : "",
+					choices : [ "zero", "one", "two", "few", "many", "other"],
+					correctIndex : [1,5]
+				}
+				],
+		allCorrectOutput : "Well done!",
+		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
+	},
+	"<br><br>",
+	"<b>3.</b> What is true of the format of colors in colors.xml? (Choose all that apply.)",
 	{
 		questionType : "multiple choice group",
 		questionsList : [
@@ -54,13 +68,27 @@ var activity = [
 		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
 	},
 	"<br><br>",
-	"<b>3.</b> If you want a view to stretch across the screen, what value should you use for android:layout_width?<br>",
+	"<b>4.</b> If you want a view to stretch across the screen, what value should you use for android:layout_width?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
 				["matchParent", true, "Correct. " ],
 				["fillParent", false, "Try again. That is what it used to be called. (And it will work fine if you use it, so you still get full credit.)" ],
-				["wrap content", false, "Try again. That will only be as large as the text within it." ],
+				["wrapContent", false, "Try again. That will only be as large as the text within it." ],
 		]
+	},
+	"<br><br>",
+	"<b>5.</b> When it is important to give an ID to a widget in the layout? (Choose all that apply.)",
+	{
+		questionType : "multiple choice group",
+		questionsList : [
+				{
+					questionHTML : "",
+					choices : [ "To refer to it in code", "Every widget needs an ID", "To specify where another widget is located relative to this widget"],
+					correctIndex : [0,2]
+				}
+				],
+		allCorrectOutput : "Well done!",
+		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
 	},
 ];
