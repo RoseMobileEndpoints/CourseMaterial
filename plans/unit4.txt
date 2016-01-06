@@ -49,7 +49,7 @@ END
 
 
 
-LESSON TITLE: Activity
+LESSON TITLE: Activity Concepts 
 LESSON VIDEO: Activity/Activity_player.html
 YOUTUBE ID: NbhhEIutuMQ
 CONTENT ABOVE
@@ -262,7 +262,7 @@ They live within an activity
 They can be dynamically added or removed at runtime
 They can communicate with other parts of the activity 
 They are great for reconfiguring layouts on different-size devices 
-They cannot contain LinearLayouts, but need to contain FrameLayouts $#$ They are usually added to an Activity's FrameLayout, since they are simple containers, but the Fragment itself can use any layout.
+They cannot contain LinearLayouts, but need to contain FrameLayouts $#$ They are usually added to an Activity's FrameLayout, since they are simple containers, but the Fragment itself can use any layout. $#$ yes 
 Transitions between them are quicker than transitions between activities 
 
 Q: How does the layout xml of a fragment differ from that of an activity?
