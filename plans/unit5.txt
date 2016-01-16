@@ -237,7 +237,7 @@ YOUTUBE ID: tbs3v9OOtf0
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1IYWjIMTnMEqxheQxSci1TXYswxDMQWKRCGq-IHt4y_8" target="_blank">here</a>.</li>
-<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "Adapters" self-evaluation survey before calling it a day.</li>
+<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "Firebase" self-evaluation survey before calling it a day.</li>
 </ul>
 CONTENT BELOW
 END
