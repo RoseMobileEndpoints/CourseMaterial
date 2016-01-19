@@ -1,0 +1,110 @@
+UNIT TITLE: Firebase Multiple Tables
+// Outputs directly.
+LINK TO OUTPUT: ../units/FirebaseMultiTables
+LINK TO VIDEOS: ../../videos/FirebaseMultiTables  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1uYPRZCkHyTL6QresvV-K25mJlcpIbmOq4frLT8OwtUs 
+
+xx videos
+FirebaseMultipleTablesOverview
+GradeRecorder app
+TableDesign
+
+
+
+
+LabGradeRecorder (possibly)
+
+
+
+// Lessons here
+
+LESSON TITLE: Firebase MulripleTables Overview
+LESSON VIDEO: FirebaseMultipleTablesOverview/FirebaseMultipleTablesOverview.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll get an introduction to the GradfeRecorder app that we'll create in this unit. It has ... </li>
+</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: GradeRecorder
+LESSON VIDEO: GradeRecorder/GradeRecorder_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll download the starting code and get an introduction to the parts that we will need to modify.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What are some features from PasswordKeeper that we have already used in this class?
+TYPE: MS
+Fragments with callbacks to communicate with other parts of the app. $#$ yes
+Expandable, animated RecyclerView entries $#$
+Firebase ChildEventListeners $#$ yes 
+IME keyboard options $#$
+Maps and location services $#$
+RecyclerView with swipe-to-delete $#$ yes 
+
+Q: What are some features from PasswordKeeper that we haven't covered but you can learn from this app?
+TYPE: MS
+Fragments with callbacks to communicate with other parts of the app. 
+Expandable, animated RecyclerView entries $#$ yes
+Firebase ChildEventListeners $#$ 
+IME keyboard options $#$ yes
+Maps and location services $#$
+RecyclerView with swipe-to-delete $#$  
+END
+
+
+
+LESSON TITLE: 
+LESSON VIDEO: /_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>In this lesson, </li>
+<li></li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MC
+ $#$ $#$ yes
+ $#$ .
+ $#$ .
+
+Q: 
+TYPE: MS
+ $#$ yes 
+ $#$ yes
+ $#$  
+ $#$ yes
+END
+
+
+
+
+
+LESSON TITLE: Lab: GradeRecorder
+LESSON VIDEO: LabGradeRecorder/LabGradeRecorder_player.html
+YOUTUBE ID: ?
+CONTENT ABOVE
+<ul>
+<li>The lab specification is <a href="(UPDATE)https://docs.google.com/document/d/1b78t2EEEahDxuSJ8W1njVAt-nBPxu5u73GYnouI9x14" target="_blank">here</a>.</li>
+<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "FirebaseMultiTables" self-evaluation survey before calling it a day.</li>
+</ul>
+CONTENT BELOW
+END
+
