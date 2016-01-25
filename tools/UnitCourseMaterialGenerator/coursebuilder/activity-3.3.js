@@ -30,12 +30,12 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> Did you successfully authenticate using google?<br>",
+	"<b>1.</b> Did you successfully run GradeRecorder?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
 				["Yes", true, "Correct. Good. Carry on!" ],
-				["No", false, "Try again. Get help if needed. Some students have had trouble with this, but it seems to be when running on a particular device or with a particular user account. If you followed the code, it's probably OK." ],
+				["No", false, "Try again. Please go back and do it, since it's the first step of this week's lab." ],
 		]
 	},
 ];

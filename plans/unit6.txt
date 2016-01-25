@@ -193,7 +193,7 @@ ACTIVITY TITLE: Questions
 Q: Did you successfully authenticate using google?
 TYPE: MC
 Yes $#$ Good. Carry on! $#$ yes
-No $#$ Get help if needed.
+No $#$ Get help if needed. Some students have had trouble with this, but it seems to be when running on a particular device or with a particular user account. If you followed the code, it's probably OK.
 END
 
 

@@ -30,12 +30,22 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> Did you successfully authenticate using google?<br>",
+	"<b>1.</b> A course can have several owners. How do we do this in Firebase?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["Yes", true, "Correct. Good. Carry on!" ],
-				["No", false, "Try again. Get help if needed. Some students have had trouble with this, but it seems to be when running on a particular device or with a particular user account. If you followed the code, it's probably OK." ],
+				["Store the owners in a List", false, "Try again. " ],
+				["Store the owners in a Map", true, "Correct. Yes, each owner's key is their user ID and their value is simply 'true'." ],
+				["Add paths for owner1, owner2, etc", false, "Try again. Actually this is pretty close. But those paths are because the owners are stored in a Map." ],
+		]
+	},
+	"<br><br>",
+	"<b>2.</b> A course has a set of owners. I want to get info about each owner to display. So I use cascaded listeners. What does this mean?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["When one listener callback method is called, it causes other listeners to be added.", true, "Correct. " ],
+				["Huh?", false, "Try again. See When one listener callback method is called, it causes other listeners to be added. See 13:00 - 14:30 in the video." ],
 		]
 	},
 ];

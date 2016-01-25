@@ -1,109 +1,145 @@
-UNIT TITLE: Firebase Multiple Tables
+UNIT TITLE: Firebase ComplexData
 // Outputs directly.
-LINK TO OUTPUT: ../units/FirebaseMultiTables
-LINK TO VIDEOS: ../../videos/FirebaseMultiTables  
+LINK TO OUTPUT: ../units/FirebaseComplexData
+LINK TO VIDEOS: ../../videos/FirebaseComplexData  
 LINK TO SLIDES: https://docs.google.com/presentation/d/1uYPRZCkHyTL6QresvV-K25mJlcpIbmOq4frLT8OwtUs 
 
-xx videos
-FirebaseMultipleTablesOverview
-GradeRecorder app
-TableDesign
+6 videos
+FirebaseComplexDataOverview
+FirebaseDataDesign
+GradeRecorderSetup
+GradeRecorderFirebaseCode
+GradeRecorderFirebaseCodePart2
+LabGradeRecorder
 
 
-
-
-LabGradeRecorder (possibly)
-
-
-
-// Lessons here
-
-LESSON TITLE: Firebase MulripleTables Overview
-LESSON VIDEO: FirebaseMultipleTablesOverview/FirebaseMultipleTablesOverview.html
-YOUTUBE ID: ?
+LESSON TITLE: Firebase Complex Data Overview
+LESSON VIDEO: FirebaseComplexDataOverview/FirebaseComplexDataOverview.html
+YOUTUBE ID: pu0pJxrtm70
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll get an introduction to the GradfeRecorder app that we'll create in this unit. It has ... </li>
+<li>In this lesson, you'll get an introduction to the GradeRecorder app that we'll invistigate and extend in this unit.</li>
 </ul>
 CONTENT BELOW
 END
 
 
-LESSON TITLE: GradeRecorder
-LESSON VIDEO: GradeRecorder/GradeRecorder_player.html
-YOUTUBE ID: ?
+
+LESSON TITLE: Firebase Data Design
+LESSON VIDEO: FirebaseDataDesign/FirebaseDataDesign_player.html
+YOUTUBE ID: rtuou_a-DHI
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll download the starting code and get an introduction to the parts that we will need to modify.</li>
-</ul>
-CONTENT BELOW
-END
-
-ACTIVITY TITLE: Questions
-Q: What are some features from PasswordKeeper that we have already used in this class?
-TYPE: MS
-Fragments with callbacks to communicate with other parts of the app. $#$ yes
-Expandable, animated RecyclerView entries $#$
-Firebase ChildEventListeners $#$ yes 
-IME keyboard options $#$
-Maps and location services $#$
-RecyclerView with swipe-to-delete $#$ yes 
-
-Q: What are some features from PasswordKeeper that we haven't covered but you can learn from this app?
-TYPE: MS
-Fragments with callbacks to communicate with other parts of the app. 
-Expandable, animated RecyclerView entries $#$ yes
-Firebase ChildEventListeners $#$ 
-IME keyboard options $#$ yes
-Maps and location services $#$
-RecyclerView with swipe-to-delete $#$  
-END
-
-
-
-LESSON TITLE: 
-LESSON VIDEO: /_player.html
-YOUTUBE ID: ?
-CONTENT ABOVE
-<ul>
-<li>In this lesson, </li>
-<li></li>
+<li>In this lesson, we'll design the data models for the GradeRecorder app.</li>
 </ul>
 CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: 
+Q: Which of these is NOT a model object within the GradeRecorder Firebase?
 TYPE: MC
- $#$ $#$ yes
- $#$ .
- $#$ .
+Owner $#$
+Course $#$
+Assignment $#$ 
+GradeEntry $#$ 
+Assistant $#$ Teaching assistants are just owners, just like the instructors. $#$ yes
 
-Q: 
+Q: A single course can have multiple assignments. How is this represented in the Firebase?
 TYPE: MC
- $#$ $#$ yes
- $#$ .
- $#$ .
+There is a table that maps course keys to assignment keys; we then do a join to get all the assignments for a course $#$ Sorry, Firebase uses a no-SQL database, so there are no joins.
+Each assignment stores the key of its course $#$ That allows us to write a Query for only the assignments that have that key. $#$ yes
+Each course has a set of keys of its assignments $#$ Good idea, and that's what we did to relate courses and owners. But what we did here allows for simpler Firebase code.
 
-Q: 
-TYPE: MS
- $#$ yes 
- $#$ yes
- $#$  
- $#$ yes
+Q: If a student in the GradeRecorder app takes multiple courses, are they represented uniquely in Firebase? 
+TYPE: MC
+Yes $#$ Unfortunately not. We make the simplifying assumption that since this is an instructor-centric app, then the students in one course are considered distinct from those in another course. So a student is only associated with a single course.
+No $#$ We make the simplifying assumption that since this is an instructor-centric app, then the students in one course are considered distinct from those in another course. So a student is only associated with a single course. $#$ yes
 END
 
 
+
+LESSON TITLE: GradeRecorder Setup
+LESSON VIDEO: GradeRecorderSetup/GradeRecorderSetup_player.html
+YOUTUBE ID: MYGAwN06frw
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll download the starting code and get a quick introduction to the parts that we will need to modify.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+ACTIVITY TITLE: Questions
+Q: Did you successfully run GradeRecorder?
+TYPE: MC
+Yes $#$ Good. Carry on! $#$ yes
+No $#$ Please go back and do it, since it's the first step of this week's lab. 
+END
+
+
+
+LESSON TITLE: GradeRecorder Firebase Code
+LESSON VIDEO: GradeRecorderFirebaseCode/GradeRecorderFirebaseCode_player.html
+YOUTUBE ID: TNDvAQcPQic
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll investigate the Student and Assignment fragments and adapters and learn about Queries and SingleValueEvents.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+
+
+
+ACTIVITY TITLE: Questions
+Q: How do we tell Firebase to only listen for additions/deletions/or edits to students who are associated with a certain course?
+TYPE: MS
+Use a Query $#$ yes
+Save the course key in the Student $#$ yes
+Use a ChildEventListener on the Query $#$ yes
+
+Q: To get the name of a course for which we have the key, we called addListenerForSingleValueEvent. What is the signficance of the word Single? If you aren't sure, read <a href='https://www.firebase.com/docs/android/api/#query_methods' target='_blank'>this</a>
+TYPE: MC
+It fires only once. $#$ That is the only difference between that listener and a regular ValueEventListener. $#$ yes
+It only gets a single value instead of all its children like a ChildEventListener $#$ Good guess, but no. Any old ValueEventListener gets a 'single value'. Although, that single value is a path, so could contain lots of data!
+There is no signficance $#$ Silly answer. 
+END
+
+
+
+LESSON TITLE: GradeRecorder Firebase Code Part2
+LESSON VIDEO: GradeRecorderFirebaseCodePart2/GradeRecorderFirebaseCodePart2_player.html
+YOUTUBE ID: UMojDIuwkcI
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll investigate the Course and Owner fragments and adapters to see an example of doubly-linked data and cascaded listeners.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: A course can have several owners. How do we do this in Firebase? 
+TYPE: MC
+Store the owners in a List $#$ 
+Store the owners in a Map $#$ Yes, each owner's key is their user ID and their value is simply 'true'. $#$ yes
+Add paths for owner1, owner2, etc $#$ Actually this is pretty close. But those paths are because the owners are stored in a Map.
+
+Q: A course has a set of owners. I want to get info about each owner to display. So I use cascaded listeners. What does this mean?
+TYPE: MC
+When one listener callback method is called, it causes other listeners to be added. $#$ $#$ yes
+Huh? $#$ See When one listener callback method is called, it causes other listeners to be added. See 13:00 - 14:30 in the video.
+END
 
 
 
 LESSON TITLE: Lab: GradeRecorder
 LESSON VIDEO: LabGradeRecorder/LabGradeRecorder_player.html
-YOUTUBE ID: ?
+YOUTUBE ID: qhGQ5GmElDQ
 CONTENT ABOVE
 <ul>
-<li>The lab specification is <a href="(UPDATE)https://docs.google.com/document/d/1b78t2EEEahDxuSJ8W1njVAt-nBPxu5u73GYnouI9x14" target="_blank">here</a>.</li>
-<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "FirebaseMultiTables" self-evaluation survey before calling it a day.</li>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1cTjoycGR7MT4rmw9rebFSDqVDMMwkBFuQJVMJDiYWmc" target="_blank">here</a>.</li>
+<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "FirebaseComplexData" self-evaluation survey before calling it a day.</li>
 </ul>
 CONTENT BELOW
 END

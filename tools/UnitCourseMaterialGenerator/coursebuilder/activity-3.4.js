@@ -30,12 +30,27 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> Did you successfully authenticate using google?<br>",
+	"<b>1.</b> How do we tell Firebase to only listen for additions/deletions/or edits to students who are associated with a certain course? (Choose all that apply.)",
+	{
+		questionType : "multiple choice group",
+		questionsList : [
+				{
+					questionHTML : "",
+					choices : [ "Use a Query", "Save the course key in the Student", "Use a ChildEventListener on the Query"],
+					correctIndex : [0,1,2]
+				}
+				],
+		allCorrectOutput : "Well done!",
+		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
+	},
+	"<br><br>",
+	"<b>2.</b> To get the name of a course for which we have the key, we called addListenerForSingleValueEvent. What is the signficance of the word Single? If you aren't sure, read <a href='https://www.firebase.com/docs/android/api/#query_methods' target='_blank'>this</a><br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["Yes", true, "Correct. Good. Carry on!" ],
-				["No", false, "Try again. Get help if needed. Some students have had trouble with this, but it seems to be when running on a particular device or with a particular user account. If you followed the code, it's probably OK." ],
+				["It fires only once.", true, "Correct. That is the only difference between that listener and a regular ValueEventListener." ],
+				["It only gets a single value instead of all its children like a ChildEventListener", false, "Try again. Good guess, but no. Any old ValueEventListener gets a 'single value'. Although, that single value is a path, so could contain lots of data!" ],
+				["There is no signficance", false, "Try again. Silly answer." ],
 		]
 	},
 ];
