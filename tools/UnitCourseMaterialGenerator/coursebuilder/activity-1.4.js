@@ -30,12 +30,12 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> Did you successfully install the web app?<br>",
+	"<b>1.</b> Were you able to launch a Map with a toolbar at the top?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["Yes", true, "Correct. Excellent - I think you'll enjoy using it." ],
-				["No", true, "Correct. That's OK, you can use the Forge for testing." ],
+				["Yes", true, "Correct. Good. Carry on!" ],
+				["No", false, "Try again. Please go back and do that now." ],
 		]
 	},
 ];

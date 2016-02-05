@@ -30,12 +30,25 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> Did you notice how similar the edit and delete code was?<br>",
+	"<b>1.</b> What format are the raw state boundaries in?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["Yes", true, "Correct. Each calls firebaseRef.child(movieQuote.getKey()) and when listening for changes, each loops through the local list to find the key of the one that has been changed" ],
-				["No", false, "Try again. Compare them now, both the changes pushed to Firebase and the listeners." ],
+				["Java objects", false, "Try again. I did parse the file and create a list of objects for you. But what format was parsed?" ],
+				["json", false, "Try again. One site had that, but without colors." ],
+				["xml", true, "Correct. " ],
+		]
+	},
+	"<br><br>",
+	"<b>2.</b> What property of the polygon did we change when clicking on it?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["Its color", false, "Try again. Close. What about the color?" ],
+				["Its size", false, "Try again. That would require changing all the points." ],
+				["Its strokeWidth", false, "Try again. We set the stroke width, but we didn't change it." ],
+				["Its transparency", true, "Correct. " ],
+				["Its z-index", false, "Try again. If polygons overlap, the one with the highest z-index is displayed on top." ],
 		]
 	},
 ];

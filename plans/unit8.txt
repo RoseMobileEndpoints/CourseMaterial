@@ -1,0 +1,212 @@
+UNIT TITLE: Maps
+// Outputs directly.
+LINK TO OUTPUT: ../units/Maps
+LINK TO VIDEOS: ../../videos/Maps  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1cF7QWrx-dXE6D8IQXeC_GSg19PeDzFRcdaiNArZiZOE 
+
+9 videos
+MapsOverview
+Starting code
+MapActivity
+IntegratingMaps Integrating the maps code
+CustomizeMaps Customize the starting code
+AddMarkers
+CurrentLocation Move to your current location on the map
+Geocoding Go to a specific place or address
+MapPolygons Toggling States (Polygons)
+Summary
+
+
+
+LESSON TITLE: Maps Overview
+LESSON VIDEO: MapsOverview/MapsOverview_player.html
+YOUTUBE ID: Z3UdGowL1dE
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll see the VacationTracker app we'll make and the types of features we'll learn about in this unit: maps, markers, polygons, location, and geocoding.</li>
+</ul>
+CONTENT BELOW
+END
+
+LESSON TITLE: VacationTracker Starting Code
+LESSON VIDEO: StartingCode/StartingCode_player.html
+YOUTUBE ID: psOrpVpYWt0
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll download the starting code.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+
+LESSON TITLE: Map Activity and Map API Key
+LESSON VIDEO: MapActivity/MapActivity_player.html
+YOUTUBE ID: 6Ijxmgs_gRY
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to create a MapActivity and to get an API Key to use maps from a  Google project.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+
+
+ACTIVITY TITLE: Questions 
+Q: How do you obtain a Map API Key?
+TYPE: MC
+Follow the Google developers console URL contained in google_maps_key.xml $#$ Definitely a nice convenience feature. $#$ yes
+Extract your SHA1 fingerprint manually and enter it and your project's package name in the Google developers console $#$ That works, but it's not as convenient.
+Email map_api_key_request@google.com $#$ 
+END
+
+
+
+LESSON TITLE: Integrating the maps code
+LESSON VIDEO: IntegratingMaps/IntegratingMaps_player.html
+YOUTUBE ID: 87uM2PHU8yc
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll merge the maps starting code with the other starting code. The main purpose is to get a toolbar with the map. </li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Were you able to launch a Map with a toolbar at the top?
+TYPE: MC
+Yes $#$ Good. Carry on! $#$ yes
+No $#$ Please go back and do that now. 
+END
+
+
+
+LESSON TITLE: Customize the Maps Starting Code
+LESSON VIDEO: CustomizeMaps/CustomizeMaps_player.html
+YOUTUBE ID: Jr75EjxSahU
+CONTENT ABOVE
+<ul>
+<li>In this lesson, we'll learn about LatLng pairs and moving the camera to different locations and zoom levels.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What shows up in the map view is determined by the position of the 'camera' viewing the map. Cameras can also have zoom, tilt, and bearing. What class contains methods to determine where to position the camera? 
+TYPE: MC
+CameraSettings $#$ 
+CameraPanTiltZoomZettings $#$ 
+CameraUpdateFactory $#$ $#$ yes
+
+Q: We used zoom level 5. At this level, what is typically visible? See <a href='https://developers.google.com/maps/documentation/static-maps/intro#Zoomlevels' target="_blank">here</a>.
+TYPE: MC
+The world $#$ That is zoom level 1
+A continent or landmass $#$ $#$ yes
+A city $#$ City zoom is 10
+A street $#$ Street zoom is 15
+A building $#$ Building zoom is 20
+END
+
+
+
+LESSON TITLE: Add Markers
+LESSON VIDEO: AddMarkers/AddMarkers_player.html
+YOUTUBE ID: ACuKPNAnBik
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to add markers and to detect when they have been clicked.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Name all the MarkerOptions() properties that can be specified. We added a few and you can look up others in the API as needed. Look for info on draggable, for example.
+TYPE: MS
+anchor $#$ yes
+color 
+draggagle  $#$ yes
+position  $#$ yes
+rotation  $#$ yes
+tilt
+title $#$ yes
+
+Q: What value should be returned from onMarkerClick() if we want the title and snippet to appear when clicked?
+TYPE: MC
+true $#$ True means that our onMarkerClick() consumed the click, so it won't be passed along to the system to detect and respond to.
+false $#$ $#$ yes
+END
+
+
+LESSON TITLE: Current Location on the Map
+LESSON VIDEO: CurrentLocation/CurrentLocation_player.html
+YOUTUBE ID: wCBHYxMi1io
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to show the user's current location on the map and to provide a button that lets the user zoom to her current location.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+
+LESSON TITLE: Geocoding: Find a Specific Place or Address
+LESSON VIDEO: Geocoding/Geocoding_player.html
+YOUTUBE ID: KYRnTYULFqI
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to use the Geocoder, a service that given an address of name of a place, will return its official address and location on the map. </li>
+<li>We'll use that to zoom to that location.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What service finds an address, given a latitude/longitude pair? 
+TYPE: MC
+Geocoding $#$ What was described is the opposite of geocoding.
+Reverse geocoding $#$ $#$ yes
+END
+
+
+
+LESSON TITLE: MapPolygons to show US States
+LESSON VIDEO: MapPolygons/MapPolygons_player.html
+YOUTUBE ID: uo_e6J3f0eI
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to display polygons and detect clicks on them.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What format are the raw state boundaries in? 
+TYPE: MC
+Java objects $#$ I did parse the file and create a list of objects for you. But what format was parsed?
+json $#$ One site had that, but without colors.
+xml $#$ $#$ yes
+
+
+
+Q: What property of the polygon did we change when clicking on it?
+TYPE: MC
+Its color $#$ Close. What about the color?
+Its size $#$ That would require changing all the points.
+Its strokeWidth $#$ We set the stroke width, but we didn't change it.
+Its transparency $#$ $#$ yes
+Its z-index $#$ If polygons overlap, the one with the highest z-index is displayed on top.
+END
+
+
+
+LESSON TITLE: Summary
+LESSON VIDEO: Summary/Summary_player.html
+YOUTUBE ID: UMOOvrif2Vo
+CONTENT ABOVE
+<ul>
+<li>There is no lab in this unit. If you want to use maps in your project, you are ready!</li>
+<li>If you are taking this course in the academic year, get your codealong checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "Maps" self-evaluation survey before calling it a day.</li>
+</ul>
+CONTENT BELOW
+END
