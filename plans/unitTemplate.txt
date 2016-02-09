@@ -19,7 +19,7 @@ YOUTUBE ID: ?
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll get an overview of the various types of dialogs you can use in your apps.</li>
-<li>Link to <a href="https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o" target="_blank">instructions doc</a>. </li>
+<li>Link to <a href='https://docs.google.com/document/d/12o1Ak3vRXfXS1uWRcvvsMlPkFNvJR9DK9dAmGWf2I5o' target='_blank'>instructions doc</a>. </li>
 </ul>
 CONTENT BELOW
 END

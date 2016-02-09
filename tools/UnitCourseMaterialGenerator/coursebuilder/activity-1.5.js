@@ -40,7 +40,7 @@ var activity = [
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> We used zoom level 5. At this level, what is typically visible? See <a href='https://developers.google.com/maps/documentation/static-maps/intro#Zoomlevels' target="_blank">here</a>.<br>",
+	"<b>2.</b> We used zoom level 5. At this level, what is typically visible? See <a href='https://developers.google.com/maps/documentation/static-maps/intro#Zoomlevels' target='_blank'>here</a>.<br>",
 	{
 		questionType : "multiple choice",
 		choices : [

@@ -99,7 +99,7 @@ CameraSettings $#$
 CameraPanTiltZoomZettings $#$ 
 CameraUpdateFactory $#$ $#$ yes
 
-Q: We used zoom level 5. At this level, what is typically visible? See <a href='https://developers.google.com/maps/documentation/static-maps/intro#Zoomlevels' target="_blank">here</a>.
+Q: We used zoom level 5. At this level, what is typically visible? See <a href='https://developers.google.com/maps/documentation/static-maps/intro#Zoomlevels' target='_blank'>here</a>.
 TYPE: MC
 The world $#$ That is zoom level 1
 A continent or landmass $#$ $#$ yes
@@ -206,7 +206,7 @@ YOUTUBE ID: UMOOvrif2Vo
 CONTENT ABOVE
 <ul>
 <li>There is no lab in this unit. If you want to use maps in your project, you are ready!</li>
-<li>If you are taking this course in the academic year, get your codealong checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "Maps" self-evaluation survey before calling it a day.</li>
+<li>If you are taking this course in the academic year, get your codealong checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle 'Maps' self-evaluation survey before calling it a day.</li>
 </ul>
 CONTENT BELOW
 END
