@@ -1,0 +1,18 @@
+UNIT TITLE: AsyncTasks
+// Outputs directly.
+LINK TO OUTPUT: ../units/AsyncTasks
+LINK TO VIDEOS: ../../videos/AsyncTask  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1pB07f4KxRTbLAIRZL-uKIRf_9Q9YJL_ew3hKVnUe3gk 
+
+1 video
+
+LESSON TITLE: AsyncTasks
+LESSON VIDEO: AsyncTask/AsyncTask_player.html
+YOUTUBE ID: 5A0-iECoI0g
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn why AsyncTasks are important and see two examples of how to use them; we'll code up one that loads a json string from a URL.</li>
+</ul>
+CONTENT BELOW
+END
+
