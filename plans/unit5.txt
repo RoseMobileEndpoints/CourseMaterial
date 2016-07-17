@@ -1,24 +1,28 @@
-UNIT TITLE: Firebase
-LINK TO OUTPUT: ../units/Firebase
-LINK TO VIDEOS: ../../videos/Firebase  
-LINK TO SLIDES: https://docs.google.com/presentation/d/1EFgp6bE-Aw4oNEQptJ93uFyjo3ppGnN5-trzoHqpxG8
+UNIT TITLE: Firebase 3.0
+LINK TO OUTPUT: ../units/Firebase3
+LINK TO VIDEOS: ../../videos/Firebase3  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1D93sukQYInKtuq786jP5LAfUBHMfAjF45Vl7iqQOuOY
 
 FirebaseOverview
 WhatIsFirebase
+SetupAndroidFavoriteThings 
+SetupFirebaseFavoriteThings 
+PushAndListenForChanges 
+Understanding Firebase Database concepts
 SetupBackend
 WebClient (optional)
 SetupAndroid
 PushingToFirebase
 EventListeners
 Delete
-Update
-LabWeatherpics
+Update 
+LabPhotobucket 
 
 // Lessons here
 
 LESSON TITLE: Firebase Overview
 LESSON VIDEO: FirebaseOverview/FirebaseOverview_player.html
-YOUTUBE ID: jSpd-xUQ0do
+YOUTUBE ID: n79vNbl0Tt0
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll see a demo of MovieQuotes, the app that we'll write together in this unit.</li>
@@ -29,7 +33,7 @@ END
 
 LESSON TITLE: What Is Firebase?
 LESSON VIDEO: WhatIsFirebase/WhatIsFirebase_player.html
-YOUTUBE ID: hAhEnczsOdg
+YOUTUBE ID: ilZn0DxXc9w
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn why Firebase is nice to use as a backend for mobile clients.</li>
@@ -55,12 +59,88 @@ END
 
 
 
-LESSON TITLE: SetupBackend 
-LESSON VIDEO: SetupBackend/SetupBackend_player.html
-YOUTUBE ID: 3Sq1f5i__xI
+LESSON TITLE: Setup Android FavoriteThings
+LESSON VIDEO: SetupAndroidFavoriteThings/SetupAndroidFavoriteThings_player.html
+YOUTUBE ID: CqA7lhNwe3c
 CONTENT ABOVE
 <ul>
-<li>In this lesson, you'll create a Firebase account and do some setup for the backend of the MovieQuotes app we'll write. This will include importing some starting quotes and setting up rules to access the data. You'll also use the Firebase Forge to manipulate the data.</li>
+<li>In this lesson, you'll download a simple app that we'll use to demonstrate simple communication with the Firebase realtime database.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+
+LESSON TITLE: Setup Firebase FavoriteThings
+LESSON VIDEO: SetupFirebaseFavoriteThings/SetupFirebaseFavoriteThings_player.html
+YOUTUBE ID: qiaLbL2RYvE
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll create a Firebase account and do some setup for the backend of the FavoriteThings app. This will include downloading a setup file for your app and configuring Gradle to use Firebase.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+
+LESSON TITLE: Push and Listen for Changes
+LESSON VIDEO: PushAndListenForChanges/PushAndListenForChanges_player.html
+YOUTUBE ID: rWjWHlT5s8w
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll push data from your app to Firebase and listen for changes made to the Firebase to update your app.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Did you successfully cause your FavoriteThings app to communicate with the Firebase backend?
+TYPE: MC
+Yes $#$ Excellent - good start. $#$ yes
+No $#$ You'll need to do this to get credit for this part of the codealong app.
+END
+
+
+
+LESSON TITLE: Understanding Firebase Database Concepts
+LESSON VIDEO: UnderstandingFirebaseDatabaseConcepts/UnderstandingFirebaseDatabaseConcepts_player.html
+YOUTUBE ID: xuebjw_gP4M
+CONTENT ABOVE
+<ul>
+<li>In this lesson, we'll take a brief intermission from making apps to talk about data that goes into the Firebase Database.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Can a Key be at the bottom (a leaf) of the Firebase database JSON tree? 
+TYPE: MC
+Sure. Just delete the value below it and the Key will exist at the bottom of the tree 
+No.  If you delete the value for a key, the key is cleaned up (deleted) by Firebase automatically $#$ $#$ yes
+
+Q: Can a Key point to multiple primitive values in the tree?  i.e. can it point to two or more Strings?
+TYPE: MC
+No. If a Key points to a primitive value then it does nothing else. $#$ $#$ yes
+Sure. It's a tree that can have multiple branches. $#$ 
+
+Q: Can a Key point to multiple Keys in the tree?  i.e. can it point to two or more Keys?
+TYPE: MC
+No. If a Key points to a Key then it does nothing else.
+Sure. It's a tree that can have multiple branches (so long as those branches are other keys) $#$ $#$ yes
+
+Q: One pattern that you see in Firebase databases is a very flat structure to the data that developers design.  Why?
+TYPE: MC
+No reason. Just the convention that a lot of developers use.
+Data snapshots give you the key and everything below it. So you try not to nest data to keep things efficient. It's easy to make a query to get more data only when that extra data is needed. $#$ $#$ yes
+END
+
+
+LESSON TITLE: SetupBackend 
+LESSON VIDEO: SetupBackend/SetupBackend_player.html
+YOUTUBE ID: Fem_Bb5Ie6s
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll create a Firebase account and do some setup for the backend of the MovieQuotes app we'll write. This will include importing some starting quotes and setting up rules to access the data. You'll also use the Firebase console to manipulate the data.</li>
 </ul>
 CONTENT BELOW
 END
@@ -76,7 +156,7 @@ END
 
 LESSON TITLE: WebClient
 LESSON VIDEO: WebClient/WebClient_player.html
-YOUTUBE ID: nj77Z7xl4-Q
+YOUTUBE ID: g-SMsPNyGZs
 CONTENT ABOVE
 <ul>
 <li>In this optional lesson, you'll learn how to install a pre-existing web client so you'll be able to see real time changes between multiple clients.</li>
@@ -88,14 +168,14 @@ ACTIVITY TITLE: Questions
 Q: Did you successfully install the web app?
 TYPE: MC
 Yes $#$ Excellent - I think you'll enjoy using it. $#$ yes
-No $#$ That's OK, you can use the Forge for testing. $#$ yes
+No $#$ That's OK, you can use the console for testing. $#$ yes
 END
 
 
 
 LESSON TITLE: Setup Android 
 LESSON VIDEO: SetupAndroid/SetupAndroid_player.html
-YOUTUBE ID: -SIMQnTVx98
+YOUTUBE ID: 5cYIZa8fpRc
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will download the code for the MovieQuotes app and set up the project to use Firebase.</li>
@@ -106,10 +186,9 @@ END
 ACTIVITY TITLE: Questions
 Q: What one thing do you *not* need to do to start using Firebase in your Android client?
 TYPE: MC
-Add compile 'com.firebase:firebase-client-android:2.3.1+' to your gradle file $#$ 
-Add packaging options to the gradle file $#$ 
+Add a dependency to your gradle file $#$ 
+Add google play services to the gradle file $#$ 
 Add internet permission to the manifest $#$
-Call Firebase.setAndroidContext(context) $#$
 Add Firebase.setFirebaseURL(url) $#$ You essentially do this when you construct a Firebase, though. $#$ yes
 END
 
@@ -118,7 +197,7 @@ END
 
 LESSON TITLE: Pushing to Firebase
 LESSON VIDEO: PushingToFirebase/PushingToFirebase_player.html
-YOUTUBE ID: efEQBNuCCTw
+YOUTUBE ID: fyAGLbUWr58
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will learn about Firebase's JSON data model and how to push data to Firebase.</li>
@@ -133,12 +212,12 @@ An educational non-profit organization encouraging K-12 students to pursue STEM 
 JavaScript Object Notation $#$ $#$ yes
 JavaScript On Netbeans $#$ Although that happens to be what you get if Google completes the phrase 'JavaScript on n...'
  
-Q: Which annotation put before the key field will tell Jackson to ignore the key stored in our model?
+Q: Which annotation put before the key field will tell GSON to ignore the key stored in our model?
 TYPE: MC
-@JsonIgnore $#$ $#$ yes
-@JacksonIgnoreKey $#$ Good guess.
+@Exclude $#$ $#$ yes
+@GsonIgnoreKey $#$ Good guess.
 @IgnoreField $#$
-@JsonProperty('ignore') $#$ You can use @JsonProperty to map Android Java field names to firebase JSON field names if they differ. We didn't need to since we chose the same names for our fields.
+@SerializedName('ignore') $#$ You can use @SerializedName to map Android Java field names to firebase JSON field names if they differ. We didn't need to since we chose the same names for our fields.
  
 Q: What does push() do?
 TYPE: MS
@@ -149,7 +228,7 @@ Adds a new item to the Firebase stack $#$
 Q: What type parameter does setValue() take?
 TYPE: MC
 A HashMap $#$ It can, but that's not what we used, because another way is more convenient.
-A MovieQuote model object $#$ Good. Jackson then serializes the object into json. $#$ yes
+A MovieQuote model object $#$ Good. GSON then serializes the object into json. $#$ yes
 Object $#$ It can, but would need to be typecast to a map. See the first response. 
 END
 
@@ -157,7 +236,7 @@ END
 
 LESSON TITLE: Firebase EventListeners
 LESSON VIDEO: EventListeners/EventListeners_player.html
-YOUTUBE ID: CmwZ1XD27co
+YOUTUBE ID: 8Zz5Bd5VvQ8
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn about ChildEventListeners and data snapshots.</li>
@@ -191,11 +270,9 @@ True $#$ $#$ yes
 False $#$ In fact, this is why we are studying Firebase even before we study SQLite, which is used for local storage 
 END
 
-
-
 LESSON TITLE: Delete
 LESSON VIDEO: Delete/Delete_player.html
-YOUTUBE ID: p_GcgCS-XOE
+YOUTUBE ID: fWkZi3_XJRM
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to delete items from the Firebase and how to listen for deletions, whether made locally or from other clients. </li>
@@ -215,7 +292,7 @@ END
 
 LESSON TITLE: Update
 LESSON VIDEO: Update/Update_player.html
-YOUTUBE ID: ci7NBiBVk5I
+YOUTUBE ID: DL_rwDL7MYY
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to push updates to the Firebase. </li>
@@ -231,9 +308,9 @@ Yes $#$ Each calls firebaseRef.child(movieQuote.getKey()) and when listening for
 No $#$ Compare them now, both the changes pushed to Firebase and the listeners.
 END
 
-LESSON TITLE: Lab: Weatherpics
-LESSON VIDEO: LabWeatherpics/LabWeatherpics_player.html
-YOUTUBE ID: tbs3v9OOtf0
+LESSON TITLE: Lab: PhotoBucket
+LESSON VIDEO: LabPhotoBucket/LabPhotoBucket_player.html
+YOUTUBE ID: H9REX4zgkxo
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1IYWjIMTnMEqxheQxSci1TXYswxDMQWKRCGq-IHt4y_8" target="_blank">here</a>.</li>

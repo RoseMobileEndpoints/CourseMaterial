@@ -1,8 +1,8 @@
-UNIT TITLE: Firebase Authentication
+UNIT TITLE: Firebase 3.0 Authentication
 // Outputs directly.
-LINK TO OUTPUT: ../units/FirebaseAuth
-LINK TO VIDEOS: ../../videos/FirebaseAuth  
-LINK TO SLIDES: https://docs.google.com/presentation/d/1Ekmq5xWUdsBw1T4ZJp-98JjEyITayIq57rltRWJTLqc
+LINK TO OUTPUT: ../units/Firebase3Authentication
+LINK TO VIDEOS: ../../videos/Firebase3Authentication  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1yCGjSnnFtbYKWSNTCz1ZDTQ1f46WAaqm6ejcSakGPCs
 
 10 videos
 FirebaseAuthenticationOverview
@@ -14,7 +14,7 @@ GoogleAuthenticationSetup
 GoogleAuthenticationCode
 RoseFireAuthenticationSetup
 RoseFireAuthenticationCode
-LabOurWeatherpics
+LabOurPhotobucket
 
 notifyDataSetChanged will also animate items if you do 2 things 1) call setHasStableIds(true) on your Adapter and 2)override getItemid to return a unique long value from your Adapter for each row, once you do this, it ll trigger the animations – PirateApp Nov 18 '15 at 10:43
 
@@ -25,7 +25,7 @@ notifyDataSetChanged will also animate items if you do 2 things 1) call setHasSt
 
 LESSON TITLE: Firebase Authentication Overview
 LESSON VIDEO: FirebaseAuthenticationOverview/FirebaseAuthenticationOverview_player.html
-YOUTUBE ID: 3bdb8BWXJGk
+YOUTUBE ID: XSj0nUQ_iw8
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll get an introduction to the PasswordKeeper app that we'll create in this unit. It has options to authenticate using email&password, Google, and Rose-Hulman credentials.</li>
@@ -36,7 +36,7 @@ END
 
 LESSON TITLE: PasswordKeeper
 LESSON VIDEO: PasswordKeeper/PasswordKeeper_player.html
-YOUTUBE ID: FCgeTWOHkSo
+YOUTUBE ID: CSKn4lJobCk
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll download the starting code and get an introduction to the parts that we will need to modify.</li>
@@ -72,9 +72,9 @@ END
 
 
 
-LESSON TITLE: Firebase Rules
+LESSON TITLE: Security Rules
 LESSON VIDEO: Rules/Rules_player.html
-YOUTUBE ID: TPT9coKDpDw
+YOUTUBE ID: 7JTkVHaVT00
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you will learn about how to restrict and validate access to various paths in your Firebase.</li>
@@ -95,7 +95,7 @@ Q: What is the $ used for in a rule?
 TYPE: MC
 It designates an object $#$ 
 It denotes that the designated object is used to store currency $#$ 
-It is a wildcard $#$ $#$ yes
+It is a wildcard variable $#$ $#$ yes
 
 Q: What variable is used to store login data for a user such as their user ID?
 TYPE: MC
@@ -104,7 +104,7 @@ login $#$ Although it is used in conjunction with login.
 $auth $#$ $ is for user-defined variables, not built-in ones.
 $login $#$ $ is for user-defined variables, not built-in ones.
  
-Q: Which one of these is _not_ an advantage of Bolt? 
+Q: Which one of these is _not_ an advantage of Bolt (or its TBD successor)? 
 TYPE: MC
 Simpler format $#$ That's the main advantage.
 The ability to define types so it generate validation rules $#$ That's a huge advantage of bolt. Once you have model objects, you can determine the types easily.
@@ -115,7 +115,7 @@ END
 
 LESSON TITLE: Email & Password Authentication Setup
 LESSON VIDEO: EmailPasswordAuthenticationSetup/EmailPasswordAuthenticationSetup_player.html
-YOUTUBE ID: LGrhn2vek34
+YOUTUBE ID: C572KG77ids
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll learn how to set up users in Firebase to use email&password authentication.</li>
@@ -134,7 +134,7 @@ END
 
 LESSON TITLE: Email & Password Authentication Code
 LESSON VIDEO: EmailPasswordAuthenticationCode/EmailPasswordAuthenticationCode_player.html
-YOUTUBE ID: z6pTJ-qryKA
+YOUTUBE ID: 7GZVkEAx-DM
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll write code to check if a user is authenticated, to authenticate them, and to respond once Firebase passes back an authentication token. </li>
@@ -143,26 +143,25 @@ CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: How can you check if the user is already authenticated from a prior run of the app? 
+Q: If mAuth is initialized to FirebaseAuth.getInstance(), how can you check if the user is already authenticated from a prior run of the app? 
 TYPE: MC
-Check firebase.auth $#$ Close. $#$
-Check firebase.getAuth() $#$ $#$ yes
-Check firebase.unauth() $#$ That's used on logout.
-Check firebasePath.auth(), where firebasePath is a path to the data we are restricting access to $#$ It actually dosn't matter which path we used to authenticate.
+Check mAuth == null $#$ Close. $#$
+Check mAuth.getCurrentUser() == null $#$ $#$ yes
+Check mAuth.signin() == null $#$ That's used on logout.
+Check firebasePath.auth() == null, where firebasePath is a path to the data we are restricting access to $#$ It actually dosn't matter which path we used to authenticate.
 
-Q: What three arguments does the authWithPassword() method require?
-TYPE: MS
-a callback $#$ yes 
-email $#$ yes 
-password $#$ yes
-uid $#$ 
+Q: Why did we use an OnCompleteListener when calling signInWithEmailAndPassword()?
+TYPE: MC
+To go somewhere once the user is logged in $#$ If it is successful, the listener isn't needed - the AuthStateChanged listener takes care of it.  
+To detect a failed login attempt $#$ $#$ yes 
+The listener's callback contains a variable that has the logged-in user's info like displayName, uid, etc. $#$ The AuthStateChangedListener has the user info.   
 END
 
 
 
 LESSON TITLE: Google Authentication Setup
 LESSON VIDEO: GoogleAuthenticationSetup/GoogleAuthenticationSetup_player.html
-YOUTUBE ID: n_2vSMXW4vY
+YOUTUBE ID: akyHJBPK-ds
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll do all the setup required to authenticate vs Google using OAuth. </li>
@@ -171,7 +170,7 @@ CONTENT BELOW
 END
 
 ACTIVITY TITLE: Questions
-Q: Did you successfully generate a google client ID?
+Q: Did you find your computer's SHA1 fingerprint?
 TYPE: MC
 Yes $#$ Good. Now on to the fun part. $#$ yes
 No $#$ Get help if needed, but if you don't do this part, you won't be able to sign in using google.
@@ -181,7 +180,7 @@ END
 
 LESSON TITLE: Google Authentication Code
 LESSON VIDEO: GoogleAuthenticationCode/GoogleAuthenticationCode_player.html
-YOUTUBE ID: x9EU2EY1jU0
+YOUTUBE ID: bNIQdinmKgI
 CONTENT ABOVE
 <ul>
 <li>In this lesson, you'll write the code to authenticate a user using their google account. It's more complex than email&password, since we must handle google sign-in and get an OAuth token from Google.</li>
@@ -200,7 +199,7 @@ END
 
 LESSON TITLE: RosefireAuthenticationSetup
 LESSON VIDEO: RosefireAuthenticationSetup/RosefireAuthenticationSetup_player.html
-YOUTUBE ID: uA8V21qDKMY
+YOUTUBE ID: zrpZctt8ZXY
 CONTENT ABOVE
 <ul>
 <li>In this lesson, we'll get a registry token from the Rosefire server that we need in our app.</li>
@@ -219,10 +218,10 @@ END
 
 LESSON TITLE: Rosefire Authentication Code
 LESSON VIDEO: RosefireAuthenticationCode/RosefireAuthenticationCode_player.html
-YOUTUBE ID: wWxtBfWaRRY
+YOUTUBE ID: sE_8KycfVoc
 CONTENT ABOVE
 <ul>
-<li>In this lesson, we'll write 3 lines of code to authenticate using Rosefire. Really.</li>
+<li>In this lesson, we'll authenticate using Rosefire.</li>
 </ul>
 CONTENT BELOW
 END
@@ -236,9 +235,9 @@ END
 
 
 
-LESSON TITLE: Lab: Our Weatherpics
-LESSON VIDEO: LabOurWeatherpics/LabOurWeatherpics_player.html
-YOUTUBE ID: JavCfcDfCPs
+LESSON TITLE: Lab: Our PhotoBucket
+LESSON VIDEO: LabOurPhotoBucket/LabOurPhotoBucket_player.html
+YOUTUBE ID: EFdjEr2RydA
 CONTENT ABOVE
 <ul>
 <li>The lab specification is <a href="https://docs.google.com/document/d/1b78t2EEEahDxuSJ8W1njVAt-nBPxu5u73GYnouI9x14" target="_blank">here</a>.</li>
