@@ -1,0 +1,244 @@
+UNIT TITLE: Firebase
+LINK TO OUTPUT: ../units/Firebase
+LINK TO VIDEOS: ../../videos/Firebase  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1EFgp6bE-Aw4oNEQptJ93uFyjo3ppGnN5-trzoHqpxG8
+
+FirebaseOverview
+WhatIsFirebase
+SetupBackend
+WebClient (optional)
+SetupAndroid
+PushingToFirebase
+EventListeners
+Delete
+Update
+LabWeatherpics
+
+// Lessons here
+
+LESSON TITLE: Firebase Overview
+LESSON VIDEO: FirebaseOverview/FirebaseOverview_player.html
+YOUTUBE ID: jSpd-xUQ0do
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll see a demo of MovieQuotes, the app that we'll write together in this unit.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: What Is Firebase?
+LESSON VIDEO: WhatIsFirebase/WhatIsFirebase_player.html
+YOUTUBE ID: hAhEnczsOdg
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn why Firebase is nice to use as a backend for mobile clients.</li>
+</ul>
+CONTENT BELOW 
+END
+
+ACTIVITY TITLE: Questions
+Q: Which of these are characteristics of Firebase?
+TYPE: MS
+Cross-platform $#$ yes
+Has offline capabilities $#$ yes
+No-SQL $#$ yes
+Real-time $#$ yes 
+Supports authentication $#$ yes
+
+Q: Which one of these Rose-Hulman alumni didn't found Firebase?
+TYPE: MC
+Andrew Lee $#$ Founder.
+Michael Lehenbauer $#$ Founder.
+Mike McDonald $#$ Mike is excellent, but he graduated too recently to be a founder. :) $#$ yes
+END
+
+
+
+LESSON TITLE: SetupBackend 
+LESSON VIDEO: SetupBackend/SetupBackend_player.html
+YOUTUBE ID: 3Sq1f5i__xI
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll create a Firebase account and do some setup for the backend of the MovieQuotes app we'll write. This will include importing some starting quotes and setting up rules to access the data. You'll also use the Firebase Forge to manipulate the data.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Did you successfully create the MovieQuotes backend?
+TYPE: MC
+Yes $#$ Excellent - good start. $#$ yes
+No $#$ You'll need to do this to get credit for the codealong app.
+END
+
+
+
+LESSON TITLE: WebClient
+LESSON VIDEO: WebClient/WebClient_player.html
+YOUTUBE ID: nj77Z7xl4-Q
+CONTENT ABOVE
+<ul>
+<li>In this optional lesson, you'll learn how to install a pre-existing web client so you'll be able to see real time changes between multiple clients.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Did you successfully install the web app?
+TYPE: MC
+Yes $#$ Excellent - I think you'll enjoy using it. $#$ yes
+No $#$ That's OK, you can use the Forge for testing. $#$ yes
+END
+
+
+
+LESSON TITLE: Setup Android 
+LESSON VIDEO: SetupAndroid/SetupAndroid_player.html
+YOUTUBE ID: -SIMQnTVx98
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you will download the code for the MovieQuotes app and set up the project to use Firebase.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What one thing do you *not* need to do to start using Firebase in your Android client?
+TYPE: MC
+Add compile 'com.firebase:firebase-client-android:2.3.1+' to your gradle file $#$ 
+Add packaging options to the gradle file $#$ 
+Add internet permission to the manifest $#$
+Call Firebase.setAndroidContext(context) $#$
+Add Firebase.setFirebaseURL(url) $#$ You essentially do this when you construct a Firebase, though. $#$ yes
+END
+
+
+
+
+LESSON TITLE: Pushing to Firebase
+LESSON VIDEO: PushingToFirebase/PushingToFirebase_player.html
+YOUTUBE ID: efEQBNuCCTw
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you will learn about Firebase's JSON data model and how to push data to Firebase.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What does JSON stand for?
+TYPE: MC
+An educational non-profit organization encouraging K-12 students to pursue STEM careers. $#$ That's JASON. 
+JavaScript Object Notation $#$ $#$ yes
+JavaScript On Netbeans $#$ Although that happens to be what you get if Google completes the phrase 'JavaScript on n...'
+ 
+Q: Which annotation put before the key field will tell Jackson to ignore the key stored in our model?
+TYPE: MC
+@JsonIgnore $#$ $#$ yes
+@JacksonIgnoreKey $#$ Good guess.
+@IgnoreField $#$
+@JsonProperty('ignore') $#$ You can use @JsonProperty to map Android Java field names to firebase JSON field names if they differ. We didn't need to since we chose the same names for our fields.
+ 
+Q: What does push() do?
+TYPE: MS
+Creates a new key $#$ yes 
+Returns a Firebase reference to that key $#$ yes
+Adds a new item to the Firebase stack $#$  
+ 
+Q: What type parameter does setValue() take?
+TYPE: MC
+A HashMap $#$ It can, but that's not what we used, because another way is more convenient.
+A MovieQuote model object $#$ Good. Jackson then serializes the object into json. $#$ yes
+Object $#$ It can, but would need to be typecast to a map. See the first response. 
+END
+
+
+
+LESSON TITLE: Firebase EventListeners
+LESSON VIDEO: EventListeners/EventListeners_player.html
+YOUTUBE ID: CmwZ1XD27co
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn about ChildEventListeners and data snapshots.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What methods are part of the ChildEventListener interface?
+TYPE: MS
+onChildAdded $#$ yes 
+onChildChanged $#$ yes
+onChildRemoved $#$ yes 
+onChildMoved $#$ yes
+onCancelled $#$ yes
+
+Q: What are two things that every data snapshot has? 
+TYPE: MS
+key $#$ yes
+value $#$ yes
+photo $#$
+
+Q: What info do I pass to dataSnapshot's getValue() method to cause it to deserialize the snapshot into a java object? 
+TYPE: MC
+The DataSnapshot.DESERIALIZE boolean flag $#$ Seems reasonable. But no.
+The object's class $#$ $#$ yes
+
+Q: Firebase has offline capabilities that keep the data synced locally even when not connected to the backend.
+TYPE: MC
+True $#$ $#$ yes 
+False $#$ In fact, this is why we are studying Firebase even before we study SQLite, which is used for local storage 
+END
+
+
+
+LESSON TITLE: Delete
+LESSON VIDEO: Delete/Delete_player.html
+YOUTUBE ID: p_GcgCS-XOE
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to delete items from the Firebase and how to listen for deletions, whether made locally or from other clients. </li>
+
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: We used the MovieQuote object's key twice in this lesson. Where?
+TYPE: MS
+To determine which child's value to remove from the Firebase $#$ yes
+When one was deleted on the Firebase, to loop over the local list and see which one was deleted $#$ yes
+END
+
+
+
+LESSON TITLE: Update
+LESSON VIDEO: Update/Update_player.html
+YOUTUBE ID: ci7NBiBVk5I
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to push updates to the Firebase. </li>
+<li></li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Did you notice how similar the edit and delete code was? 
+TYPE: MC
+Yes $#$ Each calls firebaseRef.child(movieQuote.getKey()) and when listening for changes, each loops through the local list to find the key of the one that has been changed $#$ yes
+No $#$ Compare them now, both the changes pushed to Firebase and the listeners.
+END
+
+LESSON TITLE: Lab: Weatherpics
+LESSON VIDEO: LabWeatherpics/LabWeatherpics_player.html
+YOUTUBE ID: tbs3v9OOtf0
+CONTENT ABOVE
+<ul>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1IYWjIMTnMEqxheQxSci1TXYswxDMQWKRCGq-IHt4y_8" target="_blank">here</a>.</li>
+<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "Firebase" self-evaluation survey before calling it a day.</li>
+</ul>
+CONTENT BELOW
+END
+

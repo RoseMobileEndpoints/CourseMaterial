@@ -1,0 +1,249 @@
+UNIT TITLE: Firebase Authentication
+// Outputs directly.
+LINK TO OUTPUT: ../units/FirebaseAuth
+LINK TO VIDEOS: ../../videos/FirebaseAuth  
+LINK TO SLIDES: https://docs.google.com/presentation/d/1Ekmq5xWUdsBw1T4ZJp-98JjEyITayIq57rltRWJTLqc
+
+10 videos
+FirebaseAuthenticationOverview
+PasswordKeeper app
+Rules
+EmailPasswordAuthenticationSetup
+EmailPasswordAuthenticationCode
+GoogleAuthenticationSetup
+GoogleAuthenticationCode
+RoseFireAuthenticationSetup
+RoseFireAuthenticationCode
+LabOurWeatherpics
+
+notifyDataSetChanged will also animate items if you do 2 things 1) call setHasStableIds(true) on your Adapter and 2)override getItemid to return a unique long value from your Adapter for each row, once you do this, it ll trigger the animations – PirateApp Nov 18 '15 at 10:43
+
+
+
+
+// Lessons here
+
+LESSON TITLE: Firebase Authentication Overview
+LESSON VIDEO: FirebaseAuthenticationOverview/FirebaseAuthenticationOverview_player.html
+YOUTUBE ID: 3bdb8BWXJGk
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll get an introduction to the PasswordKeeper app that we'll create in this unit. It has options to authenticate using email&password, Google, and Rose-Hulman credentials.</li>
+</ul>
+CONTENT BELOW
+END
+
+
+LESSON TITLE: PasswordKeeper
+LESSON VIDEO: PasswordKeeper/PasswordKeeper_player.html
+YOUTUBE ID: FCgeTWOHkSo
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll download the starting code and get an introduction to the parts that we will need to modify.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What are some features from PasswordKeeper that we have already used in this class?
+TYPE: MS
+Fragments with callbacks to communicate with other parts of the app. $#$ yes
+Expandable, animated RecyclerView entries $#$
+Firebase ChildEventListeners $#$ yes 
+IME keyboard options $#$
+Maps and location services $#$
+RecyclerView with swipe-to-delete $#$ yes 
+
+Q: What are some features from PasswordKeeper that we haven't covered but you can learn from this app?
+TYPE: MS
+Fragments with callbacks to communicate with other parts of the app. 
+Expandable, animated RecyclerView entries $#$ yes
+Firebase ChildEventListeners $#$ 
+IME keyboard options $#$ yes
+Maps and location services $#$
+RecyclerView with swipe-to-delete $#$  
+
+Q: In which class will we be writing all of our authentication code?
+TYPE: MC
+LoginFragment $#$ Despite the name, that's not where the logic is.
+PasswordFragment $#$ Remember the passwords stored are for other services, not the passwords we are are using to sign in to our app. 
+MainActivity $#$ This is the class that implements the interface callbacks $#$ yes 
+END
+
+
+
+LESSON TITLE: Firebase Rules
+LESSON VIDEO: Rules/Rules_player.html
+YOUTUBE ID: TPT9coKDpDw
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you will learn about how to restrict and validate access to various paths in your Firebase.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: What are the three types of rules?
+TYPE: MS
+.logic $#$
+.login $#$
+.read $#$ yes
+.validate $#$ yes
+.write $#$ yes
+
+Q: What is the $ used for in a rule?
+TYPE: MC
+It designates an object $#$ 
+It denotes that the designated object is used to store currency $#$ 
+It is a wildcard $#$ $#$ yes
+
+Q: What variable is used to store login data for a user such as their user ID?
+TYPE: MC
+auth $#$ $#$ yes
+login $#$ Although it is used in conjunction with login.
+$auth $#$ $ is for user-defined variables, not built-in ones.
+$login $#$ $ is for user-defined variables, not built-in ones.
+ 
+Q: Which one of these is _not_ an advantage of Bolt? 
+TYPE: MC
+Simpler format $#$ That's the main advantage.
+The ability to define types so it generate validation rules $#$ That's a huge advantage of bolt. Once you have model objects, you can determine the types easily.
+Bolt is more expressive; that is, you can define rules in Bolt that can't be defined in json $#$ Bolt is compiled into json, so it can only do what json can do. $#$ yes
+END
+
+
+
+LESSON TITLE: Email & Password Authentication Setup
+LESSON VIDEO: EmailPasswordAuthenticationSetup/EmailPasswordAuthenticationSetup_player.html
+YOUTUBE ID: LGrhn2vek34
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll learn how to set up users in Firebase to use email&password authentication.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Email&Password is easy to set up on Firebase. 
+TYPE: MC
+True $#$ it doesn't get much easier than that. $#$ yes
+False $#$ it doesn't get much easier than that. $#$
+END
+
+
+
+LESSON TITLE: Email & Password Authentication Code
+LESSON VIDEO: EmailPasswordAuthenticationCode/EmailPasswordAuthenticationCode_player.html
+YOUTUBE ID: z6pTJ-qryKA
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll write code to check if a user is authenticated, to authenticate them, and to respond once Firebase passes back an authentication token. </li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: How can you check if the user is already authenticated from a prior run of the app? 
+TYPE: MC
+Check firebase.auth $#$ Close. $#$
+Check firebase.getAuth() $#$ $#$ yes
+Check firebase.unauth() $#$ That's used on logout.
+Check firebasePath.auth(), where firebasePath is a path to the data we are restricting access to $#$ It actually dosn't matter which path we used to authenticate.
+
+Q: What three arguments does the authWithPassword() method require?
+TYPE: MS
+a callback $#$ yes 
+email $#$ yes 
+password $#$ yes
+uid $#$ 
+END
+
+
+
+LESSON TITLE: Google Authentication Setup
+LESSON VIDEO: GoogleAuthenticationSetup/GoogleAuthenticationSetup_player.html
+YOUTUBE ID: n_2vSMXW4vY
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll do all the setup required to authenticate vs Google using OAuth. </li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Did you successfully generate a google client ID?
+TYPE: MC
+Yes $#$ Good. Now on to the fun part. $#$ yes
+No $#$ Get help if needed, but if you don't do this part, you won't be able to sign in using google.
+END
+
+
+
+LESSON TITLE: Google Authentication Code
+LESSON VIDEO: GoogleAuthenticationCode/GoogleAuthenticationCode_player.html
+YOUTUBE ID: x9EU2EY1jU0
+CONTENT ABOVE
+<ul>
+<li>In this lesson, you'll write the code to authenticate a user using their google account. It's more complex than email&password, since we must handle google sign-in and get an OAuth token from Google.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Did you successfully authenticate using google?
+TYPE: MC
+Yes $#$ Good. Carry on! $#$ yes
+No $#$ Get help if needed. Some students have had trouble with this, but it seems to be when running on a particular device or with a particular user account. If you followed the code, it's probably OK.
+END
+
+
+
+LESSON TITLE: RosefireAuthenticationSetup
+LESSON VIDEO: RosefireAuthenticationSetup/RosefireAuthenticationSetup_player.html
+YOUTUBE ID: uA8V21qDKMY
+CONTENT ABOVE
+<ul>
+<li>In this lesson, we'll get a registry token from the Rosefire server that we need in our app.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Did you successfully get a registry token from the Rosefire server?
+TYPE: MC
+Yes $#$ Good. Now on to the fun part. $#$ yes
+No $#$ Get help if needed, but if you don't do this part, you won't be able to login using rosefire. (Non-Rose-Hulman students are excused from completing this part.)
+END
+
+
+
+LESSON TITLE: Rosefire Authentication Code
+LESSON VIDEO: RosefireAuthenticationCode/RosefireAuthenticationCode_player.html
+YOUTUBE ID: wWxtBfWaRRY
+CONTENT ABOVE
+<ul>
+<li>In this lesson, we'll write 3 lines of code to authenticate using Rosefire. Really.</li>
+</ul>
+CONTENT BELOW
+END
+
+ACTIVITY TITLE: Questions
+Q: Did you successfully authenticate using rosefire?
+TYPE: MC
+Yes $#$ Good. Congratulations. Easy, huh? $#$ yes
+No $#$ Get help if needed. (Non-Rose-Hulman students are excused from completing this part.)
+END
+
+
+
+LESSON TITLE: Lab: Our Weatherpics
+LESSON VIDEO: LabOurWeatherpics/LabOurWeatherpics_player.html
+YOUTUBE ID: JavCfcDfCPs
+CONTENT ABOVE
+<ul>
+<li>The lab specification is <a href="https://docs.google.com/document/d/1b78t2EEEahDxuSJ8W1njVAt-nBPxu5u73GYnouI9x14" target="_blank">here</a>.</li>
+<li>If you are taking this course in the academic year, get your lab checked off by an instructor or assistant. If you are taking it in the summer, submit your zipped project plus video demo and complete the Moodle "FirebaseAuth" self-evaluation survey before calling it a day.</li>
+</ul>
+CONTENT BELOW
+END
+
