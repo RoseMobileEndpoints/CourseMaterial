@@ -1,7 +1,7 @@
 batch
 coursebuilder
 multiple
-../../plans/all_units_topics.txt
+../../plans/all_units_firebase.txt
 templates/
 
 Comments:
