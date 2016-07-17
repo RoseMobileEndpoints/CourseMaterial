@@ -30,17 +30,48 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> We used the MovieQuote object's key twice in this lesson. Where? (Choose all that apply.)",
+	"<b>1.</b> What are the three types of rules? (Choose all that apply.)",
 	{
 		questionType : "multiple choice group",
 		questionsList : [
 				{
 					questionHTML : "",
-					choices : [ "To determine which child's value to remove from the Firebase", "When one was deleted on the Firebase, to loop over the local list and see which one was deleted"],
-					correctIndex : [0,1]
+					choices : [ ".logic", ".login", ".read", ".validate", ".write"],
+					correctIndex : [2,3,4]
 				}
 				],
 		allCorrectOutput : "Well done!",
 		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
+	},
+	"<br><br>",
+	"<b>2.</b> What is the $ used for in a rule?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["It designates an object", false, "Try again. " ],
+				["It denotes that the designated object is used to store currency", false, "Try again. " ],
+				["It is a wildcard", true, "Correct. " ],
+		]
+	},
+	"<br><br>",
+	"<b>3.</b> What variable is used to store login data for a user such as their user ID?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["auth", true, "Correct. " ],
+				["login", false, "Try again. Although it is used in conjunction with login." ],
+				["$auth", false, "Try again. $ is for user-defined variables, not built-in ones." ],
+				["$login", false, "Try again. $ is for user-defined variables, not built-in ones." ],
+		]
+	},
+	"<br><br>",
+	"<b>4.</b> Which one of these is _not_ an advantage of Bolt?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["Simpler format", false, "Try again. That's the main advantage." ],
+				["The ability to define types so it generate validation rules", false, "Try again. That's a huge advantage of bolt. Once you have model objects, you can determine the types easily." ],
+				["Bolt is more expressive; that is, you can define rules in Bolt that can't be defined in json", true, "Correct. Bolt is compiled into json, so it can only do what json can do." ],
+		]
 	},
 ];

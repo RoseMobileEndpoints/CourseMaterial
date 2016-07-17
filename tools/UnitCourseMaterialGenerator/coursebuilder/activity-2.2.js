@@ -30,17 +30,41 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> We used the MovieQuote object's key twice in this lesson. Where? (Choose all that apply.)",
+	"<b>1.</b> What are some features from PasswordKeeper that we have already used in this class? (Choose all that apply.)",
 	{
 		questionType : "multiple choice group",
 		questionsList : [
 				{
 					questionHTML : "",
-					choices : [ "To determine which child's value to remove from the Firebase", "When one was deleted on the Firebase, to loop over the local list and see which one was deleted"],
-					correctIndex : [0,1]
+					choices : [ "Fragments with callbacks to communicate with other parts of the app.", "Expandable, animated RecyclerView entries", "Firebase ChildEventListeners", "IME keyboard options", "Maps and location services", "RecyclerView with swipe-to-delete"],
+					correctIndex : [0,2,5]
 				}
 				],
 		allCorrectOutput : "Well done!",
 		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
+	},
+	"<br><br>",
+	"<b>2.</b> What are some features from PasswordKeeper that we haven't covered but you can learn from this app? (Choose all that apply.)",
+	{
+		questionType : "multiple choice group",
+		questionsList : [
+				{
+					questionHTML : "",
+					choices : [ "Fragments with callbacks to communicate with other parts of the app.", "Expandable, animated RecyclerView entries", "Firebase ChildEventListeners", "IME keyboard options", "Maps and location services", "RecyclerView with swipe-to-delete"],
+					correctIndex : [1,3]
+				}
+				],
+		allCorrectOutput : "Well done!",
+		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
+	},
+	"<br><br>",
+	"<b>3.</b> In which class will we be writing all of our authentication code?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["LoginFragment", false, "Try again. Despite the name, that's not where the logic is." ],
+				["PasswordFragment", false, "Try again. Remember the passwords stored are for other services, not the passwords we are are using to sign in to our app." ],
+				["MainActivity", true, "Correct. This is the class that implements the interface callbacks" ],
+		]
 	},
 ];

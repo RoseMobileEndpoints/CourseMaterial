@@ -30,17 +30,27 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> We used the MovieQuote object's key twice in this lesson. Where? (Choose all that apply.)",
+	"<b>1.</b> Which of these are characteristics of Firebase? (Choose all that apply.)",
 	{
 		questionType : "multiple choice group",
 		questionsList : [
 				{
 					questionHTML : "",
-					choices : [ "To determine which child's value to remove from the Firebase", "When one was deleted on the Firebase, to loop over the local list and see which one was deleted"],
-					correctIndex : [0,1]
+					choices : [ "Cross-platform", "Has offline capabilities", "No-SQL", "Real-time", "Supports authentication"],
+					correctIndex : [0,1,2,3,4]
 				}
 				],
 		allCorrectOutput : "Well done!",
 		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
+	},
+	"<br><br>",
+	"<b>2.</b> Which one of these Rose-Hulman alumni didn't found Firebase?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["Andrew Lee", false, "Try again. Founder." ],
+				["Michael Lehenbauer", false, "Try again. Founder." ],
+				["Mike McDonald", true, "Correct. Mike is excellent, but he graduated too recently to be a founder. :)" ],
+		]
 	},
 ];

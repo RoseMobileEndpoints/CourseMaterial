@@ -30,48 +30,34 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> What does JSON stand for?<br>",
+	"<b>1.</b> Which of these is NOT a model object within the GradeRecorder Firebase?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["An educational non-profit organization encouraging K-12 students to pursue STEM careers.", false, "Try again. That's JASON." ],
-				["JavaScript Object Notation", true, "Correct. " ],
-				["JavaScript On Netbeans", false, "Try again. Although that happens to be what you get if Google completes the phrase 'JavaScript on n...'" ],
+				["Owner", false, "Try again. " ],
+				["Course", false, "Try again. " ],
+				["Assignment", false, "Try again. " ],
+				["GradeEntry", false, "Try again. " ],
+				["Assistant", true, "Correct. Teaching assistants are just owners, just like the instructors." ],
 		]
 	},
 	"<br><br>",
-	"<b>2.</b> Which annotation put before the key field will tell Jackson to ignore the key stored in our model?<br>",
+	"<b>2.</b> A single course can have multiple assignments. How is this represented in the Firebase?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["@JsonIgnore", true, "Correct. " ],
-				["@JacksonIgnoreKey", false, "Try again. Good guess." ],
-				["@IgnoreField", false, "Try again. " ],
-				["@JsonProperty('ignore')", false, "Try again. You can use @JsonProperty to map Android Java field names to firebase JSON field names if they differ. We didn't need to since we chose the same names for our fields." ],
+				["There is a table that maps course keys to assignment keys; we then do a join to get all the assignments for a course", false, "Try again. Sorry, Firebase uses a no-SQL database, so there are no joins." ],
+				["Each assignment stores the key of its course", true, "Correct. That allows us to write a Query for only the assignments that have that key." ],
+				["Each course has a set of keys of its assignments", false, "Try again. Good idea, and that's what we did to relate courses and owners. But what we did here allows for simpler Firebase code." ],
 		]
 	},
 	"<br><br>",
-	"<b>3.</b> What does push() do? (Choose all that apply.)",
-	{
-		questionType : "multiple choice group",
-		questionsList : [
-				{
-					questionHTML : "",
-					choices : [ "Creates a new key", "Returns a Firebase reference to that key", "Adds a new item to the Firebase stack"],
-					correctIndex : [0,1]
-				}
-				],
-		allCorrectOutput : "Well done!",
-		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
-	},
-	"<br><br>",
-	"<b>4.</b> What type parameter does setValue() take?<br>",
+	"<b>3.</b> If a student in the GradeRecorder app takes multiple courses, are they represented uniquely in Firebase?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["A HashMap", false, "Try again. It can, but that's not what we used, because another way is more convenient." ],
-				["A MovieQuote model object", true, "Correct. Good. Jackson then serializes the object into json." ],
-				["Object", false, "Try again. It can, but would need to be typecast to a map. See the first response." ],
+				["Yes", false, "Try again. Unfortunately not. We make the simplifying assumption that since this is an instructor-centric app, then the students in one course are considered distinct from those in another course. So a student is only associated with a single course." ],
+				["No", true, "Correct. We make the simplifying assumption that since this is an instructor-centric app, then the students in one course are considered distinct from those in another course. So a student is only associated with a single course." ],
 		]
 	},
 ];

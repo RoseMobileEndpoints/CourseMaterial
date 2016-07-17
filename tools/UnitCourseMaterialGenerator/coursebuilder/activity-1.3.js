@@ -30,13 +30,12 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> How do you obtain a Map API Key?<br>",
+	"<b>1.</b> Did you successfully create the MovieQuotes backend?<br>",
 	{
 		questionType : "multiple choice",
 		choices : [
-				["Follow the Google developers console URL contained in google_maps_key.xml", true, "Correct. Definitely a nice convenience feature." ],
-				["Extract your SHA1 fingerprint manually and enter it and your project's package name in the Google developers console", false, "Try again. That works, but it's not as convenient." ],
-				["Email map_api_key_request@google.com", false, "Try again. " ],
+				["Yes", true, "Correct. Excellent - good start." ],
+				["No", false, "Try again. You'll need to do this to get credit for the codealong app." ],
 		]
 	},
 ];

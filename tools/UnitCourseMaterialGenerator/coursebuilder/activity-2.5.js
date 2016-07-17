@@ -30,14 +30,25 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> We used the MovieQuote object's key twice in this lesson. Where? (Choose all that apply.)",
+	"<b>1.</b> How can you check if the user is already authenticated from a prior run of the app?<br>",
+	{
+		questionType : "multiple choice",
+		choices : [
+				["Check firebase.auth", false, "Try again. Close." ],
+				["Check firebase.getAuth()", true, "Correct. " ],
+				["Check firebase.unauth()", false, "Try again. That's used on logout." ],
+				["Check firebasePath.auth(), where firebasePath is a path to the data we are restricting access to", false, "Try again. It actually dosn't matter which path we used to authenticate." ],
+		]
+	},
+	"<br><br>",
+	"<b>2.</b> What three arguments does the authWithPassword() method require? (Choose all that apply.)",
 	{
 		questionType : "multiple choice group",
 		questionsList : [
 				{
 					questionHTML : "",
-					choices : [ "To determine which child's value to remove from the Firebase", "When one was deleted on the Firebase, to loop over the local list and see which one was deleted"],
-					correctIndex : [0,1]
+					choices : [ "a callback", "email", "password", "uid"],
+					correctIndex : [0,1,2]
 				}
 				],
 		allCorrectOutput : "Well done!",

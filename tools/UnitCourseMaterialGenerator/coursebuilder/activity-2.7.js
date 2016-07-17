@@ -30,17 +30,12 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-	"<b>1.</b> We used the MovieQuote object's key twice in this lesson. Where? (Choose all that apply.)",
+	"<b>1.</b> Did you successfully authenticate using google?<br>",
 	{
-		questionType : "multiple choice group",
-		questionsList : [
-				{
-					questionHTML : "",
-					choices : [ "To determine which child's value to remove from the Firebase", "When one was deleted on the Firebase, to loop over the local list and see which one was deleted"],
-					correctIndex : [0,1]
-				}
-				],
-		allCorrectOutput : "Well done!",
-		someIncorrectOutput : "Please ignore the previous feedback line. Then try again.",
+		questionType : "multiple choice",
+		choices : [
+				["Yes", true, "Correct. Good. Carry on!" ],
+				["No", false, "Try again. Get help if needed. Some students have had trouble with this, but it seems to be when running on a particular device or with a particular user account. If you followed the code, it's probably OK." ],
+		]
 	},
 ];
